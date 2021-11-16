@@ -1,0 +1,28 @@
+{
+ "Files" : [
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/hpram/src/gowin_pllvr/gowin_pllvr.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/hpram/src/hpram_syn_top.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/hpram/src/hpram_test.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/hpram/src/hyperram_memory_interface/hyperram_memory_interface.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/kitahard/Tang_Nano_4K/hpram/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

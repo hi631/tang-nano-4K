@@ -1,0 +1,46 @@
+[
+ {
+  "InstFile" : "C:/kitahard/Tang_Nano_4K/hpram/src/hpram_syn_top.v",
+  "InstLine" : 3,
+  "InstName" : "hpram_syn_top",
+  "ModuleFile" : "C:/kitahard/Tang_Nano_4K/hpram/src/hpram_syn_top.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "hpram_syn_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/hpram/src/hpram_syn_top.v",
+    "InstLine" : 45,
+    "InstName" : "your_instance_name",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/hpram/src/gowin_pllvr/gowin_pllvr.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "Gowin_PLLVR"
+   },
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/hpram/src/hpram_syn_top.v",
+    "InstLine" : 97,
+    "InstName" : "u_hpram_top",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/hpram/src/hyperram_memory_interface/hyperram_memory_interface.v",
+    "ModuleLine" : 3735,
+    "ModuleName" : "HyperRAM_Memory_Interface_Top",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/kitahard/Tang_Nano_4K/hpram/src/hyperram_memory_interface/hyperram_memory_interface.v",
+      "InstLine" : 3810,
+      "InstName" : "u_hpram_top",
+      "ModuleFile" : "C:/kitahard/Tang_Nano_4K/hpram/src/hyperram_memory_interface/hyperram_memory_interface.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "~hpram_top.HyperRAM_Memory_Interface_Top_"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/hpram/src/hpram_syn_top.v",
+    "InstLine" : 118,
+    "InstName" : "u_test",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/hpram/src/hpram_test.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "hpram_test"
+   }
+  ]
+ }
+]

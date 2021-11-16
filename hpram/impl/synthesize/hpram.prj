@@ -1,0 +1,36 @@
+# project files
+add_file -verilog "E:/IP_verify/1.9.6.0.1/IP_web/psram_hpram_ref_design/Gowin_HyperRAM_Memory_Interface_embedded_refDesign/project/src/hpram_syn_top.v"
+add_file -verilog "E:/IP_verify/1.9.6.0.1/IP_web/psram_hpram_ref_design/Gowin_HyperRAM_Memory_Interface_embedded_refDesign/project/src/hpram_test.v"
+add_file -verilog "E:/IP_verify/1.9.6.0.1/IP_web/psram_hpram_ref_design/Gowin_HyperRAM_Memory_Interface_embedded_refDesign/project/src/hyperram_memory_interface/hyperram_memory_interface.v"
+
+# implementation: "rev_1"
+impl -add rev_1 -type fpga
+
+# device options
+set_option -technology GOWIN-GW1NSR
+set_option -part GW1NSR_4C
+set_option -package QFN48P
+set_option -speed_grade -7
+
+set_option -frequency auto
+set_option -maxfan 10000
+set_option -disable_io_insertion 0
+set_option -update_models_cp 0
+set_option -rw_check_on_ram 1
+set_option -run_prop_extract 1
+set_option -symbolic_fsm_compiler 1
+set_option -resource_sharing 1
+set_option -pipe 1
+set_option -retiming 0
+set_option -write_apr_constraint 1
+set_option -vlog_std v2001
+set_option -compiler_compatible 0
+set_option -multi_file_compilation_unit 1
+set_option -looplimit 2000
+set_option -fix_gated_and_generated_clocks 1
+set_option -library_path D:/Gowin/Gowin_V1.9.6.01Beta/IDE/simlib/hardware_core/gw1n/prim_syn.v
+# set result format/file
+project -result_file "hpram.vm"
+impl -active "rev_1"
+project -run -clean
+

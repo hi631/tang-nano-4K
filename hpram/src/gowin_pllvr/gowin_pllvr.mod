@@ -1,0 +1,33 @@
+-series GW1NSR
+-device GW1NSR-4C
+-package QFN48P
+-part_number GW1NSR-LV4CQN48PC6/I5
+
+
+-mod_name Gowin_PLLVR
+-file_name gowin_pllvr
+-path C:/kitahard/Tang_Nano_4K/hpram/src/gowin_pllvr/
+-type PLL
+-pllvr true
+-file_type vlg
+-dev_type GW1NSR-4C
+-dyn_idiv_sel false
+-idiv_sel 1
+-dyn_fbdiv_sel false
+-fbdiv_sel 5
+-dyn_odiv_sel false
+-odiv_sel 8
+-dyn_da_en true
+-rst_sig true
+-rst_sig_p false
+-pll_reg false
+-fclkin 25
+-clkfb_sel 0
+-en_lock true
+-clkout_bypass false
+-clkout_ft_dir 1
+-en_clkoutp false
+-clkoutp_bypass false
+-en_clkoutd false
+-clkoutd_bypass false
+-en_clkoutd3 false

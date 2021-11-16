@@ -1,0 +1,9 @@
+
+IO_LOC  "clk" 45; // 22;
+IO_PORT "clk" PULL_MODE=UP;
+
+IO_LOC  "rst_n" 15; // 23;
+IO_PORT "rst_n" PULL_MODE=UP;
+
+IO_LOC  "LED" 10; //33;  //led1
+IO_PORT "LED" PULL_MODE=NONE DRIVE=8;

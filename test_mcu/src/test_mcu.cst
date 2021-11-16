@@ -1,0 +1,28 @@
+//Copyright (C)2014-2021 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: 1.9.7.06Beta
+//Part Number: GW1NSR-LV4CQN48PC7/I6
+//Device: GW1NSR-4C
+//Created Time: Tue 06 22 15:16:20 2021
+
+IO_LOC "gpio[4]" 29;
+IO_PORT "gpio[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC "gpio[3]" 10; // 13;
+IO_PORT "gpio[3]" PULL_MODE=UP DRIVE=8;
+IO_LOC "gpio[2]" 33;
+IO_PORT "gpio[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC "gpio[1]" 32;
+IO_PORT "gpio[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+IO_LOC "gpio[0]" 31;
+IO_PORT "gpio[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=8;
+
+IO_LOC "reset_n" 15; // 20;
+IO_PORT "reset_n" PULL_MODE=UP;
+IO_LOC "sys_clk" 45; // 22;
+IO_PORT "sys_clk" PULL_MODE=UP;
+
+IO_LOC "uart0_txd" 8;
+IO_PORT "uart0_txd" PULL_MODE=UP;
+IO_LOC "uart0_rxd" 9;
+IO_PORT "uart0_rxd" PULL_MODE=UP;
