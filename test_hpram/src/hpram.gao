@@ -2,7 +2,7 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="clk" trig_type="0" storage_depth="1024" window_num="1" capture_amount="1024" trigger_pos="512">
+    <AoCore index="0" sample_clock="memory_clk" trig_type="0" storage_depth="1024" window_num="1" capture_amount="1024" trigger_pos="512">
         <SignalList>
             <Signal>rd_data_valid</Signal>
             <Signal>init_calib</Signal>
@@ -86,5 +86,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0011000101110000</GAO_ID>
+    <GAO_ID>0010011011110101</GAO_ID>
 </GAO_CONFIG>
