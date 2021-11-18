@@ -1,0 +1,408 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gw1ns4c_syscon.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.SYSCON_Init,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	SYSCON_Init
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	SYSCON_Init:
+  26              	.LFB29:
+  27              		.file 1 "../PERIPHERAL/Sources/gw1ns4c_syscon.c"
+   1:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /*
+   2:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  * *****************************************************************************************
+   3:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  *
+   4:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  * 		
+   6:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  * @file        gw1ns4c_syscon.c
+   7:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  * @author      Embedded Development Team
+   8:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  * @version     V1.x.x
+   9:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  * @date        2021-01-01 09:00:00
+  10:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  * @brief       This file contains all the functions prototypes for the SYSCON firmware library.
+  11:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  ******************************************************************************************
+  12:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****  */
+  13:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  14:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /* Includes ------------------------------------------------------------------*/
+  15:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** #include "gw1ns4c_syscon.h"
+  16:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  17:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /** @addtogroup GW1NS4C_StdPeriph_Driver
+  18:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @{
+  19:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  20:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  21:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /** @defgroup SYSCON
+  22:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @brief SYSCON driver modules
+  23:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @{
+  24:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  25:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  26:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /** @defgroup SYSCON_Private_TypesDefinitions
+  27:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @{
+  28:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  29:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  30:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+  31:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @}
+  32:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  33:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  34:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /** @defgroup SYSCON_Private_Macros
+  35:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @{
+  36:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  37:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  38:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+  39:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @}
+  40:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  41:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  42:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /** @defgroup SYSCON_Private_Variables
+  43:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @{
+  44:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  45:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  46:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+  47:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @}
+  48:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  49:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  50:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /** @defgroup SYSCON_Private_FunctionPrototypes
+  51:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @{
+  52:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  53:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  54:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+  55:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @}
+  56:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  57:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  58:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /** @defgroup SYSCON_Private_Functions
+  59:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @{
+  60:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  61:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  62:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+  63:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @param none
+  64:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @return none
+  65:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @brief Initializes SYSCON
+  66:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  67:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** void SYSCON_Init(void)
+  68:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** {
+  28              		.loc 1 68 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  69:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   SYSCON->REMAP = 0;
+  33              		.loc 1 69 3 view .LVU1
+  34              		.loc 1 69 17 is_stmt 0 view .LVU2
+  35 0000 0022     		movs	r2, #0
+  36 0002 034B     		ldr	r3, .L3
+  37 0004 1A60     		str	r2, [r3]
+  70:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   SYSCON->PMUCTRL = 0;
+  38              		.loc 1 70 3 is_stmt 1 view .LVU3
+  39              		.loc 1 70 19 is_stmt 0 view .LVU4
+  40 0006 5A60     		str	r2, [r3, #4]
+  71:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   SYSCON->RESETOP = 0;
+  41              		.loc 1 71 3 is_stmt 1 view .LVU5
+  42              		.loc 1 71 19 is_stmt 0 view .LVU6
+  43 0008 9A60     		str	r2, [r3, #8]
+  72:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   SYSCON->RSTINFO = 0;
+  44              		.loc 1 72 3 is_stmt 1 view .LVU7
+  45              		.loc 1 72 19 is_stmt 0 view .LVU8
+  46 000a 1A61     		str	r2, [r3, #16]
+  73:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** }
+  47              		.loc 1 73 1 view .LVU9
+  48 000c 7047     		bx	lr
+  49              	.L4:
+  50 000e 00BF     		.align	2
+  51              	.L3:
+  52 0010 00F00140 		.word	1073868800
+  53              		.cfi_endproc
+  54              	.LFE29:
+  56              		.section	.text.SYSCON_GetRemap,"ax",%progbits
+  57              		.align	1
+  58              		.p2align 2,,3
+  59              		.global	SYSCON_GetRemap
+  60              		.syntax unified
+  61              		.thumb
+  62              		.thumb_func
+  63              		.fpu softvfp
+  65              	SYSCON_GetRemap:
+  66              	.LFB30:
+  74:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  75:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+  76:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @param none
+  77:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @return uint32_t
+  78:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @brief Returns REMAP
+  79:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  80:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** uint32_t SYSCON_GetRemap(void)
+  81:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** {
+  67              		.loc 1 81 1 is_stmt 1 view -0
+  68              		.cfi_startproc
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 0, uses_anonymous_args = 0
+  71              		@ link register save eliminated.
+  82:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   return SYSCON->REMAP;
+  72              		.loc 1 82 3 view .LVU11
+  73              		.loc 1 82 16 is_stmt 0 view .LVU12
+  74 0000 014B     		ldr	r3, .L6
+  75 0002 1868     		ldr	r0, [r3]
+  83:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** }
+  76              		.loc 1 83 1 view .LVU13
+  77 0004 7047     		bx	lr
+  78              	.L7:
+  79 0006 00BF     		.align	2
+  80              	.L6:
+  81 0008 00F00140 		.word	1073868800
+  82              		.cfi_endproc
+  83              	.LFE30:
+  85              		.section	.text.SYSCON_GetPmuctrlEnable,"ax",%progbits
+  86              		.align	1
+  87              		.p2align 2,,3
+  88              		.global	SYSCON_GetPmuctrlEnable
+  89              		.syntax unified
+  90              		.thumb
+  91              		.thumb_func
+  92              		.fpu softvfp
+  94              	SYSCON_GetPmuctrlEnable:
+  95              	.LFB31:
+  84:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  85:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+  86:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @param none
+  87:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @param uint32_t
+  88:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @brief Returns PMUCTRL Enable
+  89:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+  90:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** uint32_t SYSCON_GetPmuctrlEnable(void)
+  91:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** {
+  96              		.loc 1 91 1 is_stmt 1 view -0
+  97              		.cfi_startproc
+  98              		@ args = 0, pretend = 0, frame = 0
+  99              		@ frame_needed = 0, uses_anonymous_args = 0
+ 100              		@ link register save eliminated.
+  92:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   return SYSCON->PMUCTRL;
+ 101              		.loc 1 92 3 view .LVU15
+ 102              		.loc 1 92 16 is_stmt 0 view .LVU16
+ 103 0000 014B     		ldr	r3, .L9
+ 104 0002 5868     		ldr	r0, [r3, #4]
+  93:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** }
+ 105              		.loc 1 93 1 view .LVU17
+ 106 0004 7047     		bx	lr
+ 107              	.L10:
+ 108 0006 00BF     		.align	2
+ 109              	.L9:
+ 110 0008 00F00140 		.word	1073868800
+ 111              		.cfi_endproc
+ 112              	.LFE31:
+ 114              		.section	.text.SYSCON_GetResetopLockuprst,"ax",%progbits
+ 115              		.align	1
+ 116              		.p2align 2,,3
+ 117              		.global	SYSCON_GetResetopLockuprst
+ 118              		.syntax unified
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.fpu softvfp
+ 123              	SYSCON_GetResetopLockuprst:
+ 124              	.LFB32:
+  94:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+  95:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+  96:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @param none
+  97:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @return uint32_t
+  98:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @brief Returns RESETOP LOCKUPRST
+  99:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+ 100:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** uint32_t SYSCON_GetResetopLockuprst(void)
+ 101:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** {
+ 125              		.loc 1 101 1 is_stmt 1 view -0
+ 126              		.cfi_startproc
+ 127              		@ args = 0, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129              		@ link register save eliminated.
+ 102:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   return SYSCON->RESETOP;
+ 130              		.loc 1 102 3 view .LVU19
+ 131              		.loc 1 102 16 is_stmt 0 view .LVU20
+ 132 0000 014B     		ldr	r3, .L12
+ 133 0002 9868     		ldr	r0, [r3, #8]
+ 103:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** }
+ 134              		.loc 1 103 1 view .LVU21
+ 135 0004 7047     		bx	lr
+ 136              	.L13:
+ 137 0006 00BF     		.align	2
+ 138              	.L12:
+ 139 0008 00F00140 		.word	1073868800
+ 140              		.cfi_endproc
+ 141              	.LFE32:
+ 143              		.section	.text.SYSCON_GetRstinfoSysresetreq,"ax",%progbits
+ 144              		.align	1
+ 145              		.p2align 2,,3
+ 146              		.global	SYSCON_GetRstinfoSysresetreq
+ 147              		.syntax unified
+ 148              		.thumb
+ 149              		.thumb_func
+ 150              		.fpu softvfp
+ 152              	SYSCON_GetRstinfoSysresetreq:
+ 153              	.LFB33:
+ 104:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+ 105:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+ 106:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @param none
+ 107:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @return FlagStatus
+ 108:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   *         @arg SET
+ 109:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   *         @arg RESET
+ 110:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @brief Returns RSTINFO SYSRESETREQ
+ 111:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+ 112:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** FlagStatus SYSCON_GetRstinfoSysresetreq(void)
+ 113:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** {
+ 154              		.loc 1 113 1 is_stmt 1 view -0
+ 155              		.cfi_startproc
+ 156              		@ args = 0, pretend = 0, frame = 0
+ 157              		@ frame_needed = 0, uses_anonymous_args = 0
+ 158              		@ link register save eliminated.
+ 114:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   return (FlagStatus)((SYSCON->RSTINFO & SYSCON_RSTINFO_SYSRESETREQ) >> SYSCON_RSTINFO_SYSRESETREQ_
+ 159              		.loc 1 114 3 view .LVU23
+ 160              		.loc 1 114 30 is_stmt 0 view .LVU24
+ 161 0000 024B     		ldr	r3, .L15
+ 162 0002 1869     		ldr	r0, [r3, #16]
+ 115:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** }
+ 163              		.loc 1 115 1 view .LVU25
+ 164 0004 00F00100 		and	r0, r0, #1
+ 165 0008 7047     		bx	lr
+ 166              	.L16:
+ 167 000a 00BF     		.align	2
+ 168              	.L15:
+ 169 000c 00F00140 		.word	1073868800
+ 170              		.cfi_endproc
+ 171              	.LFE33:
+ 173              		.section	.text.SYSCON_GetRstinfoWdogresetreq,"ax",%progbits
+ 174              		.align	1
+ 175              		.p2align 2,,3
+ 176              		.global	SYSCON_GetRstinfoWdogresetreq
+ 177              		.syntax unified
+ 178              		.thumb
+ 179              		.thumb_func
+ 180              		.fpu softvfp
+ 182              	SYSCON_GetRstinfoWdogresetreq:
+ 183              	.LFB34:
+ 116:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+ 117:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+ 118:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @param none
+ 119:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @return FlagStatus
+ 120:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   *         @arg SET
+ 121:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   *         @arg RESET
+ 122:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @brief Returns RSTINFO WDOGRESETREQ
+ 123:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+ 124:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** FlagStatus SYSCON_GetRstinfoWdogresetreq(void)
+ 125:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** {
+ 184              		.loc 1 125 1 is_stmt 1 view -0
+ 185              		.cfi_startproc
+ 186              		@ args = 0, pretend = 0, frame = 0
+ 187              		@ frame_needed = 0, uses_anonymous_args = 0
+ 188              		@ link register save eliminated.
+ 126:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   return (FlagStatus)((SYSCON->RSTINFO & SYSCON_RSTINFO_WDOGRESETREQ) >> SYSCON_RSTINFO_WDOGRESETRE
+ 189              		.loc 1 126 3 view .LVU27
+ 190              		.loc 1 126 30 is_stmt 0 view .LVU28
+ 191 0000 024B     		ldr	r3, .L18
+ 192 0002 1869     		ldr	r0, [r3, #16]
+ 127:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** }
+ 193              		.loc 1 127 1 view .LVU29
+ 194 0004 C0F34000 		ubfx	r0, r0, #1, #1
+ 195 0008 7047     		bx	lr
+ 196              	.L19:
+ 197 000a 00BF     		.align	2
+ 198              	.L18:
+ 199 000c 00F00140 		.word	1073868800
+ 200              		.cfi_endproc
+ 201              	.LFE34:
+ 203              		.section	.text.SYSCON_GetRstinfoLockreset,"ax",%progbits
+ 204              		.align	1
+ 205              		.p2align 2,,3
+ 206              		.global	SYSCON_GetRstinfoLockreset
+ 207              		.syntax unified
+ 208              		.thumb
+ 209              		.thumb_func
+ 210              		.fpu softvfp
+ 212              	SYSCON_GetRstinfoLockreset:
+ 213              	.LFB35:
+ 128:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** 
+ 129:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** /**
+ 130:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @param none
+ 131:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @return FlagStatus
+ 132:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   *         @arg SET
+ 133:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   *         @arg RESET
+ 134:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   * @brief Returns RSTINFO LOCKRESET
+ 135:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   */
+ 136:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** FlagStatus SYSCON_GetRstinfoLockreset(void)
+ 137:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** {
+ 214              		.loc 1 137 1 is_stmt 1 view -0
+ 215              		.cfi_startproc
+ 216              		@ args = 0, pretend = 0, frame = 0
+ 217              		@ frame_needed = 0, uses_anonymous_args = 0
+ 218              		@ link register save eliminated.
+ 138:../PERIPHERAL/Sources/gw1ns4c_syscon.c ****   return (FlagStatus)((SYSCON->RSTINFO & SYSCON_RSTINFO_LOCKUPRESET) >> SYSCON_RSTINFO_LOCKUPRESET_
+ 219              		.loc 1 138 3 view .LVU31
+ 220              		.loc 1 138 30 is_stmt 0 view .LVU32
+ 221 0000 024B     		ldr	r3, .L21
+ 222 0002 1869     		ldr	r0, [r3, #16]
+ 139:../PERIPHERAL/Sources/gw1ns4c_syscon.c **** }
+ 223              		.loc 1 139 1 view .LVU33
+ 224 0004 C0F38000 		ubfx	r0, r0, #2, #1
+ 225 0008 7047     		bx	lr
+ 226              	.L22:
+ 227 000a 00BF     		.align	2
+ 228              	.L21:
+ 229 000c 00F00140 		.word	1073868800
+ 230              		.cfi_endproc
+ 231              	.LFE35:
+ 233              		.text
+ 234              	.Letext0:
+ 235              		.file 2 "c:\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 236              		.file 3 "c:\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 237              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 238              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+ 239              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gw1ns4c_syscon.c
+d:\wintmp\ccrpa7R2.s:16     .text.SYSCON_Init:00000000 $t
+d:\wintmp\ccrpa7R2.s:25     .text.SYSCON_Init:00000000 SYSCON_Init
+d:\wintmp\ccrpa7R2.s:52     .text.SYSCON_Init:00000010 $d
+d:\wintmp\ccrpa7R2.s:57     .text.SYSCON_GetRemap:00000000 $t
+d:\wintmp\ccrpa7R2.s:65     .text.SYSCON_GetRemap:00000000 SYSCON_GetRemap
+d:\wintmp\ccrpa7R2.s:81     .text.SYSCON_GetRemap:00000008 $d
+d:\wintmp\ccrpa7R2.s:86     .text.SYSCON_GetPmuctrlEnable:00000000 $t
+d:\wintmp\ccrpa7R2.s:94     .text.SYSCON_GetPmuctrlEnable:00000000 SYSCON_GetPmuctrlEnable
+d:\wintmp\ccrpa7R2.s:110    .text.SYSCON_GetPmuctrlEnable:00000008 $d
+d:\wintmp\ccrpa7R2.s:115    .text.SYSCON_GetResetopLockuprst:00000000 $t
+d:\wintmp\ccrpa7R2.s:123    .text.SYSCON_GetResetopLockuprst:00000000 SYSCON_GetResetopLockuprst
+d:\wintmp\ccrpa7R2.s:139    .text.SYSCON_GetResetopLockuprst:00000008 $d
+d:\wintmp\ccrpa7R2.s:144    .text.SYSCON_GetRstinfoSysresetreq:00000000 $t
+d:\wintmp\ccrpa7R2.s:152    .text.SYSCON_GetRstinfoSysresetreq:00000000 SYSCON_GetRstinfoSysresetreq
+d:\wintmp\ccrpa7R2.s:169    .text.SYSCON_GetRstinfoSysresetreq:0000000c $d
+d:\wintmp\ccrpa7R2.s:174    .text.SYSCON_GetRstinfoWdogresetreq:00000000 $t
+d:\wintmp\ccrpa7R2.s:182    .text.SYSCON_GetRstinfoWdogresetreq:00000000 SYSCON_GetRstinfoWdogresetreq
+d:\wintmp\ccrpa7R2.s:199    .text.SYSCON_GetRstinfoWdogresetreq:0000000c $d
+d:\wintmp\ccrpa7R2.s:204    .text.SYSCON_GetRstinfoLockreset:00000000 $t
+d:\wintmp\ccrpa7R2.s:212    .text.SYSCON_GetRstinfoLockreset:00000000 SYSCON_GetRstinfoLockreset
+d:\wintmp\ccrpa7R2.s:229    .text.SYSCON_GetRstinfoLockreset:0000000c $d
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.45.7203167db6aedfb2660e12e941273eba
+
+NO UNDEFINED SYMBOLS
