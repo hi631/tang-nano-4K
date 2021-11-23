@@ -1,0 +1,56 @@
+{
+ "Files" : [
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/dvi_tx/dvi_tx.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/gowin_pllvr/GW_PLLVR.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/gowin_pllvr/TMDS_PLLVR.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/hyperram_memory_interface/hyperram_memory_interface.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/ov2640/I2C_Interface.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/ov2640/OV2640_Controller.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/ov2640/OV2640_Registers.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/syn_code/syn_gen.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/testpattern.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_frame_buffer/video_frame_buffer.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_top.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/kitahard/Tang_Nano_4K/dk_video/impl/temp/rtl_parser.result",
+ "Top" : "video_top",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}
