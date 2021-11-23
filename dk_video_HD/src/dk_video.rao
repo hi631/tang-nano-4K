@@ -2,11 +2,11 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="PIXCLK" trig_type="0" storage_depth="2048" window_num="1" capture_amount="2048" trigger_pos="100">
+    <AoCore index="0" sample_clock="PIXCLK" trig_type="0" storage_depth="4096" window_num="1" capture_amount="4096" trigger_pos="100">
         <SignalList>
             <Signal>HREF</Signal>
             <Signal>PIXCLK565</Signal>
-            <Signal>XCLK</Signal>
+            <Signal>PIXCLK</Signal>
             <Bus name="PIXDATA[9:2]">
                 <Signal>PIXDATA[9]</Signal>
                 <Signal>PIXDATA[8]</Signal>
@@ -16,24 +16,6 @@
                 <Signal>PIXDATA[4]</Signal>
                 <Signal>PIXDATA[3]</Signal>
                 <Signal>PIXDATA[2]</Signal>
-            </Bus>
-            <Bus name="PIXDAT565[15:0]">
-                <Signal>PIXDAT565[15]</Signal>
-                <Signal>PIXDAT565[14]</Signal>
-                <Signal>PIXDAT565[13]</Signal>
-                <Signal>PIXDAT565[12]</Signal>
-                <Signal>PIXDAT565[11]</Signal>
-                <Signal>PIXDAT565[10]</Signal>
-                <Signal>PIXDAT565[9]</Signal>
-                <Signal>PIXDAT565[8]</Signal>
-                <Signal>PIXDAT565[7]</Signal>
-                <Signal>PIXDAT565[6]</Signal>
-                <Signal>PIXDAT565[5]</Signal>
-                <Signal>PIXDAT565[4]</Signal>
-                <Signal>PIXDAT565[3]</Signal>
-                <Signal>PIXDAT565[2]</Signal>
-                <Signal>PIXDAT565[1]</Signal>
-                <Signal>PIXDAT565[0]</Signal>
             </Bus>
         </SignalList>
         <Triggers>
@@ -80,5 +62,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1011010000011011</GAO_ID>
+    <GAO_ID>0111001000111000</GAO_ID>
 </GAO_CONFIG>

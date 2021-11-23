@@ -227,7 +227,6 @@ module OV2640_Registers (
           187 : sreg <= 16'hFF_01;
           188 : sreg <= 16'h11_80;//clkrc=0x83 for resolution <= SVGA		
           189 : sreg <= 16'hFF_01;
-          // normal 16'h12_40 <-> color bar 16'h12_42 
           190 : sreg <= 16'h12_40;/* DSP input image resoultion and window size control */
           191 : sreg <= 16'h03_0A;/* UXGA=0x0F, SVGA=0x0A, CIF=0x06 */
           192 : sreg <= 16'h32_09;/* UXGA=0x36, SVGA/CIF=0x09 */
@@ -338,4 +337,204 @@ module OV2640_Registers (
         endcase  
             
     end 
-endmodule
+endmodule               
+                        
+/*
+          // Set 800x600
+          231 : sreg <= 16'hff_01;
+          232 : sreg <= 16'h11_01;
+          233 : sreg <= 16'h12_00;// Bit[6:4]: Resolution selection //02 color bar
+          234 : sreg <= 16'h17_11;// HREFST[10:3]
+          235 : sreg <= 16'h18_75;// HREFEND[10:3]
+          236 : sreg <= 16'h32_36;// Bit[5:3]: HREFEND[2:0]; Bit[2:0]: HREFST[2:0]
+          237 : sreg <= 16'h19_01;// VSTRT[9:2]
+          238 : sreg <= 16'h1a_97;// VEND[9:2]
+          239 : sreg <= 16'h03_0f;// Bit[3:2]: VEND[1:0]; Bit[1:0]: VSTRT[1:0]
+          240 : sreg <= 16'h37_40;
+          241 : sreg <= 16'h4f_bb;
+          242 : sreg <= 16'h50_9c;
+          243 : sreg <= 16'h5a_57;
+          244 : sreg <= 16'h6d_80;
+          245 : sreg <= 16'h3d_34;
+          246 : sreg <= 16'h39_02;
+          247 : sreg <= 16'h35_88;
+          248 : sreg <= 16'h22_0a;
+          249 : sreg <= 16'h37_40;
+          250 : sreg <= 16'h34_a0;
+          251 : sreg <= 16'h06_02;
+          252 : sreg <= 16'h0d_b7;
+          253 : sreg <= 16'h0e_01;
+	
+          254 : sreg <= 16'hff_00;
+          255 : sreg <= 16'he0_04;
+          256 : sreg <= 16'hc0_c8;
+          257 : sreg <= 16'hc1_96;
+          258 : sreg <= 16'h86_35;
+          259 : sreg <= 16'h50_89;
+          260 : sreg <= 16'h51_90;
+          261 : sreg <= 16'h52_2c;
+          262 : sreg <= 16'h53_00;
+          263 : sreg <= 16'h54_00;
+          264 : sreg <= 16'h55_88;
+          265 : sreg <= 16'h57_00;
+          266 : sreg <= 16'h5a_c8;
+          267 : sreg <= 16'h5b_96;
+          268 : sreg <= 16'h5c_00;
+          269 : sreg <= 16'hd3_02;
+          270 : sreg <= 16'he0_00;
+
+          // Set 1024x768
+          231 : sreg <= 16'hff_01;
+          232 : sreg <= 16'h11_01;
+          233 : sreg <= 16'h12_00; // Bit[6:4]: Resolution selection //0x02 color bar
+          234 : sreg <= 16'h17_11; // HREFST[10:3]
+          235 : sreg <= 16'h18_75; // HREFEND[10:3]
+          236 : sreg <= 16'h32_36; // Bit[5:3]: HREFEND[2:0]; Bit[2:0]: HREFST[2:0]
+          237 : sreg <= 16'h19_01; // VSTRT[9:2]
+          238 : sreg <= 16'h1a_97; // VEND[9:2]
+          239 : sreg <= 16'h03_0f; // Bit[3:2]: VEND[1:0]; Bit[1:0]: VSTRT[1:0]
+          240 : sreg <= 16'h37_40;
+          241 : sreg <= 16'h4f_bb;
+          242 : sreg <= 16'h50_9c;
+          243 : sreg <= 16'h5a_57;
+          244 : sreg <= 16'h6d_80;
+          245 : sreg <= 16'h3d_34;
+          246 : sreg <= 16'h39_02;
+          247 : sreg <= 16'h35_88;
+          248 : sreg <= 16'h22_0a;
+          249 : sreg <= 16'h37_40;
+          250 : sreg <= 16'h34_a0;
+          251 : sreg <= 16'h06_02;
+          252 : sreg <= 16'h0d_b7;
+          253 : sreg <= 16'h0e_01;
+	      
+          254 : sreg <= 16'hff_00;
+          255 : sreg <= 16'hc0_C8;
+          256 : sreg <= 16'hc1_96;
+          257 : sreg <= 16'h8c_00;
+          258 : sreg <= 16'h86_3D;
+          259 : sreg <= 16'h50_00;
+          260 : sreg <= 16'h51_90;
+          261 : sreg <= 16'h52_2C;
+          262 : sreg <= 16'h53_00;
+          263 : sreg <= 16'h54_00;
+          264 : sreg <= 16'h55_88;
+          265 : sreg <= 16'h5a_00;
+          266 : sreg <= 16'h5b_C0;
+          267 : sreg <= 16'h5c_01;
+          268 : sreg <= 16'hd3_02;
+
+          // 1280x1024(NG)
+          231 : sreg <= 16'hff_01;
+          232 : sreg <= 16'h11_01;
+          233 : sreg <= 16'h12_00; // Bit[6:4]: Resolution selection//0x02 color bar
+          234 : sreg <= 16'h17_11; // HREFST[10:3]
+          235 : sreg <= 16'h18_75; // HREFEND[10:3]
+          236 : sreg <= 16'h32_36; // Bit[5:3]: HREFEND[2:0]; Bit[2:0]: HREFST[2:0]
+          237 : sreg <= 16'h19_01; // VSTRT[9:2]
+          238 : sreg <= 16'h1a_97; // VEND[9:2]
+          239 : sreg <= 16'h03_0f; // Bit[3:2]: VEND[1:0]; Bit[1:0]: VSTRT[1:0]
+          240 : sreg <= 16'h37_40;
+          241 : sreg <= 16'h4f_bb;
+          242 : sreg <= 16'h50_9c;
+          243 : sreg <= 16'h5a_57;
+          244 : sreg <= 16'h6d_80;
+          245 : sreg <= 16'h3d_34;
+          246 : sreg <= 16'h39_02;
+          247 : sreg <= 16'h35_88;
+          248 : sreg <= 16'h22_0a;
+          249 : sreg <= 16'h37_40;
+          250 : sreg <= 16'h34_a0;
+          251 : sreg <= 16'h06_02;
+          252 : sreg <= 16'h0d_b7;
+          253 : sreg <= 16'h0e_01;
+	      
+          254 : sreg <= 16'hff_00;
+          255 : sreg <= 16'he0_04;
+          256 : sreg <= 16'hA0_c8; // HSize[10:3]=A0 (c8)  
+          257 : sreg <= 16'hc1_80; // VSize(10:3]=80 (96)
+          258 : sreg <= 16'h86_3d; // ?
+          259 : sreg <= 16'h50_00;
+          260 : sreg <= 16'h51_40; // HSiZe[7:0](real/4)=140 (90)
+          261 : sreg <= 16'h52_00; // VSize[7:0](real/4)=100 (2c)
+          262 : sreg <= 16'h53_00; 
+          263 : sreg <= 16'h54_00;
+          264 : sreg <= 16'h55_88; // (88)
+          265 : sreg <= 16'h57_00;
+          266 : sreg <= 16'h5a_40; // (40)
+          267 : sreg <= 16'h5b_00; // (Fo)
+          268 : sreg <= 16'h5c_05; // (01)
+          269 : sreg <= 16'hd3_02;
+          270 : sreg <= 16'he0_00;
+
+          // 1600x1200(NG)
+          231 : sreg <= 16'hff_01;
+          232 : sreg <= 16'h11_01;
+          233 : sreg <= 16'h12_00; // Bit[6:4]: Resolution selection//0x02葎科訳
+          234 : sreg <= 16'h17_11; // HREFST[10:3]
+          235 : sreg <= 16'h18_75; // HREFEND[10:3]
+          236 : sreg <= 16'h32_36; // Bit[5:3]: HREFEND[2:0]; Bit[2:0]: HREFST[2:0]
+          237 : sreg <= 16'h19_01; // VSTRT[9:2]
+          238 : sreg <= 16'h1a_97; // VEND[9:2]
+          239 : sreg <= 16'h03_0f; // Bit[3:2]: VEND[1:0]; Bit[1:0]: VSTRT[1:0]
+          240 : sreg <= 16'h37_40;
+          241 : sreg <= 16'h4f_bb;
+          242 : sreg <= 16'h50_9c;
+          243 : sreg <= 16'h5a_57;
+          244 : sreg <= 16'h6d_80;
+          245 : sreg <= 16'h3d_34;
+          246 : sreg <= 16'h39_02;
+          247 : sreg <= 16'h35_88;
+          248 : sreg <= 16'h22_0a;
+          249 : sreg <= 16'h37_40;
+          250 : sreg <= 16'h34_a0;
+          251 : sreg <= 16'h06_02;
+          252 : sreg <= 16'h0d_b7;
+          253 : sreg <= 16'h0e_01;
+	      
+          254 : sreg <= 16'hff_00;        	                              
+          255 : sreg <= 16'he0_04;                                   
+          256 : sreg <= 16'hc0_c8;                                   
+          257 : sreg <= 16'hc1_96;                                   
+          258 : sreg <= 16'h86_3d;                                   
+          259 : sreg <= 16'h50_00;                                   
+          260 : sreg <= 16'h51_90;                                   
+          261 : sreg <= 16'h52_2c;                                   
+          262 : sreg <= 16'h53_00;                                   
+          263 : sreg <= 16'h54_00;                                   
+          264 : sreg <= 16'h55_88;                                   
+          265 : sreg <= 16'h57_00;                                   
+          266 : sreg <= 16'h5a_90;                                   
+          267 : sreg <= 16'h5b_2C;                                   
+          268 : sreg <= 16'h5c_05;              //bit2->1;bit[1:0]->1
+          269 : sreg <= 16'hd3_02;                                   
+          270 : sreg <= 16'he0_00;                                   
+
+*/                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        

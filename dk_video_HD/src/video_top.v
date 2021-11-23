@@ -254,7 +254,7 @@ Video_Frame_Buffer_Top Video_Frame_Buffer_Top_inst
     .I_vin0_data        (ch0_vfb_data_in  ),
     .O_vin0_fifo_full   (                 ),
     // video data output          
-    .I_vout0_clk        (pix_clk          ), // 74.25MHz PIXCLKx3
+    .I_vout0_clk        (memory_clk),//pix_clk          ), // 74.25MHz PIXCLKx3
     .I_vout0_vs_n       (~syn_off0_vs     ),
     .I_vout0_de         (syn_off0_re      ),
     .O_vout0_den        (off0_syn_de      ),
@@ -307,8 +307,7 @@ HyperRAM_Memory_Interface_Top HyperRAM_Memory_Interface_Top_inst
 wire out_de;
 syn_gen syn_gen_inst
 (
-/*    // 1280x720
-    .I_pxl_clk   (pix_clk         ),//40MHz      //65MHz      //74.25MHz    
+/*    .I_pxl_clk   (pix_clk         ),//40MHz      //65MHz      //74.25MHz    
     .I_rst_n     (hdmi_rst_n      ),//800x600    //1024x768   //1280x720       
     .I_h_total   (16'd1650        ),// 16'd1056  // 16'd1344  // 16'd1650    
     .I_h_sync    (16'd40          ),// 16'd128   // 16'd136   // 16'd40     
@@ -328,7 +327,7 @@ syn_gen syn_gen_inst
     .O_vs        (syn_off0_vs     )
 */
     // 1920x1080
-    .I_pxl_clk   (memory_clk      ),//40MHz      //65MHz      //74.25MHz    
+    .I_pxl_clk   (memory_clk      ),//40MHz      //65MHz      //74.25MHz    // 148.5MHz   
     .I_rst_n     (hdmi_rst_n      ),//800x600    //1024x768   //1280x720       
     .I_h_total   (16'd2200        ),// 16'd1056  // 16'd1344  // 16'd1650    
     .I_h_sync    (16'd44          ),// 16'd128   // 16'd136   // 16'd40     
