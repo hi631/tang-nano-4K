@@ -2,11 +2,10 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="PIXCLK" trig_type="0" storage_depth="4096" window_num="1" capture_amount="4096" trigger_pos="100">
+    <AoCore index="0" sample_clock="PIXCLK" trig_type="0" storage_depth="2048" window_num="1" capture_amount="2048" trigger_pos="100">
         <SignalList>
             <Signal>HREF</Signal>
             <Signal>PIXCLK565</Signal>
-            <Signal>PIXCLK</Signal>
             <Bus name="PIXDATA[9:2]">
                 <Signal>PIXDATA[9]</Signal>
                 <Signal>PIXDATA[8]</Signal>
@@ -62,5 +61,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0111001000111000</GAO_ID>
+    <GAO_ID>1100001010001110</GAO_ID>
 </GAO_CONFIG>

@@ -1,3 +1,7 @@
+//`define USE_640
+//`define USE_800
+`define USE_1024
+
 module OV2640_Registers (
     input clk, 
     input resend, 
@@ -269,80 +273,10 @@ module OV2640_Registers (
           229 : sreg <= 16'hE1_77;
           230 : sreg <= 16'hE0_00;            
 
-          // 640x480以上にする場合、下記の該当項目を有効にする。
-          // video_top.vのsyn_gen_instのI_rd_hres,I_rd_vresを併せて変更
-
-          // 800x600,1024x768共通部
-          231 : sreg <= 16'hff_01;
-          232 : sreg <= 16'h11_01;
-          233 : sreg <= 16'h12_00; // Bit[6:4]: Resolution selection //0x02 color bar
-          234 : sreg <= 16'h17_11; // HREFST[10:3]
-          235 : sreg <= 16'h18_75; // HREFEND[10:3]
-          236 : sreg <= 16'h32_36; // Bit[5:3]: HREFEND[2:0]; Bit[2:0]: HREFST[2:0]
-          237 : sreg <= 16'h19_01; // VSTRT[9:2]
-          238 : sreg <= 16'h1a_97; // VEND[9:2]
-          239 : sreg <= 16'h03_0f; // Bit[3:2]: VEND[1:0]; Bit[1:0]: VSTRT[1:0]
-          240 : sreg <= 16'h37_40;
-          241 : sreg <= 16'h4f_bb;
-          242 : sreg <= 16'h50_9c;
-          243 : sreg <= 16'h5a_57;
-          244 : sreg <= 16'h6d_80;
-          245 : sreg <= 16'h3d_34;
-          246 : sreg <= 16'h39_02;
-          247 : sreg <= 16'h35_88;
-          248 : sreg <= 16'h22_0a;
-          249 : sreg <= 16'h37_40;
-          250 : sreg <= 16'h34_a0;
-          251 : sreg <= 16'h06_02;
-          252 : sreg <= 16'h0d_b7;
-          253 : sreg <= 16'h0e_01;
-/*
-          // Set 800x600
-          254 : sreg <= 16'hff_00;
-          255 : sreg <= 16'he0_04;
-          256 : sreg <= 16'hc0_c8;
-          257 : sreg <= 16'hc1_96;
-          258 : sreg <= 16'h86_35;
-          259 : sreg <= 16'h50_89;
-          260 : sreg <= 16'h51_90;
-          261 : sreg <= 16'h52_2c;
-          262 : sreg <= 16'h53_00;
-          263 : sreg <= 16'h54_00;
-          264 : sreg <= 16'h55_88;
-          265 : sreg <= 16'h57_00;
-          266 : sreg <= 16'h5a_c8;
-          267 : sreg <= 16'h5b_96;
-          268 : sreg <= 16'h5c_00;
-          269 : sreg <= 16'hd3_02;
-          270 : sreg <= 16'he0_00;
-*/
-          // Set 1024x768
-          254 : sreg <= 16'hff_00;
-          255 : sreg <= 16'hc0_C8;
-          256 : sreg <= 16'hc1_96;
-          257 : sreg <= 16'h8c_00;
-          258 : sreg <= 16'h86_3D;
-          259 : sreg <= 16'h50_00;
-          260 : sreg <= 16'h51_90;
-          261 : sreg <= 16'h52_2C;
-          262 : sreg <= 16'h53_00;
-          263 : sreg <= 16'h54_00;
-          264 : sreg <= 16'h55_88;
-          265 : sreg <= 16'h5a_00;
-          266 : sreg <= 16'h5b_C0;
-          267 : sreg <= 16'h5c_01;
-          268 : sreg <= 16'hd3_02;
-
-          default : sreg <= 16'hFF_FF;    // End configuration
-        endcase  
-            
-    end 
-endmodule               
-                        
-/*
+`ifdef USE_800
           // Set 800x600
           231 : sreg <= 16'hff_01;
-          232 : sreg <= 16'h11_01;
+          232 : sreg <= 16'h11_80;
           233 : sreg <= 16'h12_00;// Bit[6:4]: Resolution selection //02 color bar
           234 : sreg <= 16'h17_11;// HREFST[10:3]
           235 : sreg <= 16'h18_75;// HREFEND[10:3]
@@ -382,10 +316,11 @@ endmodule
           268 : sreg <= 16'h5c_00;
           269 : sreg <= 16'hd3_02;
           270 : sreg <= 16'he0_00;
-
+`endif
+`ifdef USE_1024
           // Set 1024x768
           231 : sreg <= 16'hff_01;
-          232 : sreg <= 16'h11_01;
+          232 : sreg <= 16'h11_80;
           233 : sreg <= 16'h12_00; // Bit[6:4]: Resolution selection //0x02 color bar
           234 : sreg <= 16'h17_11; // HREFST[10:3]
           235 : sreg <= 16'h18_75; // HREFEND[10:3]
@@ -423,7 +358,14 @@ endmodule
           266 : sreg <= 16'h5b_C0;
           267 : sreg <= 16'h5c_01;
           268 : sreg <= 16'hd3_02;
-
+`endif
+          default : sreg <= 16'hFF_FF;    // End configuration
+        endcase  
+            
+    end 
+endmodule               
+                        
+/*
           // 1280x1024(NG)
           231 : sreg <= 16'hff_01;
           232 : sreg <= 16'h11_01;
@@ -510,31 +452,4 @@ endmodule
           269 : sreg <= 16'hd3_02;                                   
           270 : sreg <= 16'he0_00;                                   
 
-*/                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+*/   

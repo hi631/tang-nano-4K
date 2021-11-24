@@ -18,6 +18,7 @@
 // V1.0    | Caojie     | 11/22/19     | Initial version 
 // ----------------------------------------------------------------------------------
 // ==============0ooo===================================================0ooo===========
+`define USE_HD
   
 module video_top
 (
@@ -222,8 +223,7 @@ end
 
 // assign cam_data = {pixdata_d1[9:5],pixdata_d1[4:2],PIXDATA[9:7],PIXDATA[6:2]}; //RGB565
 // assign cam_data = {PIXDATA[9:5],PIXDATA[4:2],pixdata_d1[9:7],pixdata_d1[6:2]}; //RGB565
-//assign cam_data = {PIXDATA[9:5],PIXDATA[9:4],PIXDATA[9:5]}; //RAW10
-
+// assign cam_data = {PIXDATA[9:5],PIXDATA[9:4],PIXDATA[9:5]}; //RAW10
 assign cam_data = PIXDAT565;
 
 //==============================================
@@ -253,8 +253,12 @@ Video_Frame_Buffer_Top Video_Frame_Buffer_Top_inst
     .I_vin0_de          (ch0_vfb_de_in    ),
     .I_vin0_data        (ch0_vfb_data_in  ),
     .O_vin0_fifo_full   (                 ),
-    // video data output          
-    .I_vout0_clk        (memory_clk),//pix_clk          ), // 74.25MHz PIXCLKx3
+    // video data output 
+`ifdef USE_HD           
+    .I_vout0_clk        (memory_clk       ), // 148.5MHz
+`else
+    .I_vout0_clk        (pix_clk          ), // 74.25MHz PIXCLKx3
+`endif
     .I_vout0_vs_n       (~syn_off0_vs     ),
     .I_vout0_de         (syn_off0_re      ),
     .O_vout0_den        (off0_syn_de      ),
@@ -275,7 +279,7 @@ Video_Frame_Buffer_Top Video_Frame_Buffer_Top_inst
 //HyperRAM ip
 GW_PLLVR GW_PLLVR_inst
 (
-    .clkout(memory_clk    ), //output clkout 159MHz(53/9)
+    .clkout(memory_clk    ), //output clkout 159MHz(53/9) -> 148.5MHz
     .lock  (mem_pll_lock  ), //output lock
     .clkin (I_clk         )  //input clkin   27MHz
 );
@@ -307,7 +311,20 @@ HyperRAM_Memory_Interface_Top HyperRAM_Memory_Interface_Top_inst
 wire out_de;
 syn_gen syn_gen_inst
 (
-/*    .I_pxl_clk   (pix_clk         ),//40MHz      //65MHz      //74.25MHz    
+`ifdef USE_HD           
+    // 1920x1080
+    .I_pxl_clk   (memory_clk      ),//148.5MHz  
+    .I_rst_n     (hdmi_rst_n      ),      
+    .I_h_total   (16'd2200        ),    
+    .I_h_sync    (16'd44          ),    
+    .I_h_bporch  (16'd148         ),
+    .I_h_res     (16'd1920        ),
+    .I_v_total   (16'd1125        ),    
+    .I_v_sync    (16'd5           ),  
+    .I_v_bporch  (16'd36          ),     
+    .I_v_res     (16'd1080        ),      
+`else
+    .I_pxl_clk   (pix_clk         ),//40MHz      //65MHz      //74.25MHz    
     .I_rst_n     (hdmi_rst_n      ),//800x600    //1024x768   //1280x720       
     .I_h_total   (16'd1650        ),// 16'd1056  // 16'd1344  // 16'd1650    
     .I_h_sync    (16'd40          ),// 16'd128   // 16'd136   // 16'd40     
@@ -317,35 +334,25 @@ syn_gen syn_gen_inst
     .I_v_sync    (16'd5           ),// 16'd4     // 16'd6     // 16'd5        
     .I_v_bporch  (16'd20          ),// 16'd23    // 16'd29    // 16'd20        
     .I_v_res     (16'd720         ),// 16'd600   // 16'd768   // 16'd720      
+`endif
+`ifdef USE_640
+    .I_rd_hres   (16'd640         ),
+    .I_rd_vres   (16'd480         ),
+`endif
+`ifdef USE_800 
+    .I_rd_hres   (16'd800         ),
+    .I_rd_vres   (16'd600         ),
+`endif
+`ifdef USE_1024 
     .I_rd_hres   (16'd1024        ),
     .I_rd_vres   (16'd768         ),
+`endif
     .I_hs_pol    (1'b1            ),//HS polarity , 0:??性，1：正?性
     .I_vs_pol    (1'b1            ),//VS polarity , 0:??性，1：正?性
     .O_rden      (syn_off0_re     ),
     .O_de        (out_de          ),   
     .O_hs        (syn_off0_hs     ),
     .O_vs        (syn_off0_vs     )
-*/
-    // 1920x1080
-    .I_pxl_clk   (memory_clk      ),//40MHz      //65MHz      //74.25MHz    // 148.5MHz   
-    .I_rst_n     (hdmi_rst_n      ),//800x600    //1024x768   //1280x720       
-    .I_h_total   (16'd2200        ),// 16'd1056  // 16'd1344  // 16'd1650    
-    .I_h_sync    (16'd44          ),// 16'd128   // 16'd136   // 16'd40     
-    .I_h_bporch  (16'd148         ),// 16'd88    // 16'd160   // 16'd220     
-    .I_h_res     (16'd1920        ),// 16'd800   // 16'd1024  // 16'd1280    
-    .I_v_total   (16'd1125         ),// 16'd628   // 16'd806   // 16'd750      
-    .I_v_sync    (16'd5           ),// 16'd4     // 16'd6     // 16'd5        
-    .I_v_bporch  (16'd36          ),// 16'd23    // 16'd29    // 16'd20        
-    .I_v_res     (16'd1080         ),// 16'd600   // 16'd768   // 16'd720      
-    .I_rd_hres   (16'd1024        ),
-    .I_rd_vres   (16'd768         ),
-    .I_hs_pol    (1'b1            ),//HS polarity , 0:??性，1：正?性
-    .I_vs_pol    (1'b1            ),//VS polarity , 0:??性，1：正?性
-    .O_rden      (syn_off0_re     ),
-    .O_de        (out_de          ),   
-    .O_hs        (syn_off0_hs     ),
-    .O_vs        (syn_off0_vs     )
-
 );
 
 localparam N = 5; //delay N clocks
@@ -377,11 +384,11 @@ assign rgb_vs      = Pout_vs_dn[4];//syn_off0_vs;
 assign rgb_hs      = Pout_hs_dn[4];//syn_off0_hs;
 assign rgb_de      = Pout_de_dn[4];//off0_syn_de;
 
-//assign tsig[0] = I_clk;     // (27.00MHz)27MHz       XTAL 
-//assign tsig[1] = pix_clk;   // (74.25MHz)73.5MHz  <- I_clkx2.75(11/4)
-//assign tsig[3] = PIXCLK;    // (24.75MHz)24.7MHz  <- pix_clk/3
-//assign tsig[2] = XCLK;      // (12.375MHz)12.4MHz <- PIXCLK/2
-//assign tsig[4] = serial_clk;// (371.25MHz)***     <- pix_clkx5
+//assign tsig[0] = I_clk;     // (27.00MHz)     XTAL 
+//assign tsig[1] = pix_clk;   // (74.25MHz)  <- I_clkx2.75(11/4)
+//assign tsig[2] = PIXCLK;    // (24.75MHz)  <- pix_clk/3
+//assign tsig[3] = XCLK;      // (12.375MHz) <- PIXCLK/2
+//assign tsig[4] = serial_clk;// (371.25MHz) <- pix_clkx5
 
 TMDS_PLLVR TMDS_PLLVR_inst
 (.clkin     (I_clk     )     //input clk     (27M) 

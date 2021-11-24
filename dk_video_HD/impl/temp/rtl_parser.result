@@ -1,15 +1,15 @@
 [
  {
   "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_top.v",
-  "InstLine" : 22,
+  "InstLine" : 23,
   "InstName" : "video_top",
   "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_top.v",
-  "ModuleLine" : 22,
+  "ModuleLine" : 23,
   "ModuleName" : "video_top",
   "SubInsts" : [
    {
     "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_top.v",
-    "InstLine" : 140,
+    "InstLine" : 141,
     "InstName" : "testpattern_inst",
     "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/testpattern.v",
     "ModuleLine" : 17,
@@ -17,7 +17,7 @@
    },
    {
     "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_top.v",
-    "InstLine" : 184,
+    "InstLine" : 185,
     "InstName" : "u_OV2640_Controller",
     "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/ov2640/OV2640_Controller.v",
     "ModuleLine" : 1,
@@ -28,7 +28,7 @@
       "InstLine" : 30,
       "InstName" : "LUT",
       "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/ov2640/OV2640_Registers.v",
-      "ModuleLine" : 1,
+      "ModuleLine" : 5,
       "ModuleName" : "OV2640_Registers"
      },
      {
@@ -61,7 +61,7 @@
    },
    {
     "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_top.v",
-    "InstLine" : 276,
+    "InstLine" : 280,
     "InstName" : "GW_PLLVR_inst",
     "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/gowin_pllvr/GW_PLLVR.v",
     "ModuleLine" : 9,
@@ -69,7 +69,7 @@
    },
    {
     "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_top.v",
-    "InstLine" : 283,
+    "InstLine" : 287,
     "InstName" : "HyperRAM_Memory_Interface_Top_inst",
     "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/hyperram_memory_interface/hyperram_memory_interface.v",
     "ModuleLine" : 3735,
@@ -87,7 +87,7 @@
    },
    {
     "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_top.v",
-    "InstLine" : 308,
+    "InstLine" : 312,
     "InstName" : "syn_gen_inst",
     "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/syn_code/syn_gen.v",
     "ModuleLine" : 13,
@@ -95,7 +95,7 @@
    },
    {
     "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_top.v",
-    "InstLine" : 387,
+    "InstLine" : 393,
     "InstName" : "TMDS_PLLVR_inst",
     "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/gowin_pllvr/TMDS_PLLVR.v",
     "ModuleLine" : 9,
@@ -103,7 +103,7 @@
    },
    {
     "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/video_top.v",
-    "InstLine" : 404,
+    "InstLine" : 410,
     "InstName" : "DVI_TX_Top_inst",
     "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_video/src/dvi_tx/dvi_tx.v",
     "ModuleLine" : 1048,

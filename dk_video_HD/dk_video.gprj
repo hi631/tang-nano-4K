@@ -18,6 +18,6 @@
         <File path="src/video_top.v" type="file.verilog" enable="1"/>
         <File path="src/dk_video.cst" type="file.cst" enable="1"/>
         <File path="src/dk_video.sdc" type="file.sdc" enable="1"/>
-        <File path="src/dk_video.rao" type="file.gao" enable="1"/>
+        <File path="src/dk_video.rao" type="file.gao" enable="0"/>
     </FileList>
 </Project>
