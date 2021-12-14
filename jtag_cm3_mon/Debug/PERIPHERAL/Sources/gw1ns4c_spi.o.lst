@@ -1,0 +1,1380 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gw1ns4c_spi.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.SPI_Init,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	SPI_Init
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	SPI_Init:
+  26              	.LVL0:
+  27              	.LFB29:
+  28              		.file 1 "../PERIPHERAL/Sources/gw1ns4c_spi.c"
+   1:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /*
+   2:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  * *****************************************************************************************
+   3:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  *
+   4:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  *         Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  * 
+   6:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  * @file        gw1ns4c_spi.c
+   7:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  * @author      Embedded Development Team
+   8:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  * @version     V1.x.x
+   9:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  * @date        2021-07-01 09:00:00
+  10:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  * @brief       This file contains all the functions prototypes for the SPI firmware library.
+  11:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  ******************************************************************************************
+  12:../PERIPHERAL/Sources/gw1ns4c_spi.c ****  */
+  13:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  14:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /* Includes ------------------------------------------------------------------*/
+  15:../PERIPHERAL/Sources/gw1ns4c_spi.c **** #include "gw1ns4c_spi.h"
+  16:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  17:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /** @addtogroup GW1NS4C_StdPeriph_Driver
+  18:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @{
+  19:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  20:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  21:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /** @defgroup SPI
+  22:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief SPI driver modules
+  23:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @{
+  24:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  25:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  26:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /** @defgroup SPI_Private_TypesDefinitions
+  27:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @{
+  28:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  29:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  30:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+  31:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @}
+  32:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  33:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  34:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /** @defgroup SPI_Private_Macros
+  35:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @{
+  36:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  37:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  38:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+  39:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @}
+  40:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  41:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  42:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /** @defgroup SPI_Private_Variables
+  43:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @{
+  44:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  45:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  46:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+  47:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @}
+  48:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  49:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  50:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /** @defgroup SPI_Private_FunctionPrototypes
+  51:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @{
+  52:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  53:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  54:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+  55:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @}
+  56:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  57:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  58:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /** @defgroup SPI_Private_Functions
+  59:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @{
+  60:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  61:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  62:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+  63:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param SPI_InitTypeDef Pointer
+  64:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+  65:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Initializes SPI
+  66:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+  67:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_Init(SPI_InitTypeDef* SPI_InitStruct)
+  68:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+  29              		.loc 1 68 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  69:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   uint32_t new_ctrl = 0;
+  34              		.loc 1 69 3 view .LVU1
+  70:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  71:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL = 0;
+  35              		.loc 1 71 3 view .LVU2
+  36              		.loc 1 71 13 is_stmt 0 view .LVU3
+  37 0000 0022     		movs	r2, #0
+  38 0002 0D4B     		ldr	r3, .L5
+  39 0004 1A61     		str	r2, [r3, #16]
+  72:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->STATUS = 0;
+  40              		.loc 1 72 3 is_stmt 1 view .LVU4
+  41              		.loc 1 72 15 is_stmt 0 view .LVU5
+  42 0006 9A60     		str	r2, [r3, #8]
+  73:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  74:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   /* Set Direction */
+  75:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   if(SPI_InitStruct->DIRECTION == 1)
+  43              		.loc 1 75 3 is_stmt 1 view .LVU6
+  44              		.loc 1 75 5 is_stmt 0 view .LVU7
+  45 0008 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+  76:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   {
+  77:../PERIPHERAL/Sources/gw1ns4c_spi.c ****     new_ctrl |= SPI_CR_DIRECTION;
+  78:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   }
+  79:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  80:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   /*Set Phase*/
+  81:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   if(SPI_InitStruct->PHASE == 1)
+  46              		.loc 1 81 5 view .LVU8
+  47 000a 4278     		ldrb	r2, [r0, #1]	@ zero_extendqisi2
+  75:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   {
+  48              		.loc 1 75 5 view .LVU9
+  49 000c A3F10103 		sub	r3, #1
+  50 0010 B3FA83F3 		clz	r3, r3
+  51              		.loc 1 81 5 view .LVU10
+  52 0014 012A     		cmp	r2, #1
+  82:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   {
+  83:../PERIPHERAL/Sources/gw1ns4c_spi.c ****     new_ctrl |= SPI_CR_PHASE;
+  84:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   }
+  85:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  86:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   /*Set Polarity*/
+  87:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   if(SPI_InitStruct->POLARITY == 1)
+  53              		.loc 1 87 5 view .LVU11
+  54 0016 8278     		ldrb	r2, [r0, #2]	@ zero_extendqisi2
+  75:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   {
+  55              		.loc 1 75 5 view .LVU12
+  56 0018 4FEA5313 		lsr	r3, r3, #5
+  57              	.LVL1:
+  81:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   {
+  58              		.loc 1 81 3 is_stmt 1 view .LVU13
+  83:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   }
+  59              		.loc 1 83 5 view .LVU14
+  83:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   }
+  60              		.loc 1 83 14 is_stmt 0 view .LVU15
+  61 001c 08BF     		it	eq
+  62 001e 43F00203 		orreq	r3, r3, #2
+  63              	.LVL2:
+  64              		.loc 1 87 3 is_stmt 1 view .LVU16
+  88:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   {
+  89:../PERIPHERAL/Sources/gw1ns4c_spi.c ****     new_ctrl |= SPI_CR_POLARITY;
+  90:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   }
+  91:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  92:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   /*Set ClkSel*/
+  93:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   new_ctrl |= (SPI_InitStruct->CLKSEL << SPI_CR_CLKSEL_Pos);
+  65              		.loc 1 93 30 is_stmt 0 view .LVU17
+  66 0022 C178     		ldrb	r1, [r0, #3]	@ zero_extendqisi2
+  87:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   {
+  67              		.loc 1 87 5 view .LVU18
+  68 0024 012A     		cmp	r2, #1
+  89:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   }
+  69              		.loc 1 89 5 is_stmt 1 view .LVU19
+  89:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   }
+  70              		.loc 1 89 14 is_stmt 0 view .LVU20
+  71 0026 08BF     		it	eq
+  72 0028 43F00403 		orreq	r3, r3, #4
+  73              	.LVL3:
+  74              		.loc 1 93 3 is_stmt 1 view .LVU21
+  94:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  95:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL = new_ctrl;
+  75              		.loc 1 95 13 is_stmt 0 view .LVU22
+  76 002c 024A     		ldr	r2, .L5
+  93:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  77              		.loc 1 93 12 view .LVU23
+  78 002e 43EAC103 		orr	r3, r3, r1, lsl #3
+  79              	.LVL4:
+  80              		.loc 1 95 3 is_stmt 1 view .LVU24
+  81              		.loc 1 95 13 is_stmt 0 view .LVU25
+  82 0032 1361     		str	r3, [r2, #16]
+  96:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+  83              		.loc 1 96 1 view .LVU26
+  84 0034 7047     		bx	lr
+  85              	.L6:
+  86 0036 00BF     		.align	2
+  87              	.L5:
+  88 0038 00220040 		.word	1073750528
+  89              		.cfi_endproc
+  90              	.LFE29:
+  92              		.section	.text.SPI_SetDirection,"ax",%progbits
+  93              		.align	1
+  94              		.p2align 2,,3
+  95              		.global	SPI_SetDirection
+  96              		.syntax unified
+  97              		.thumb
+  98              		.thumb_func
+  99              		.fpu softvfp
+ 101              	SPI_SetDirection:
+ 102              	.LFB30:
+  97:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+  98:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+  99:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 100:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 101:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Sets Direction
+ 102:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 103:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_SetDirection(void)
+ 104:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 103              		.loc 1 104 1 is_stmt 1 view -0
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 0
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+ 107              		@ link register save eliminated.
+ 105:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL |= SPI_CR_DIRECTION;
+ 108              		.loc 1 105 3 view .LVU28
+ 109              		.loc 1 105 13 is_stmt 0 view .LVU29
+ 110 0000 024A     		ldr	r2, .L8
+ 111 0002 1369     		ldr	r3, [r2, #16]
+ 112 0004 43F00103 		orr	r3, r3, #1
+ 113 0008 1361     		str	r3, [r2, #16]
+ 106:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 114              		.loc 1 106 1 view .LVU30
+ 115 000a 7047     		bx	lr
+ 116              	.L9:
+ 117              		.align	2
+ 118              	.L8:
+ 119 000c 00220040 		.word	1073750528
+ 120              		.cfi_endproc
+ 121              	.LFE30:
+ 123              		.section	.text.SPI_ClrDirection,"ax",%progbits
+ 124              		.align	1
+ 125              		.p2align 2,,3
+ 126              		.global	SPI_ClrDirection
+ 127              		.syntax unified
+ 128              		.thumb
+ 129              		.thumb_func
+ 130              		.fpu softvfp
+ 132              	SPI_ClrDirection:
+ 133              	.LFB31:
+ 107:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 108:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 109:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 110:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 111:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Clears Direction
+ 112:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 113:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_ClrDirection(void)
+ 114:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 134              		.loc 1 114 1 is_stmt 1 view -0
+ 135              		.cfi_startproc
+ 136              		@ args = 0, pretend = 0, frame = 0
+ 137              		@ frame_needed = 0, uses_anonymous_args = 0
+ 138              		@ link register save eliminated.
+ 115:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL &= ~SPI_CR_DIRECTION;
+ 139              		.loc 1 115 3 view .LVU32
+ 140              		.loc 1 115 13 is_stmt 0 view .LVU33
+ 141 0000 024A     		ldr	r2, .L11
+ 142 0002 1369     		ldr	r3, [r2, #16]
+ 143 0004 23F00103 		bic	r3, r3, #1
+ 144 0008 1361     		str	r3, [r2, #16]
+ 116:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 145              		.loc 1 116 1 view .LVU34
+ 146 000a 7047     		bx	lr
+ 147              	.L12:
+ 148              		.align	2
+ 149              	.L11:
+ 150 000c 00220040 		.word	1073750528
+ 151              		.cfi_endproc
+ 152              	.LFE31:
+ 154              		.section	.text.SPI_GetDirection,"ax",%progbits
+ 155              		.align	1
+ 156              		.p2align 2,,3
+ 157              		.global	SPI_GetDirection
+ 158              		.syntax unified
+ 159              		.thumb
+ 160              		.thumb_func
+ 161              		.fpu softvfp
+ 163              	SPI_GetDirection:
+ 164              	.LFB32:
+ 117:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 118:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 119:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 120:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return uint32_t
+ 121:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Returns Direction
+ 122:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 123:../PERIPHERAL/Sources/gw1ns4c_spi.c **** uint32_t SPI_GetDirection(void)
+ 124:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 165              		.loc 1 124 1 is_stmt 1 view -0
+ 166              		.cfi_startproc
+ 167              		@ args = 0, pretend = 0, frame = 0
+ 168              		@ frame_needed = 0, uses_anonymous_args = 0
+ 169              		@ link register save eliminated.
+ 125:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return ((SPI->CTRL&SPI_CR_DIRECTION)==SPI_CR_DIRECTION);
+ 170              		.loc 1 125 3 view .LVU36
+ 171              		.loc 1 125 15 is_stmt 0 view .LVU37
+ 172 0000 024B     		ldr	r3, .L14
+ 173 0002 1869     		ldr	r0, [r3, #16]
+ 126:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 174              		.loc 1 126 1 view .LVU38
+ 175 0004 00F00100 		and	r0, r0, #1
+ 176 0008 7047     		bx	lr
+ 177              	.L15:
+ 178 000a 00BF     		.align	2
+ 179              	.L14:
+ 180 000c 00220040 		.word	1073750528
+ 181              		.cfi_endproc
+ 182              	.LFE32:
+ 184              		.section	.text.SPI_SetPhase,"ax",%progbits
+ 185              		.align	1
+ 186              		.p2align 2,,3
+ 187              		.global	SPI_SetPhase
+ 188              		.syntax unified
+ 189              		.thumb
+ 190              		.thumb_func
+ 191              		.fpu softvfp
+ 193              	SPI_SetPhase:
+ 194              	.LFB33:
+ 127:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 128:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 129:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 130:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 131:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Sets Phase
+ 132:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 133:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_SetPhase(void)
+ 134:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 195              		.loc 1 134 1 is_stmt 1 view -0
+ 196              		.cfi_startproc
+ 197              		@ args = 0, pretend = 0, frame = 0
+ 198              		@ frame_needed = 0, uses_anonymous_args = 0
+ 199              		@ link register save eliminated.
+ 135:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL |= SPI_CR_PHASE;
+ 200              		.loc 1 135 3 view .LVU40
+ 201              		.loc 1 135 13 is_stmt 0 view .LVU41
+ 202 0000 024A     		ldr	r2, .L17
+ 203 0002 1369     		ldr	r3, [r2, #16]
+ 204 0004 43F00203 		orr	r3, r3, #2
+ 205 0008 1361     		str	r3, [r2, #16]
+ 136:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 206              		.loc 1 136 1 view .LVU42
+ 207 000a 7047     		bx	lr
+ 208              	.L18:
+ 209              		.align	2
+ 210              	.L17:
+ 211 000c 00220040 		.word	1073750528
+ 212              		.cfi_endproc
+ 213              	.LFE33:
+ 215              		.section	.text.SPI_ClrPhase,"ax",%progbits
+ 216              		.align	1
+ 217              		.p2align 2,,3
+ 218              		.global	SPI_ClrPhase
+ 219              		.syntax unified
+ 220              		.thumb
+ 221              		.thumb_func
+ 222              		.fpu softvfp
+ 224              	SPI_ClrPhase:
+ 225              	.LFB34:
+ 137:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 138:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 139:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 140:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 141:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Clears Phase
+ 142:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 143:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_ClrPhase(void)
+ 144:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 226              		.loc 1 144 1 is_stmt 1 view -0
+ 227              		.cfi_startproc
+ 228              		@ args = 0, pretend = 0, frame = 0
+ 229              		@ frame_needed = 0, uses_anonymous_args = 0
+ 230              		@ link register save eliminated.
+ 145:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL &= ~SPI_CR_PHASE;
+ 231              		.loc 1 145 3 view .LVU44
+ 232              		.loc 1 145 13 is_stmt 0 view .LVU45
+ 233 0000 024A     		ldr	r2, .L20
+ 234 0002 1369     		ldr	r3, [r2, #16]
+ 235 0004 23F00203 		bic	r3, r3, #2
+ 236 0008 1361     		str	r3, [r2, #16]
+ 146:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 237              		.loc 1 146 1 view .LVU46
+ 238 000a 7047     		bx	lr
+ 239              	.L21:
+ 240              		.align	2
+ 241              	.L20:
+ 242 000c 00220040 		.word	1073750528
+ 243              		.cfi_endproc
+ 244              	.LFE34:
+ 246              		.section	.text.SPI_GetPhase,"ax",%progbits
+ 247              		.align	1
+ 248              		.p2align 2,,3
+ 249              		.global	SPI_GetPhase
+ 250              		.syntax unified
+ 251              		.thumb
+ 252              		.thumb_func
+ 253              		.fpu softvfp
+ 255              	SPI_GetPhase:
+ 256              	.LFB35:
+ 147:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 148:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 149:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 150:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return uint32_t
+ 151:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Returns Phase
+ 152:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 153:../PERIPHERAL/Sources/gw1ns4c_spi.c **** uint32_t SPI_GetPhase(void)
+ 154:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 257              		.loc 1 154 1 is_stmt 1 view -0
+ 258              		.cfi_startproc
+ 259              		@ args = 0, pretend = 0, frame = 0
+ 260              		@ frame_needed = 0, uses_anonymous_args = 0
+ 261              		@ link register save eliminated.
+ 155:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return ((SPI->CTRL&SPI_CR_PHASE)==SPI_CR_PHASE);
+ 262              		.loc 1 155 3 view .LVU48
+ 263              		.loc 1 155 15 is_stmt 0 view .LVU49
+ 264 0000 024B     		ldr	r3, .L23
+ 265 0002 1869     		ldr	r0, [r3, #16]
+ 156:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 266              		.loc 1 156 1 view .LVU50
+ 267 0004 C0F34000 		ubfx	r0, r0, #1, #1
+ 268 0008 7047     		bx	lr
+ 269              	.L24:
+ 270 000a 00BF     		.align	2
+ 271              	.L23:
+ 272 000c 00220040 		.word	1073750528
+ 273              		.cfi_endproc
+ 274              	.LFE35:
+ 276              		.section	.text.SPI_SetPolarity,"ax",%progbits
+ 277              		.align	1
+ 278              		.p2align 2,,3
+ 279              		.global	SPI_SetPolarity
+ 280              		.syntax unified
+ 281              		.thumb
+ 282              		.thumb_func
+ 283              		.fpu softvfp
+ 285              	SPI_SetPolarity:
+ 286              	.LFB36:
+ 157:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 158:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 159:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 160:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 161:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Sets Polarity
+ 162:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 163:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_SetPolarity(void)
+ 164:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 287              		.loc 1 164 1 is_stmt 1 view -0
+ 288              		.cfi_startproc
+ 289              		@ args = 0, pretend = 0, frame = 0
+ 290              		@ frame_needed = 0, uses_anonymous_args = 0
+ 291              		@ link register save eliminated.
+ 165:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL |= SPI_CR_POLARITY;
+ 292              		.loc 1 165 3 view .LVU52
+ 293              		.loc 1 165 13 is_stmt 0 view .LVU53
+ 294 0000 024A     		ldr	r2, .L26
+ 295 0002 1369     		ldr	r3, [r2, #16]
+ 296 0004 43F00403 		orr	r3, r3, #4
+ 297 0008 1361     		str	r3, [r2, #16]
+ 166:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 298              		.loc 1 166 1 view .LVU54
+ 299 000a 7047     		bx	lr
+ 300              	.L27:
+ 301              		.align	2
+ 302              	.L26:
+ 303 000c 00220040 		.word	1073750528
+ 304              		.cfi_endproc
+ 305              	.LFE36:
+ 307              		.section	.text.SPI_ClrPolarity,"ax",%progbits
+ 308              		.align	1
+ 309              		.p2align 2,,3
+ 310              		.global	SPI_ClrPolarity
+ 311              		.syntax unified
+ 312              		.thumb
+ 313              		.thumb_func
+ 314              		.fpu softvfp
+ 316              	SPI_ClrPolarity:
+ 317              	.LFB37:
+ 167:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 168:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 169:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 170:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 171:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Clears Polarity
+ 172:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 173:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_ClrPolarity(void)
+ 174:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 318              		.loc 1 174 1 is_stmt 1 view -0
+ 319              		.cfi_startproc
+ 320              		@ args = 0, pretend = 0, frame = 0
+ 321              		@ frame_needed = 0, uses_anonymous_args = 0
+ 322              		@ link register save eliminated.
+ 175:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL &= ~SPI_CR_POLARITY;
+ 323              		.loc 1 175 3 view .LVU56
+ 324              		.loc 1 175 13 is_stmt 0 view .LVU57
+ 325 0000 024A     		ldr	r2, .L29
+ 326 0002 1369     		ldr	r3, [r2, #16]
+ 327 0004 23F00403 		bic	r3, r3, #4
+ 328 0008 1361     		str	r3, [r2, #16]
+ 176:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 329              		.loc 1 176 1 view .LVU58
+ 330 000a 7047     		bx	lr
+ 331              	.L30:
+ 332              		.align	2
+ 333              	.L29:
+ 334 000c 00220040 		.word	1073750528
+ 335              		.cfi_endproc
+ 336              	.LFE37:
+ 338              		.section	.text.SPI_GetPolarity,"ax",%progbits
+ 339              		.align	1
+ 340              		.p2align 2,,3
+ 341              		.global	SPI_GetPolarity
+ 342              		.syntax unified
+ 343              		.thumb
+ 344              		.thumb_func
+ 345              		.fpu softvfp
+ 347              	SPI_GetPolarity:
+ 348              	.LFB38:
+ 177:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 178:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 179:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 180:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return uint32_t
+ 181:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Returns Polarity
+ 182:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 183:../PERIPHERAL/Sources/gw1ns4c_spi.c **** uint32_t SPI_GetPolarity(void)
+ 184:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 349              		.loc 1 184 1 is_stmt 1 view -0
+ 350              		.cfi_startproc
+ 351              		@ args = 0, pretend = 0, frame = 0
+ 352              		@ frame_needed = 0, uses_anonymous_args = 0
+ 353              		@ link register save eliminated.
+ 185:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return ((SPI->CTRL&SPI_CR_POLARITY)==SPI_CR_POLARITY);
+ 354              		.loc 1 185 3 view .LVU60
+ 355              		.loc 1 185 15 is_stmt 0 view .LVU61
+ 356 0000 024B     		ldr	r3, .L32
+ 357 0002 1869     		ldr	r0, [r3, #16]
+ 186:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 358              		.loc 1 186 1 view .LVU62
+ 359 0004 C0F38000 		ubfx	r0, r0, #2, #1
+ 360 0008 7047     		bx	lr
+ 361              	.L33:
+ 362 000a 00BF     		.align	2
+ 363              	.L32:
+ 364 000c 00220040 		.word	1073750528
+ 365              		.cfi_endproc
+ 366              	.LFE38:
+ 368              		.section	.text.SPI_SetClkSel,"ax",%progbits
+ 369              		.align	1
+ 370              		.p2align 2,,3
+ 371              		.global	SPI_SetClkSel
+ 372              		.syntax unified
+ 373              		.thumb
+ 374              		.thumb_func
+ 375              		.fpu softvfp
+ 377              	SPI_SetClkSel:
+ 378              	.LVL5:
+ 379              	.LFB39:
+ 187:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 188:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 189:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param uint32_t
+ 190:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 191:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief  Set ClkSel
+ 192:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 193:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_SetClkSel(uint32_t clksel)
+ 194:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 380              		.loc 1 194 1 is_stmt 1 view -0
+ 381              		.cfi_startproc
+ 382              		@ args = 0, pretend = 0, frame = 0
+ 383              		@ frame_needed = 0, uses_anonymous_args = 0
+ 384              		@ link register save eliminated.
+ 195:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL &= ~SPI_CR_CLKSEL;
+ 385              		.loc 1 195 3 view .LVU64
+ 386              		.loc 1 195 13 is_stmt 0 view .LVU65
+ 387 0000 054B     		ldr	r3, .L35
+ 196:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL |= ((clksel&SPI_CR_CLKSEL_Mask)<<SPI_CR_CLKSEL_Pos);
+ 388              		.loc 1 196 44 view .LVU66
+ 389 0002 C000     		lsls	r0, r0, #3
+ 390              	.LVL6:
+ 195:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL &= ~SPI_CR_CLKSEL;
+ 391              		.loc 1 195 13 view .LVU67
+ 392 0004 1A69     		ldr	r2, [r3, #16]
+ 393              		.loc 1 196 44 view .LVU68
+ 394 0006 00F01800 		and	r0, r0, #24
+ 195:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->CTRL &= ~SPI_CR_CLKSEL;
+ 395              		.loc 1 195 13 view .LVU69
+ 396 000a 22F01802 		bic	r2, r2, #24
+ 397 000e 1A61     		str	r2, [r3, #16]
+ 398              		.loc 1 196 3 is_stmt 1 view .LVU70
+ 399              		.loc 1 196 13 is_stmt 0 view .LVU71
+ 400 0010 1A69     		ldr	r2, [r3, #16]
+ 401 0012 1043     		orrs	r0, r0, r2
+ 402 0014 1861     		str	r0, [r3, #16]
+ 197:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 403              		.loc 1 197 1 view .LVU72
+ 404 0016 7047     		bx	lr
+ 405              	.L36:
+ 406              		.align	2
+ 407              	.L35:
+ 408 0018 00220040 		.word	1073750528
+ 409              		.cfi_endproc
+ 410              	.LFE39:
+ 412              		.section	.text.SPI_GetClkSel,"ax",%progbits
+ 413              		.align	1
+ 414              		.p2align 2,,3
+ 415              		.global	SPI_GetClkSel
+ 416              		.syntax unified
+ 417              		.thumb
+ 418              		.thumb_func
+ 419              		.fpu softvfp
+ 421              	SPI_GetClkSel:
+ 422              	.LFB40:
+ 198:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 199:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 200:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 201:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return uint32_t
+ 202:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Returns ClkSel
+ 203:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 204:../PERIPHERAL/Sources/gw1ns4c_spi.c **** uint32_t SPI_GetClkSel(void)
+ 205:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 423              		.loc 1 205 1 is_stmt 1 view -0
+ 424              		.cfi_startproc
+ 425              		@ args = 0, pretend = 0, frame = 0
+ 426              		@ frame_needed = 0, uses_anonymous_args = 0
+ 427              		@ link register save eliminated.
+ 206:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return ((SPI->CTRL >>SPI_CR_CLKSEL_Pos)&SPI_CR_CLKSEL_Mask);
+ 428              		.loc 1 206 3 view .LVU74
+ 429              		.loc 1 206 15 is_stmt 0 view .LVU75
+ 430 0000 024B     		ldr	r3, .L38
+ 431 0002 1869     		ldr	r0, [r3, #16]
+ 207:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 432              		.loc 1 207 1 view .LVU76
+ 433 0004 C0F3C100 		ubfx	r0, r0, #3, #2
+ 434 0008 7047     		bx	lr
+ 435              	.L39:
+ 436 000a 00BF     		.align	2
+ 437              	.L38:
+ 438 000c 00220040 		.word	1073750528
+ 439              		.cfi_endproc
+ 440              	.LFE40:
+ 442              		.section	.text.SPI_GetToeStatus,"ax",%progbits
+ 443              		.align	1
+ 444              		.p2align 2,,3
+ 445              		.global	SPI_GetToeStatus
+ 446              		.syntax unified
+ 447              		.thumb
+ 448              		.thumb_func
+ 449              		.fpu softvfp
+ 451              	SPI_GetToeStatus:
+ 452              	.LFB41:
+ 208:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 209:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 210:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 211:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return FlagStatus
+ 212:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Reads transmit overrun error status
+ 213:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 214:../PERIPHERAL/Sources/gw1ns4c_spi.c **** FlagStatus SPI_GetToeStatus(void)
+ 215:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 453              		.loc 1 215 1 is_stmt 1 view -0
+ 454              		.cfi_startproc
+ 455              		@ args = 0, pretend = 0, frame = 0
+ 456              		@ frame_needed = 0, uses_anonymous_args = 0
+ 457              		@ link register save eliminated.
+ 216:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return (FlagStatus)((SPI->STATUS&SPI_STATUS_TOE)==SPI_STATUS_TOE);
+ 458              		.loc 1 216 3 view .LVU78
+ 459              		.loc 1 216 27 is_stmt 0 view .LVU79
+ 460 0000 024B     		ldr	r3, .L41
+ 461 0002 9868     		ldr	r0, [r3, #8]
+ 217:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 462              		.loc 1 217 1 view .LVU80
+ 463 0004 C0F3C000 		ubfx	r0, r0, #3, #1
+ 464 0008 7047     		bx	lr
+ 465              	.L42:
+ 466 000a 00BF     		.align	2
+ 467              	.L41:
+ 468 000c 00220040 		.word	1073750528
+ 469              		.cfi_endproc
+ 470              	.LFE41:
+ 472              		.section	.text.SPI_GetRoeStatus,"ax",%progbits
+ 473              		.align	1
+ 474              		.p2align 2,,3
+ 475              		.global	SPI_GetRoeStatus
+ 476              		.syntax unified
+ 477              		.thumb
+ 478              		.thumb_func
+ 479              		.fpu softvfp
+ 481              	SPI_GetRoeStatus:
+ 482              	.LFB42:
+ 218:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 219:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 220:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 221:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return FlagStatus
+ 222:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Returns receive overrun error status
+ 223:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 224:../PERIPHERAL/Sources/gw1ns4c_spi.c **** FlagStatus SPI_GetRoeStatus(void)
+ 225:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 483              		.loc 1 225 1 is_stmt 1 view -0
+ 484              		.cfi_startproc
+ 485              		@ args = 0, pretend = 0, frame = 0
+ 486              		@ frame_needed = 0, uses_anonymous_args = 0
+ 487              		@ link register save eliminated.
+ 226:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return (FlagStatus)((SPI->STATUS&SPI_STATUS_ROE)==SPI_STATUS_ROE);
+ 488              		.loc 1 226 3 view .LVU82
+ 489              		.loc 1 226 27 is_stmt 0 view .LVU83
+ 490 0000 024B     		ldr	r3, .L44
+ 491 0002 9868     		ldr	r0, [r3, #8]
+ 227:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 492              		.loc 1 227 1 view .LVU84
+ 493 0004 C0F38000 		ubfx	r0, r0, #2, #1
+ 494 0008 7047     		bx	lr
+ 495              	.L45:
+ 496 000a 00BF     		.align	2
+ 497              	.L44:
+ 498 000c 00220040 		.word	1073750528
+ 499              		.cfi_endproc
+ 500              	.LFE42:
+ 502              		.section	.text.SPI_GetTmtStatus,"ax",%progbits
+ 503              		.align	1
+ 504              		.p2align 2,,3
+ 505              		.global	SPI_GetTmtStatus
+ 506              		.syntax unified
+ 507              		.thumb
+ 508              		.thumb_func
+ 509              		.fpu softvfp
+ 511              	SPI_GetTmtStatus:
+ 512              	.LFB43:
+ 228:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 229:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 230:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 231:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return FlagStatus
+ 232:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Returns transmitting status
+ 233:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 234:../PERIPHERAL/Sources/gw1ns4c_spi.c **** FlagStatus SPI_GetTmtStatus(void)
+ 235:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 513              		.loc 1 235 1 is_stmt 1 view -0
+ 514              		.cfi_startproc
+ 515              		@ args = 0, pretend = 0, frame = 0
+ 516              		@ frame_needed = 0, uses_anonymous_args = 0
+ 517              		@ link register save eliminated.
+ 236:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return (FlagStatus)((SPI->STATUS&SPI_STATUS_TMT)==SPI_STATUS_TMT);
+ 518              		.loc 1 236 3 view .LVU86
+ 519              		.loc 1 236 27 is_stmt 0 view .LVU87
+ 520 0000 024B     		ldr	r3, .L47
+ 521 0002 9868     		ldr	r0, [r3, #8]
+ 237:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 522              		.loc 1 237 1 view .LVU88
+ 523 0004 C0F30010 		ubfx	r0, r0, #4, #1
+ 524 0008 7047     		bx	lr
+ 525              	.L48:
+ 526 000a 00BF     		.align	2
+ 527              	.L47:
+ 528 000c 00220040 		.word	1073750528
+ 529              		.cfi_endproc
+ 530              	.LFE43:
+ 532              		.section	.text.SPI_GetTrdyStatus,"ax",%progbits
+ 533              		.align	1
+ 534              		.p2align 2,,3
+ 535              		.global	SPI_GetTrdyStatus
+ 536              		.syntax unified
+ 537              		.thumb
+ 538              		.thumb_func
+ 539              		.fpu softvfp
+ 541              	SPI_GetTrdyStatus:
+ 542              	.LFB44:
+ 238:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 239:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 240:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 241:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return FlagStatus
+ 242:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Return transmit ready status
+ 243:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 244:../PERIPHERAL/Sources/gw1ns4c_spi.c **** FlagStatus SPI_GetTrdyStatus(void)
+ 245:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 543              		.loc 1 245 1 is_stmt 1 view -0
+ 544              		.cfi_startproc
+ 545              		@ args = 0, pretend = 0, frame = 0
+ 546              		@ frame_needed = 0, uses_anonymous_args = 0
+ 547              		@ link register save eliminated.
+ 246:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return (FlagStatus)((SPI->STATUS & SPI_STATUS_TRDY) == SPI_STATUS_TRDY);
+ 548              		.loc 1 246 3 view .LVU90
+ 549              		.loc 1 246 27 is_stmt 0 view .LVU91
+ 550 0000 024B     		ldr	r3, .L50
+ 551 0002 9868     		ldr	r0, [r3, #8]
+ 247:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 552              		.loc 1 247 1 view .LVU92
+ 553 0004 C0F34010 		ubfx	r0, r0, #5, #1
+ 554 0008 7047     		bx	lr
+ 555              	.L51:
+ 556 000a 00BF     		.align	2
+ 557              	.L50:
+ 558 000c 00220040 		.word	1073750528
+ 559              		.cfi_endproc
+ 560              	.LFE44:
+ 562              		.section	.text.SPI_GetRrdyStatus,"ax",%progbits
+ 563              		.align	1
+ 564              		.p2align 2,,3
+ 565              		.global	SPI_GetRrdyStatus
+ 566              		.syntax unified
+ 567              		.thumb
+ 568              		.thumb_func
+ 569              		.fpu softvfp
+ 571              	SPI_GetRrdyStatus:
+ 572              	.LFB45:
+ 248:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 249:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 250:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 251:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return FlagStatus
+ 252:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Returns receive ready status
+ 253:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 254:../PERIPHERAL/Sources/gw1ns4c_spi.c **** FlagStatus SPI_GetRrdyStatus(void)
+ 255:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 573              		.loc 1 255 1 is_stmt 1 view -0
+ 574              		.cfi_startproc
+ 575              		@ args = 0, pretend = 0, frame = 0
+ 576              		@ frame_needed = 0, uses_anonymous_args = 0
+ 577              		@ link register save eliminated.
+ 256:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return (FlagStatus)((SPI->STATUS&SPI_STATUS_RRDY)==SPI_STATUS_RRDY);
+ 578              		.loc 1 256 3 view .LVU94
+ 579              		.loc 1 256 27 is_stmt 0 view .LVU95
+ 580 0000 024B     		ldr	r3, .L53
+ 581 0002 9868     		ldr	r0, [r3, #8]
+ 257:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 582              		.loc 1 257 1 view .LVU96
+ 583 0004 C0F38010 		ubfx	r0, r0, #6, #1
+ 584 0008 7047     		bx	lr
+ 585              	.L54:
+ 586 000a 00BF     		.align	2
+ 587              	.L53:
+ 588 000c 00220040 		.word	1073750528
+ 589              		.cfi_endproc
+ 590              	.LFE45:
+ 592              		.section	.text.SPI_GetErrStatus,"ax",%progbits
+ 593              		.align	1
+ 594              		.p2align 2,,3
+ 595              		.global	SPI_GetErrStatus
+ 596              		.syntax unified
+ 597              		.thumb
+ 598              		.thumb_func
+ 599              		.fpu softvfp
+ 601              	SPI_GetErrStatus:
+ 602              	.LFB46:
+ 258:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 259:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 260:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 261:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return FlagStatus
+ 262:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Returns error Status
+ 263:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 264:../PERIPHERAL/Sources/gw1ns4c_spi.c **** FlagStatus SPI_GetErrStatus(void)
+ 265:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 603              		.loc 1 265 1 is_stmt 1 view -0
+ 604              		.cfi_startproc
+ 605              		@ args = 0, pretend = 0, frame = 0
+ 606              		@ frame_needed = 0, uses_anonymous_args = 0
+ 607              		@ link register save eliminated.
+ 266:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return (FlagStatus)((SPI->STATUS&SPI_STATUS_ERR)==SPI_STATUS_ERR);
+ 608              		.loc 1 266 3 view .LVU98
+ 609              		.loc 1 266 27 is_stmt 0 view .LVU99
+ 610 0000 024B     		ldr	r3, .L56
+ 611 0002 9868     		ldr	r0, [r3, #8]
+ 267:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 612              		.loc 1 267 1 view .LVU100
+ 613 0004 C0F3C010 		ubfx	r0, r0, #7, #1
+ 614 0008 7047     		bx	lr
+ 615              	.L57:
+ 616 000a 00BF     		.align	2
+ 617              	.L56:
+ 618 000c 00220040 		.word	1073750528
+ 619              		.cfi_endproc
+ 620              	.LFE46:
+ 622              		.section	.text.SPI_ClrToeStatus,"ax",%progbits
+ 623              		.align	1
+ 624              		.p2align 2,,3
+ 625              		.global	SPI_ClrToeStatus
+ 626              		.syntax unified
+ 627              		.thumb
+ 628              		.thumb_func
+ 629              		.fpu softvfp
+ 631              	SPI_ClrToeStatus:
+ 632              	.LFB47:
+ 268:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 269:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 270:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 271:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 272:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Clears transmit overrun error status
+ 273:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 274:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_ClrToeStatus(void)
+ 275:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 633              		.loc 1 275 1 is_stmt 1 view -0
+ 634              		.cfi_startproc
+ 635              		@ args = 0, pretend = 0, frame = 0
+ 636              		@ frame_needed = 0, uses_anonymous_args = 0
+ 637              		@ link register save eliminated.
+ 276:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->STATUS |= SPI_STATUS_TOE;
+ 638              		.loc 1 276 3 view .LVU102
+ 639              		.loc 1 276 15 is_stmt 0 view .LVU103
+ 640 0000 024A     		ldr	r2, .L59
+ 641 0002 9368     		ldr	r3, [r2, #8]
+ 642 0004 43F00803 		orr	r3, r3, #8
+ 643 0008 9360     		str	r3, [r2, #8]
+ 277:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 644              		.loc 1 277 1 view .LVU104
+ 645 000a 7047     		bx	lr
+ 646              	.L60:
+ 647              		.align	2
+ 648              	.L59:
+ 649 000c 00220040 		.word	1073750528
+ 650              		.cfi_endproc
+ 651              	.LFE47:
+ 653              		.section	.text.SPI_ClrRoeStatus,"ax",%progbits
+ 654              		.align	1
+ 655              		.p2align 2,,3
+ 656              		.global	SPI_ClrRoeStatus
+ 657              		.syntax unified
+ 658              		.thumb
+ 659              		.thumb_func
+ 660              		.fpu softvfp
+ 662              	SPI_ClrRoeStatus:
+ 663              	.LFB48:
+ 278:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 279:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 280:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 281:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 282:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Clears receive overrun error status
+ 283:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 284:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_ClrRoeStatus(void)
+ 285:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 664              		.loc 1 285 1 is_stmt 1 view -0
+ 665              		.cfi_startproc
+ 666              		@ args = 0, pretend = 0, frame = 0
+ 667              		@ frame_needed = 0, uses_anonymous_args = 0
+ 668              		@ link register save eliminated.
+ 286:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->STATUS |= SPI_STATUS_ROE;
+ 669              		.loc 1 286 3 view .LVU106
+ 670              		.loc 1 286 15 is_stmt 0 view .LVU107
+ 671 0000 024A     		ldr	r2, .L62
+ 672 0002 9368     		ldr	r3, [r2, #8]
+ 673 0004 43F00403 		orr	r3, r3, #4
+ 674 0008 9360     		str	r3, [r2, #8]
+ 287:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 675              		.loc 1 287 1 view .LVU108
+ 676 000a 7047     		bx	lr
+ 677              	.L63:
+ 678              		.align	2
+ 679              	.L62:
+ 680 000c 00220040 		.word	1073750528
+ 681              		.cfi_endproc
+ 682              	.LFE48:
+ 684              		.section	.text.SPI_ClrErrStatus,"ax",%progbits
+ 685              		.align	1
+ 686              		.p2align 2,,3
+ 687              		.global	SPI_ClrErrStatus
+ 688              		.syntax unified
+ 689              		.thumb
+ 690              		.thumb_func
+ 691              		.fpu softvfp
+ 693              	SPI_ClrErrStatus:
+ 694              	.LFB49:
+ 288:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 289:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 290:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 291:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 292:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Clears error status
+ 293:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 294:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_ClrErrStatus(void)
+ 295:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 695              		.loc 1 295 1 is_stmt 1 view -0
+ 696              		.cfi_startproc
+ 697              		@ args = 0, pretend = 0, frame = 0
+ 698              		@ frame_needed = 0, uses_anonymous_args = 0
+ 699              		@ link register save eliminated.
+ 296:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->STATUS |= SPI_STATUS_ERR; 
+ 700              		.loc 1 296 3 view .LVU110
+ 701              		.loc 1 296 15 is_stmt 0 view .LVU111
+ 702 0000 024A     		ldr	r2, .L65
+ 703 0002 9368     		ldr	r3, [r2, #8]
+ 704 0004 43F08003 		orr	r3, r3, #128
+ 705 0008 9360     		str	r3, [r2, #8]
+ 297:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 706              		.loc 1 297 1 view .LVU112
+ 707 000a 7047     		bx	lr
+ 708              	.L66:
+ 709              		.align	2
+ 710              	.L65:
+ 711 000c 00220040 		.word	1073750528
+ 712              		.cfi_endproc
+ 713              	.LFE49:
+ 715              		.section	.text.SPI_ReadWriteByte,"ax",%progbits
+ 716              		.align	1
+ 717              		.p2align 2,,3
+ 718              		.global	SPI_ReadWriteByte
+ 719              		.syntax unified
+ 720              		.thumb
+ 721              		.thumb_func
+ 722              		.fpu softvfp
+ 724              	SPI_ReadWriteByte:
+ 725              	.LVL7:
+ 726              	.LFB50:
+ 298:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 299:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 300:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param uint8_t cmd
+ 301:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return uint8_t
+ 302:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Reads and writes byte data
+ 303:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 304:../PERIPHERAL/Sources/gw1ns4c_spi.c **** uint8_t SPI_ReadWriteByte(uint8_t cmd)
+ 305:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 727              		.loc 1 305 1 is_stmt 1 view -0
+ 728              		.cfi_startproc
+ 729              		@ args = 0, pretend = 0, frame = 0
+ 730              		@ frame_needed = 0, uses_anonymous_args = 0
+ 731              		@ link register save eliminated.
+ 306:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   uint32_t master_rx_data;
+ 732              		.loc 1 306 3 view .LVU114
+ 307:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   while (!(SPI->STATUS & (1UL << 5)));
+ 733              		.loc 1 308 3 view .LVU115
+ 734              		.loc 1 308 15 is_stmt 0 view .LVU116
+ 735 0000 0549     		ldr	r1, .L74
+ 736              	.L68:
+ 737              		.loc 1 308 38 is_stmt 1 discriminator 1 view .LVU117
+ 738              		.loc 1 308 15 is_stmt 0 discriminator 1 view .LVU118
+ 739 0002 8B68     		ldr	r3, [r1, #8]
+ 740              		.loc 1 308 9 discriminator 1 view .LVU119
+ 741 0004 9A06     		lsls	r2, r3, #26
+ 742 0006 FCD5     		bpl	.L68
+ 309:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 743              		.loc 1 309 3 is_stmt 1 view .LVU120
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   while (!(SPI->STATUS & (1UL << 6)));
+ 744              		.loc 1 310 15 is_stmt 0 view .LVU121
+ 745 0008 034A     		ldr	r2, .L74
+ 309:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 746              		.loc 1 309 14 view .LVU122
+ 747 000a 4860     		str	r0, [r1, #4]
+ 748              		.loc 1 310 3 is_stmt 1 view .LVU123
+ 749              	.L69:
+ 750              		.loc 1 310 38 discriminator 1 view .LVU124
+ 751              		.loc 1 310 15 is_stmt 0 discriminator 1 view .LVU125
+ 752 000c 9368     		ldr	r3, [r2, #8]
+ 753              		.loc 1 310 9 discriminator 1 view .LVU126
+ 754 000e 5B06     		lsls	r3, r3, #25
+ 755 0010 FCD5     		bpl	.L69
+ 311:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 756              		.loc 1 311 3 is_stmt 1 view .LVU127
+ 757              		.loc 1 311 18 is_stmt 0 view .LVU128
+ 758 0012 1068     		ldr	r0, [r2]
+ 759              	.LVL8:
+ 312:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 313:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return master_rx_data & 0xff;
+ 760              		.loc 1 313 3 is_stmt 1 view .LVU129
+ 314:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 761              		.loc 1 314 1 is_stmt 0 view .LVU130
+ 762 0014 C0B2     		uxtb	r0, r0
+ 763              	.LVL9:
+ 764              		.loc 1 314 1 view .LVU131
+ 765 0016 7047     		bx	lr
+ 766              	.L75:
+ 767              		.align	2
+ 768              	.L74:
+ 769 0018 00220040 		.word	1073750528
+ 770              		.cfi_endproc
+ 771              	.LFE50:
+ 773              		.section	.text.SPI_WriteData,"ax",%progbits
+ 774              		.align	1
+ 775              		.p2align 2,,3
+ 776              		.global	SPI_WriteData
+ 777              		.syntax unified
+ 778              		.thumb
+ 779              		.thumb_func
+ 780              		.fpu softvfp
+ 782              	SPI_WriteData:
+ 783              	.LVL10:
+ 784              	.LFB51:
+ 315:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 316:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 317:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param uint8_t data
+ 318:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 319:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Writes Data
+ 320:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 321:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_WriteData(uint8_t data)
+ 322:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 785              		.loc 1 322 1 is_stmt 1 view -0
+ 786              		.cfi_startproc
+ 787              		@ args = 0, pretend = 0, frame = 0
+ 788              		@ frame_needed = 0, uses_anonymous_args = 0
+ 789              		@ link register save eliminated.
+ 323:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI_ReadWriteByte(data);
+ 790              		.loc 1 323 3 view .LVU133
+ 791              	.LBB6:
+ 792              	.LBI6:
+ 304:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 793              		.loc 1 304 9 view .LVU134
+ 794              	.LBB7:
+ 306:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 795              		.loc 1 306 3 view .LVU135
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 796              		.loc 1 308 3 view .LVU136
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 797              		.loc 1 308 15 is_stmt 0 view .LVU137
+ 798 0000 0549     		ldr	r1, .L83
+ 799              	.L77:
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 800              		.loc 1 308 38 is_stmt 1 view .LVU138
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 801              		.loc 1 308 15 is_stmt 0 view .LVU139
+ 802 0002 8B68     		ldr	r3, [r1, #8]
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 803              		.loc 1 308 9 view .LVU140
+ 804 0004 9A06     		lsls	r2, r3, #26
+ 805 0006 FCD5     		bpl	.L77
+ 309:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   while (!(SPI->STATUS & (1UL << 6)));
+ 806              		.loc 1 309 3 is_stmt 1 view .LVU141
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 807              		.loc 1 310 15 is_stmt 0 view .LVU142
+ 808 0008 034A     		ldr	r2, .L83
+ 309:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   while (!(SPI->STATUS & (1UL << 6)));
+ 809              		.loc 1 309 14 view .LVU143
+ 810 000a 4860     		str	r0, [r1, #4]
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 811              		.loc 1 310 3 is_stmt 1 view .LVU144
+ 812              	.L78:
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 813              		.loc 1 310 38 view .LVU145
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 814              		.loc 1 310 15 is_stmt 0 view .LVU146
+ 815 000c 9368     		ldr	r3, [r2, #8]
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 816              		.loc 1 310 9 view .LVU147
+ 817 000e 5B06     		lsls	r3, r3, #25
+ 818 0010 FCD5     		bpl	.L78
+ 311:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 819              		.loc 1 311 3 is_stmt 1 view .LVU148
+ 311:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 820              		.loc 1 311 18 is_stmt 0 view .LVU149
+ 821 0012 1368     		ldr	r3, [r2]
+ 313:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 822              		.loc 1 313 3 is_stmt 1 view .LVU150
+ 823              	.LVL11:
+ 313:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 824              		.loc 1 313 3 is_stmt 0 view .LVU151
+ 825              	.LBE7:
+ 826              	.LBE6:
+ 324:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 827              		.loc 1 324 1 view .LVU152
+ 828 0014 7047     		bx	lr
+ 829              	.L84:
+ 830 0016 00BF     		.align	2
+ 831              	.L83:
+ 832 0018 00220040 		.word	1073750528
+ 833              		.cfi_endproc
+ 834              	.LFE51:
+ 836              		.section	.text.SPI_ReadData,"ax",%progbits
+ 837              		.align	1
+ 838              		.p2align 2,,3
+ 839              		.global	SPI_ReadData
+ 840              		.syntax unified
+ 841              		.thumb
+ 842              		.thumb_func
+ 843              		.fpu softvfp
+ 845              	SPI_ReadData:
+ 846              	.LFB52:
+ 325:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 326:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 327:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param none
+ 328:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return uint8_t
+ 329:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Reads Data
+ 330:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 331:../PERIPHERAL/Sources/gw1ns4c_spi.c **** uint8_t SPI_ReadData(void)
+ 332:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 847              		.loc 1 332 1 is_stmt 1 view -0
+ 848              		.cfi_startproc
+ 849              		@ args = 0, pretend = 0, frame = 0
+ 850              		@ frame_needed = 0, uses_anonymous_args = 0
+ 851              		@ link register save eliminated.
+ 333:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   return (SPI_ReadWriteByte(0x00));
+ 852              		.loc 1 333 3 view .LVU154
+ 853              	.LVL12:
+ 854              	.LBB8:
+ 855              	.LBI8:
+ 304:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 856              		.loc 1 304 9 view .LVU155
+ 857              	.LBB9:
+ 306:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 858              		.loc 1 306 3 view .LVU156
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 859              		.loc 1 308 3 view .LVU157
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 860              		.loc 1 308 15 is_stmt 0 view .LVU158
+ 861 0000 0649     		ldr	r1, .L92
+ 862              	.L86:
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 863              		.loc 1 308 38 is_stmt 1 view .LVU159
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 864              		.loc 1 308 15 is_stmt 0 view .LVU160
+ 865 0002 8B68     		ldr	r3, [r1, #8]
+ 308:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->WDATA = cmd;
+ 866              		.loc 1 308 9 view .LVU161
+ 867 0004 9A06     		lsls	r2, r3, #26
+ 868 0006 FCD5     		bpl	.L86
+ 309:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   while (!(SPI->STATUS & (1UL << 6)));
+ 869              		.loc 1 309 3 is_stmt 1 view .LVU162
+ 309:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   while (!(SPI->STATUS & (1UL << 6)));
+ 870              		.loc 1 309 14 is_stmt 0 view .LVU163
+ 871 0008 0023     		movs	r3, #0
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 872              		.loc 1 310 15 view .LVU164
+ 873 000a 044A     		ldr	r2, .L92
+ 309:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   while (!(SPI->STATUS & (1UL << 6)));
+ 874              		.loc 1 309 14 view .LVU165
+ 875 000c 4B60     		str	r3, [r1, #4]
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 876              		.loc 1 310 3 is_stmt 1 view .LVU166
+ 877              	.L87:
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 878              		.loc 1 310 38 view .LVU167
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 879              		.loc 1 310 15 is_stmt 0 view .LVU168
+ 880 000e 9368     		ldr	r3, [r2, #8]
+ 310:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   master_rx_data = SPI->RDATA;
+ 881              		.loc 1 310 9 view .LVU169
+ 882 0010 5B06     		lsls	r3, r3, #25
+ 883 0012 FCD5     		bpl	.L87
+ 311:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 884              		.loc 1 311 3 is_stmt 1 view .LVU170
+ 311:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 885              		.loc 1 311 18 is_stmt 0 view .LVU171
+ 886 0014 1068     		ldr	r0, [r2]
+ 887              	.LVL13:
+ 313:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 888              		.loc 1 313 3 is_stmt 1 view .LVU172
+ 313:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 889              		.loc 1 313 3 is_stmt 0 view .LVU173
+ 890              	.LBE9:
+ 891              	.LBE8:
+ 334:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 892              		.loc 1 334 1 view .LVU174
+ 893 0016 C0B2     		uxtb	r0, r0
+ 894 0018 7047     		bx	lr
+ 895              	.L93:
+ 896 001a 00BF     		.align	2
+ 897              	.L92:
+ 898 001c 00220040 		.word	1073750528
+ 899              		.cfi_endproc
+ 900              	.LFE52:
+ 902              		.section	.text.SPI_Select_Slave,"ax",%progbits
+ 903              		.align	1
+ 904              		.p2align 2,,3
+ 905              		.global	SPI_Select_Slave
+ 906              		.syntax unified
+ 907              		.thumb
+ 908              		.thumb_func
+ 909              		.fpu softvfp
+ 911              	SPI_Select_Slave:
+ 912              	.LVL14:
+ 913              	.LFB53:
+ 335:../PERIPHERAL/Sources/gw1ns4c_spi.c **** 
+ 336:../PERIPHERAL/Sources/gw1ns4c_spi.c **** /**
+ 337:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @param uint32_t slave address
+ 338:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @return none
+ 339:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   * @brief Select Slave
+ 340:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   */
+ 341:../PERIPHERAL/Sources/gw1ns4c_spi.c **** void SPI_Select_Slave(uint32_t Slave_address)
+ 342:../PERIPHERAL/Sources/gw1ns4c_spi.c **** {
+ 914              		.loc 1 342 1 is_stmt 1 view -0
+ 915              		.cfi_startproc
+ 916              		@ args = 0, pretend = 0, frame = 0
+ 917              		@ frame_needed = 0, uses_anonymous_args = 0
+ 918              		@ link register save eliminated.
+ 343:../PERIPHERAL/Sources/gw1ns4c_spi.c ****   SPI->SSMASK = Slave_address;
+ 919              		.loc 1 343 3 view .LVU176
+ 920              		.loc 1 343 15 is_stmt 0 view .LVU177
+ 921 0000 014B     		ldr	r3, .L95
+ 922 0002 D860     		str	r0, [r3, #12]
+ 344:../PERIPHERAL/Sources/gw1ns4c_spi.c **** }
+ 923              		.loc 1 344 1 view .LVU178
+ 924 0004 7047     		bx	lr
+ 925              	.L96:
+ 926 0006 00BF     		.align	2
+ 927              	.L95:
+ 928 0008 00220040 		.word	1073750528
+ 929              		.cfi_endproc
+ 930              	.LFE53:
+ 932              		.text
+ 933              	.Letext0:
+ 934              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 935              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 936              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 937              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+ 938              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+ 939              		.file 7 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\PERIPHERAL\\Includes/gw1ns4c_spi.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gw1ns4c_spi.c
+d:\wintmp\ccrhrWVU.s:16     .text.SPI_Init:00000000 $t
+d:\wintmp\ccrhrWVU.s:25     .text.SPI_Init:00000000 SPI_Init
+d:\wintmp\ccrhrWVU.s:88     .text.SPI_Init:00000038 $d
+d:\wintmp\ccrhrWVU.s:93     .text.SPI_SetDirection:00000000 $t
+d:\wintmp\ccrhrWVU.s:101    .text.SPI_SetDirection:00000000 SPI_SetDirection
+d:\wintmp\ccrhrWVU.s:119    .text.SPI_SetDirection:0000000c $d
+d:\wintmp\ccrhrWVU.s:124    .text.SPI_ClrDirection:00000000 $t
+d:\wintmp\ccrhrWVU.s:132    .text.SPI_ClrDirection:00000000 SPI_ClrDirection
+d:\wintmp\ccrhrWVU.s:150    .text.SPI_ClrDirection:0000000c $d
+d:\wintmp\ccrhrWVU.s:155    .text.SPI_GetDirection:00000000 $t
+d:\wintmp\ccrhrWVU.s:163    .text.SPI_GetDirection:00000000 SPI_GetDirection
+d:\wintmp\ccrhrWVU.s:180    .text.SPI_GetDirection:0000000c $d
+d:\wintmp\ccrhrWVU.s:185    .text.SPI_SetPhase:00000000 $t
+d:\wintmp\ccrhrWVU.s:193    .text.SPI_SetPhase:00000000 SPI_SetPhase
+d:\wintmp\ccrhrWVU.s:211    .text.SPI_SetPhase:0000000c $d
+d:\wintmp\ccrhrWVU.s:216    .text.SPI_ClrPhase:00000000 $t
+d:\wintmp\ccrhrWVU.s:224    .text.SPI_ClrPhase:00000000 SPI_ClrPhase
+d:\wintmp\ccrhrWVU.s:242    .text.SPI_ClrPhase:0000000c $d
+d:\wintmp\ccrhrWVU.s:247    .text.SPI_GetPhase:00000000 $t
+d:\wintmp\ccrhrWVU.s:255    .text.SPI_GetPhase:00000000 SPI_GetPhase
+d:\wintmp\ccrhrWVU.s:272    .text.SPI_GetPhase:0000000c $d
+d:\wintmp\ccrhrWVU.s:277    .text.SPI_SetPolarity:00000000 $t
+d:\wintmp\ccrhrWVU.s:285    .text.SPI_SetPolarity:00000000 SPI_SetPolarity
+d:\wintmp\ccrhrWVU.s:303    .text.SPI_SetPolarity:0000000c $d
+d:\wintmp\ccrhrWVU.s:308    .text.SPI_ClrPolarity:00000000 $t
+d:\wintmp\ccrhrWVU.s:316    .text.SPI_ClrPolarity:00000000 SPI_ClrPolarity
+d:\wintmp\ccrhrWVU.s:334    .text.SPI_ClrPolarity:0000000c $d
+d:\wintmp\ccrhrWVU.s:339    .text.SPI_GetPolarity:00000000 $t
+d:\wintmp\ccrhrWVU.s:347    .text.SPI_GetPolarity:00000000 SPI_GetPolarity
+d:\wintmp\ccrhrWVU.s:364    .text.SPI_GetPolarity:0000000c $d
+d:\wintmp\ccrhrWVU.s:369    .text.SPI_SetClkSel:00000000 $t
+d:\wintmp\ccrhrWVU.s:377    .text.SPI_SetClkSel:00000000 SPI_SetClkSel
+d:\wintmp\ccrhrWVU.s:408    .text.SPI_SetClkSel:00000018 $d
+d:\wintmp\ccrhrWVU.s:413    .text.SPI_GetClkSel:00000000 $t
+d:\wintmp\ccrhrWVU.s:421    .text.SPI_GetClkSel:00000000 SPI_GetClkSel
+d:\wintmp\ccrhrWVU.s:438    .text.SPI_GetClkSel:0000000c $d
+d:\wintmp\ccrhrWVU.s:443    .text.SPI_GetToeStatus:00000000 $t
+d:\wintmp\ccrhrWVU.s:451    .text.SPI_GetToeStatus:00000000 SPI_GetToeStatus
+d:\wintmp\ccrhrWVU.s:468    .text.SPI_GetToeStatus:0000000c $d
+d:\wintmp\ccrhrWVU.s:473    .text.SPI_GetRoeStatus:00000000 $t
+d:\wintmp\ccrhrWVU.s:481    .text.SPI_GetRoeStatus:00000000 SPI_GetRoeStatus
+d:\wintmp\ccrhrWVU.s:498    .text.SPI_GetRoeStatus:0000000c $d
+d:\wintmp\ccrhrWVU.s:503    .text.SPI_GetTmtStatus:00000000 $t
+d:\wintmp\ccrhrWVU.s:511    .text.SPI_GetTmtStatus:00000000 SPI_GetTmtStatus
+d:\wintmp\ccrhrWVU.s:528    .text.SPI_GetTmtStatus:0000000c $d
+d:\wintmp\ccrhrWVU.s:533    .text.SPI_GetTrdyStatus:00000000 $t
+d:\wintmp\ccrhrWVU.s:541    .text.SPI_GetTrdyStatus:00000000 SPI_GetTrdyStatus
+d:\wintmp\ccrhrWVU.s:558    .text.SPI_GetTrdyStatus:0000000c $d
+d:\wintmp\ccrhrWVU.s:563    .text.SPI_GetRrdyStatus:00000000 $t
+d:\wintmp\ccrhrWVU.s:571    .text.SPI_GetRrdyStatus:00000000 SPI_GetRrdyStatus
+d:\wintmp\ccrhrWVU.s:588    .text.SPI_GetRrdyStatus:0000000c $d
+d:\wintmp\ccrhrWVU.s:593    .text.SPI_GetErrStatus:00000000 $t
+d:\wintmp\ccrhrWVU.s:601    .text.SPI_GetErrStatus:00000000 SPI_GetErrStatus
+d:\wintmp\ccrhrWVU.s:618    .text.SPI_GetErrStatus:0000000c $d
+d:\wintmp\ccrhrWVU.s:623    .text.SPI_ClrToeStatus:00000000 $t
+d:\wintmp\ccrhrWVU.s:631    .text.SPI_ClrToeStatus:00000000 SPI_ClrToeStatus
+d:\wintmp\ccrhrWVU.s:649    .text.SPI_ClrToeStatus:0000000c $d
+d:\wintmp\ccrhrWVU.s:654    .text.SPI_ClrRoeStatus:00000000 $t
+d:\wintmp\ccrhrWVU.s:662    .text.SPI_ClrRoeStatus:00000000 SPI_ClrRoeStatus
+d:\wintmp\ccrhrWVU.s:680    .text.SPI_ClrRoeStatus:0000000c $d
+d:\wintmp\ccrhrWVU.s:685    .text.SPI_ClrErrStatus:00000000 $t
+d:\wintmp\ccrhrWVU.s:693    .text.SPI_ClrErrStatus:00000000 SPI_ClrErrStatus
+d:\wintmp\ccrhrWVU.s:711    .text.SPI_ClrErrStatus:0000000c $d
+d:\wintmp\ccrhrWVU.s:716    .text.SPI_ReadWriteByte:00000000 $t
+d:\wintmp\ccrhrWVU.s:724    .text.SPI_ReadWriteByte:00000000 SPI_ReadWriteByte
+d:\wintmp\ccrhrWVU.s:769    .text.SPI_ReadWriteByte:00000018 $d
+d:\wintmp\ccrhrWVU.s:774    .text.SPI_WriteData:00000000 $t
+d:\wintmp\ccrhrWVU.s:782    .text.SPI_WriteData:00000000 SPI_WriteData
+d:\wintmp\ccrhrWVU.s:832    .text.SPI_WriteData:00000018 $d
+d:\wintmp\ccrhrWVU.s:837    .text.SPI_ReadData:00000000 $t
+d:\wintmp\ccrhrWVU.s:845    .text.SPI_ReadData:00000000 SPI_ReadData
+d:\wintmp\ccrhrWVU.s:898    .text.SPI_ReadData:0000001c $d
+d:\wintmp\ccrhrWVU.s:903    .text.SPI_Select_Slave:00000000 $t
+d:\wintmp\ccrhrWVU.s:911    .text.SPI_Select_Slave:00000000 SPI_Select_Slave
+d:\wintmp\ccrhrWVU.s:928    .text.SPI_Select_Slave:00000008 $d
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+                           .group:00000000 wm4.gw1ns4c_spi.h.55.dae68c0a8fefd2d843c8a2096aa72602
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,10 @@
+C:\kitaprg\C#\JtagTerm\bin\Debug\JtagTerm.exe.config
+C:\kitaprg\C#\JtagTerm\bin\Debug\JtagTerm.exe
+C:\kitaprg\C#\JtagTerm\bin\Debug\JtagTerm.pdb
+C:\kitaprg\C#\JtagTerm\obj\Debug\JtagTerm.csprojAssemblyReference.cache
+C:\kitaprg\C#\JtagTerm\obj\Debug\JtagTerm.Form1.resources
+C:\kitaprg\C#\JtagTerm\obj\Debug\JtagTerm.Properties.Resources.resources
+C:\kitaprg\C#\JtagTerm\obj\Debug\JtagTerm.csproj.GenerateResource.cache
+C:\kitaprg\C#\JtagTerm\obj\Debug\JtagTerm.csproj.CoreCompileInputs.cache
+C:\kitaprg\C#\JtagTerm\obj\Debug\JtagTerm.exe
+C:\kitaprg\C#\JtagTerm\obj\Debug\JtagTerm.pdb

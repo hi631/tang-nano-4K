@@ -1,0 +1,168 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"retarget.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text._write,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	_write
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	_write:
+  26              	.LVL0:
+  27              	.LFB32:
+  28              		.file 1 "../USER/retarget.c"
+   1:../USER/retarget.c **** /*
+   2:../USER/retarget.c ****  * *****************************************************************************************
+   3:../USER/retarget.c ****  *
+   4:../USER/retarget.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../USER/retarget.c ****  * 		
+   6:../USER/retarget.c ****  * @file        retarget.c
+   7:../USER/retarget.c ****  * @author      Embedded Development Team
+   8:../USER/retarget.c ****  * @version     V1.x.x
+   9:../USER/retarget.c ****  * @date        2021-01-01 09:00:00
+  10:../USER/retarget.c ****  * @brief       UART printf and scanf retarget function.
+  11:../USER/retarget.c ****  ******************************************************************************************
+  12:../USER/retarget.c ****  */
+  13:../USER/retarget.c **** 
+  14:../USER/retarget.c **** /* Includes ------------------------------------------------------------------*/
+  15:../USER/retarget.c **** #include "gw1ns4c.h"
+  16:../USER/retarget.c **** #include <stdio.h>
+  17:../USER/retarget.c **** #include <sys/stat.h>
+  18:../USER/retarget.c **** 
+  19:../USER/retarget.c **** __attribute__ ((used))  int _write (int fd, char *ptr, int len)
+  20:../USER/retarget.c **** {
+  29              		.loc 1 20 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  21:../USER/retarget.c ****   size_t i;
+  33              		.loc 1 21 3 view .LVU1
+  22:../USER/retarget.c **** 
+  23:../USER/retarget.c ****   for (i=0; i<len; i++)
+  34              		.loc 1 23 3 view .LVU2
+  20:../USER/retarget.c ****   size_t i;
+  35              		.loc 1 20 1 is_stmt 0 view .LVU3
+  36 0000 70B5     		push	{r4, r5, r6, lr}
+  37              		.cfi_def_cfa_offset 16
+  38              		.cfi_offset 4, -16
+  39              		.cfi_offset 5, -12
+  40              		.cfi_offset 6, -8
+  41              		.cfi_offset 14, -4
+  42              		.loc 1 23 3 view .LVU4
+  43 0002 1646     		mov	r6, r2
+  44 0004 4AB1     		cbz	r2, .L2
+  45 0006 4C1E     		subs	r4, r1, #1
+  46 0008 A518     		adds	r5, r4, r2
+  47              	.LVL1:
+  48              	.L3:
+  24:../USER/retarget.c ****   {
+  25:../USER/retarget.c ****     UART_SendChar(UART0,ptr[i]); // call character output function
+  49              		.loc 1 25 5 is_stmt 1 discriminator 3 view .LVU5
+  50 000a 14F9011F 		ldrsb	r1, [r4, #1]!
+  51              	.LVL2:
+  52              		.loc 1 25 5 is_stmt 0 discriminator 3 view .LVU6
+  53 000e 4FF04020 		mov	r0, #1073758208
+  54 0012 FFF7FEFF 		bl	UART_SendChar
+  55              	.LVL3:
+  23:../USER/retarget.c ****   {
+  56              		.loc 1 23 3 discriminator 3 view .LVU7
+  57 0016 AC42     		cmp	r4, r5
+  58 0018 F7D1     		bne	.L3
+  59              	.LVL4:
+  60              	.L2:
+  26:../USER/retarget.c ****   }
+  27:../USER/retarget.c **** 
+  28:../USER/retarget.c ****   return len;
+  61              		.loc 1 28 3 is_stmt 1 view .LVU8
+  29:../USER/retarget.c **** }
+  62              		.loc 1 29 1 is_stmt 0 view .LVU9
+  63 001a 3046     		mov	r0, r6
+  64 001c 70BD     		pop	{r4, r5, r6, pc}
+  65              		.loc 1 29 1 view .LVU10
+  66              		.cfi_endproc
+  67              	.LFE32:
+  69 001e 00BF     		.text
+  70              	.Letext0:
+  71              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+  72              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+  73              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+  74              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+  75              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+  76              		.file 7 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\lib\\gcc\\arm-none-eabi\\8.3.1\\include\\s
+  77              		.file 8 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_types.h"
+  78              		.file 9 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\reent.h"
+  79              		.file 10 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\lock.h"
+  80              		.file 11 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\time.h"
+  81              		.file 12 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\PERIPHERAL\\Includes/gw1ns4c_uart.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 retarget.c
+d:\wintmp\ccVTtHgC.s:16     .text._write:00000000 $t
+d:\wintmp\ccVTtHgC.s:25     .text._write:00000000 _write
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+                           .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
+                           .group:00000000 wm4.ieeefp.h.77.5499ed899a78229fbaf6d102924f4714
+                           .group:00000000 wm4.config.h.224.c701144a7b0518c6ee9b9b5465b79f81
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.stdio.h.31.7c0e28c411445f3f9c5b11accf882760
+                           .group:00000000 wm4.stddef.h.187.2ff233552538c6ff9b8575ca8ea52cb3
+                           .group:00000000 wm4.cdefs.h.49.6260d97adb8d27534cbdc0f868b8ea87
+                           .group:00000000 wm4.stddef.h.39.ec95e8feac892e292b69dc7ae75b0d64
+                           .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
+                           .group:00000000 wm4.stddef.h.161.5349cb105733e8777bfb0cf53c4e3f34
+                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
+                           .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4.reent.h.77.dcd6129ff07fe81bd5636db29abe53b2
+                           .group:00000000 wm4.types.h.40.8b6acba56cefbb11746718204edc8f5e
+                           .group:00000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
+                           .group:00000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
+                           .group:00000000 wm4._timeval.h.30.0e8bfd94e85db17dda3286ee81496fe6
+                           .group:00000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
+                           .group:00000000 wm4.select.h.19.97ca6fd0c752a0f3b6719fd314d361e6
+                           .group:00000000 wm4.types.h.51.5571ec98f267d17d3c670b7a3ba33afa
+                           .group:00000000 wm4.sched.h.22.c60982713a5c428609783c78f9c78d95
+                           .group:00000000 wm4._pthreadtypes.h.36.fcee9961c35163dde6267ef772ad1972
+                           .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:00000000 wm4.stdio.h.81.932d0c162786b883f622b8d05c120c78
+                           .group:00000000 wm4.time.h.8.db4619001f026d0b4874c029fef0e91f
+                           .group:00000000 wm4.stddef.h.161.19e15733342b50ead2919490b095303e
+                           .group:00000000 wm4.time.h.2.4581ce0ffb6627cfc02162c94bf846c9
+                           .group:00000000 wm4.time.h.25.0e6a0fdbc9955f5707ed54246ed2e089
+                           .group:00000000 wm4.time.h.162.85256a1e684b58f061361067da714e0e
+                           .group:00000000 wm4.stat.h.71.d65ac61ff88c651e198008cfb38bda9c
+
+UNDEFINED SYMBOLS
+UART_SendChar

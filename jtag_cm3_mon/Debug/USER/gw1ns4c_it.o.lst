@@ -1,0 +1,867 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gw1ns4c_it.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.NMI_Handler,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	NMI_Handler
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	NMI_Handler:
+  26              	.LFB29:
+  27              		.file 1 "../USER/gw1ns4c_it.c"
+   1:../USER/gw1ns4c_it.c **** /*
+   2:../USER/gw1ns4c_it.c ****  * *****************************************************************************************
+   3:../USER/gw1ns4c_it.c ****  *
+   4:../USER/gw1ns4c_it.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../USER/gw1ns4c_it.c ****  * 		
+   6:../USER/gw1ns4c_it.c ****  * @file        gw1ns4c_it.c
+   7:../USER/gw1ns4c_it.c ****  * @author      Embedded Development Team
+   8:../USER/gw1ns4c_it.c ****  * @version     V1.x.x
+   9:../USER/gw1ns4c_it.c ****  * @date        2021-01-01 09:00:00
+  10:../USER/gw1ns4c_it.c ****  * @brief       Main Interrupt Service Routines.
+  11:../USER/gw1ns4c_it.c ****  *              This file provides template for all exceptions handler and
+  12:../USER/gw1ns4c_it.c ****  *              peripherals interrupt service routine.
+  13:../USER/gw1ns4c_it.c ****  ******************************************************************************************
+  14:../USER/gw1ns4c_it.c ****  */
+  15:../USER/gw1ns4c_it.c **** 
+  16:../USER/gw1ns4c_it.c **** /* Includes ------------------------------------------------------------------*/
+  17:../USER/gw1ns4c_it.c **** #include "gw1ns4c_it.h"
+  18:../USER/gw1ns4c_it.c **** 
+  19:../USER/gw1ns4c_it.c **** /** @addtogroup GW1NS4C_StdPeriph_Template
+  20:../USER/gw1ns4c_it.c ****   * @{
+  21:../USER/gw1ns4c_it.c ****   */
+  22:../USER/gw1ns4c_it.c **** 
+  23:../USER/gw1ns4c_it.c **** /* Private typedef -----------------------------------------------------------*/
+  24:../USER/gw1ns4c_it.c **** 
+  25:../USER/gw1ns4c_it.c **** /* Private define ------------------------------------------------------------*/
+  26:../USER/gw1ns4c_it.c **** 
+  27:../USER/gw1ns4c_it.c **** /* Private macro -------------------------------------------------------------*/
+  28:../USER/gw1ns4c_it.c **** 
+  29:../USER/gw1ns4c_it.c **** /* Private variables ---------------------------------------------------------*/
+  30:../USER/gw1ns4c_it.c **** 
+  31:../USER/gw1ns4c_it.c **** /* Private function prototypes -----------------------------------------------*/
+  32:../USER/gw1ns4c_it.c **** 
+  33:../USER/gw1ns4c_it.c **** /* Private functions ---------------------------------------------------------*/
+  34:../USER/gw1ns4c_it.c **** 
+  35:../USER/gw1ns4c_it.c **** /******************************************************************************/
+  36:../USER/gw1ns4c_it.c **** /*            Cortex-M3 Processor Exceptions Handlers                         */
+  37:../USER/gw1ns4c_it.c **** /******************************************************************************/
+  38:../USER/gw1ns4c_it.c **** 
+  39:../USER/gw1ns4c_it.c **** /**
+  40:../USER/gw1ns4c_it.c ****   * @brief  This function handles NMI exception.
+  41:../USER/gw1ns4c_it.c ****   * @param  none
+  42:../USER/gw1ns4c_it.c ****   * @retval none
+  43:../USER/gw1ns4c_it.c ****   */
+  44:../USER/gw1ns4c_it.c **** void NMI_Handler(void)
+  45:../USER/gw1ns4c_it.c **** {
+  28              		.loc 1 45 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  46:../USER/gw1ns4c_it.c **** }
+  33              		.loc 1 46 1 view .LVU1
+  34 0000 7047     		bx	lr
+  35              		.cfi_endproc
+  36              	.LFE29:
+  38 0002 00BF     		.section	.text.HardFault_Handler,"ax",%progbits
+  39              		.align	1
+  40              		.p2align 2,,3
+  41              		.global	HardFault_Handler
+  42              		.syntax unified
+  43              		.thumb
+  44              		.thumb_func
+  45              		.fpu softvfp
+  47              	HardFault_Handler:
+  48              	.LFB30:
+  47:../USER/gw1ns4c_it.c **** 
+  48:../USER/gw1ns4c_it.c **** /**
+  49:../USER/gw1ns4c_it.c ****   * @brief  This function handles Hard Fault exception.
+  50:../USER/gw1ns4c_it.c ****   * @param  none
+  51:../USER/gw1ns4c_it.c ****   * @retval none
+  52:../USER/gw1ns4c_it.c ****   */
+  53:../USER/gw1ns4c_it.c **** void HardFault_Handler(void)
+  54:../USER/gw1ns4c_it.c **** {
+  49              		.loc 1 54 1 view -0
+  50              		.cfi_startproc
+  51              		@ Volatile: function does not return.
+  52              		@ args = 0, pretend = 0, frame = 0
+  53              		@ frame_needed = 0, uses_anonymous_args = 0
+  54              		@ link register save eliminated.
+  55              	.L4:
+  55:../USER/gw1ns4c_it.c ****   /* Go to infinite loop when Hard Fault exception occurs */
+  56:../USER/gw1ns4c_it.c ****   while (1)
+  56              		.loc 1 56 3 discriminator 1 view .LVU3
+  57:../USER/gw1ns4c_it.c ****   {
+  58:../USER/gw1ns4c_it.c ****   }
+  57              		.loc 1 58 3 discriminator 1 view .LVU4
+  58 0000 FEE7     		b	.L4
+  59              		.cfi_endproc
+  60              	.LFE30:
+  62 0002 00BF     		.section	.text.MemManage_Handler,"ax",%progbits
+  63              		.align	1
+  64              		.p2align 2,,3
+  65              		.global	MemManage_Handler
+  66              		.syntax unified
+  67              		.thumb
+  68              		.thumb_func
+  69              		.fpu softvfp
+  71              	MemManage_Handler:
+  72              	.LFB31:
+  59:../USER/gw1ns4c_it.c **** }
+  60:../USER/gw1ns4c_it.c **** 
+  61:../USER/gw1ns4c_it.c **** /**
+  62:../USER/gw1ns4c_it.c ****   * @brief  This function handles Memory Manage exception.
+  63:../USER/gw1ns4c_it.c ****   * @param  none
+  64:../USER/gw1ns4c_it.c ****   * @retval none
+  65:../USER/gw1ns4c_it.c ****   */
+  66:../USER/gw1ns4c_it.c **** void MemManage_Handler(void)
+  67:../USER/gw1ns4c_it.c **** {
+  73              		.loc 1 67 1 view -0
+  74              		.cfi_startproc
+  75              		@ Volatile: function does not return.
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78              		@ link register save eliminated.
+  79              	.L6:
+  68:../USER/gw1ns4c_it.c ****   /* Go to infinite loop when Memory Manage exception occurs */
+  69:../USER/gw1ns4c_it.c ****   while (1)
+  80              		.loc 1 69 3 discriminator 1 view .LVU6
+  70:../USER/gw1ns4c_it.c ****   {
+  71:../USER/gw1ns4c_it.c ****   }
+  81              		.loc 1 71 3 discriminator 1 view .LVU7
+  82 0000 FEE7     		b	.L6
+  83              		.cfi_endproc
+  84              	.LFE31:
+  86 0002 00BF     		.section	.text.BusFault_Handler,"ax",%progbits
+  87              		.align	1
+  88              		.p2align 2,,3
+  89              		.global	BusFault_Handler
+  90              		.syntax unified
+  91              		.thumb
+  92              		.thumb_func
+  93              		.fpu softvfp
+  95              	BusFault_Handler:
+  96              	.LFB32:
+  72:../USER/gw1ns4c_it.c **** }
+  73:../USER/gw1ns4c_it.c **** 
+  74:../USER/gw1ns4c_it.c **** /**
+  75:../USER/gw1ns4c_it.c ****   * @brief  This function handles Bus Fault exception.
+  76:../USER/gw1ns4c_it.c ****   * @param  none
+  77:../USER/gw1ns4c_it.c ****   * @retval none
+  78:../USER/gw1ns4c_it.c ****   */
+  79:../USER/gw1ns4c_it.c **** void BusFault_Handler(void)
+  80:../USER/gw1ns4c_it.c **** {
+  97              		.loc 1 80 1 view -0
+  98              		.cfi_startproc
+  99              		@ Volatile: function does not return.
+ 100              		@ args = 0, pretend = 0, frame = 0
+ 101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 102              		@ link register save eliminated.
+ 103              	.L8:
+  81:../USER/gw1ns4c_it.c ****   /* Go to infinite loop when Bus Fault exception occurs */
+  82:../USER/gw1ns4c_it.c ****   while (1)
+ 104              		.loc 1 82 3 discriminator 1 view .LVU9
+  83:../USER/gw1ns4c_it.c ****   {
+  84:../USER/gw1ns4c_it.c ****   }
+ 105              		.loc 1 84 3 discriminator 1 view .LVU10
+ 106 0000 FEE7     		b	.L8
+ 107              		.cfi_endproc
+ 108              	.LFE32:
+ 110 0002 00BF     		.section	.text.UsageFault_Handler,"ax",%progbits
+ 111              		.align	1
+ 112              		.p2align 2,,3
+ 113              		.global	UsageFault_Handler
+ 114              		.syntax unified
+ 115              		.thumb
+ 116              		.thumb_func
+ 117              		.fpu softvfp
+ 119              	UsageFault_Handler:
+ 120              	.LFB33:
+  85:../USER/gw1ns4c_it.c **** }
+  86:../USER/gw1ns4c_it.c **** 
+  87:../USER/gw1ns4c_it.c **** /**
+  88:../USER/gw1ns4c_it.c ****   * @brief  This function handles Usage Fault exception.
+  89:../USER/gw1ns4c_it.c ****   * @param  none
+  90:../USER/gw1ns4c_it.c ****   * @retval none
+  91:../USER/gw1ns4c_it.c ****   */
+  92:../USER/gw1ns4c_it.c **** void UsageFault_Handler(void)
+  93:../USER/gw1ns4c_it.c **** {
+ 121              		.loc 1 93 1 view -0
+ 122              		.cfi_startproc
+ 123              		@ Volatile: function does not return.
+ 124              		@ args = 0, pretend = 0, frame = 0
+ 125              		@ frame_needed = 0, uses_anonymous_args = 0
+ 126              		@ link register save eliminated.
+ 127              	.L10:
+  94:../USER/gw1ns4c_it.c ****   /* Go to infinite loop when Usage Fault exception occurs */
+  95:../USER/gw1ns4c_it.c ****   while (1)
+ 128              		.loc 1 95 3 discriminator 1 view .LVU12
+  96:../USER/gw1ns4c_it.c ****   {
+  97:../USER/gw1ns4c_it.c ****   }
+ 129              		.loc 1 97 3 discriminator 1 view .LVU13
+ 130 0000 FEE7     		b	.L10
+ 131              		.cfi_endproc
+ 132              	.LFE33:
+ 134 0002 00BF     		.section	.text.SVC_Handler,"ax",%progbits
+ 135              		.align	1
+ 136              		.p2align 2,,3
+ 137              		.global	SVC_Handler
+ 138              		.syntax unified
+ 139              		.thumb
+ 140              		.thumb_func
+ 141              		.fpu softvfp
+ 143              	SVC_Handler:
+ 144              	.LFB67:
+ 145              		.cfi_startproc
+ 146              		@ args = 0, pretend = 0, frame = 0
+ 147              		@ frame_needed = 0, uses_anonymous_args = 0
+ 148              		@ link register save eliminated.
+ 149 0000 7047     		bx	lr
+ 150              		.cfi_endproc
+ 151              	.LFE67:
+ 153 0002 00BF     		.section	.text.DebugMon_Handler,"ax",%progbits
+ 154              		.align	1
+ 155              		.p2align 2,,3
+ 156              		.global	DebugMon_Handler
+ 157              		.syntax unified
+ 158              		.thumb
+ 159              		.thumb_func
+ 160              		.fpu softvfp
+ 162              	DebugMon_Handler:
+ 163              	.LFB69:
+ 164              		.cfi_startproc
+ 165              		@ args = 0, pretend = 0, frame = 0
+ 166              		@ frame_needed = 0, uses_anonymous_args = 0
+ 167              		@ link register save eliminated.
+ 168 0000 7047     		bx	lr
+ 169              		.cfi_endproc
+ 170              	.LFE69:
+ 172 0002 00BF     		.section	.text.PendSV_Handler,"ax",%progbits
+ 173              		.align	1
+ 174              		.p2align 2,,3
+ 175              		.global	PendSV_Handler
+ 176              		.syntax unified
+ 177              		.thumb
+ 178              		.thumb_func
+ 179              		.fpu softvfp
+ 181              	PendSV_Handler:
+ 182              	.LFB71:
+ 183              		.cfi_startproc
+ 184              		@ args = 0, pretend = 0, frame = 0
+ 185              		@ frame_needed = 0, uses_anonymous_args = 0
+ 186              		@ link register save eliminated.
+ 187 0000 7047     		bx	lr
+ 188              		.cfi_endproc
+ 189              	.LFE71:
+ 191 0002 00BF     		.section	.text.SysTick_Handler,"ax",%progbits
+ 192              		.align	1
+ 193              		.p2align 2,,3
+ 194              		.global	SysTick_Handler
+ 195              		.syntax unified
+ 196              		.thumb
+ 197              		.thumb_func
+ 198              		.fpu softvfp
+ 200              	SysTick_Handler:
+ 201              	.LFB73:
+ 202              		.cfi_startproc
+ 203              		@ args = 0, pretend = 0, frame = 0
+ 204              		@ frame_needed = 0, uses_anonymous_args = 0
+ 205              		@ link register save eliminated.
+ 206 0000 7047     		bx	lr
+ 207              		.cfi_endproc
+ 208              	.LFE73:
+ 210 0002 00BF     		.section	.text.USER_INT0_Handler,"ax",%progbits
+ 211              		.align	1
+ 212              		.p2align 2,,3
+ 213              		.global	USER_INT0_Handler
+ 214              		.syntax unified
+ 215              		.thumb
+ 216              		.thumb_func
+ 217              		.fpu softvfp
+ 219              	USER_INT0_Handler:
+ 220              	.LFB75:
+ 221              		.cfi_startproc
+ 222              		@ args = 0, pretend = 0, frame = 0
+ 223              		@ frame_needed = 0, uses_anonymous_args = 0
+ 224              		@ link register save eliminated.
+ 225 0000 7047     		bx	lr
+ 226              		.cfi_endproc
+ 227              	.LFE75:
+ 229 0002 00BF     		.section	.text.USER_INT1_Handler,"ax",%progbits
+ 230              		.align	1
+ 231              		.p2align 2,,3
+ 232              		.global	USER_INT1_Handler
+ 233              		.syntax unified
+ 234              		.thumb
+ 235              		.thumb_func
+ 236              		.fpu softvfp
+ 238              	USER_INT1_Handler:
+ 239              	.LFB77:
+ 240              		.cfi_startproc
+ 241              		@ args = 0, pretend = 0, frame = 0
+ 242              		@ frame_needed = 0, uses_anonymous_args = 0
+ 243              		@ link register save eliminated.
+ 244 0000 7047     		bx	lr
+ 245              		.cfi_endproc
+ 246              	.LFE77:
+ 248 0002 00BF     		.section	.text.USER_INT2_Handler,"ax",%progbits
+ 249              		.align	1
+ 250              		.p2align 2,,3
+ 251              		.global	USER_INT2_Handler
+ 252              		.syntax unified
+ 253              		.thumb
+ 254              		.thumb_func
+ 255              		.fpu softvfp
+ 257              	USER_INT2_Handler:
+ 258              	.LFB79:
+ 259              		.cfi_startproc
+ 260              		@ args = 0, pretend = 0, frame = 0
+ 261              		@ frame_needed = 0, uses_anonymous_args = 0
+ 262              		@ link register save eliminated.
+ 263 0000 7047     		bx	lr
+ 264              		.cfi_endproc
+ 265              	.LFE79:
+ 267 0002 00BF     		.section	.text.USER_INT3_Handler,"ax",%progbits
+ 268              		.align	1
+ 269              		.p2align 2,,3
+ 270              		.global	USER_INT3_Handler
+ 271              		.syntax unified
+ 272              		.thumb
+ 273              		.thumb_func
+ 274              		.fpu softvfp
+ 276              	USER_INT3_Handler:
+ 277              	.LFB81:
+ 278              		.cfi_startproc
+ 279              		@ args = 0, pretend = 0, frame = 0
+ 280              		@ frame_needed = 0, uses_anonymous_args = 0
+ 281              		@ link register save eliminated.
+ 282 0000 7047     		bx	lr
+ 283              		.cfi_endproc
+ 284              	.LFE81:
+ 286 0002 00BF     		.section	.text.USER_INT4_Handler,"ax",%progbits
+ 287              		.align	1
+ 288              		.p2align 2,,3
+ 289              		.global	USER_INT4_Handler
+ 290              		.syntax unified
+ 291              		.thumb
+ 292              		.thumb_func
+ 293              		.fpu softvfp
+ 295              	USER_INT4_Handler:
+ 296              	.LFB83:
+ 297              		.cfi_startproc
+ 298              		@ args = 0, pretend = 0, frame = 0
+ 299              		@ frame_needed = 0, uses_anonymous_args = 0
+ 300              		@ link register save eliminated.
+ 301 0000 7047     		bx	lr
+ 302              		.cfi_endproc
+ 303              	.LFE83:
+ 305 0002 00BF     		.section	.text.USER_INT5_Handler,"ax",%progbits
+ 306              		.align	1
+ 307              		.p2align 2,,3
+ 308              		.global	USER_INT5_Handler
+ 309              		.syntax unified
+ 310              		.thumb
+ 311              		.thumb_func
+ 312              		.fpu softvfp
+ 314              	USER_INT5_Handler:
+ 315              	.LFB85:
+ 316              		.cfi_startproc
+ 317              		@ args = 0, pretend = 0, frame = 0
+ 318              		@ frame_needed = 0, uses_anonymous_args = 0
+ 319              		@ link register save eliminated.
+ 320 0000 7047     		bx	lr
+ 321              		.cfi_endproc
+ 322              	.LFE85:
+ 324 0002 00BF     		.section	.text.UART0_Handler,"ax",%progbits
+ 325              		.align	1
+ 326              		.p2align 2,,3
+ 327              		.global	UART0_Handler
+ 328              		.syntax unified
+ 329              		.thumb
+ 330              		.thumb_func
+ 331              		.fpu softvfp
+ 333              	UART0_Handler:
+ 334              	.LFB87:
+ 335              		.cfi_startproc
+ 336              		@ args = 0, pretend = 0, frame = 0
+ 337              		@ frame_needed = 0, uses_anonymous_args = 0
+ 338              		@ link register save eliminated.
+ 339 0000 7047     		bx	lr
+ 340              		.cfi_endproc
+ 341              	.LFE87:
+ 343 0002 00BF     		.section	.text.UART1_Handler,"ax",%progbits
+ 344              		.align	1
+ 345              		.p2align 2,,3
+ 346              		.global	UART1_Handler
+ 347              		.syntax unified
+ 348              		.thumb
+ 349              		.thumb_func
+ 350              		.fpu softvfp
+ 352              	UART1_Handler:
+ 353              	.LFB89:
+ 354              		.cfi_startproc
+ 355              		@ args = 0, pretend = 0, frame = 0
+ 356              		@ frame_needed = 0, uses_anonymous_args = 0
+ 357              		@ link register save eliminated.
+ 358 0000 7047     		bx	lr
+ 359              		.cfi_endproc
+ 360              	.LFE89:
+ 362 0002 00BF     		.section	.text.TIMER0_Handler,"ax",%progbits
+ 363              		.align	1
+ 364              		.p2align 2,,3
+ 365              		.global	TIMER0_Handler
+ 366              		.syntax unified
+ 367              		.thumb
+ 368              		.thumb_func
+ 369              		.fpu softvfp
+ 371              	TIMER0_Handler:
+ 372              	.LFB91:
+ 373              		.cfi_startproc
+ 374              		@ args = 0, pretend = 0, frame = 0
+ 375              		@ frame_needed = 0, uses_anonymous_args = 0
+ 376              		@ link register save eliminated.
+ 377 0000 7047     		bx	lr
+ 378              		.cfi_endproc
+ 379              	.LFE91:
+ 381 0002 00BF     		.section	.text.TIMER1_Handler,"ax",%progbits
+ 382              		.align	1
+ 383              		.p2align 2,,3
+ 384              		.global	TIMER1_Handler
+ 385              		.syntax unified
+ 386              		.thumb
+ 387              		.thumb_func
+ 388              		.fpu softvfp
+ 390              	TIMER1_Handler:
+ 391              	.LFB93:
+ 392              		.cfi_startproc
+ 393              		@ args = 0, pretend = 0, frame = 0
+ 394              		@ frame_needed = 0, uses_anonymous_args = 0
+ 395              		@ link register save eliminated.
+ 396 0000 7047     		bx	lr
+ 397              		.cfi_endproc
+ 398              	.LFE93:
+ 400 0002 00BF     		.section	.text.I2C_Handler,"ax",%progbits
+ 401              		.align	1
+ 402              		.p2align 2,,3
+ 403              		.global	I2C_Handler
+ 404              		.syntax unified
+ 405              		.thumb
+ 406              		.thumb_func
+ 407              		.fpu softvfp
+ 409              	I2C_Handler:
+ 410              	.LFB95:
+ 411              		.cfi_startproc
+ 412              		@ args = 0, pretend = 0, frame = 0
+ 413              		@ frame_needed = 0, uses_anonymous_args = 0
+ 414              		@ link register save eliminated.
+ 415 0000 7047     		bx	lr
+ 416              		.cfi_endproc
+ 417              	.LFE95:
+ 419 0002 00BF     		.section	.text.RTC_Handler,"ax",%progbits
+ 420              		.align	1
+ 421              		.p2align 2,,3
+ 422              		.global	RTC_Handler
+ 423              		.syntax unified
+ 424              		.thumb
+ 425              		.thumb_func
+ 426              		.fpu softvfp
+ 428              	RTC_Handler:
+ 429              	.LFB97:
+ 430              		.cfi_startproc
+ 431              		@ args = 0, pretend = 0, frame = 0
+ 432              		@ frame_needed = 0, uses_anonymous_args = 0
+ 433              		@ link register save eliminated.
+ 434 0000 7047     		bx	lr
+ 435              		.cfi_endproc
+ 436              	.LFE97:
+ 438 0002 00BF     		.section	.text.PORT0_0_Handler,"ax",%progbits
+ 439              		.align	1
+ 440              		.p2align 2,,3
+ 441              		.global	PORT0_0_Handler
+ 442              		.syntax unified
+ 443              		.thumb
+ 444              		.thumb_func
+ 445              		.fpu softvfp
+ 447              	PORT0_0_Handler:
+ 448              	.LFB99:
+ 449              		.cfi_startproc
+ 450              		@ args = 0, pretend = 0, frame = 0
+ 451              		@ frame_needed = 0, uses_anonymous_args = 0
+ 452              		@ link register save eliminated.
+ 453 0000 7047     		bx	lr
+ 454              		.cfi_endproc
+ 455              	.LFE99:
+ 457 0002 00BF     		.section	.text.PORT0_1_Handler,"ax",%progbits
+ 458              		.align	1
+ 459              		.p2align 2,,3
+ 460              		.global	PORT0_1_Handler
+ 461              		.syntax unified
+ 462              		.thumb
+ 463              		.thumb_func
+ 464              		.fpu softvfp
+ 466              	PORT0_1_Handler:
+ 467              	.LFB101:
+ 468              		.cfi_startproc
+ 469              		@ args = 0, pretend = 0, frame = 0
+ 470              		@ frame_needed = 0, uses_anonymous_args = 0
+ 471              		@ link register save eliminated.
+ 472 0000 7047     		bx	lr
+ 473              		.cfi_endproc
+ 474              	.LFE101:
+ 476 0002 00BF     		.section	.text.PORT0_2_Handler,"ax",%progbits
+ 477              		.align	1
+ 478              		.p2align 2,,3
+ 479              		.global	PORT0_2_Handler
+ 480              		.syntax unified
+ 481              		.thumb
+ 482              		.thumb_func
+ 483              		.fpu softvfp
+ 485              	PORT0_2_Handler:
+ 486              	.LFB103:
+ 487              		.cfi_startproc
+ 488              		@ args = 0, pretend = 0, frame = 0
+ 489              		@ frame_needed = 0, uses_anonymous_args = 0
+ 490              		@ link register save eliminated.
+ 491 0000 7047     		bx	lr
+ 492              		.cfi_endproc
+ 493              	.LFE103:
+ 495 0002 00BF     		.section	.text.PORT0_3_Handler,"ax",%progbits
+ 496              		.align	1
+ 497              		.p2align 2,,3
+ 498              		.global	PORT0_3_Handler
+ 499              		.syntax unified
+ 500              		.thumb
+ 501              		.thumb_func
+ 502              		.fpu softvfp
+ 504              	PORT0_3_Handler:
+ 505              	.LFB105:
+ 506              		.cfi_startproc
+ 507              		@ args = 0, pretend = 0, frame = 0
+ 508              		@ frame_needed = 0, uses_anonymous_args = 0
+ 509              		@ link register save eliminated.
+ 510 0000 7047     		bx	lr
+ 511              		.cfi_endproc
+ 512              	.LFE105:
+ 514 0002 00BF     		.section	.text.PORT0_4_Handler,"ax",%progbits
+ 515              		.align	1
+ 516              		.p2align 2,,3
+ 517              		.global	PORT0_4_Handler
+ 518              		.syntax unified
+ 519              		.thumb
+ 520              		.thumb_func
+ 521              		.fpu softvfp
+ 523              	PORT0_4_Handler:
+ 524              	.LFB107:
+ 525              		.cfi_startproc
+ 526              		@ args = 0, pretend = 0, frame = 0
+ 527              		@ frame_needed = 0, uses_anonymous_args = 0
+ 528              		@ link register save eliminated.
+ 529 0000 7047     		bx	lr
+ 530              		.cfi_endproc
+ 531              	.LFE107:
+ 533 0002 00BF     		.section	.text.PORT0_5_Handler,"ax",%progbits
+ 534              		.align	1
+ 535              		.p2align 2,,3
+ 536              		.global	PORT0_5_Handler
+ 537              		.syntax unified
+ 538              		.thumb
+ 539              		.thumb_func
+ 540              		.fpu softvfp
+ 542              	PORT0_5_Handler:
+ 543              	.LFB109:
+ 544              		.cfi_startproc
+ 545              		@ args = 0, pretend = 0, frame = 0
+ 546              		@ frame_needed = 0, uses_anonymous_args = 0
+ 547              		@ link register save eliminated.
+ 548 0000 7047     		bx	lr
+ 549              		.cfi_endproc
+ 550              	.LFE109:
+ 552 0002 00BF     		.section	.text.PORT0_6_Handler,"ax",%progbits
+ 553              		.align	1
+ 554              		.p2align 2,,3
+ 555              		.global	PORT0_6_Handler
+ 556              		.syntax unified
+ 557              		.thumb
+ 558              		.thumb_func
+ 559              		.fpu softvfp
+ 561              	PORT0_6_Handler:
+ 562              	.LFB111:
+ 563              		.cfi_startproc
+ 564              		@ args = 0, pretend = 0, frame = 0
+ 565              		@ frame_needed = 0, uses_anonymous_args = 0
+ 566              		@ link register save eliminated.
+ 567 0000 7047     		bx	lr
+ 568              		.cfi_endproc
+ 569              	.LFE111:
+ 571 0002 00BF     		.section	.text.PORT0_7_Handler,"ax",%progbits
+ 572              		.align	1
+ 573              		.p2align 2,,3
+ 574              		.global	PORT0_7_Handler
+ 575              		.syntax unified
+ 576              		.thumb
+ 577              		.thumb_func
+ 578              		.fpu softvfp
+ 580              	PORT0_7_Handler:
+ 581              	.LFB113:
+ 582              		.cfi_startproc
+ 583              		@ args = 0, pretend = 0, frame = 0
+ 584              		@ frame_needed = 0, uses_anonymous_args = 0
+ 585              		@ link register save eliminated.
+ 586 0000 7047     		bx	lr
+ 587              		.cfi_endproc
+ 588              	.LFE113:
+ 590 0002 00BF     		.section	.text.PORT0_8_Handler,"ax",%progbits
+ 591              		.align	1
+ 592              		.p2align 2,,3
+ 593              		.global	PORT0_8_Handler
+ 594              		.syntax unified
+ 595              		.thumb
+ 596              		.thumb_func
+ 597              		.fpu softvfp
+ 599              	PORT0_8_Handler:
+ 600              	.LFB115:
+ 601              		.cfi_startproc
+ 602              		@ args = 0, pretend = 0, frame = 0
+ 603              		@ frame_needed = 0, uses_anonymous_args = 0
+ 604              		@ link register save eliminated.
+ 605 0000 7047     		bx	lr
+ 606              		.cfi_endproc
+ 607              	.LFE115:
+ 609 0002 00BF     		.section	.text.PORT0_9_Handler,"ax",%progbits
+ 610              		.align	1
+ 611              		.p2align 2,,3
+ 612              		.global	PORT0_9_Handler
+ 613              		.syntax unified
+ 614              		.thumb
+ 615              		.thumb_func
+ 616              		.fpu softvfp
+ 618              	PORT0_9_Handler:
+ 619              	.LFB117:
+ 620              		.cfi_startproc
+ 621              		@ args = 0, pretend = 0, frame = 0
+ 622              		@ frame_needed = 0, uses_anonymous_args = 0
+ 623              		@ link register save eliminated.
+ 624 0000 7047     		bx	lr
+ 625              		.cfi_endproc
+ 626              	.LFE117:
+ 628 0002 00BF     		.section	.text.PORT0_10_Handler,"ax",%progbits
+ 629              		.align	1
+ 630              		.p2align 2,,3
+ 631              		.global	PORT0_10_Handler
+ 632              		.syntax unified
+ 633              		.thumb
+ 634              		.thumb_func
+ 635              		.fpu softvfp
+ 637              	PORT0_10_Handler:
+ 638              	.LFB119:
+ 639              		.cfi_startproc
+ 640              		@ args = 0, pretend = 0, frame = 0
+ 641              		@ frame_needed = 0, uses_anonymous_args = 0
+ 642              		@ link register save eliminated.
+ 643 0000 7047     		bx	lr
+ 644              		.cfi_endproc
+ 645              	.LFE119:
+ 647 0002 00BF     		.section	.text.PORT0_11_Handler,"ax",%progbits
+ 648              		.align	1
+ 649              		.p2align 2,,3
+ 650              		.global	PORT0_11_Handler
+ 651              		.syntax unified
+ 652              		.thumb
+ 653              		.thumb_func
+ 654              		.fpu softvfp
+ 656              	PORT0_11_Handler:
+ 657              	.LFB121:
+ 658              		.cfi_startproc
+ 659              		@ args = 0, pretend = 0, frame = 0
+ 660              		@ frame_needed = 0, uses_anonymous_args = 0
+ 661              		@ link register save eliminated.
+ 662 0000 7047     		bx	lr
+ 663              		.cfi_endproc
+ 664              	.LFE121:
+ 666 0002 00BF     		.section	.text.PORT0_12_Handler,"ax",%progbits
+ 667              		.align	1
+ 668              		.p2align 2,,3
+ 669              		.global	PORT0_12_Handler
+ 670              		.syntax unified
+ 671              		.thumb
+ 672              		.thumb_func
+ 673              		.fpu softvfp
+ 675              	PORT0_12_Handler:
+ 676              	.LFB123:
+ 677              		.cfi_startproc
+ 678              		@ args = 0, pretend = 0, frame = 0
+ 679              		@ frame_needed = 0, uses_anonymous_args = 0
+ 680              		@ link register save eliminated.
+ 681 0000 7047     		bx	lr
+ 682              		.cfi_endproc
+ 683              	.LFE123:
+ 685 0002 00BF     		.section	.text.PORT0_13_Handler,"ax",%progbits
+ 686              		.align	1
+ 687              		.p2align 2,,3
+ 688              		.global	PORT0_13_Handler
+ 689              		.syntax unified
+ 690              		.thumb
+ 691              		.thumb_func
+ 692              		.fpu softvfp
+ 694              	PORT0_13_Handler:
+ 695              	.LFB125:
+ 696              		.cfi_startproc
+ 697              		@ args = 0, pretend = 0, frame = 0
+ 698              		@ frame_needed = 0, uses_anonymous_args = 0
+ 699              		@ link register save eliminated.
+ 700 0000 7047     		bx	lr
+ 701              		.cfi_endproc
+ 702              	.LFE125:
+ 704 0002 00BF     		.section	.text.PORT0_14_Handler,"ax",%progbits
+ 705              		.align	1
+ 706              		.p2align 2,,3
+ 707              		.global	PORT0_14_Handler
+ 708              		.syntax unified
+ 709              		.thumb
+ 710              		.thumb_func
+ 711              		.fpu softvfp
+ 713              	PORT0_14_Handler:
+ 714              	.LFB127:
+ 715              		.cfi_startproc
+ 716              		@ args = 0, pretend = 0, frame = 0
+ 717              		@ frame_needed = 0, uses_anonymous_args = 0
+ 718              		@ link register save eliminated.
+ 719 0000 7047     		bx	lr
+ 720              		.cfi_endproc
+ 721              	.LFE127:
+ 723 0002 00BF     		.section	.text.PORT0_15_Handler,"ax",%progbits
+ 724              		.align	1
+ 725              		.p2align 2,,3
+ 726              		.global	PORT0_15_Handler
+ 727              		.syntax unified
+ 728              		.thumb
+ 729              		.thumb_func
+ 730              		.fpu softvfp
+ 732              	PORT0_15_Handler:
+ 733              	.LFB129:
+ 734              		.cfi_startproc
+ 735              		@ args = 0, pretend = 0, frame = 0
+ 736              		@ frame_needed = 0, uses_anonymous_args = 0
+ 737              		@ link register save eliminated.
+ 738 0000 7047     		bx	lr
+ 739              		.cfi_endproc
+ 740              	.LFE129:
+ 742 0002 00BF     		.text
+ 743              	.Letext0:
+ 744              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 745              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 746              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 747              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gw1ns4c_it.c
+d:\wintmp\ccdDpCu1.s:16     .text.NMI_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:25     .text.NMI_Handler:00000000 NMI_Handler
+d:\wintmp\ccdDpCu1.s:39     .text.HardFault_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:47     .text.HardFault_Handler:00000000 HardFault_Handler
+d:\wintmp\ccdDpCu1.s:63     .text.MemManage_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:71     .text.MemManage_Handler:00000000 MemManage_Handler
+d:\wintmp\ccdDpCu1.s:87     .text.BusFault_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:95     .text.BusFault_Handler:00000000 BusFault_Handler
+d:\wintmp\ccdDpCu1.s:111    .text.UsageFault_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:119    .text.UsageFault_Handler:00000000 UsageFault_Handler
+d:\wintmp\ccdDpCu1.s:135    .text.SVC_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:143    .text.SVC_Handler:00000000 SVC_Handler
+d:\wintmp\ccdDpCu1.s:154    .text.DebugMon_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:162    .text.DebugMon_Handler:00000000 DebugMon_Handler
+d:\wintmp\ccdDpCu1.s:173    .text.PendSV_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:181    .text.PendSV_Handler:00000000 PendSV_Handler
+d:\wintmp\ccdDpCu1.s:192    .text.SysTick_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:200    .text.SysTick_Handler:00000000 SysTick_Handler
+d:\wintmp\ccdDpCu1.s:211    .text.USER_INT0_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:219    .text.USER_INT0_Handler:00000000 USER_INT0_Handler
+d:\wintmp\ccdDpCu1.s:230    .text.USER_INT1_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:238    .text.USER_INT1_Handler:00000000 USER_INT1_Handler
+d:\wintmp\ccdDpCu1.s:249    .text.USER_INT2_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:257    .text.USER_INT2_Handler:00000000 USER_INT2_Handler
+d:\wintmp\ccdDpCu1.s:268    .text.USER_INT3_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:276    .text.USER_INT3_Handler:00000000 USER_INT3_Handler
+d:\wintmp\ccdDpCu1.s:287    .text.USER_INT4_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:295    .text.USER_INT4_Handler:00000000 USER_INT4_Handler
+d:\wintmp\ccdDpCu1.s:306    .text.USER_INT5_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:314    .text.USER_INT5_Handler:00000000 USER_INT5_Handler
+d:\wintmp\ccdDpCu1.s:325    .text.UART0_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:333    .text.UART0_Handler:00000000 UART0_Handler
+d:\wintmp\ccdDpCu1.s:344    .text.UART1_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:352    .text.UART1_Handler:00000000 UART1_Handler
+d:\wintmp\ccdDpCu1.s:363    .text.TIMER0_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:371    .text.TIMER0_Handler:00000000 TIMER0_Handler
+d:\wintmp\ccdDpCu1.s:382    .text.TIMER1_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:390    .text.TIMER1_Handler:00000000 TIMER1_Handler
+d:\wintmp\ccdDpCu1.s:401    .text.I2C_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:409    .text.I2C_Handler:00000000 I2C_Handler
+d:\wintmp\ccdDpCu1.s:420    .text.RTC_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:428    .text.RTC_Handler:00000000 RTC_Handler
+d:\wintmp\ccdDpCu1.s:439    .text.PORT0_0_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:447    .text.PORT0_0_Handler:00000000 PORT0_0_Handler
+d:\wintmp\ccdDpCu1.s:458    .text.PORT0_1_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:466    .text.PORT0_1_Handler:00000000 PORT0_1_Handler
+d:\wintmp\ccdDpCu1.s:477    .text.PORT0_2_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:485    .text.PORT0_2_Handler:00000000 PORT0_2_Handler
+d:\wintmp\ccdDpCu1.s:496    .text.PORT0_3_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:504    .text.PORT0_3_Handler:00000000 PORT0_3_Handler
+d:\wintmp\ccdDpCu1.s:515    .text.PORT0_4_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:523    .text.PORT0_4_Handler:00000000 PORT0_4_Handler
+d:\wintmp\ccdDpCu1.s:534    .text.PORT0_5_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:542    .text.PORT0_5_Handler:00000000 PORT0_5_Handler
+d:\wintmp\ccdDpCu1.s:553    .text.PORT0_6_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:561    .text.PORT0_6_Handler:00000000 PORT0_6_Handler
+d:\wintmp\ccdDpCu1.s:572    .text.PORT0_7_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:580    .text.PORT0_7_Handler:00000000 PORT0_7_Handler
+d:\wintmp\ccdDpCu1.s:591    .text.PORT0_8_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:599    .text.PORT0_8_Handler:00000000 PORT0_8_Handler
+d:\wintmp\ccdDpCu1.s:610    .text.PORT0_9_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:618    .text.PORT0_9_Handler:00000000 PORT0_9_Handler
+d:\wintmp\ccdDpCu1.s:629    .text.PORT0_10_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:637    .text.PORT0_10_Handler:00000000 PORT0_10_Handler
+d:\wintmp\ccdDpCu1.s:648    .text.PORT0_11_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:656    .text.PORT0_11_Handler:00000000 PORT0_11_Handler
+d:\wintmp\ccdDpCu1.s:667    .text.PORT0_12_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:675    .text.PORT0_12_Handler:00000000 PORT0_12_Handler
+d:\wintmp\ccdDpCu1.s:686    .text.PORT0_13_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:694    .text.PORT0_13_Handler:00000000 PORT0_13_Handler
+d:\wintmp\ccdDpCu1.s:705    .text.PORT0_14_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:713    .text.PORT0_14_Handler:00000000 PORT0_14_Handler
+d:\wintmp\ccdDpCu1.s:724    .text.PORT0_15_Handler:00000000 $t
+d:\wintmp\ccdDpCu1.s:732    .text.PORT0_15_Handler:00000000 PORT0_15_Handler
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+
+NO UNDEFINED SYMBOLS

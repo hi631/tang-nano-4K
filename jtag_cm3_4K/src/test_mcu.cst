@@ -1,0 +1,45 @@
+//Copyright (C)2014-2021 Gowin Semiconductor Corporation.
+//All rights reserved. 
+//File Title: Physical Constraints file
+//GOWIN Version: 1.9.7.06Beta
+//Part Number: GW1NSR-LV4CQN48PC7/I6
+//Device: GW1NSR-4C
+//Created Time: Tue 06 22 15:16:20 2021
+
+IO_LOC  "sys_clk" 45;
+IO_PORT "sys_clk" PULL_MODE=UP;
+IO_LOC  "reset_n" 14; // USER_KEY1
+IO_PORT "reset_n" PULL_MODE=UP;
+IO_LOC  "ukey2_n" 15; // USER_KEY2
+IO_PORT "ukey2_n" PULL_MODE=UP;
+
+IO_LOC  "uart0_txd" 18;
+IO_PORT "uart0_txd" PULL_MODE=UP;
+IO_LOC  "uart0_rxd" 19;
+IO_PORT "uart0_rxd" PULL_MODE=UP;
+
+// jtag(7,3,4)          <-> dumy.in(16,13,17)
+// re.write pin08->GND  <-> Use JTAG as reguler  
+//IO_LOC  "TCK" 7; //16; // connect 7(jtag.TCK)<->16(s2s.TCK)
+//IO_PORT "TCK" PULL_MODE=UP;
+//IO_LOC  "TDI" 3; //13; // connect 3(jtag.TDI)<->13(s2s.TDI)
+//IO_PORT "TDI" PULL_MODE=UP;
+//IO_LOC  "TDO" 4; //17; // connect 4(jtag.TDO)<->17(s2s.TDI)
+//IO_PORT "TDO" PULL_MODE=NONE DRIVE=4;
+IO_LOC  "TCK" 16; // connect 7(jtag.TCK)<->16(s2s.TCK)
+IO_PORT "TCK" PULL_MODE=UP;
+IO_LOC  "TDI" 13; // connect 3(jtag.TDI)<->13(s2s.TDI)
+IO_PORT "TDI" PULL_MODE=UP;
+IO_LOC  "TDO" 17; // connect 4(jtag.TDO)<->17(s2s.TDI)
+IO_PORT "TDO" PULL_MODE=NONE DRIVE=4;
+
+IO_LOC  "leds[0]" 35; //27;
+IO_PORT "leds[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=4;
+IO_LOC  "leds[1]" 34; //28;
+IO_PORT "leds[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=4;
+IO_LOC  "leds[2]" 32; //29;
+IO_PORT "leds[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=4;
+IO_LOC  "leds[3]" 31; //30;
+IO_PORT "leds[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP DRIVE=4;
+
+

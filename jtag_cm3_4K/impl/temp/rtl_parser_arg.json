@@ -1,0 +1,24 @@
+{
+ "Files" : [
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/gowin_empu/gowin_empu.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/gowin_pllvr/gowin_pllvr.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/test_mcu_top.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/impl/temp/rtl_parser.result",
+ "Top" : "test_mcu_top",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

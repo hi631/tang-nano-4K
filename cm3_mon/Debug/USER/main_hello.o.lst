@@ -1,0 +1,635 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"main_hello.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.GPIOInit,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	GPIOInit
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	GPIOInit:
+  26              	.LVL0:
+  27              	.LFB33:
+  28              		.file 1 "../USER/main_hello.c"
+   1:../USER/main_hello.c **** 
+   2:../USER/main_hello.c **** /*
+   3:../USER/main_hello.c ****  * *****************************************************************************************
+   4:../USER/main_hello.c ****  *
+   5:../USER/main_hello.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   6:../USER/main_hello.c ****  * 		
+   7:../USER/main_hello.c ****  * @file			main.c
+   8:../USER/main_hello.c ****  * @author		Embedded Development Team
+   9:../USER/main_hello.c ****  * @version		V1.x.x
+  10:../USER/main_hello.c ****  * @date			2021-01-01 09:00:00
+  11:../USER/main_hello.c ****  * @brief			Main program body.
+  12:../USER/main_hello.c ****  ******************************************************************************************
+  13:../USER/main_hello.c ****  */
+  14:../USER/main_hello.c **** 
+  15:../USER/main_hello.c **** /* Includes ------------------------------------------------------------------*/
+  16:../USER/main_hello.c **** #include "gw1ns4c.h"
+  17:../USER/main_hello.c **** //#include "GOWIN_M3.h"
+  18:../USER/main_hello.c **** 
+  19:../USER/main_hello.c **** #include <stdio.h>
+  20:../USER/main_hello.c **** #include <stdlib.h>
+  21:../USER/main_hello.c **** #include <string.h>
+  22:../USER/main_hello.c **** /* Declarations ------------------------------------------------------------------*/
+  23:../USER/main_hello.c **** void delay_ms(__IO uint32_t delay_ms);
+  24:../USER/main_hello.c **** void GPIOInit(uint32_t pin);
+  25:../USER/main_hello.c **** void UartInit(void);
+  26:../USER/main_hello.c **** 
+  27:../USER/main_hello.c **** /* Functions ------------------------------------------------------------------*/
+  28:../USER/main_hello.c **** int main(void)
+  29:../USER/main_hello.c **** {
+  30:../USER/main_hello.c **** 	uint32_t pin;
+  31:../USER/main_hello.c **** 	char ch,kd;
+  32:../USER/main_hello.c **** 	SystemInit();	//Initializes system
+  33:../USER/main_hello.c **** 	pin = GPIO_Pin_3;
+  34:../USER/main_hello.c **** 	GPIOInit(pin);	//Initializes GPIO
+  35:../USER/main_hello.c **** 	UartInit();
+  36:../USER/main_hello.c **** 
+  37:../USER/main_hello.c **** 	printf("\r\n----------------------------------\r\n");
+  38:../USER/main_hello.c **** 	printf("       GowinSemiconductor\r\n");
+  39:../USER/main_hello.c **** 	printf("----------------------------------\r\n");
+  40:../USER/main_hello.c **** 
+  41:../USER/main_hello.c ****   ch = 0x30;
+  42:../USER/main_hello.c ****   while(1)
+  43:../USER/main_hello.c ****   {
+  44:../USER/main_hello.c ****     GPIO_ResetBit(GPIO0,pin);	//LED on
+  45:../USER/main_hello.c **** 	delay_ms(100);
+  46:../USER/main_hello.c **** 		
+  47:../USER/main_hello.c ****     GPIO_SetBit(GPIO0,pin);		//LED off
+  48:../USER/main_hello.c **** 	delay_ms(100);
+  49:../USER/main_hello.c **** 
+  50:../USER/main_hello.c **** 	printf("%c",ch); fflush(stdout); ch++;
+  51:../USER/main_hello.c **** 	if(ch>0x39) ch = 0x30;
+  52:../USER/main_hello.c **** 	// PERIPHERAL\Sources\gw1ns4c_uart.c
+  53:../USER/main_hello.c **** 	if(UART_GetRxBufferFull(UART0)){
+  54:../USER/main_hello.c **** 		kd = UART_ReceiveChar(UART0);
+  55:../USER/main_hello.c **** 		UART_SendChar(UART0,kd);
+  56:../USER/main_hello.c **** 	}
+  57:../USER/main_hello.c ****   }
+  58:../USER/main_hello.c **** }
+  59:../USER/main_hello.c **** 
+  60:../USER/main_hello.c **** //Initializes GPIO
+  61:../USER/main_hello.c **** void GPIOInit(uint32_t pin)
+  62:../USER/main_hello.c **** {
+  29              		.loc 1 62 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 8
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  63:../USER/main_hello.c **** 	GPIO_InitTypeDef GPIO_InitType;
+  33              		.loc 1 63 2 view .LVU1
+  64:../USER/main_hello.c **** 	
+  65:../USER/main_hello.c **** 	GPIO_InitType.GPIO_Pin = pin;
+  34              		.loc 1 65 2 view .LVU2
+  62:../USER/main_hello.c **** 	GPIO_InitTypeDef GPIO_InitType;
+  35              		.loc 1 62 1 is_stmt 0 view .LVU3
+  36 0000 30B5     		push	{r4, r5, lr}
+  37              		.cfi_def_cfa_offset 12
+  38              		.cfi_offset 4, -12
+  39              		.cfi_offset 5, -8
+  40              		.cfi_offset 14, -4
+  66:../USER/main_hello.c **** 	GPIO_InitType.GPIO_Mode = GPIO_Mode_OUT;
+  41              		.loc 1 66 26 view .LVU4
+  42 0002 0123     		movs	r3, #1
+  62:../USER/main_hello.c **** 	GPIO_InitTypeDef GPIO_InitType;
+  43              		.loc 1 62 1 view .LVU5
+  44 0004 0546     		mov	r5, r0
+  67:../USER/main_hello.c **** 	GPIO_InitType.GPIO_Int = GPIO_Int_Disable;
+  68:../USER/main_hello.c **** 	GPIO_Init(GPIO0,&GPIO_InitType);
+  45              		.loc 1 68 2 view .LVU6
+  46 0006 074C     		ldr	r4, .L4
+  62:../USER/main_hello.c **** 	GPIO_InitTypeDef GPIO_InitType;
+  47              		.loc 1 62 1 view .LVU7
+  48 0008 83B0     		sub	sp, sp, #12
+  49              		.cfi_def_cfa_offset 24
+  50              		.loc 1 68 2 view .LVU8
+  51 000a 6946     		mov	r1, sp
+  52 000c 2046     		mov	r0, r4
+  53              	.LVL1:
+  66:../USER/main_hello.c **** 	GPIO_InitType.GPIO_Mode = GPIO_Mode_OUT;
+  54              		.loc 1 66 26 view .LVU9
+  55 000e ADF80430 		strh	r3, [sp, #4]	@ movhi
+  65:../USER/main_hello.c **** 	GPIO_InitType.GPIO_Mode = GPIO_Mode_OUT;
+  56              		.loc 1 65 25 view .LVU10
+  57 0012 0095     		str	r5, [sp]
+  66:../USER/main_hello.c **** 	GPIO_InitType.GPIO_Int = GPIO_Int_Disable;
+  58              		.loc 1 66 2 is_stmt 1 view .LVU11
+  67:../USER/main_hello.c **** 	GPIO_Init(GPIO0,&GPIO_InitType);
+  59              		.loc 1 67 2 view .LVU12
+  60              		.loc 1 68 2 view .LVU13
+  61 0014 FFF7FEFF 		bl	GPIO_Init
+  62              	.LVL2:
+  69:../USER/main_hello.c ****   GPIO_SetBit(GPIO0,pin);
+  63              		.loc 1 69 3 view .LVU14
+  64 0018 2946     		mov	r1, r5
+  65 001a 2046     		mov	r0, r4
+  66 001c FFF7FEFF 		bl	GPIO_SetBit
+  67              	.LVL3:
+  70:../USER/main_hello.c **** }
+  68              		.loc 1 70 1 is_stmt 0 view .LVU15
+  69 0020 03B0     		add	sp, sp, #12
+  70              		.cfi_def_cfa_offset 12
+  71              		@ sp needed
+  72 0022 30BD     		pop	{r4, r5, pc}
+  73              	.LVL4:
+  74              	.L5:
+  75              		.loc 1 70 1 view .LVU16
+  76              		.align	2
+  77              	.L4:
+  78 0024 00000140 		.word	1073807360
+  79              		.cfi_endproc
+  80              	.LFE33:
+  82              		.section	.text.UartInit,"ax",%progbits
+  83              		.align	1
+  84              		.p2align 2,,3
+  85              		.global	UartInit
+  86              		.syntax unified
+  87              		.thumb
+  88              		.thumb_func
+  89              		.fpu softvfp
+  91              	UartInit:
+  92              	.LFB34:
+  71:../USER/main_hello.c **** 
+  72:../USER/main_hello.c **** void UartInit(void)
+  73:../USER/main_hello.c **** {
+  93              		.loc 1 73 1 is_stmt 1 view -0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 16
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  74:../USER/main_hello.c ****   UART_InitTypeDef UART_InitStruct;
+  97              		.loc 1 74 3 view .LVU18
+  75:../USER/main_hello.c **** 
+  76:../USER/main_hello.c ****   UART_InitStruct.UART_Mode.UARTMode_Tx = ENABLE;
+  98              		.loc 1 76 3 view .LVU19
+  77:../USER/main_hello.c ****   UART_InitStruct.UART_Mode.UARTMode_Rx = ENABLE;
+  99              		.loc 1 77 3 view .LVU20
+  78:../USER/main_hello.c ****   UART_InitStruct.UART_Int.UARTInt_Tx = DISABLE;
+ 100              		.loc 1 78 3 view .LVU21
+  79:../USER/main_hello.c ****   UART_InitStruct.UART_Int.UARTInt_Rx = DISABLE;
+ 101              		.loc 1 79 3 view .LVU22
+  80:../USER/main_hello.c ****   UART_InitStruct.UART_Ovr.UARTOvr_Tx = DISABLE;
+ 102              		.loc 1 80 3 view .LVU23
+  81:../USER/main_hello.c ****   UART_InitStruct.UART_Ovr.UARTOvr_Rx = DISABLE;
+ 103              		.loc 1 81 3 view .LVU24
+  82:../USER/main_hello.c ****   UART_InitStruct.UART_Hstm = DISABLE;
+ 104              		.loc 1 82 3 view .LVU25
+  83:../USER/main_hello.c ****   UART_InitStruct.UART_BaudRate = 115200*80/72;//Baud Rate
+ 105              		.loc 1 83 3 view .LVU26
+  73:../USER/main_hello.c ****   UART_InitTypeDef UART_InitStruct;
+ 106              		.loc 1 73 1 is_stmt 0 view .LVU27
+ 107 0000 10B5     		push	{r4, lr}
+ 108              		.cfi_def_cfa_offset 8
+ 109              		.cfi_offset 4, -8
+ 110              		.cfi_offset 14, -4
+  80:../USER/main_hello.c ****   UART_InitStruct.UART_Ovr.UARTOvr_Rx = DISABLE;
+ 111              		.loc 1 80 39 view .LVU28
+ 112 0002 0023     		movs	r3, #0
+  76:../USER/main_hello.c ****   UART_InitStruct.UART_Mode.UARTMode_Rx = ENABLE;
+ 113              		.loc 1 76 41 view .LVU29
+ 114 0004 40F20112 		movw	r2, #257
+ 115              		.loc 1 83 33 view .LVU30
+ 116 0008 4FF4FA34 		mov	r4, #128000
+  73:../USER/main_hello.c ****   UART_InitTypeDef UART_InitStruct;
+ 117              		.loc 1 73 1 view .LVU31
+ 118 000c 84B0     		sub	sp, sp, #16
+ 119              		.cfi_def_cfa_offset 24
+  84:../USER/main_hello.c ****   UART_Init(UART0,&UART_InitStruct);
+ 120              		.loc 1 84 3 view .LVU32
+ 121 000e 01A9     		add	r1, sp, #4
+ 122 0010 4FF04020 		mov	r0, #1073758208
+  76:../USER/main_hello.c ****   UART_InitStruct.UART_Mode.UARTMode_Rx = ENABLE;
+ 123              		.loc 1 76 41 view .LVU33
+ 124 0014 CDE90142 		strd	r4, r2, [sp, #4]
+  80:../USER/main_hello.c ****   UART_InitStruct.UART_Ovr.UARTOvr_Rx = DISABLE;
+ 125              		.loc 1 80 39 view .LVU34
+ 126 0018 ADF80C30 		strh	r3, [sp, #12]	@ movhi
+  82:../USER/main_hello.c ****   UART_InitStruct.UART_BaudRate = 115200*80/72;//Baud Rate
+ 127              		.loc 1 82 29 view .LVU35
+ 128 001c 8DF80E30 		strb	r3, [sp, #14]
+ 129              		.loc 1 84 3 is_stmt 1 view .LVU36
+ 130 0020 FFF7FEFF 		bl	UART_Init
+ 131              	.LVL5:
+  85:../USER/main_hello.c **** }
+ 132              		.loc 1 85 1 is_stmt 0 view .LVU37
+ 133 0024 04B0     		add	sp, sp, #16
+ 134              		.cfi_def_cfa_offset 8
+ 135              		@ sp needed
+ 136 0026 10BD     		pop	{r4, pc}
+ 137              		.cfi_endproc
+ 138              	.LFE34:
+ 140              		.section	.text.startup.main,"ax",%progbits
+ 141              		.align	1
+ 142              		.p2align 2,,3
+ 143              		.global	main
+ 144              		.syntax unified
+ 145              		.thumb
+ 146              		.thumb_func
+ 147              		.fpu softvfp
+ 149              	main:
+ 150              	.LFB32:
+  29:../USER/main_hello.c **** 	uint32_t pin;
+ 151              		.loc 1 29 1 is_stmt 1 view -0
+ 152              		.cfi_startproc
+ 153              		@ args = 0, pretend = 0, frame = 0
+ 154              		@ frame_needed = 0, uses_anonymous_args = 0
+  30:../USER/main_hello.c **** 	char ch,kd;
+ 155              		.loc 1 30 2 view .LVU39
+  31:../USER/main_hello.c **** 	SystemInit();	//Initializes system
+ 156              		.loc 1 31 2 view .LVU40
+  32:../USER/main_hello.c **** 	pin = GPIO_Pin_3;
+ 157              		.loc 1 32 2 view .LVU41
+  29:../USER/main_hello.c **** 	uint32_t pin;
+ 158              		.loc 1 29 1 is_stmt 0 view .LVU42
+ 159 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 160              		.cfi_def_cfa_offset 24
+ 161              		.cfi_offset 3, -24
+ 162              		.cfi_offset 4, -20
+ 163              		.cfi_offset 5, -16
+ 164              		.cfi_offset 6, -12
+ 165              		.cfi_offset 7, -8
+ 166              		.cfi_offset 14, -4
+  32:../USER/main_hello.c **** 	pin = GPIO_Pin_3;
+ 167              		.loc 1 32 2 view .LVU43
+ 168 0002 FFF7FEFF 		bl	SystemInit
+ 169              	.LVL6:
+  33:../USER/main_hello.c **** 	GPIOInit(pin);	//Initializes GPIO
+ 170              		.loc 1 33 2 is_stmt 1 view .LVU44
+  34:../USER/main_hello.c **** 	UartInit();
+ 171              		.loc 1 34 2 view .LVU45
+ 172 0006 0820     		movs	r0, #8
+ 173 0008 FFF7FEFF 		bl	GPIOInit
+ 174              	.LVL7:
+  35:../USER/main_hello.c **** 
+ 175              		.loc 1 35 2 view .LVU46
+ 176 000c FFF7FEFF 		bl	UartInit
+ 177              	.LVL8:
+  37:../USER/main_hello.c **** 	printf("       GowinSemiconductor\r\n");
+ 178              		.loc 1 37 2 view .LVU47
+ 179 0010 2048     		ldr	r0, .L25
+ 180 0012 FFF7FEFF 		bl	puts
+ 181              	.LVL9:
+  38:../USER/main_hello.c **** 	printf("----------------------------------\r\n");
+ 182              		.loc 1 38 2 view .LVU48
+ 183 0016 2048     		ldr	r0, .L25+4
+ 184 0018 FFF7FEFF 		bl	puts
+ 185              	.LVL10:
+  39:../USER/main_hello.c **** 
+ 186              		.loc 1 39 2 view .LVU49
+ 187 001c 1F48     		ldr	r0, .L25+8
+ 188 001e FFF7FEFF 		bl	puts
+ 189              	.LVL11:
+  41:../USER/main_hello.c ****   while(1)
+ 190              		.loc 1 41 3 view .LVU50
+  41:../USER/main_hello.c ****   while(1)
+ 191              		.loc 1 41 6 is_stmt 0 view .LVU51
+ 192 0022 3024     		movs	r4, #48
+ 193 0024 1E4E     		ldr	r6, .L25+12
+ 194 0026 1F4F     		ldr	r7, .L25+16
+  44:../USER/main_hello.c **** 	delay_ms(100);
+ 195              		.loc 1 44 5 view .LVU52
+ 196 0028 1F4D     		ldr	r5, .L25+20
+ 197              	.LVL12:
+ 198              	.L9:
+  42:../USER/main_hello.c ****   {
+ 199              		.loc 1 42 3 is_stmt 1 view .LVU53
+  44:../USER/main_hello.c **** 	delay_ms(100);
+ 200              		.loc 1 44 5 view .LVU54
+ 201 002a 0821     		movs	r1, #8
+ 202 002c 2846     		mov	r0, r5
+ 203 002e FFF7FEFF 		bl	GPIO_ResetBit
+ 204              	.LVL13:
+  45:../USER/main_hello.c **** 		
+ 205              		.loc 1 45 2 view .LVU55
+ 206 0032 6423     		movs	r3, #100
+ 207              	.LVL14:
+ 208              	.LBB6:
+ 209              	.LBI6:
+  86:../USER/main_hello.c **** 
+  87:../USER/main_hello.c **** //delay ms
+  88:../USER/main_hello.c **** void delay_ms(__IO uint32_t delay_ms)
+ 210              		.loc 1 88 6 view .LVU56
+ 211              	.LBB7:
+  89:../USER/main_hello.c **** {
+  90:../USER/main_hello.c **** 	//delay_ms = delay_ms ;
+  91:../USER/main_hello.c **** 	for(delay_ms=(SystemCoreClock>>13)*delay_ms; delay_ms != 0; delay_ms--);
+ 212              		.loc 1 91 2 view .LVU57
+ 213              		.loc 1 91 31 is_stmt 0 view .LVU58
+ 214 0034 3268     		ldr	r2, [r6]
+ 215 0036 520B     		lsrs	r2, r2, #13
+ 216              		.loc 1 91 36 view .LVU59
+ 217 0038 03FB02F3 		mul	r3, r3, r2
+ 218              		.loc 1 91 2 view .LVU60
+ 219 003c 0BB1     		cbz	r3, .L13
+ 220              	.L10:
+ 221              		.loc 1 91 73 is_stmt 1 view .LVU61
+ 222              		.loc 1 91 2 is_stmt 0 view .LVU62
+ 223 003e 013B     		subs	r3, r3, #1
+ 224 0040 FDD1     		bne	.L10
+ 225              	.L13:
+ 226              	.LVL15:
+ 227              		.loc 1 91 2 view .LVU63
+ 228              	.LBE7:
+ 229              	.LBE6:
+  47:../USER/main_hello.c **** 	delay_ms(100);
+ 230              		.loc 1 47 5 is_stmt 1 view .LVU64
+ 231 0042 0821     		movs	r1, #8
+ 232 0044 2846     		mov	r0, r5
+ 233 0046 FFF7FEFF 		bl	GPIO_SetBit
+ 234              	.LVL16:
+  48:../USER/main_hello.c **** 
+ 235              		.loc 1 48 2 view .LVU65
+ 236 004a 6423     		movs	r3, #100
+ 237              	.LVL17:
+ 238              	.LBB8:
+ 239              	.LBI8:
+  88:../USER/main_hello.c **** {
+ 240              		.loc 1 88 6 view .LVU66
+ 241              	.LBB9:
+ 242              		.loc 1 91 2 view .LVU67
+ 243              		.loc 1 91 31 is_stmt 0 view .LVU68
+ 244 004c 3268     		ldr	r2, [r6]
+ 245 004e 520B     		lsrs	r2, r2, #13
+ 246              		.loc 1 91 36 view .LVU69
+ 247 0050 03FB02F3 		mul	r3, r3, r2
+ 248              		.loc 1 91 2 view .LVU70
+ 249 0054 0BB1     		cbz	r3, .L12
+ 250              	.L11:
+ 251              		.loc 1 91 73 is_stmt 1 view .LVU71
+ 252              		.loc 1 91 2 is_stmt 0 view .LVU72
+ 253 0056 013B     		subs	r3, r3, #1
+ 254 0058 FDD1     		bne	.L11
+ 255              	.L12:
+ 256              	.LVL18:
+ 257              		.loc 1 91 2 view .LVU73
+ 258              	.LBE9:
+ 259              	.LBE8:
+  50:../USER/main_hello.c **** 	if(ch>0x39) ch = 0x30;
+ 260              		.loc 1 50 2 is_stmt 1 view .LVU74
+ 261 005a 2046     		mov	r0, r4
+ 262 005c FFF7FEFF 		bl	putchar
+ 263              	.LVL19:
+  50:../USER/main_hello.c **** 	if(ch>0x39) ch = 0x30;
+ 264              		.loc 1 50 19 view .LVU75
+  50:../USER/main_hello.c **** 	if(ch>0x39) ch = 0x30;
+ 265              		.loc 1 50 26 is_stmt 0 view .LVU76
+ 266 0060 3B68     		ldr	r3, [r7]
+  50:../USER/main_hello.c **** 	if(ch>0x39) ch = 0x30;
+ 267              		.loc 1 50 19 view .LVU77
+ 268 0062 9868     		ldr	r0, [r3, #8]
+ 269 0064 FFF7FEFF 		bl	fflush
+ 270              	.LVL20:
+  50:../USER/main_hello.c **** 	if(ch>0x39) ch = 0x30;
+ 271              		.loc 1 50 35 is_stmt 1 view .LVU78
+  50:../USER/main_hello.c **** 	if(ch>0x39) ch = 0x30;
+ 272              		.loc 1 50 37 is_stmt 0 view .LVU79
+ 273 0068 631C     		adds	r3, r4, #1
+ 274 006a DBB2     		uxtb	r3, r3
+ 275              	.LVL21:
+  51:../USER/main_hello.c **** 	// PERIPHERAL\Sources\gw1ns4c_uart.c
+ 276              		.loc 1 51 2 is_stmt 1 view .LVU80
+  51:../USER/main_hello.c **** 	// PERIPHERAL\Sources\gw1ns4c_uart.c
+ 277              		.loc 1 51 4 is_stmt 0 view .LVU81
+ 278 006c 3A2B     		cmp	r3, #58
+ 279 006e 28BF     		it	cs
+ 280 0070 3023     		movcs	r3, #48
+ 281              	.LVL22:
+  53:../USER/main_hello.c **** 		kd = UART_ReceiveChar(UART0);
+ 282              		.loc 1 53 5 view .LVU82
+ 283 0072 4FF04020 		mov	r0, #1073758208
+ 284 0076 5CB2     		sxtb	r4, r3
+ 285              	.LVL23:
+  53:../USER/main_hello.c **** 		kd = UART_ReceiveChar(UART0);
+ 286              		.loc 1 53 2 is_stmt 1 view .LVU83
+  53:../USER/main_hello.c **** 		kd = UART_ReceiveChar(UART0);
+ 287              		.loc 1 53 5 is_stmt 0 view .LVU84
+ 288 0078 FFF7FEFF 		bl	UART_GetRxBufferFull
+ 289              	.LVL24:
+  53:../USER/main_hello.c **** 		kd = UART_ReceiveChar(UART0);
+ 290              		.loc 1 53 4 view .LVU85
+ 291 007c 0028     		cmp	r0, #0
+ 292 007e D4D0     		beq	.L9
+  54:../USER/main_hello.c **** 		UART_SendChar(UART0,kd);
+ 293              		.loc 1 54 3 is_stmt 1 view .LVU86
+  54:../USER/main_hello.c **** 		UART_SendChar(UART0,kd);
+ 294              		.loc 1 54 8 is_stmt 0 view .LVU87
+ 295 0080 4FF04020 		mov	r0, #1073758208
+ 296 0084 FFF7FEFF 		bl	UART_ReceiveChar
+ 297              	.LVL25:
+  55:../USER/main_hello.c **** 	}
+ 298              		.loc 1 55 3 is_stmt 1 view .LVU88
+ 299 0088 0146     		mov	r1, r0
+ 300 008a 4FF04020 		mov	r0, #1073758208
+ 301              	.LVL26:
+  55:../USER/main_hello.c **** 	}
+ 302              		.loc 1 55 3 is_stmt 0 view .LVU89
+ 303 008e FFF7FEFF 		bl	UART_SendChar
+ 304              	.LVL27:
+ 305 0092 CAE7     		b	.L9
+ 306              	.L26:
+ 307              		.align	2
+ 308              	.L25:
+ 309 0094 00000000 		.word	.LC0
+ 310 0098 28000000 		.word	.LC1
+ 311 009c 44000000 		.word	.LC2
+ 312 00a0 00000000 		.word	SystemCoreClock
+ 313 00a4 00000000 		.word	_impure_ptr
+ 314 00a8 00000140 		.word	1073807360
+ 315              		.cfi_endproc
+ 316              	.LFE32:
+ 318              		.section	.text.delay_ms,"ax",%progbits
+ 319              		.align	1
+ 320              		.p2align 2,,3
+ 321              		.global	delay_ms
+ 322              		.syntax unified
+ 323              		.thumb
+ 324              		.thumb_func
+ 325              		.fpu softvfp
+ 327              	delay_ms:
+ 328              	.LVL28:
+ 329              	.LFB35:
+  89:../USER/main_hello.c **** 	//delay_ms = delay_ms ;
+ 330              		.loc 1 89 1 is_stmt 1 view -0
+ 331              		.cfi_startproc
+ 332              		@ args = 0, pretend = 0, frame = 8
+ 333              		@ frame_needed = 0, uses_anonymous_args = 0
+ 334              		@ link register save eliminated.
+ 335              		.loc 1 91 2 view .LVU91
+ 336              		.loc 1 91 31 is_stmt 0 view .LVU92
+ 337 0000 094B     		ldr	r3, .L35
+  89:../USER/main_hello.c **** 	//delay_ms = delay_ms ;
+ 338              		.loc 1 89 1 view .LVU93
+ 339 0002 82B0     		sub	sp, sp, #8
+ 340              		.cfi_def_cfa_offset 8
+  89:../USER/main_hello.c **** 	//delay_ms = delay_ms ;
+ 341              		.loc 1 89 1 view .LVU94
+ 342 0004 0190     		str	r0, [sp, #4]
+ 343              		.loc 1 91 31 view .LVU95
+ 344 0006 1A68     		ldr	r2, [r3]
+ 345              		.loc 1 91 36 view .LVU96
+ 346 0008 019B     		ldr	r3, [sp, #4]
+ 347              		.loc 1 91 31 view .LVU97
+ 348 000a 520B     		lsrs	r2, r2, #13
+ 349              		.loc 1 91 36 view .LVU98
+ 350 000c 03FB02F3 		mul	r3, r3, r2
+ 351              		.loc 1 91 14 view .LVU99
+ 352 0010 0193     		str	r3, [sp, #4]
+ 353              		.loc 1 91 56 view .LVU100
+ 354 0012 019B     		ldr	r3, [sp, #4]
+ 355              		.loc 1 91 2 view .LVU101
+ 356 0014 2BB1     		cbz	r3, .L27
+ 357              	.L29:
+ 358              		.loc 1 91 73 is_stmt 1 discriminator 3 view .LVU102
+ 359              		.loc 1 91 70 is_stmt 0 discriminator 3 view .LVU103
+ 360 0016 019B     		ldr	r3, [sp, #4]
+ 361 0018 013B     		subs	r3, r3, #1
+ 362 001a 0193     		str	r3, [sp, #4]
+ 363              		.loc 1 91 56 discriminator 3 view .LVU104
+ 364 001c 019B     		ldr	r3, [sp, #4]
+ 365              		.loc 1 91 2 discriminator 3 view .LVU105
+ 366 001e 002B     		cmp	r3, #0
+ 367 0020 F9D1     		bne	.L29
+ 368              	.L27:
+  92:../USER/main_hello.c **** }
+ 369              		.loc 1 92 1 view .LVU106
+ 370 0022 02B0     		add	sp, sp, #8
+ 371              		.cfi_def_cfa_offset 0
+ 372              		@ sp needed
+ 373 0024 7047     		bx	lr
+ 374              	.L36:
+ 375 0026 00BF     		.align	2
+ 376              	.L35:
+ 377 0028 00000000 		.word	SystemCoreClock
+ 378              		.cfi_endproc
+ 379              	.LFE35:
+ 381              		.section	.rodata.main.str1.4,"aMS",%progbits,1
+ 382              		.align	2
+ 383              	.LC0:
+ 384 0000 0D0A2D2D 		.ascii	"\015\012----------------------------------\015\000"
+ 384      2D2D2D2D 
+ 384      2D2D2D2D 
+ 384      2D2D2D2D 
+ 384      2D2D2D2D 
+ 385 0026 0000     		.space	2
+ 386              	.LC1:
+ 387 0028 20202020 		.ascii	"       GowinSemiconductor\015\000"
+ 387      20202047 
+ 387      6F77696E 
+ 387      53656D69 
+ 387      636F6E64 
+ 388 0043 00       		.space	1
+ 389              	.LC2:
+ 390 0044 2D2D2D2D 		.ascii	"----------------------------------\015\000"
+ 390      2D2D2D2D 
+ 390      2D2D2D2D 
+ 390      2D2D2D2D 
+ 390      2D2D2D2D 
+ 391              		.text
+ 392              	.Letext0:
+ 393              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 394              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 395              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 396              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+ 397              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+ 398              		.file 7 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\PERIPHERAL\\Includes/gw1ns4c_gpio.h"
+ 399              		.file 8 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\PERIPHERAL\\Includes/gw1ns4c_uart.h"
+ 400              		.file 9 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\lib\\gcc\\arm-none-eabi\\8.3.1\\include\\s
+ 401              		.file 10 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_types.h"
+ 402              		.file 11 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\reent.h"
+ 403              		.file 12 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\lock.h"
+ 404              		.file 13 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\stdlib.h"
+ 405              		.file 14 "<built-in>"
+ 406              		.file 15 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\stdio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 main_hello.c
+d:\wintmp\cc6mHD98.s:16     .text.GPIOInit:00000000 $t
+d:\wintmp\cc6mHD98.s:25     .text.GPIOInit:00000000 GPIOInit
+d:\wintmp\cc6mHD98.s:78     .text.GPIOInit:00000024 $d
+d:\wintmp\cc6mHD98.s:83     .text.UartInit:00000000 $t
+d:\wintmp\cc6mHD98.s:91     .text.UartInit:00000000 UartInit
+d:\wintmp\cc6mHD98.s:141    .text.startup.main:00000000 $t
+d:\wintmp\cc6mHD98.s:149    .text.startup.main:00000000 main
+d:\wintmp\cc6mHD98.s:309    .text.startup.main:00000094 $d
+d:\wintmp\cc6mHD98.s:319    .text.delay_ms:00000000 $t
+d:\wintmp\cc6mHD98.s:327    .text.delay_ms:00000000 delay_ms
+d:\wintmp\cc6mHD98.s:377    .text.delay_ms:00000028 $d
+d:\wintmp\cc6mHD98.s:382    .rodata.main.str1.4:00000000 $d
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+                           .group:00000000 wm4.newlib.h.8.f6e543eac3f2f65163ba2ffe3b04987b
+                           .group:00000000 wm4.ieeefp.h.77.5499ed899a78229fbaf6d102924f4714
+                           .group:00000000 wm4.config.h.224.c701144a7b0518c6ee9b9b5465b79f81
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.stdio.h.31.7c0e28c411445f3f9c5b11accf882760
+                           .group:00000000 wm4.stddef.h.187.2ff233552538c6ff9b8575ca8ea52cb3
+                           .group:00000000 wm4.cdefs.h.49.6260d97adb8d27534cbdc0f868b8ea87
+                           .group:00000000 wm4.stddef.h.39.ec95e8feac892e292b69dc7ae75b0d64
+                           .group:00000000 wm4.stdarg.h.34.3a23a216c0c293b3d2ea2e89281481e6
+                           .group:00000000 wm4._types.h.20.dd0d04dca3800a0d2a6129b87f3adbb2
+                           .group:00000000 wm4.stddef.h.161.5349cb105733e8777bfb0cf53c4e3f34
+                           .group:00000000 wm4._types.h.127.34941de1b2539d59d5cac00e0dd27a45
+                           .group:00000000 wm4.reent.h.17.e292bf8b0bec6c96e131a54347145a30
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4.reent.h.77.dcd6129ff07fe81bd5636db29abe53b2
+                           .group:00000000 wm4.types.h.40.8b6acba56cefbb11746718204edc8f5e
+                           .group:00000000 wm4._endian.h.31.65a10590763c3dde1ac4a7f66d7d4891
+                           .group:00000000 wm4.endian.h.9.49f3a4695c1b61e8a0808de3c4a106cb
+                           .group:00000000 wm4._timeval.h.30.0e8bfd94e85db17dda3286ee81496fe6
+                           .group:00000000 wm4.timespec.h.41.d855182eb0e690443ab8651bcedca6e1
+                           .group:00000000 wm4.select.h.19.97ca6fd0c752a0f3b6719fd314d361e6
+                           .group:00000000 wm4.types.h.51.5571ec98f267d17d3c670b7a3ba33afa
+                           .group:00000000 wm4.sched.h.22.c60982713a5c428609783c78f9c78d95
+                           .group:00000000 wm4._pthreadtypes.h.36.fcee9961c35163dde6267ef772ad1972
+                           .group:00000000 wm4.stdio.h.2.4aa87247282eca6c8f36f9de33d8df1a
+                           .group:00000000 wm4.stdio.h.81.932d0c162786b883f622b8d05c120c78
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.stddef.h.161.19e15733342b50ead2919490b095303e
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.f4862cfbf4363a1db01842d5bdf72c18
+                           .group:00000000 wm4.string.h.8.c4b8571ce60dff2817f43fec8b86aecd
+
+UNDEFINED SYMBOLS
+GPIO_Init
+GPIO_SetBit
+UART_Init
+SystemInit
+puts
+GPIO_ResetBit
+putchar
+fflush
+UART_GetRxBufferFull
+UART_ReceiveChar
+UART_SendChar
+SystemCoreClock
+_impure_ptr

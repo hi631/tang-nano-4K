@@ -1,0 +1,1173 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gw1ns4c_uart.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.UART_Init,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	UART_Init
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	UART_Init:
+  26              	.LVL0:
+  27              	.LFB29:
+  28              		.file 1 "../PERIPHERAL/Sources/gw1ns4c_uart.c"
+   1:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /*
+   2:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  * *****************************************************************************************
+   3:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  *
+   4:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  * 		
+   6:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  * @file        gw1ns4c_uart.c
+   7:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  * @author      Embedded Development Team
+   8:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  * @version     V1.x.x
+   9:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  * @date        2021-01-01 09:00:00
+  10:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  * @brief       This file contains all the functions prototypes for the UART firmware library.
+  11:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  ******************************************************************************************
+  12:../PERIPHERAL/Sources/gw1ns4c_uart.c ****  */
+  13:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  14:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /* Includes ------------------------------------------------------------------*/
+  15:../PERIPHERAL/Sources/gw1ns4c_uart.c **** #include "gw1ns4c_uart.h"
+  16:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  17:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /** @addtogroup GW1NS4C_StdPeriph_Driver
+  18:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @{
+  19:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  20:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  21:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /** @defgroup UART 
+  22:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief UART driver modules
+  23:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @{
+  24:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  25:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  26:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /** @defgroup UART_Private_TypesDefinitions
+  27:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @{
+  28:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  29:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  30:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+  31:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @}
+  32:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  33:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  34:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /** @defgroup UART_Private_Macros
+  35:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @{
+  36:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  37:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  38:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+  39:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @}
+  40:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  41:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  42:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /** @defgroup UART_Private_Variables
+  43:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @{
+  44:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  45:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  46:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+  47:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @}
+  48:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  49:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  50:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /** @defgroup UART_Private_FunctionPrototypes
+  51:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @{
+  52:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  53:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  54:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+  55:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @}
+  56:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  57:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  58:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /** @defgroup UART_Private_Functions
+  59:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @{
+  60:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  61:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  62:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /** 
+  63:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param UART_TypeDef Pointer
+  64:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param UART_InitTypeDef Pointer
+  65:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return ErrorStatus
+  66:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg ERROR
+  67:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg SUCCESS
+  68:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Initializes the UART specifying the UART Baud rate divider value.
+  69:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         And whether the send and receive functionality is enabled.
+  70:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         It also specifies which of the various interrupts are enabled.
+  71:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+  72:../PERIPHERAL/Sources/gw1ns4c_uart.c **** ErrorStatus UART_Init(UART_TypeDef* UARTx, UART_InitTypeDef* UART_InitStruct)
+  73:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+  29              		.loc 1 73 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  74:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   uint32_t new_ctrl = 0;
+  34              		.loc 1 74 3 view .LVU1
+  75:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  76:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   /* Initial all register to zero */
+  77:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->DATA = 0;
+  35              		.loc 1 77 3 view .LVU2
+  78:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->STATE = 0;
+  79:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->CTRL = 0;
+  80:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->INTCLEAR = 0;
+  81:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->BAUDDIV = 0;
+  82:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  83:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   /* Config CTRL register */
+  84:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   /* Tx Enable */
+  85:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   if(UART_InitStruct->UART_Mode.UARTMode_Tx == ENABLE)
+  36              		.loc 1 85 5 is_stmt 0 view .LVU3
+  37 0000 0B79     		ldrb	r3, [r1, #4]	@ zero_extendqisi2
+  77:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->STATE = 0;
+  38              		.loc 1 77 15 view .LVU4
+  39 0002 0022     		movs	r2, #0
+  40              		.loc 1 85 5 view .LVU5
+  41 0004 A3F10103 		sub	r3, #1
+  42 0008 B3FA83F3 		clz	r3, r3
+  73:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   uint32_t new_ctrl = 0;
+  43              		.loc 1 73 1 view .LVU6
+  44 000c 10B4     		push	{r4}
+  45              		.cfi_def_cfa_offset 4
+  46              		.cfi_offset 4, -4
+  86:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+  87:../PERIPHERAL/Sources/gw1ns4c_uart.c ****     new_ctrl |= UART_CTRL_TXEN;
+  88:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+  89:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  90:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   /* Rx Enable */
+  91:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   if(UART_InitStruct->UART_Mode.UARTMode_Rx == ENABLE)
+  47              		.loc 1 91 5 view .LVU7
+  48 000e 4C79     		ldrb	r4, [r1, #5]	@ zero_extendqisi2
+  77:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->STATE = 0;
+  49              		.loc 1 77 15 view .LVU8
+  50 0010 0260     		str	r2, [r0]
+  78:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->CTRL = 0;
+  51              		.loc 1 78 3 is_stmt 1 view .LVU9
+  78:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->CTRL = 0;
+  52              		.loc 1 78 16 is_stmt 0 view .LVU10
+  53 0012 4260     		str	r2, [r0, #4]
+  79:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->INTCLEAR = 0;
+  54              		.loc 1 79 3 is_stmt 1 view .LVU11
+  79:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->INTCLEAR = 0;
+  55              		.loc 1 79 15 is_stmt 0 view .LVU12
+  56 0014 8260     		str	r2, [r0, #8]
+  80:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->BAUDDIV = 0;
+  57              		.loc 1 80 3 is_stmt 1 view .LVU13
+  80:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->BAUDDIV = 0;
+  58              		.loc 1 80 19 is_stmt 0 view .LVU14
+  59 0016 C260     		str	r2, [r0, #12]
+  81:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  60              		.loc 1 81 3 is_stmt 1 view .LVU15
+  81:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  61              		.loc 1 81 18 is_stmt 0 view .LVU16
+  62 0018 0261     		str	r2, [r0, #16]
+  85:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+  63              		.loc 1 85 3 is_stmt 1 view .LVU17
+  92:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+  93:../PERIPHERAL/Sources/gw1ns4c_uart.c ****     new_ctrl |= UART_CTRL_RXEN;
+  94:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+  95:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+  96:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   /* Tx Interrupt Enable */
+  97:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   if(UART_InitStruct->UART_Int.UARTInt_Tx == ENABLE)
+  64              		.loc 1 97 5 is_stmt 0 view .LVU18
+  65 001a 8A79     		ldrb	r2, [r1, #6]	@ zero_extendqisi2
+  85:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+  66              		.loc 1 85 5 view .LVU19
+  67 001c 5B09     		lsrs	r3, r3, #5
+  68              	.LVL1:
+  91:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+  69              		.loc 1 91 3 is_stmt 1 view .LVU20
+  91:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+  70              		.loc 1 91 5 is_stmt 0 view .LVU21
+  71 001e 012C     		cmp	r4, #1
+  93:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+  72              		.loc 1 93 5 is_stmt 1 view .LVU22
+  93:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+  73              		.loc 1 93 14 is_stmt 0 view .LVU23
+  74 0020 08BF     		it	eq
+  75 0022 43F00203 		orreq	r3, r3, #2
+  76              	.LVL2:
+  77              		.loc 1 97 3 is_stmt 1 view .LVU24
+  78              		.loc 1 97 5 is_stmt 0 view .LVU25
+  79 0026 012A     		cmp	r2, #1
+  98:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+  99:../PERIPHERAL/Sources/gw1ns4c_uart.c ****     new_ctrl |= UART_CTRL_TXIRQEN;
+  80              		.loc 1 99 5 is_stmt 1 view .LVU26
+ 100:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+ 101:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 102:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   /* Rx Interrupt Enable */
+ 103:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   if(UART_InitStruct->UART_Int.UARTInt_Rx == ENABLE)
+  81              		.loc 1 103 5 is_stmt 0 view .LVU27
+  82 0028 CA79     		ldrb	r2, [r1, #7]	@ zero_extendqisi2
+  99:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+  83              		.loc 1 99 14 view .LVU28
+  84 002a 08BF     		it	eq
+  85 002c 43F00403 		orreq	r3, r3, #4
+  86              	.LVL3:
+  87              		.loc 1 103 3 is_stmt 1 view .LVU29
+  88              		.loc 1 103 5 is_stmt 0 view .LVU30
+  89 0030 012A     		cmp	r2, #1
+ 104:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+ 105:../PERIPHERAL/Sources/gw1ns4c_uart.c ****     new_ctrl |= UART_CTRL_RXIRQEN;
+  90              		.loc 1 105 5 is_stmt 1 view .LVU31
+ 106:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+ 107:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 108:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   /* Tx Overrun Enable */
+ 109:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   if(UART_InitStruct->UART_Ovr.UARTOvr_Tx == ENABLE)
+  91              		.loc 1 109 5 is_stmt 0 view .LVU32
+  92 0032 0A7A     		ldrb	r2, [r1, #8]	@ zero_extendqisi2
+ 105:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+  93              		.loc 1 105 14 view .LVU33
+  94 0034 08BF     		it	eq
+  95 0036 43F00803 		orreq	r3, r3, #8
+  96              	.LVL4:
+  97              		.loc 1 109 3 is_stmt 1 view .LVU34
+  98              		.loc 1 109 5 is_stmt 0 view .LVU35
+  99 003a 012A     		cmp	r2, #1
+ 110:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+ 111:../PERIPHERAL/Sources/gw1ns4c_uart.c ****     new_ctrl |= UART_CTRL_TXORIRQEN;
+ 100              		.loc 1 111 5 is_stmt 1 view .LVU36
+ 112:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+ 113:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 114:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   /* Rx Overrun Enable */
+ 115:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   if(UART_InitStruct->UART_Ovr.UARTOvr_Rx == ENABLE)
+ 101              		.loc 1 115 5 is_stmt 0 view .LVU37
+ 102 003c 4A7A     		ldrb	r2, [r1, #9]	@ zero_extendqisi2
+ 111:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+ 103              		.loc 1 111 14 view .LVU38
+ 104 003e 08BF     		it	eq
+ 105 0040 43F01003 		orreq	r3, r3, #16
+ 106              	.LVL5:
+ 107              		.loc 1 115 3 is_stmt 1 view .LVU39
+ 108              		.loc 1 115 5 is_stmt 0 view .LVU40
+ 109 0044 012A     		cmp	r2, #1
+ 116:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+ 117:../PERIPHERAL/Sources/gw1ns4c_uart.c ****     new_ctrl |= UART_CTRL_RXORIRQEN;
+ 110              		.loc 1 117 5 is_stmt 1 view .LVU41
+ 118:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+ 119:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 120:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   /* High Speed Test Mode Enable */
+ 121:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   if(UART_InitStruct->UART_Hstm == ENABLE)
+ 111              		.loc 1 121 5 is_stmt 0 view .LVU42
+ 112 0046 8A7A     		ldrb	r2, [r1, #10]	@ zero_extendqisi2
+ 117:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+ 113              		.loc 1 117 14 view .LVU43
+ 114 0048 08BF     		it	eq
+ 115 004a 43F02003 		orreq	r3, r3, #32
+ 116              	.LVL6:
+ 117              		.loc 1 121 3 is_stmt 1 view .LVU44
+ 118              		.loc 1 121 5 is_stmt 0 view .LVU45
+ 119 004e 012A     		cmp	r2, #1
+ 122:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+ 123:../PERIPHERAL/Sources/gw1ns4c_uart.c ****     new_ctrl |= UART_CTRL_HSTM;
+ 120              		.loc 1 123 5 is_stmt 1 view .LVU46
+ 124:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+ 125:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 126:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->CTRL = 0;         /* Disable UART when changing configuration */
+ 127:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->CTRL = new_ctrl;  /* Update CTRL register to new value */
+ 128:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 129:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   /* Config baud divider */
+ 130:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->BAUDDIV = PCLK1 / UART_InitStruct->UART_BaudRate;
+ 121              		.loc 1 130 26 is_stmt 0 view .LVU47
+ 122 0050 0A4A     		ldr	r2, .L10
+ 123 0052 0C68     		ldr	r4, [r1]
+ 124 0054 1268     		ldr	r2, [r2]
+ 126:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->CTRL = new_ctrl;  /* Update CTRL register to new value */
+ 125              		.loc 1 126 15 view .LVU48
+ 126 0056 4FF00001 		mov	r1, #0
+ 127              	.LVL7:
+ 128              		.loc 1 130 26 view .LVU49
+ 129 005a B2FBF4F2 		udiv	r2, r2, r4
+ 123:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+ 130              		.loc 1 123 14 view .LVU50
+ 131 005e 08BF     		it	eq
+ 132 0060 43F04003 		orreq	r3, r3, #64
+ 133              	.LVL8:
+ 126:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->CTRL = new_ctrl;  /* Update CTRL register to new value */
+ 134              		.loc 1 126 3 is_stmt 1 view .LVU51
+ 126:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->CTRL = new_ctrl;  /* Update CTRL register to new value */
+ 135              		.loc 1 126 15 is_stmt 0 view .LVU52
+ 136 0064 8160     		str	r1, [r0, #8]
+ 127:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 137              		.loc 1 127 3 is_stmt 1 view .LVU53
+ 127:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 138              		.loc 1 127 15 is_stmt 0 view .LVU54
+ 139 0066 8360     		str	r3, [r0, #8]
+ 140              		.loc 1 130 3 is_stmt 1 view .LVU55
+ 141              		.loc 1 130 18 is_stmt 0 view .LVU56
+ 142 0068 0261     		str	r2, [r0, #16]
+ 131:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 132:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   if((UARTx->STATE & (UART_STATE_RXOR | UART_STATE_TXOR)))
+ 143              		.loc 1 132 3 is_stmt 1 view .LVU57
+ 144              		.loc 1 132 12 is_stmt 0 view .LVU58
+ 145 006a 4368     		ldr	r3, [r0, #4]
+ 146              	.LVL9:
+ 133:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+ 134:../PERIPHERAL/Sources/gw1ns4c_uart.c ****     return ERROR;
+ 135:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+ 136:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   else
+ 137:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   { 
+ 138:../PERIPHERAL/Sources/gw1ns4c_uart.c ****     return SUCCESS;
+ 139:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   }
+ 140:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 147              		.loc 1 140 1 view .LVU59
+ 148 006c 10BC     		pop	{r4}
+ 149              		.cfi_restore 4
+ 150              		.cfi_def_cfa_offset 0
+ 132:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+ 151              		.loc 1 132 5 view .LVU60
+ 152 006e 13F00C0F 		tst	r3, #12
+ 153              	.LVL10:
+ 154              		.loc 1 140 1 view .LVU61
+ 155 0072 0CBF     		ite	eq
+ 156 0074 0120     		moveq	r0, #1
+ 157              	.LVL11:
+ 158              		.loc 1 140 1 view .LVU62
+ 159 0076 0846     		movne	r0, r1
+ 160 0078 7047     		bx	lr
+ 161              	.L11:
+ 162 007a 00BF     		.align	2
+ 163              	.L10:
+ 164 007c 00000000 		.word	PCLK1
+ 165              		.cfi_endproc
+ 166              	.LFE29:
+ 168              		.section	.text.UART_GetRxBufferFull,"ax",%progbits
+ 169              		.align	1
+ 170              		.p2align 2,,3
+ 171              		.global	UART_GetRxBufferFull
+ 172              		.syntax unified
+ 173              		.thumb
+ 174              		.thumb_func
+ 175              		.fpu softvfp
+ 177              	UART_GetRxBufferFull:
+ 178              	.LVL12:
+ 179              	.LFB30:
+ 141:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 142:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 143:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 144:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return RxBufferFull
+ 145:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg SET
+ 146:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg RESET
+ 147:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Returns whether the RX buffer is full.
+ 148:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 149:../PERIPHERAL/Sources/gw1ns4c_uart.c **** FlagStatus UART_GetRxBufferFull(UART_TypeDef* UARTx)
+ 150:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 180              		.loc 1 150 1 is_stmt 1 view -0
+ 181              		.cfi_startproc
+ 182              		@ args = 0, pretend = 0, frame = 0
+ 183              		@ frame_needed = 0, uses_anonymous_args = 0
+ 184              		@ link register save eliminated.
+ 151:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   return (FlagStatus)((UARTx->STATE & UART_STATE_RXBF) >> UART_STATE_RXBF_Pos);
+ 185              		.loc 1 151 3 view .LVU64
+ 186              		.loc 1 151 29 is_stmt 0 view .LVU65
+ 187 0000 4068     		ldr	r0, [r0, #4]
+ 188              	.LVL13:
+ 152:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 189              		.loc 1 152 1 view .LVU66
+ 190 0002 C0F34000 		ubfx	r0, r0, #1, #1
+ 191 0006 7047     		bx	lr
+ 192              		.cfi_endproc
+ 193              	.LFE30:
+ 195              		.section	.text.UART_GetTxBufferFull,"ax",%progbits
+ 196              		.align	1
+ 197              		.p2align 2,,3
+ 198              		.global	UART_GetTxBufferFull
+ 199              		.syntax unified
+ 200              		.thumb
+ 201              		.thumb_func
+ 202              		.fpu softvfp
+ 204              	UART_GetTxBufferFull:
+ 205              	.LVL14:
+ 206              	.LFB31:
+ 153:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 154:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 155:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 156:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return TxBufferFull 
+ 157:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg SET
+ 158:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg RESET
+ 159:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Returns whether the TX buffer is full.
+ 160:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 161:../PERIPHERAL/Sources/gw1ns4c_uart.c **** FlagStatus UART_GetTxBufferFull(UART_TypeDef* UARTx)
+ 162:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 207              		.loc 1 162 1 is_stmt 1 view -0
+ 208              		.cfi_startproc
+ 209              		@ args = 0, pretend = 0, frame = 0
+ 210              		@ frame_needed = 0, uses_anonymous_args = 0
+ 211              		@ link register save eliminated.
+ 163:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   return (FlagStatus)((UARTx->STATE & UART_STATE_TXBF) >> UART_STATE_TXBF_Pos);
+ 212              		.loc 1 163 3 view .LVU68
+ 213              		.loc 1 163 29 is_stmt 0 view .LVU69
+ 214 0000 4068     		ldr	r0, [r0, #4]
+ 215              	.LVL15:
+ 164:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 216              		.loc 1 164 1 view .LVU70
+ 217 0002 00F00100 		and	r0, r0, #1
+ 218 0006 7047     		bx	lr
+ 219              		.cfi_endproc
+ 220              	.LFE31:
+ 222              		.section	.text.UART_GetRxBufferOverrunStatus,"ax",%progbits
+ 223              		.align	1
+ 224              		.p2align 2,,3
+ 225              		.global	UART_GetRxBufferOverrunStatus
+ 226              		.syntax unified
+ 227              		.thumb
+ 228              		.thumb_func
+ 229              		.fpu softvfp
+ 231              	UART_GetRxBufferOverrunStatus:
+ 232              	.LVL16:
+ 233              	.LFB32:
+ 165:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 166:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 167:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 168:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return RxBufferOverrun
+ 169:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg SET
+ 170:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg RESET
+ 171:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Returns whether the RX buffer is overrun.
+ 172:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 173:../PERIPHERAL/Sources/gw1ns4c_uart.c **** FlagStatus UART_GetRxBufferOverrunStatus(UART_TypeDef* UARTx)
+ 174:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 234              		.loc 1 174 1 is_stmt 1 view -0
+ 235              		.cfi_startproc
+ 236              		@ args = 0, pretend = 0, frame = 0
+ 237              		@ frame_needed = 0, uses_anonymous_args = 0
+ 238              		@ link register save eliminated.
+ 175:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   return (FlagStatus)((UARTx->STATE & UART_STATE_RXOR) >> UART_STATE_RXOR_Pos);
+ 239              		.loc 1 175 3 view .LVU72
+ 240              		.loc 1 175 29 is_stmt 0 view .LVU73
+ 241 0000 4068     		ldr	r0, [r0, #4]
+ 242              	.LVL17:
+ 176:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 243              		.loc 1 176 1 view .LVU74
+ 244 0002 C0F3C000 		ubfx	r0, r0, #3, #1
+ 245 0006 7047     		bx	lr
+ 246              		.cfi_endproc
+ 247              	.LFE32:
+ 249              		.section	.text.UART_GetTxBufferOverrunStatus,"ax",%progbits
+ 250              		.align	1
+ 251              		.p2align 2,,3
+ 252              		.global	UART_GetTxBufferOverrunStatus
+ 253              		.syntax unified
+ 254              		.thumb
+ 255              		.thumb_func
+ 256              		.fpu softvfp
+ 258              	UART_GetTxBufferOverrunStatus:
+ 259              	.LVL18:
+ 260              	.LFB33:
+ 177:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 178:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 179:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 180:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return TxBufferOverrun
+ 181:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg SET
+ 182:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg RESET
+ 183:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Returns whether the TX buffer is overrun.
+ 184:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 185:../PERIPHERAL/Sources/gw1ns4c_uart.c **** FlagStatus UART_GetTxBufferOverrunStatus(UART_TypeDef* UARTx)
+ 186:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 261              		.loc 1 186 1 is_stmt 1 view -0
+ 262              		.cfi_startproc
+ 263              		@ args = 0, pretend = 0, frame = 0
+ 264              		@ frame_needed = 0, uses_anonymous_args = 0
+ 265              		@ link register save eliminated.
+ 187:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   return (FlagStatus)((UARTx->STATE & UART_STATE_TXOR) >> UART_STATE_TXOR_Pos);
+ 266              		.loc 1 187 3 view .LVU76
+ 267              		.loc 1 187 29 is_stmt 0 view .LVU77
+ 268 0000 4068     		ldr	r0, [r0, #4]
+ 269              	.LVL19:
+ 188:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 270              		.loc 1 188 1 view .LVU78
+ 271 0002 C0F38000 		ubfx	r0, r0, #2, #1
+ 272 0006 7047     		bx	lr
+ 273              		.cfi_endproc
+ 274              	.LFE33:
+ 276              		.section	.text.UART_ClearRxBufferOverrunStatus,"ax",%progbits
+ 277              		.align	1
+ 278              		.p2align 2,,3
+ 279              		.global	UART_ClearRxBufferOverrunStatus
+ 280              		.syntax unified
+ 281              		.thumb
+ 282              		.thumb_func
+ 283              		.fpu softvfp
+ 285              	UART_ClearRxBufferOverrunStatus:
+ 286              	.LVL20:
+ 287              	.LFB34:
+ 189:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 190:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 191:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 192:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return None
+ 193:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief Clears RxBuffer overrun status.
+ 194:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */ 
+ 195:../PERIPHERAL/Sources/gw1ns4c_uart.c **** void UART_ClearRxBufferOverrunStatus(UART_TypeDef* UARTx)
+ 196:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 288              		.loc 1 196 1 is_stmt 1 view -0
+ 289              		.cfi_startproc
+ 290              		@ args = 0, pretend = 0, frame = 0
+ 291              		@ frame_needed = 0, uses_anonymous_args = 0
+ 292              		@ link register save eliminated.
+ 197:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->STATE = UART_STATE_RXOR;
+ 293              		.loc 1 197 3 view .LVU80
+ 294              		.loc 1 197 16 is_stmt 0 view .LVU81
+ 295 0000 0823     		movs	r3, #8
+ 296 0002 4360     		str	r3, [r0, #4]
+ 198:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 297              		.loc 1 198 1 view .LVU82
+ 298 0004 7047     		bx	lr
+ 299              		.cfi_endproc
+ 300              	.LFE34:
+ 302 0006 00BF     		.section	.text.UART_ClearTxBufferOverrunStatus,"ax",%progbits
+ 303              		.align	1
+ 304              		.p2align 2,,3
+ 305              		.global	UART_ClearTxBufferOverrunStatus
+ 306              		.syntax unified
+ 307              		.thumb
+ 308              		.thumb_func
+ 309              		.fpu softvfp
+ 311              	UART_ClearTxBufferOverrunStatus:
+ 312              	.LVL21:
+ 313              	.LFB35:
+ 199:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 200:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 201:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 202:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return None
+ 203:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief Clears RxBuffer overrun status.
+ 204:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 205:../PERIPHERAL/Sources/gw1ns4c_uart.c **** void UART_ClearTxBufferOverrunStatus(UART_TypeDef* UARTx)
+ 206:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 314              		.loc 1 206 1 is_stmt 1 view -0
+ 315              		.cfi_startproc
+ 316              		@ args = 0, pretend = 0, frame = 0
+ 317              		@ frame_needed = 0, uses_anonymous_args = 0
+ 318              		@ link register save eliminated.
+ 207:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->STATE = UART_STATE_TXOR;
+ 319              		.loc 1 207 3 view .LVU84
+ 320              		.loc 1 207 16 is_stmt 0 view .LVU85
+ 321 0000 0423     		movs	r3, #4
+ 322 0002 4360     		str	r3, [r0, #4]
+ 208:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 323              		.loc 1 208 1 view .LVU86
+ 324 0004 7047     		bx	lr
+ 325              		.cfi_endproc
+ 326              	.LFE35:
+ 328 0006 00BF     		.section	.text.UART_SendChar,"ax",%progbits
+ 329              		.align	1
+ 330              		.p2align 2,,3
+ 331              		.global	UART_SendChar
+ 332              		.syntax unified
+ 333              		.thumb
+ 334              		.thumb_func
+ 335              		.fpu softvfp
+ 337              	UART_SendChar:
+ 338              	.LFB36:
+ 209:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 210:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 211:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param UART_TypeDef Pointer
+ 212:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param txchar Character to be sent
+ 213:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return none
+ 214:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Sends a character to the TX buffer for transmission.
+ 215:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 216:../PERIPHERAL/Sources/gw1ns4c_uart.c **** void UART_SendChar(UART_TypeDef* UARTx,char txchar)
+ 217:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 339              		.loc 1 217 1 is_stmt 1 view -0
+ 340              		.cfi_startproc
+ 341              		@ args = 0, pretend = 0, frame = 0
+ 342              		@ frame_needed = 0, uses_anonymous_args = 0
+ 343              		@ link register save eliminated.
+ 344              	.LVL22:
+ 345              	.L19:
+ 218:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   while(UARTx->STATE & UART_STATE_TXBF);
+ 346              		.loc 1 218 40 discriminator 1 view .LVU88
+ 347              		.loc 1 218 14 is_stmt 0 discriminator 1 view .LVU89
+ 348 0000 4368     		ldr	r3, [r0, #4]
+ 349              		.loc 1 218 8 discriminator 1 view .LVU90
+ 350 0002 DB07     		lsls	r3, r3, #31
+ 351 0004 FCD4     		bmi	.L19
+ 219:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->DATA = (uint32_t)txchar;
+ 352              		.loc 1 219 3 is_stmt 1 view .LVU91
+ 353              		.loc 1 219 15 is_stmt 0 view .LVU92
+ 354 0006 0160     		str	r1, [r0]
+ 220:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 355              		.loc 1 220 1 view .LVU93
+ 356 0008 7047     		bx	lr
+ 357              		.cfi_endproc
+ 358              	.LFE36:
+ 360 000a 00BF     		.section	.text.UART_SendString,"ax",%progbits
+ 361              		.align	1
+ 362              		.p2align 2,,3
+ 363              		.global	UART_SendString
+ 364              		.syntax unified
+ 365              		.thumb
+ 366              		.thumb_func
+ 367              		.fpu softvfp
+ 369              	UART_SendString:
+ 370              	.LFB37:
+ 221:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 222:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 223:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param UART_TypeDef Pointer
+ 224:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param str string to be sent
+ 225:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return none
+ 226:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Sends a string to the TX buffer for transmission.
+ 227:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 228:../PERIPHERAL/Sources/gw1ns4c_uart.c **** void UART_SendString(UART_TypeDef* pUARTx, char *str)
+ 229:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 371              		.loc 1 229 1 is_stmt 1 view -0
+ 372              		.cfi_startproc
+ 373              		@ args = 0, pretend = 0, frame = 0
+ 374              		@ frame_needed = 0, uses_anonymous_args = 0
+ 375              		@ link register save eliminated.
+ 376              	.LVL23:
+ 377              	.L23:
+ 230:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   unsigned int k = 0;
+ 231:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   
+ 232:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   do 
+ 378              		.loc 1 232 3 discriminator 1 view .LVU95
+ 233:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   {
+ 234:../PERIPHERAL/Sources/gw1ns4c_uart.c ****       UART_SendChar( pUARTx, *(str + k) );
+ 379              		.loc 1 234 7 discriminator 1 view .LVU96
+ 380 0000 11F9012B 		ldrsb	r2, [r1], #1
+ 381              	.LVL24:
+ 382              	.LBB4:
+ 383              	.LBI4:
+ 216:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 384              		.loc 1 216 6 discriminator 1 view .LVU97
+ 385              	.LBB5:
+ 218:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->DATA = (uint32_t)txchar;
+ 386              		.loc 1 218 3 discriminator 1 view .LVU98
+ 387              	.L22:
+ 218:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->DATA = (uint32_t)txchar;
+ 388              		.loc 1 218 40 view .LVU99
+ 218:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->DATA = (uint32_t)txchar;
+ 389              		.loc 1 218 14 is_stmt 0 view .LVU100
+ 390 0004 4368     		ldr	r3, [r0, #4]
+ 218:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->DATA = (uint32_t)txchar;
+ 391              		.loc 1 218 8 view .LVU101
+ 392 0006 DB07     		lsls	r3, r3, #31
+ 393 0008 FCD4     		bmi	.L22
+ 219:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 394              		.loc 1 219 3 is_stmt 1 view .LVU102
+ 219:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 395              		.loc 1 219 15 is_stmt 0 view .LVU103
+ 396 000a 0260     		str	r2, [r0]
+ 397              	.LVL25:
+ 219:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 398              		.loc 1 219 15 view .LVU104
+ 399              	.LBE5:
+ 400              	.LBE4:
+ 235:../PERIPHERAL/Sources/gw1ns4c_uart.c ****       k++;
+ 401              		.loc 1 235 7 is_stmt 1 view .LVU105
+ 236:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   } while(*(str + k)!='\0');
+ 402              		.loc 1 236 3 is_stmt 0 view .LVU106
+ 403 000c 91F90030 		ldrsb	r3, [r1]
+ 404 0010 002B     		cmp	r3, #0
+ 405 0012 F5D1     		bne	.L23
+ 237:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 406              		.loc 1 237 1 view .LVU107
+ 407 0014 7047     		bx	lr
+ 408              		.cfi_endproc
+ 409              	.LFE37:
+ 411 0016 00BF     		.section	.text.UART_ReceiveChar,"ax",%progbits
+ 412              		.align	1
+ 413              		.p2align 2,,3
+ 414              		.global	UART_ReceiveChar
+ 415              		.syntax unified
+ 416              		.thumb
+ 417              		.thumb_func
+ 418              		.fpu softvfp
+ 420              	UART_ReceiveChar:
+ 421              	.LFB38:
+ 238:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 239:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 240:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 241:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return rxchar
+ 242:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  returns the character from the RX buffer which has been received.
+ 243:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 244:../PERIPHERAL/Sources/gw1ns4c_uart.c **** char UART_ReceiveChar(UART_TypeDef* UARTx)
+ 245:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 422              		.loc 1 245 1 is_stmt 1 view -0
+ 423              		.cfi_startproc
+ 424              		@ args = 0, pretend = 0, frame = 0
+ 425              		@ frame_needed = 0, uses_anonymous_args = 0
+ 426              		@ link register save eliminated.
+ 427              	.LVL26:
+ 428              	.L27:
+ 246:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   while(!(UARTx->STATE & UART_STATE_RXBF));
+ 429              		.loc 1 246 43 discriminator 1 view .LVU109
+ 430              		.loc 1 246 16 is_stmt 0 discriminator 1 view .LVU110
+ 431 0000 4368     		ldr	r3, [r0, #4]
+ 432              		.loc 1 246 8 discriminator 1 view .LVU111
+ 433 0002 9B07     		lsls	r3, r3, #30
+ 434 0004 FCD5     		bpl	.L27
+ 247:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   return (char)(UARTx->DATA);
+ 435              		.loc 1 247 3 is_stmt 1 view .LVU112
+ 436              		.loc 1 247 22 is_stmt 0 view .LVU113
+ 437 0006 0068     		ldr	r0, [r0]
+ 438              	.LVL27:
+ 248:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 439              		.loc 1 248 1 view .LVU114
+ 440 0008 40B2     		sxtb	r0, r0
+ 441 000a 7047     		bx	lr
+ 442              		.cfi_endproc
+ 443              	.LFE38:
+ 445              		.section	.text.UART_GetBaudDivider,"ax",%progbits
+ 446              		.align	1
+ 447              		.p2align 2,,3
+ 448              		.global	UART_GetBaudDivider
+ 449              		.syntax unified
+ 450              		.thumb
+ 451              		.thumb_func
+ 452              		.fpu softvfp
+ 454              	UART_GetBaudDivider:
+ 455              	.LVL28:
+ 456              	.LFB39:
+ 249:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 250:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 251:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 252:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return BaudDiv
+ 253:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Returns the current UART Baud rate divider.
+ 254:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         Note that the Baud rate divider is the difference between 
+ 255:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         the clock frequency and the Baud frequency.
+ 256:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 257:../PERIPHERAL/Sources/gw1ns4c_uart.c **** uint32_t UART_GetBaudDivider(UART_TypeDef* UARTx)
+ 258:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 457              		.loc 1 258 1 is_stmt 1 view -0
+ 458              		.cfi_startproc
+ 459              		@ args = 0, pretend = 0, frame = 0
+ 460              		@ frame_needed = 0, uses_anonymous_args = 0
+ 461              		@ link register save eliminated.
+ 259:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   return UARTx->BAUDDIV;
+ 462              		.loc 1 259 3 view .LVU116
+ 463              		.loc 1 259 15 is_stmt 0 view .LVU117
+ 464 0000 0069     		ldr	r0, [r0, #16]
+ 465              	.LVL29:
+ 260:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 466              		.loc 1 260 1 view .LVU118
+ 467 0002 7047     		bx	lr
+ 468              		.cfi_endproc
+ 469              	.LFE39:
+ 471              		.section	.text.UART_GetTxIRQStatus,"ax",%progbits
+ 472              		.align	1
+ 473              		.p2align 2,,3
+ 474              		.global	UART_GetTxIRQStatus
+ 475              		.syntax unified
+ 476              		.thumb
+ 477              		.thumb_func
+ 478              		.fpu softvfp
+ 480              	UART_GetTxIRQStatus:
+ 481              	.LVL30:
+ 482              	.LFB40:
+ 261:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 262:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 263:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 264:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return TX IntStatus
+ 265:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg SET
+ 266:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg RESET
+ 267:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Returns the TX interrupt status.
+ 268:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 269:../PERIPHERAL/Sources/gw1ns4c_uart.c **** ITStatus UART_GetTxIRQStatus(UART_TypeDef* UARTx)
+ 270:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 483              		.loc 1 270 1 is_stmt 1 view -0
+ 484              		.cfi_startproc
+ 485              		@ args = 0, pretend = 0, frame = 0
+ 486              		@ frame_needed = 0, uses_anonymous_args = 0
+ 487              		@ link register save eliminated.
+ 271:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   return (ITStatus)((UARTx->INTSTATUS & UART_INTSTATUS_TXIRQ) >> UART_INTSTATUS_TXIRQ_Pos);
+ 488              		.loc 1 271 3 view .LVU120
+ 489              		.loc 1 271 27 is_stmt 0 view .LVU121
+ 490 0000 C068     		ldr	r0, [r0, #12]
+ 491              	.LVL31:
+ 272:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 492              		.loc 1 272 1 view .LVU122
+ 493 0002 00F00100 		and	r0, r0, #1
+ 494 0006 7047     		bx	lr
+ 495              		.cfi_endproc
+ 496              	.LFE40:
+ 498              		.section	.text.UART_GetRxIRQStatus,"ax",%progbits
+ 499              		.align	1
+ 500              		.p2align 2,,3
+ 501              		.global	UART_GetRxIRQStatus
+ 502              		.syntax unified
+ 503              		.thumb
+ 504              		.thumb_func
+ 505              		.fpu softvfp
+ 507              	UART_GetRxIRQStatus:
+ 508              	.LVL32:
+ 509              	.LFB41:
+ 273:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 274:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 275:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 276:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return RX IntStatus
+ 277:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg SET
+ 278:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg RESET
+ 279:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Returns the RX interrupt status.
+ 280:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 281:../PERIPHERAL/Sources/gw1ns4c_uart.c **** ITStatus UART_GetRxIRQStatus(UART_TypeDef* UARTx)
+ 282:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 510              		.loc 1 282 1 is_stmt 1 view -0
+ 511              		.cfi_startproc
+ 512              		@ args = 0, pretend = 0, frame = 0
+ 513              		@ frame_needed = 0, uses_anonymous_args = 0
+ 514              		@ link register save eliminated.
+ 283:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   return (ITStatus)((UARTx->INTSTATUS & UART_INTSTATUS_RXIRQ) >> UART_INTSTATUS_RXIRQ_Pos);
+ 515              		.loc 1 283 3 view .LVU124
+ 516              		.loc 1 283 27 is_stmt 0 view .LVU125
+ 517 0000 C068     		ldr	r0, [r0, #12]
+ 518              	.LVL33:
+ 284:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 519              		.loc 1 284 1 view .LVU126
+ 520 0002 C0F34000 		ubfx	r0, r0, #1, #1
+ 521 0006 7047     		bx	lr
+ 522              		.cfi_endproc
+ 523              	.LFE41:
+ 525              		.section	.text.UART_ClearTxIRQ,"ax",%progbits
+ 526              		.align	1
+ 527              		.p2align 2,,3
+ 528              		.global	UART_ClearTxIRQ
+ 529              		.syntax unified
+ 530              		.thumb
+ 531              		.thumb_func
+ 532              		.fpu softvfp
+ 534              	UART_ClearTxIRQ:
+ 535              	.LVL34:
+ 536              	.LFB42:
+ 285:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 286:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 287:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 288:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return none
+ 289:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Clears the TX buffer full interrupt status.
+ 290:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 291:../PERIPHERAL/Sources/gw1ns4c_uart.c **** void UART_ClearTxIRQ(UART_TypeDef* UARTx)
+ 292:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 537              		.loc 1 292 1 is_stmt 1 view -0
+ 538              		.cfi_startproc
+ 539              		@ args = 0, pretend = 0, frame = 0
+ 540              		@ frame_needed = 0, uses_anonymous_args = 0
+ 541              		@ link register save eliminated.
+ 293:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->INTCLEAR = UART_INTCLEAR_TXIRQ;
+ 542              		.loc 1 293 3 view .LVU128
+ 543              		.loc 1 293 19 is_stmt 0 view .LVU129
+ 544 0000 0123     		movs	r3, #1
+ 545 0002 C360     		str	r3, [r0, #12]
+ 294:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 546              		.loc 1 294 1 view .LVU130
+ 547 0004 7047     		bx	lr
+ 548              		.cfi_endproc
+ 549              	.LFE42:
+ 551 0006 00BF     		.section	.text.UART_ClearRxIRQ,"ax",%progbits
+ 552              		.align	1
+ 553              		.p2align 2,,3
+ 554              		.global	UART_ClearRxIRQ
+ 555              		.syntax unified
+ 556              		.thumb
+ 557              		.thumb_func
+ 558              		.fpu softvfp
+ 560              	UART_ClearRxIRQ:
+ 561              	.LVL35:
+ 562              	.LFB43:
+ 295:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 296:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 297:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 298:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return none
+ 299:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief  Clears the RX interrupt status.
+ 300:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 301:../PERIPHERAL/Sources/gw1ns4c_uart.c **** void UART_ClearRxIRQ(UART_TypeDef* UARTx)
+ 302:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 563              		.loc 1 302 1 is_stmt 1 view -0
+ 564              		.cfi_startproc
+ 565              		@ args = 0, pretend = 0, frame = 0
+ 566              		@ frame_needed = 0, uses_anonymous_args = 0
+ 567              		@ link register save eliminated.
+ 303:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->INTCLEAR = UART_INTCLEAR_RXIRQ;
+ 568              		.loc 1 303 3 view .LVU132
+ 569              		.loc 1 303 19 is_stmt 0 view .LVU133
+ 570 0000 0223     		movs	r3, #2
+ 571 0002 C360     		str	r3, [r0, #12]
+ 304:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 572              		.loc 1 304 1 view .LVU134
+ 573 0004 7047     		bx	lr
+ 574              		.cfi_endproc
+ 575              	.LFE43:
+ 577 0006 00BF     		.section	.text.UART_GetTxOverrunIRQStatus,"ax",%progbits
+ 578              		.align	1
+ 579              		.p2align 2,,3
+ 580              		.global	UART_GetTxOverrunIRQStatus
+ 581              		.syntax unified
+ 582              		.thumb
+ 583              		.thumb_func
+ 584              		.fpu softvfp
+ 586              	UART_GetTxOverrunIRQStatus:
+ 587              	.LVL36:
+ 588              	.LFB44:
+ 305:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 306:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 307:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 308:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return Tx OverrunIRQ
+ 309:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg SET
+ 310:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg RESET
+ 311:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief Return UART TX Overrun Interrupt Status.
+ 312:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 313:../PERIPHERAL/Sources/gw1ns4c_uart.c **** ITStatus UART_GetTxOverrunIRQStatus(UART_TypeDef* UARTx)
+ 314:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 589              		.loc 1 314 1 is_stmt 1 view -0
+ 590              		.cfi_startproc
+ 591              		@ args = 0, pretend = 0, frame = 0
+ 592              		@ frame_needed = 0, uses_anonymous_args = 0
+ 593              		@ link register save eliminated.
+ 315:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   return (ITStatus)((UARTx->INTSTATUS & UART_INTSTATUS_TXORIRQ) >> UART_INTSTATUS_TXORIRQ_Pos);
+ 594              		.loc 1 315 3 view .LVU136
+ 595              		.loc 1 315 27 is_stmt 0 view .LVU137
+ 596 0000 C068     		ldr	r0, [r0, #12]
+ 597              	.LVL37:
+ 316:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 598              		.loc 1 316 1 view .LVU138
+ 599 0002 C0F38000 		ubfx	r0, r0, #2, #1
+ 600 0006 7047     		bx	lr
+ 601              		.cfi_endproc
+ 602              	.LFE44:
+ 604              		.section	.text.UART_GetRxOverrunIRQStatus,"ax",%progbits
+ 605              		.align	1
+ 606              		.p2align 2,,3
+ 607              		.global	UART_GetRxOverrunIRQStatus
+ 608              		.syntax unified
+ 609              		.thumb
+ 610              		.thumb_func
+ 611              		.fpu softvfp
+ 613              	UART_GetRxOverrunIRQStatus:
+ 614              	.LVL38:
+ 615              	.LFB45:
+ 317:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 318:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 319:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 320:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return Rx OverrunIRQ
+ 321:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg SET
+ 322:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   *         @arg RESET
+ 323:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief Return UART RX Overrun Interrupt Status.
+ 324:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 325:../PERIPHERAL/Sources/gw1ns4c_uart.c **** ITStatus UART_GetRxOverrunIRQStatus(UART_TypeDef* UARTx)
+ 326:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 616              		.loc 1 326 1 is_stmt 1 view -0
+ 617              		.cfi_startproc
+ 618              		@ args = 0, pretend = 0, frame = 0
+ 619              		@ frame_needed = 0, uses_anonymous_args = 0
+ 620              		@ link register save eliminated.
+ 327:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   return (ITStatus)((UARTx->INTSTATUS & UART_INTSTATUS_RXORIRQ) >> UART_INTSTATUS_RXORIRQ_Pos);
+ 621              		.loc 1 327 3 view .LVU140
+ 622              		.loc 1 327 27 is_stmt 0 view .LVU141
+ 623 0000 C068     		ldr	r0, [r0, #12]
+ 624              	.LVL39:
+ 328:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 625              		.loc 1 328 1 view .LVU142
+ 626 0002 C0F3C000 		ubfx	r0, r0, #3, #1
+ 627 0006 7047     		bx	lr
+ 628              		.cfi_endproc
+ 629              	.LFE45:
+ 631              		.section	.text.UART_ClearTxOverrunIRQ,"ax",%progbits
+ 632              		.align	1
+ 633              		.p2align 2,,3
+ 634              		.global	UART_ClearTxOverrunIRQ
+ 635              		.syntax unified
+ 636              		.thumb
+ 637              		.thumb_func
+ 638              		.fpu softvfp
+ 640              	UART_ClearTxOverrunIRQ:
+ 641              	.LVL40:
+ 642              	.LFB46:
+ 329:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 330:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 331:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 332:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return none
+ 333:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief Clear UART TX Overrun Interrupt request.
+ 334:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 335:../PERIPHERAL/Sources/gw1ns4c_uart.c **** void UART_ClearTxOverrunIRQ(UART_TypeDef* UARTx)
+ 336:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 643              		.loc 1 336 1 is_stmt 1 view -0
+ 644              		.cfi_startproc
+ 645              		@ args = 0, pretend = 0, frame = 0
+ 646              		@ frame_needed = 0, uses_anonymous_args = 0
+ 647              		@ link register save eliminated.
+ 337:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->INTCLEAR = UART_INTCLEAR_TXORIRQ;
+ 648              		.loc 1 337 3 view .LVU144
+ 649              		.loc 1 337 19 is_stmt 0 view .LVU145
+ 650 0000 0423     		movs	r3, #4
+ 651 0002 C360     		str	r3, [r0, #12]
+ 338:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 652              		.loc 1 338 1 view .LVU146
+ 653 0004 7047     		bx	lr
+ 654              		.cfi_endproc
+ 655              	.LFE46:
+ 657 0006 00BF     		.section	.text.UART_ClearRxOverrunIRQ,"ax",%progbits
+ 658              		.align	1
+ 659              		.p2align 2,,3
+ 660              		.global	UART_ClearRxOverrunIRQ
+ 661              		.syntax unified
+ 662              		.thumb
+ 663              		.thumb_func
+ 664              		.fpu softvfp
+ 666              	UART_ClearRxOverrunIRQ:
+ 667              	.LVL41:
+ 668              	.LFB47:
+ 339:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 340:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 341:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param  UART_TypeDef Pointer
+ 342:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return none
+ 343:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief Clear UART RX Overrun Interrupt request.
+ 344:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 345:../PERIPHERAL/Sources/gw1ns4c_uart.c **** void UART_ClearRxOverrunIRQ(UART_TypeDef* UARTx)
+ 346:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 669              		.loc 1 346 1 is_stmt 1 view -0
+ 670              		.cfi_startproc
+ 671              		@ args = 0, pretend = 0, frame = 0
+ 672              		@ frame_needed = 0, uses_anonymous_args = 0
+ 673              		@ link register save eliminated.
+ 347:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->INTCLEAR = UART_INTCLEAR_RXORIRQ;
+ 674              		.loc 1 347 3 view .LVU148
+ 675              		.loc 1 347 19 is_stmt 0 view .LVU149
+ 676 0000 0823     		movs	r3, #8
+ 677 0002 C360     		str	r3, [r0, #12]
+ 348:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 678              		.loc 1 348 1 view .LVU150
+ 679 0004 7047     		bx	lr
+ 680              		.cfi_endproc
+ 681              	.LFE47:
+ 683 0006 00BF     		.section	.text.UART_SetHSTM,"ax",%progbits
+ 684              		.align	1
+ 685              		.p2align 2,,3
+ 686              		.global	UART_SetHSTM
+ 687              		.syntax unified
+ 688              		.thumb
+ 689              		.thumb_func
+ 690              		.fpu softvfp
+ 692              	UART_SetHSTM:
+ 693              	.LVL42:
+ 694              	.LFB48:
+ 349:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 350:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 351:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param none
+ 352:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return none
+ 353:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief Sets Tx High Speed Test Mode
+ 354:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 355:../PERIPHERAL/Sources/gw1ns4c_uart.c **** void UART_SetHSTM(UART_TypeDef* UARTx)
+ 356:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 695              		.loc 1 356 1 is_stmt 1 view -0
+ 696              		.cfi_startproc
+ 697              		@ args = 0, pretend = 0, frame = 0
+ 698              		@ frame_needed = 0, uses_anonymous_args = 0
+ 699              		@ link register save eliminated.
+ 357:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->CTRL |= UART_CTRL_HSTM;
+ 700              		.loc 1 357 3 view .LVU152
+ 701              		.loc 1 357 15 is_stmt 0 view .LVU153
+ 702 0000 8368     		ldr	r3, [r0, #8]
+ 703 0002 43F04003 		orr	r3, r3, #64
+ 704 0006 8360     		str	r3, [r0, #8]
+ 358:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 705              		.loc 1 358 1 view .LVU154
+ 706 0008 7047     		bx	lr
+ 707              		.cfi_endproc
+ 708              	.LFE48:
+ 710 000a 00BF     		.section	.text.UART_ClrHSTM,"ax",%progbits
+ 711              		.align	1
+ 712              		.p2align 2,,3
+ 713              		.global	UART_ClrHSTM
+ 714              		.syntax unified
+ 715              		.thumb
+ 716              		.thumb_func
+ 717              		.fpu softvfp
+ 719              	UART_ClrHSTM:
+ 720              	.LVL43:
+ 721              	.LFB49:
+ 359:../PERIPHERAL/Sources/gw1ns4c_uart.c **** 
+ 360:../PERIPHERAL/Sources/gw1ns4c_uart.c **** /**
+ 361:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @param none
+ 362:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @return none
+ 363:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   * @brief Clears Tx High Speed Test Mode
+ 364:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   */
+ 365:../PERIPHERAL/Sources/gw1ns4c_uart.c **** void UART_ClrHSTM(UART_TypeDef* UARTx)
+ 366:../PERIPHERAL/Sources/gw1ns4c_uart.c **** {
+ 722              		.loc 1 366 1 is_stmt 1 view -0
+ 723              		.cfi_startproc
+ 724              		@ args = 0, pretend = 0, frame = 0
+ 725              		@ frame_needed = 0, uses_anonymous_args = 0
+ 726              		@ link register save eliminated.
+ 367:../PERIPHERAL/Sources/gw1ns4c_uart.c ****   UARTx->CTRL &= ~UART_CTRL_HSTM;
+ 727              		.loc 1 367 3 view .LVU156
+ 728              		.loc 1 367 15 is_stmt 0 view .LVU157
+ 729 0000 8368     		ldr	r3, [r0, #8]
+ 730 0002 23F04003 		bic	r3, r3, #64
+ 731 0006 8360     		str	r3, [r0, #8]
+ 368:../PERIPHERAL/Sources/gw1ns4c_uart.c **** }
+ 732              		.loc 1 368 1 view .LVU158
+ 733 0008 7047     		bx	lr
+ 734              		.cfi_endproc
+ 735              	.LFE49:
+ 737 000a 00BF     		.text
+ 738              	.Letext0:
+ 739              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 740              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 741              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 742              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+ 743              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+ 744              		.file 7 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\PERIPHERAL\\Includes/gw1ns4c_uart.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gw1ns4c_uart.c
+d:\wintmp\ccMPTouQ.s:16     .text.UART_Init:00000000 $t
+d:\wintmp\ccMPTouQ.s:25     .text.UART_Init:00000000 UART_Init
+d:\wintmp\ccMPTouQ.s:164    .text.UART_Init:0000007c $d
+d:\wintmp\ccMPTouQ.s:169    .text.UART_GetRxBufferFull:00000000 $t
+d:\wintmp\ccMPTouQ.s:177    .text.UART_GetRxBufferFull:00000000 UART_GetRxBufferFull
+d:\wintmp\ccMPTouQ.s:196    .text.UART_GetTxBufferFull:00000000 $t
+d:\wintmp\ccMPTouQ.s:204    .text.UART_GetTxBufferFull:00000000 UART_GetTxBufferFull
+d:\wintmp\ccMPTouQ.s:223    .text.UART_GetRxBufferOverrunStatus:00000000 $t
+d:\wintmp\ccMPTouQ.s:231    .text.UART_GetRxBufferOverrunStatus:00000000 UART_GetRxBufferOverrunStatus
+d:\wintmp\ccMPTouQ.s:250    .text.UART_GetTxBufferOverrunStatus:00000000 $t
+d:\wintmp\ccMPTouQ.s:258    .text.UART_GetTxBufferOverrunStatus:00000000 UART_GetTxBufferOverrunStatus
+d:\wintmp\ccMPTouQ.s:277    .text.UART_ClearRxBufferOverrunStatus:00000000 $t
+d:\wintmp\ccMPTouQ.s:285    .text.UART_ClearRxBufferOverrunStatus:00000000 UART_ClearRxBufferOverrunStatus
+d:\wintmp\ccMPTouQ.s:303    .text.UART_ClearTxBufferOverrunStatus:00000000 $t
+d:\wintmp\ccMPTouQ.s:311    .text.UART_ClearTxBufferOverrunStatus:00000000 UART_ClearTxBufferOverrunStatus
+d:\wintmp\ccMPTouQ.s:329    .text.UART_SendChar:00000000 $t
+d:\wintmp\ccMPTouQ.s:337    .text.UART_SendChar:00000000 UART_SendChar
+d:\wintmp\ccMPTouQ.s:361    .text.UART_SendString:00000000 $t
+d:\wintmp\ccMPTouQ.s:369    .text.UART_SendString:00000000 UART_SendString
+d:\wintmp\ccMPTouQ.s:412    .text.UART_ReceiveChar:00000000 $t
+d:\wintmp\ccMPTouQ.s:420    .text.UART_ReceiveChar:00000000 UART_ReceiveChar
+d:\wintmp\ccMPTouQ.s:446    .text.UART_GetBaudDivider:00000000 $t
+d:\wintmp\ccMPTouQ.s:454    .text.UART_GetBaudDivider:00000000 UART_GetBaudDivider
+d:\wintmp\ccMPTouQ.s:472    .text.UART_GetTxIRQStatus:00000000 $t
+d:\wintmp\ccMPTouQ.s:480    .text.UART_GetTxIRQStatus:00000000 UART_GetTxIRQStatus
+d:\wintmp\ccMPTouQ.s:499    .text.UART_GetRxIRQStatus:00000000 $t
+d:\wintmp\ccMPTouQ.s:507    .text.UART_GetRxIRQStatus:00000000 UART_GetRxIRQStatus
+d:\wintmp\ccMPTouQ.s:526    .text.UART_ClearTxIRQ:00000000 $t
+d:\wintmp\ccMPTouQ.s:534    .text.UART_ClearTxIRQ:00000000 UART_ClearTxIRQ
+d:\wintmp\ccMPTouQ.s:552    .text.UART_ClearRxIRQ:00000000 $t
+d:\wintmp\ccMPTouQ.s:560    .text.UART_ClearRxIRQ:00000000 UART_ClearRxIRQ
+d:\wintmp\ccMPTouQ.s:578    .text.UART_GetTxOverrunIRQStatus:00000000 $t
+d:\wintmp\ccMPTouQ.s:586    .text.UART_GetTxOverrunIRQStatus:00000000 UART_GetTxOverrunIRQStatus
+d:\wintmp\ccMPTouQ.s:605    .text.UART_GetRxOverrunIRQStatus:00000000 $t
+d:\wintmp\ccMPTouQ.s:613    .text.UART_GetRxOverrunIRQStatus:00000000 UART_GetRxOverrunIRQStatus
+d:\wintmp\ccMPTouQ.s:632    .text.UART_ClearTxOverrunIRQ:00000000 $t
+d:\wintmp\ccMPTouQ.s:640    .text.UART_ClearTxOverrunIRQ:00000000 UART_ClearTxOverrunIRQ
+d:\wintmp\ccMPTouQ.s:658    .text.UART_ClearRxOverrunIRQ:00000000 $t
+d:\wintmp\ccMPTouQ.s:666    .text.UART_ClearRxOverrunIRQ:00000000 UART_ClearRxOverrunIRQ
+d:\wintmp\ccMPTouQ.s:684    .text.UART_SetHSTM:00000000 $t
+d:\wintmp\ccMPTouQ.s:692    .text.UART_SetHSTM:00000000 UART_SetHSTM
+d:\wintmp\ccMPTouQ.s:711    .text.UART_ClrHSTM:00000000 $t
+d:\wintmp\ccMPTouQ.s:719    .text.UART_ClrHSTM:00000000 UART_ClrHSTM
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+                           .group:00000000 wm4.gw1ns4c_uart.h.89.554ac13afbbde060b22688ce7f55c4fd
+
+UNDEFINED SYMBOLS
+PCLK1

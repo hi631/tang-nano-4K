@@ -1,0 +1,1125 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gw1ns4c_wdog.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.WDOG_Init,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	WDOG_Init
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	WDOG_Init:
+  26              	.LVL0:
+  27              	.LFB29:
+  28              		.file 1 "../PERIPHERAL/Sources/gw1ns4c_wdog.c"
+   1:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /*
+   2:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  * *****************************************************************************************
+   3:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  *
+   4:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  * 		
+   6:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  * @file        gw1ns4c_wdog.c
+   7:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  * @author      Embedded Development Team
+   8:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  * @version     V1.x.x
+   9:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  * @date        2021-01-01 09:00:00
+  10:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  * @brief       This file contains all the functions prototypes for the WatchDog firmware library.
+  11:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  ******************************************************************************************
+  12:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****  */
+  13:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  14:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /* Includes ------------------------------------------------------------------*/
+  15:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** #include "gw1ns4c_wdog.h"
+  16:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  17:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /** @addtogroup GW1NS4C_StdPeriph_Driver
+  18:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @{
+  19:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  20:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  21:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /** @defgroup WDOG
+  22:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief WDOG driver modules
+  23:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @{
+  24:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  25:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  26:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /** @defgroup WDOG_Private_TypesDefinitions
+  27:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @{
+  28:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  29:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  30:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+  31:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @}
+  32:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  33:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  34:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /** @defgroup WDOG_Private_Macros
+  35:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @{
+  36:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  37:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  38:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+  39:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @}
+  40:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  41:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  42:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /** @defgroup WDOG_Private_Variables
+  43:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @{
+  44:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  45:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  46:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+  47:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @}
+  48:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  49:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  50:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /** @defgroup WDOG_Private_FunctionPrototypes
+  51:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @{
+  52:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  53:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  54:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+  55:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @}
+  56:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  57:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  58:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /** @defgroup WDOG_Private_Functions
+  59:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @{
+  60:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+  61:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+  62:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+  63:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *
+  64:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param WDOG_InitTypeDef Pointer
+  65:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return ErrorStatus 
+  66:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg ERROR
+  67:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg SUCCESS
+  68:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Initials WatchDog.
+  69:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */ 
+  70:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** ErrorStatus WDOG_Init(WDOG_InitTypeDef* WDOG_InitStruct)
+  71:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+  29              		.loc 1 71 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  72:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->LOAD = 0;
+  34              		.loc 1 72 3 view .LVU1
+  35              		.loc 1 72 14 is_stmt 0 view .LVU2
+  36 0000 0022     		movs	r2, #0
+  37 0002 234B     		ldr	r3, .L12
+  71:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->LOAD = 0;
+  38              		.loc 1 71 1 view .LVU3
+  39 0004 0146     		mov	r1, r0
+  73:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->CTRL = 0;
+  74:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->INTCLR = 0;
+  75:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->LOCK = 0;
+  76:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->ITCR = 0;
+  77:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->ITOP = 0;
+  78:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+  79:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   /* Set LOCK register */
+  80:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   if(WDOG_InitStruct->WDOG_Lock == DISABLE)
+  40              		.loc 1 80 21 view .LVU4
+  41 0006 0079     		ldrb	r0, [r0, #4]	@ zero_extendqisi2
+  42              	.LVL1:
+  72:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->CTRL = 0;
+  43              		.loc 1 72 14 view .LVU5
+  44 0008 1A60     		str	r2, [r3]
+  73:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->CTRL = 0;
+  45              		.loc 1 73 3 is_stmt 1 view .LVU6
+  73:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->CTRL = 0;
+  46              		.loc 1 73 14 is_stmt 0 view .LVU7
+  47 000a 9A60     		str	r2, [r3, #8]
+  74:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->LOCK = 0;
+  48              		.loc 1 74 3 is_stmt 1 view .LVU8
+  74:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->LOCK = 0;
+  49              		.loc 1 74 16 is_stmt 0 view .LVU9
+  50 000c DA60     		str	r2, [r3, #12]
+  75:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->ITCR = 0;
+  51              		.loc 1 75 3 is_stmt 1 view .LVU10
+  75:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->ITCR = 0;
+  52              		.loc 1 75 14 is_stmt 0 view .LVU11
+  53 000e C3F8002C 		str	r2, [r3, #3072]
+  76:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->ITOP = 0;
+  54              		.loc 1 76 3 is_stmt 1 view .LVU12
+  76:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->ITOP = 0;
+  55              		.loc 1 76 14 is_stmt 0 view .LVU13
+  56 0012 C3F8002F 		str	r2, [r3, #3840]
+  77:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+  57              		.loc 1 77 3 is_stmt 1 view .LVU14
+  77:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+  58              		.loc 1 77 14 is_stmt 0 view .LVU15
+  59 0016 C3F8042F 		str	r2, [r3, #3844]
+  60              		.loc 1 80 3 is_stmt 1 view .LVU16
+  61              		.loc 1 80 5 is_stmt 0 view .LVU17
+  62 001a 0028     		cmp	r0, #0
+  63 001c 33D0     		beq	.L9
+  81:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   {
+  82:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****     WDOG->LOCK = 0xFFFFFFFF; /* lock : [0] bit is 1, disable write access register */
+  83:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****     return ERROR;	
+  84:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   }
+  85:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+  86:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   /* unlock : Enable write access all register */
+  87:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->LOCK = 0xACCE551 << WDOG_LOCK_EN_Pos;  /* [0] bit is 0 */
+  64              		.loc 1 87 3 is_stmt 1 view .LVU18
+  88:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+  89:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   /* Set Control register Reset bit */
+  90:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   if(WDOG_InitStruct->WDOG_Res == ENABLE)
+  65              		.loc 1 90 5 is_stmt 0 view .LVU19
+  66 001e 8A79     		ldrb	r2, [r1, #6]	@ zero_extendqisi2
+  87:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+  67              		.loc 1 87 14 view .LVU20
+  68 0020 1C48     		ldr	r0, .L12+4
+  69              		.loc 1 90 5 view .LVU21
+  70 0022 012A     		cmp	r2, #1
+  87:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+  71              		.loc 1 87 14 view .LVU22
+  72 0024 C3F8000C 		str	r0, [r3, #3072]
+  73              		.loc 1 90 3 is_stmt 1 view .LVU23
+  74              		.loc 1 90 5 is_stmt 0 view .LVU24
+  75 0028 19D0     		beq	.L10
+  76              	.L5:
+  91:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   {
+  92:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****     WDOG->CTRL |= WDOG_CTRL_RESEN;
+  93:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	
+  94:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	/* Set Integration Test Mode register */
+  95:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	if(WDOG_InitStruct->WDOG_ITMode == ENABLE)
+  96:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	{
+  97:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****       WDOG->ITCR |= WDOG_ITCR_INTEGTESTEN;
+  98:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	  
+  99:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	  /* Set ITOP register WDOGRES bit */
+ 100:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	  WDOG->ITOP |= WDOG_ITOP_WDOGRES;
+ 101:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	}
+ 102:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   }
+ 103:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+ 104:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   /* Set Control register Interrupt bit */
+ 105:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   if(WDOG_InitStruct->WDOG_Int == ENABLE)
+  77              		.loc 1 105 3 is_stmt 1 view .LVU25
+  78              		.loc 1 105 5 is_stmt 0 view .LVU26
+  79 002a 4B79     		ldrb	r3, [r1, #5]	@ zero_extendqisi2
+  80 002c 012B     		cmp	r3, #1
+  81 002e 04D0     		beq	.L11
+  82              	.L7:
+ 106:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   {
+ 107:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****     WDOG->CTRL |= WDOG_CTRL_INTEN;
+ 108:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	
+ 109:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	/* Set Integration Test Mode register */
+ 110:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	{
+ 111:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****       WDOG->ITCR |= WDOG_ITCR_INTEGTESTEN;
+ 112:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	  
+ 113:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	  /* Set ITOP register WDOGINT bit */
+ 114:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	  WDOG->ITOP |= WDOG_ITOP_WDOGINT;
+ 115:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	}
+ 116:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   }
+ 117:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+ 118:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   /* RIS register only read */
+ 119:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+ 120:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   /* Set MIS register only read */
+ 121:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+ 122:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   /* Set Reload register */
+ 123:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->LOAD = WDOG_InitStruct->WDOG_Reload;
+  83              		.loc 1 123 3 is_stmt 1 view .LVU27
+  84              		.loc 1 123 31 is_stmt 0 view .LVU28
+  85 0030 0A68     		ldr	r2, [r1]
+  86              		.loc 1 123 14 view .LVU29
+  87 0032 174B     		ldr	r3, .L12
+ 124:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+ 125:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   /* Set Value register only read */
+ 126:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+ 127:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   return SUCCESS;
+  88              		.loc 1 127 10 view .LVU30
+  89 0034 0120     		movs	r0, #1
+ 123:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   
+  90              		.loc 1 123 14 view .LVU31
+  91 0036 1A60     		str	r2, [r3]
+  92              		.loc 1 127 3 is_stmt 1 view .LVU32
+ 128:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+  93              		.loc 1 128 1 is_stmt 0 view .LVU33
+  94 0038 7047     		bx	lr
+  95              	.L11:
+ 107:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	
+  96              		.loc 1 107 5 is_stmt 1 view .LVU34
+ 107:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	
+  97              		.loc 1 107 16 is_stmt 0 view .LVU35
+  98 003a 154B     		ldr	r3, .L12
+  99 003c 9A68     		ldr	r2, [r3, #8]
+ 100 003e 42F00102 		orr	r2, r2, #1
+ 101 0042 9A60     		str	r2, [r3, #8]
+ 111:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	  
+ 102              		.loc 1 111 7 is_stmt 1 view .LVU36
+ 111:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	  
+ 103              		.loc 1 111 18 is_stmt 0 view .LVU37
+ 104 0044 D3F8002F 		ldr	r2, [r3, #3840]
+ 105 0048 42F00102 		orr	r2, r2, #1
+ 106 004c C3F8002F 		str	r2, [r3, #3840]
+ 114:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	}
+ 107              		.loc 1 114 4 is_stmt 1 view .LVU38
+ 114:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	}
+ 108              		.loc 1 114 15 is_stmt 0 view .LVU39
+ 109 0050 D3F8042F 		ldr	r2, [r3, #3844]
+ 110 0054 42F00202 		orr	r2, r2, #2
+ 111 0058 C3F8042F 		str	r2, [r3, #3844]
+ 112 005c E8E7     		b	.L7
+ 113              	.L10:
+  92:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	
+ 114              		.loc 1 92 5 is_stmt 1 view .LVU40
+  92:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	
+ 115              		.loc 1 92 16 is_stmt 0 view .LVU41
+ 116 005e 9A68     		ldr	r2, [r3, #8]
+  95:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	{
+ 117              		.loc 1 95 4 view .LVU42
+ 118 0060 C879     		ldrb	r0, [r1, #7]	@ zero_extendqisi2
+  92:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	
+ 119              		.loc 1 92 16 view .LVU43
+ 120 0062 42F00202 		orr	r2, r2, #2
+  95:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	{
+ 121              		.loc 1 95 4 view .LVU44
+ 122 0066 0128     		cmp	r0, #1
+  92:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	
+ 123              		.loc 1 92 16 view .LVU45
+ 124 0068 9A60     		str	r2, [r3, #8]
+  95:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	{
+ 125              		.loc 1 95 2 is_stmt 1 view .LVU46
+  95:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	{
+ 126              		.loc 1 95 4 is_stmt 0 view .LVU47
+ 127 006a DED1     		bne	.L5
+  97:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	  
+ 128              		.loc 1 97 7 is_stmt 1 view .LVU48
+  97:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	  
+ 129              		.loc 1 97 18 is_stmt 0 view .LVU49
+ 130 006c D3F8002F 		ldr	r2, [r3, #3840]
+ 131 0070 42F00102 		orr	r2, r2, #1
+ 132 0074 C3F8002F 		str	r2, [r3, #3840]
+ 100:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	}
+ 133              		.loc 1 100 4 is_stmt 1 view .LVU50
+ 100:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 	}
+ 134              		.loc 1 100 15 is_stmt 0 view .LVU51
+ 135 0078 D3F8042F 		ldr	r2, [r3, #3844]
+ 136 007c 42F00102 		orr	r2, r2, #1
+ 137 0080 C3F8042F 		str	r2, [r3, #3844]
+ 138 0084 D1E7     		b	.L5
+ 139              	.L9:
+  82:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****     return ERROR;	
+ 140              		.loc 1 82 5 is_stmt 1 view .LVU52
+  82:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****     return ERROR;	
+ 141              		.loc 1 82 16 is_stmt 0 view .LVU53
+ 142 0086 4FF0FF32 		mov	r2, #-1
+ 143 008a C3F8002C 		str	r2, [r3, #3072]
+  83:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   }
+ 144              		.loc 1 83 5 is_stmt 1 view .LVU54
+  83:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   }
+ 145              		.loc 1 83 12 is_stmt 0 view .LVU55
+ 146 008e 7047     		bx	lr
+ 147              	.L13:
+ 148              		.align	2
+ 149              	.L12:
+ 150 0090 00800040 		.word	1073774592
+ 151 0094 A2CA9915 		.word	362400418
+ 152              		.cfi_endproc
+ 153              	.LFE29:
+ 155              		.section	.text.WDOG_RestartCounter,"ax",%progbits
+ 156              		.align	1
+ 157              		.p2align 2,,3
+ 158              		.global	WDOG_RestartCounter
+ 159              		.syntax unified
+ 160              		.thumb
+ 161              		.thumb_func
+ 162              		.fpu softvfp
+ 164              	WDOG_RestartCounter:
+ 165              	.LVL2:
+ 166              	.LFB30:
+ 129:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 130:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 131:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param uint32_t load
+ 132:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return none
+ 133:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Restart counter, reload value.
+ 134:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 135:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** void WDOG_RestartCounter(uint32_t reload)
+ 136:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 167              		.loc 1 136 1 is_stmt 1 view -0
+ 168              		.cfi_startproc
+ 169              		@ args = 0, pretend = 0, frame = 0
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+ 171              		@ link register save eliminated.
+ 137:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->LOAD = reload;
+ 172              		.loc 1 137 3 view .LVU57
+ 173              		.loc 1 137 14 is_stmt 0 view .LVU58
+ 174 0000 014B     		ldr	r3, .L15
+ 175 0002 1860     		str	r0, [r3]
+ 138:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 176              		.loc 1 138 1 view .LVU59
+ 177 0004 7047     		bx	lr
+ 178              	.L16:
+ 179 0006 00BF     		.align	2
+ 180              	.L15:
+ 181 0008 00800040 		.word	1073774592
+ 182              		.cfi_endproc
+ 183              	.LFE30:
+ 185              		.section	.text.WDOG_GetCounterValue,"ax",%progbits
+ 186              		.align	1
+ 187              		.p2align 2,,3
+ 188              		.global	WDOG_GetCounterValue
+ 189              		.syntax unified
+ 190              		.thumb
+ 191              		.thumb_func
+ 192              		.fpu softvfp
+ 194              	WDOG_GetCounterValue:
+ 195              	.LFB31:
+ 139:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 140:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 141:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 142:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return uint32_t value
+ 143:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Returns current counter value.
+ 144:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 145:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** uint32_t WDOG_GetCounterValue(void)
+ 146:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 196              		.loc 1 146 1 is_stmt 1 view -0
+ 197              		.cfi_startproc
+ 198              		@ args = 0, pretend = 0, frame = 0
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200              		@ link register save eliminated.
+ 147:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   return WDOG->VALUE;
+ 201              		.loc 1 147 3 view .LVU61
+ 202              		.loc 1 147 14 is_stmt 0 view .LVU62
+ 203 0000 014B     		ldr	r3, .L18
+ 204 0002 5868     		ldr	r0, [r3, #4]
+ 148:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 205              		.loc 1 148 1 view .LVU63
+ 206 0004 7047     		bx	lr
+ 207              	.L19:
+ 208 0006 00BF     		.align	2
+ 209              	.L18:
+ 210 0008 00800040 		.word	1073774592
+ 211              		.cfi_endproc
+ 212              	.LFE31:
+ 214              		.section	.text.WDOG_SetResetEnable,"ax",%progbits
+ 215              		.align	1
+ 216              		.p2align 2,,3
+ 217              		.global	WDOG_SetResetEnable
+ 218              		.syntax unified
+ 219              		.thumb
+ 220              		.thumb_func
+ 221              		.fpu softvfp
+ 223              	WDOG_SetResetEnable:
+ 224              	.LFB32:
+ 149:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 150:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 151:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 152:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return none
+ 153:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Sets reset enable.
+ 154:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 155:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** void WDOG_SetResetEnable(void)
+ 156:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 225              		.loc 1 156 1 is_stmt 1 view -0
+ 226              		.cfi_startproc
+ 227              		@ args = 0, pretend = 0, frame = 0
+ 228              		@ frame_needed = 0, uses_anonymous_args = 0
+ 229              		@ link register save eliminated.
+ 157:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->CTRL |= WDOG_CTRL_RESEN;
+ 230              		.loc 1 157 3 view .LVU65
+ 231              		.loc 1 157 14 is_stmt 0 view .LVU66
+ 232 0000 024A     		ldr	r2, .L21
+ 233 0002 9368     		ldr	r3, [r2, #8]
+ 234 0004 43F00203 		orr	r3, r3, #2
+ 235 0008 9360     		str	r3, [r2, #8]
+ 158:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 236              		.loc 1 158 1 view .LVU67
+ 237 000a 7047     		bx	lr
+ 238              	.L22:
+ 239              		.align	2
+ 240              	.L21:
+ 241 000c 00800040 		.word	1073774592
+ 242              		.cfi_endproc
+ 243              	.LFE32:
+ 245              		.section	.text.WDOG_GetResStatus,"ax",%progbits
+ 246              		.align	1
+ 247              		.p2align 2,,3
+ 248              		.global	WDOG_GetResStatus
+ 249              		.syntax unified
+ 250              		.thumb
+ 251              		.thumb_func
+ 252              		.fpu softvfp
+ 254              	WDOG_GetResStatus:
+ 255              	.LFB33:
+ 159:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 160:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 161:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 162:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return FlagStatus
+ 163:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg SET
+ 164:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg RESET
+ 165:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Returns reset status.
+ 166:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 167:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** FlagStatus WDOG_GetResStatus(void)
+ 168:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 256              		.loc 1 168 1 is_stmt 1 view -0
+ 257              		.cfi_startproc
+ 258              		@ args = 0, pretend = 0, frame = 0
+ 259              		@ frame_needed = 0, uses_anonymous_args = 0
+ 260              		@ link register save eliminated.
+ 169:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   return (FlagStatus)(WDOG->CTRL==WDOG_CTRL_RESEN);
+ 261              		.loc 1 169 3 view .LVU69
+ 262              		.loc 1 169 27 is_stmt 0 view .LVU70
+ 263 0000 034B     		ldr	r3, .L24
+ 264 0002 9868     		ldr	r0, [r3, #8]
+ 170:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 265              		.loc 1 170 1 view .LVU71
+ 266 0004 A0F10200 		sub	r0, #2
+ 267 0008 B0FA80F0 		clz	r0, r0
+ 268 000c 4009     		lsrs	r0, r0, #5
+ 269 000e 7047     		bx	lr
+ 270              	.L25:
+ 271              		.align	2
+ 272              	.L24:
+ 273 0010 00800040 		.word	1073774592
+ 274              		.cfi_endproc
+ 275              	.LFE33:
+ 277              		.section	.text.WDOG_SetIntEnable,"ax",%progbits
+ 278              		.align	1
+ 279              		.p2align 2,,3
+ 280              		.global	WDOG_SetIntEnable
+ 281              		.syntax unified
+ 282              		.thumb
+ 283              		.thumb_func
+ 284              		.fpu softvfp
+ 286              	WDOG_SetIntEnable:
+ 287              	.LFB34:
+ 171:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 172:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 173:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 174:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return none
+ 175:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Sets interrupt enable.
+ 176:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 177:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** void WDOG_SetIntEnable(void)
+ 178:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 288              		.loc 1 178 1 is_stmt 1 view -0
+ 289              		.cfi_startproc
+ 290              		@ args = 0, pretend = 0, frame = 0
+ 291              		@ frame_needed = 0, uses_anonymous_args = 0
+ 292              		@ link register save eliminated.
+ 179:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->CTRL |= WDOG_CTRL_INTEN;
+ 293              		.loc 1 179 3 view .LVU73
+ 294              		.loc 1 179 14 is_stmt 0 view .LVU74
+ 295 0000 024A     		ldr	r2, .L27
+ 296 0002 9368     		ldr	r3, [r2, #8]
+ 297 0004 43F00103 		orr	r3, r3, #1
+ 298 0008 9360     		str	r3, [r2, #8]
+ 180:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 299              		.loc 1 180 1 view .LVU75
+ 300 000a 7047     		bx	lr
+ 301              	.L28:
+ 302              		.align	2
+ 303              	.L27:
+ 304 000c 00800040 		.word	1073774592
+ 305              		.cfi_endproc
+ 306              	.LFE34:
+ 308              		.section	.text.WDOG_GetIntStatus,"ax",%progbits
+ 309              		.align	1
+ 310              		.p2align 2,,3
+ 311              		.global	WDOG_GetIntStatus
+ 312              		.syntax unified
+ 313              		.thumb
+ 314              		.thumb_func
+ 315              		.fpu softvfp
+ 317              	WDOG_GetIntStatus:
+ 318              	.LFB35:
+ 181:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 182:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 183:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 184:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return FlagStatus
+ 185:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg SET
+ 186:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg RESET
+ 187:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Returns interrupt status.
+ 188:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 189:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** FlagStatus WDOG_GetIntStatus(void)
+ 190:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 319              		.loc 1 190 1 is_stmt 1 view -0
+ 320              		.cfi_startproc
+ 321              		@ args = 0, pretend = 0, frame = 0
+ 322              		@ frame_needed = 0, uses_anonymous_args = 0
+ 323              		@ link register save eliminated.
+ 191:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   return (FlagStatus)(WDOG->CTRL==WDOG_CTRL_INTEN);
+ 324              		.loc 1 191 3 view .LVU77
+ 325              		.loc 1 191 27 is_stmt 0 view .LVU78
+ 326 0000 034B     		ldr	r3, .L30
+ 327 0002 9868     		ldr	r0, [r3, #8]
+ 192:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 328              		.loc 1 192 1 view .LVU79
+ 329 0004 A0F10100 		sub	r0, #1
+ 330 0008 B0FA80F0 		clz	r0, r0
+ 331 000c 4009     		lsrs	r0, r0, #5
+ 332 000e 7047     		bx	lr
+ 333              	.L31:
+ 334              		.align	2
+ 335              	.L30:
+ 336 0010 00800040 		.word	1073774592
+ 337              		.cfi_endproc
+ 338              	.LFE35:
+ 340              		.section	.text.WDOG_ClrIntEnable,"ax",%progbits
+ 341              		.align	1
+ 342              		.p2align 2,,3
+ 343              		.global	WDOG_ClrIntEnable
+ 344              		.syntax unified
+ 345              		.thumb
+ 346              		.thumb_func
+ 347              		.fpu softvfp
+ 349              	WDOG_ClrIntEnable:
+ 350              	.LFB36:
+ 193:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 194:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 195:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 196:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return none
+ 197:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Clears interrupt enable.
+ 198:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 199:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** void WDOG_ClrIntEnable(void)
+ 200:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 351              		.loc 1 200 1 is_stmt 1 view -0
+ 352              		.cfi_startproc
+ 353              		@ args = 0, pretend = 0, frame = 0
+ 354              		@ frame_needed = 0, uses_anonymous_args = 0
+ 355              		@ link register save eliminated.
+ 201:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   /* Write any value to INTCLR clears the interrupt */
+ 202:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->INTCLR = WDOG_INTCLR;
+ 356              		.loc 1 202 3 view .LVU81
+ 357              		.loc 1 202 16 is_stmt 0 view .LVU82
+ 358 0000 0122     		movs	r2, #1
+ 359 0002 014B     		ldr	r3, .L33
+ 360 0004 DA60     		str	r2, [r3, #12]
+ 203:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 361              		.loc 1 203 1 view .LVU83
+ 362 0006 7047     		bx	lr
+ 363              	.L34:
+ 364              		.align	2
+ 365              	.L33:
+ 366 0008 00800040 		.word	1073774592
+ 367              		.cfi_endproc
+ 368              	.LFE36:
+ 370              		.section	.text.WDOG_GetRawIntStatus,"ax",%progbits
+ 371              		.align	1
+ 372              		.p2align 2,,3
+ 373              		.global	WDOG_GetRawIntStatus
+ 374              		.syntax unified
+ 375              		.thumb
+ 376              		.thumb_func
+ 377              		.fpu softvfp
+ 379              	WDOG_GetRawIntStatus:
+ 380              	.LFB37:
+ 204:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 205:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 206:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 207:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return FlagStatus
+ 208:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg SET
+ 209:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg RESET
+ 210:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Returns raw interrupt status.
+ 211:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 212:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** FlagStatus WDOG_GetRawIntStatus(void)
+ 213:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 381              		.loc 1 213 1 is_stmt 1 view -0
+ 382              		.cfi_startproc
+ 383              		@ args = 0, pretend = 0, frame = 0
+ 384              		@ frame_needed = 0, uses_anonymous_args = 0
+ 385              		@ link register save eliminated.
+ 214:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   return (FlagStatus)(WDOG->RIS==WDOG_RAWINTSTAT);
+ 386              		.loc 1 214 3 view .LVU85
+ 387              		.loc 1 214 27 is_stmt 0 view .LVU86
+ 388 0000 034B     		ldr	r3, .L36
+ 389 0002 1869     		ldr	r0, [r3, #16]
+ 215:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 390              		.loc 1 215 1 view .LVU87
+ 391 0004 A0F10100 		sub	r0, #1
+ 392 0008 B0FA80F0 		clz	r0, r0
+ 393 000c 4009     		lsrs	r0, r0, #5
+ 394 000e 7047     		bx	lr
+ 395              	.L37:
+ 396              		.align	2
+ 397              	.L36:
+ 398 0010 00800040 		.word	1073774592
+ 399              		.cfi_endproc
+ 400              	.LFE37:
+ 402              		.section	.text.WDOG_GetMaskIntStatus,"ax",%progbits
+ 403              		.align	1
+ 404              		.p2align 2,,3
+ 405              		.global	WDOG_GetMaskIntStatus
+ 406              		.syntax unified
+ 407              		.thumb
+ 408              		.thumb_func
+ 409              		.fpu softvfp
+ 411              	WDOG_GetMaskIntStatus:
+ 412              	.LFB38:
+ 216:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 217:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 218:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 219:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return FlagStatus
+ 220:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg SET
+ 221:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg RESET
+ 222:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Return masked interrupt status.
+ 223:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 224:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** FlagStatus WDOG_GetMaskIntStatus(void)
+ 225:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 413              		.loc 1 225 1 is_stmt 1 view -0
+ 414              		.cfi_startproc
+ 415              		@ args = 0, pretend = 0, frame = 0
+ 416              		@ frame_needed = 0, uses_anonymous_args = 0
+ 417              		@ link register save eliminated.
+ 226:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   return (FlagStatus)(WDOG->MIS==WDOG_MASKINTSTAT);
+ 418              		.loc 1 226 3 view .LVU89
+ 419              		.loc 1 226 27 is_stmt 0 view .LVU90
+ 420 0000 034B     		ldr	r3, .L39
+ 421 0002 5869     		ldr	r0, [r3, #20]
+ 227:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 422              		.loc 1 227 1 view .LVU91
+ 423 0004 A0F10100 		sub	r0, #1
+ 424 0008 B0FA80F0 		clz	r0, r0
+ 425 000c 4009     		lsrs	r0, r0, #5
+ 426 000e 7047     		bx	lr
+ 427              	.L40:
+ 428              		.align	2
+ 429              	.L39:
+ 430 0010 00800040 		.word	1073774592
+ 431              		.cfi_endproc
+ 432              	.LFE38:
+ 434              		.section	.text.WDOG_LockWriteAccess,"ax",%progbits
+ 435              		.align	1
+ 436              		.p2align 2,,3
+ 437              		.global	WDOG_LockWriteAccess
+ 438              		.syntax unified
+ 439              		.thumb
+ 440              		.thumb_func
+ 441              		.fpu softvfp
+ 443              	WDOG_LockWriteAccess:
+ 444              	.LFB39:
+ 228:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 229:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 230:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 231:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return none
+ 232:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Disable write access all registers.
+ 233:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 234:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** void WDOG_LockWriteAccess(void)
+ 235:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 445              		.loc 1 235 1 is_stmt 1 view -0
+ 446              		.cfi_startproc
+ 447              		@ args = 0, pretend = 0, frame = 0
+ 448              		@ frame_needed = 0, uses_anonymous_args = 0
+ 449              		@ link register save eliminated.
+ 236:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->LOCK = 0;
+ 450              		.loc 1 236 3 view .LVU93
+ 451              		.loc 1 236 14 is_stmt 0 view .LVU94
+ 452 0000 0022     		movs	r2, #0
+ 453 0002 024B     		ldr	r3, .L42
+ 454 0004 C3F8002C 		str	r2, [r3, #3072]
+ 237:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 455              		.loc 1 237 1 view .LVU95
+ 456 0008 7047     		bx	lr
+ 457              	.L43:
+ 458 000a 00BF     		.align	2
+ 459              	.L42:
+ 460 000c 00800040 		.word	1073774592
+ 461              		.cfi_endproc
+ 462              	.LFE39:
+ 464              		.section	.text.WDOG_UnlockWriteAccess,"ax",%progbits
+ 465              		.align	1
+ 466              		.p2align 2,,3
+ 467              		.global	WDOG_UnlockWriteAccess
+ 468              		.syntax unified
+ 469              		.thumb
+ 470              		.thumb_func
+ 471              		.fpu softvfp
+ 473              	WDOG_UnlockWriteAccess:
+ 474              	.LFB40:
+ 238:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 239:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 240:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 241:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return none
+ 242:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Enable write access all registers.
+ 243:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 244:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** void WDOG_UnlockWriteAccess(void)
+ 245:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 475              		.loc 1 245 1 is_stmt 1 view -0
+ 476              		.cfi_startproc
+ 477              		@ args = 0, pretend = 0, frame = 0
+ 478              		@ frame_needed = 0, uses_anonymous_args = 0
+ 479              		@ link register save eliminated.
+ 246:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->LOCK = 0x1ACCE551;  
+ 480              		.loc 1 246 3 view .LVU97
+ 481              		.loc 1 246 14 is_stmt 0 view .LVU98
+ 482 0000 024B     		ldr	r3, .L45
+ 483 0002 034A     		ldr	r2, .L45+4
+ 484 0004 C3F8002C 		str	r2, [r3, #3072]
+ 247:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 485              		.loc 1 247 1 view .LVU99
+ 486 0008 7047     		bx	lr
+ 487              	.L46:
+ 488 000a 00BF     		.align	2
+ 489              	.L45:
+ 490 000c 00800040 		.word	1073774592
+ 491 0010 51E5CC1A 		.word	449635665
+ 492              		.cfi_endproc
+ 493              	.LFE40:
+ 495              		.section	.text.WDOG_SetITModeEnable,"ax",%progbits
+ 496              		.align	1
+ 497              		.p2align 2,,3
+ 498              		.global	WDOG_SetITModeEnable
+ 499              		.syntax unified
+ 500              		.thumb
+ 501              		.thumb_func
+ 502              		.fpu softvfp
+ 504              	WDOG_SetITModeEnable:
+ 505              	.LFB41:
+ 248:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 249:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 250:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 251:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return none
+ 252:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Sets integration test mode enable.
+ 253:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 254:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** void WDOG_SetITModeEnable(void)
+ 255:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 506              		.loc 1 255 1 is_stmt 1 view -0
+ 507              		.cfi_startproc
+ 508              		@ args = 0, pretend = 0, frame = 0
+ 509              		@ frame_needed = 0, uses_anonymous_args = 0
+ 510              		@ link register save eliminated.
+ 256:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->ITCR |= WDOG_ITCR_INTEGTESTEN;
+ 511              		.loc 1 256 3 view .LVU101
+ 512              		.loc 1 256 14 is_stmt 0 view .LVU102
+ 513 0000 034A     		ldr	r2, .L48
+ 514 0002 D2F8003F 		ldr	r3, [r2, #3840]
+ 515 0006 43F00103 		orr	r3, r3, #1
+ 516 000a C2F8003F 		str	r3, [r2, #3840]
+ 257:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 517              		.loc 1 257 1 view .LVU103
+ 518 000e 7047     		bx	lr
+ 519              	.L49:
+ 520              		.align	2
+ 521              	.L48:
+ 522 0010 00800040 		.word	1073774592
+ 523              		.cfi_endproc
+ 524              	.LFE41:
+ 526              		.section	.text.WDOG_ClrITModeEnable,"ax",%progbits
+ 527              		.align	1
+ 528              		.p2align 2,,3
+ 529              		.global	WDOG_ClrITModeEnable
+ 530              		.syntax unified
+ 531              		.thumb
+ 532              		.thumb_func
+ 533              		.fpu softvfp
+ 535              	WDOG_ClrITModeEnable:
+ 536              	.LFB42:
+ 258:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 259:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 260:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 261:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return none
+ 262:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Clears integration test mode enable.
+ 263:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 264:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** void WDOG_ClrITModeEnable(void)
+ 265:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 537              		.loc 1 265 1 is_stmt 1 view -0
+ 538              		.cfi_startproc
+ 539              		@ args = 0, pretend = 0, frame = 0
+ 540              		@ frame_needed = 0, uses_anonymous_args = 0
+ 541              		@ link register save eliminated.
+ 266:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->ITCR &= ~WDOG_ITCR_INTEGTESTEN;
+ 542              		.loc 1 266 3 view .LVU105
+ 543              		.loc 1 266 14 is_stmt 0 view .LVU106
+ 544 0000 034A     		ldr	r2, .L51
+ 545 0002 D2F8003F 		ldr	r3, [r2, #3840]
+ 546 0006 23F00103 		bic	r3, r3, #1
+ 547 000a C2F8003F 		str	r3, [r2, #3840]
+ 267:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 548              		.loc 1 267 1 view .LVU107
+ 549 000e 7047     		bx	lr
+ 550              	.L52:
+ 551              		.align	2
+ 552              	.L51:
+ 553 0010 00800040 		.word	1073774592
+ 554              		.cfi_endproc
+ 555              	.LFE42:
+ 557              		.section	.text.WDOG_GetITModeStatus,"ax",%progbits
+ 558              		.align	1
+ 559              		.p2align 2,,3
+ 560              		.global	WDOG_GetITModeStatus
+ 561              		.syntax unified
+ 562              		.thumb
+ 563              		.thumb_func
+ 564              		.fpu softvfp
+ 566              	WDOG_GetITModeStatus:
+ 567              	.LFB43:
+ 268:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 269:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 270:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 271:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return FlagStatus
+ 272:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg SET
+ 273:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg RESET
+ 274:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Returns integration test mode status.
+ 275:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 276:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** FlagStatus WDOG_GetITModeStatus(void)
+ 277:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 568              		.loc 1 277 1 is_stmt 1 view -0
+ 569              		.cfi_startproc
+ 570              		@ args = 0, pretend = 0, frame = 0
+ 571              		@ frame_needed = 0, uses_anonymous_args = 0
+ 572              		@ link register save eliminated.
+ 278:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   return (FlagStatus)(WDOG->ITCR==WDOG_ITCR_INTEGTESTEN);
+ 573              		.loc 1 278 3 view .LVU109
+ 574              		.loc 1 278 27 is_stmt 0 view .LVU110
+ 575 0000 044B     		ldr	r3, .L54
+ 576 0002 D3F8000F 		ldr	r0, [r3, #3840]
+ 279:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 577              		.loc 1 279 1 view .LVU111
+ 578 0006 A0F10100 		sub	r0, #1
+ 579 000a B0FA80F0 		clz	r0, r0
+ 580 000e 4009     		lsrs	r0, r0, #5
+ 581 0010 7047     		bx	lr
+ 582              	.L55:
+ 583 0012 00BF     		.align	2
+ 584              	.L54:
+ 585 0014 00800040 		.word	1073774592
+ 586              		.cfi_endproc
+ 587              	.LFE43:
+ 589              		.section	.text.WDOG_SetITOP,"ax",%progbits
+ 590              		.align	1
+ 591              		.p2align 2,,3
+ 592              		.global	WDOG_SetITOP
+ 593              		.syntax unified
+ 594              		.thumb
+ 595              		.thumb_func
+ 596              		.fpu softvfp
+ 598              	WDOG_SetITOP:
+ 599              	.LVL3:
+ 600              	.LFB44:
+ 280:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 281:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 282:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param uint32_t
+ 283:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return none
+ 284:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Sets integration test output reset or interrupt.
+ 285:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 286:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** void WDOG_SetITOP(uint32_t itop)
+ 287:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 601              		.loc 1 287 1 is_stmt 1 view -0
+ 602              		.cfi_startproc
+ 603              		@ args = 0, pretend = 0, frame = 0
+ 604              		@ frame_needed = 0, uses_anonymous_args = 0
+ 605              		@ link register save eliminated.
+ 288:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->ITOP = itop;
+ 606              		.loc 1 288 3 view .LVU113
+ 607              		.loc 1 288 14 is_stmt 0 view .LVU114
+ 608 0000 014B     		ldr	r3, .L57
+ 609 0002 C3F8040F 		str	r0, [r3, #3844]
+ 289:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 610              		.loc 1 289 1 view .LVU115
+ 611 0006 7047     		bx	lr
+ 612              	.L58:
+ 613              		.align	2
+ 614              	.L57:
+ 615 0008 00800040 		.word	1073774592
+ 616              		.cfi_endproc
+ 617              	.LFE44:
+ 619              		.section	.text.WDOG_ClrITOP,"ax",%progbits
+ 620              		.align	1
+ 621              		.p2align 2,,3
+ 622              		.global	WDOG_ClrITOP
+ 623              		.syntax unified
+ 624              		.thumb
+ 625              		.thumb_func
+ 626              		.fpu softvfp
+ 628              	WDOG_ClrITOP:
+ 629              	.LVL4:
+ 630              	.LFB45:
+ 290:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 291:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param uint32_t
+ 292:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return none
+ 293:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Clear integration test output reset or interrupt.
+ 294:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 295:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** void WDOG_ClrITOP(uint32_t itop)
+ 296:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 631              		.loc 1 296 1 is_stmt 1 view -0
+ 632              		.cfi_startproc
+ 633              		@ args = 0, pretend = 0, frame = 0
+ 634              		@ frame_needed = 0, uses_anonymous_args = 0
+ 635              		@ link register save eliminated.
+ 297:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   WDOG->ITOP &= ~itop; 
+ 636              		.loc 1 297 3 view .LVU117
+ 637              		.loc 1 297 14 is_stmt 0 view .LVU118
+ 638 0000 034A     		ldr	r2, .L60
+ 639 0002 D2F8043F 		ldr	r3, [r2, #3844]
+ 640 0006 23EA0000 		bic	r0, r3, r0
+ 641              	.LVL5:
+ 642              		.loc 1 297 14 view .LVU119
+ 643 000a C2F8040F 		str	r0, [r2, #3844]
+ 298:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 644              		.loc 1 298 1 view .LVU120
+ 645 000e 7047     		bx	lr
+ 646              	.L61:
+ 647              		.align	2
+ 648              	.L60:
+ 649 0010 00800040 		.word	1073774592
+ 650              		.cfi_endproc
+ 651              	.LFE45:
+ 653              		.section	.text.WDOG_GetITOPResStatus,"ax",%progbits
+ 654              		.align	1
+ 655              		.p2align 2,,3
+ 656              		.global	WDOG_GetITOPResStatus
+ 657              		.syntax unified
+ 658              		.thumb
+ 659              		.thumb_func
+ 660              		.fpu softvfp
+ 662              	WDOG_GetITOPResStatus:
+ 663              	.LFB46:
+ 299:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 300:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 301:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 302:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return FlagStatus
+ 303:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg SET
+ 304:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg RESET
+ 305:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Returns integration test output reset status.
+ 306:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 307:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** FlagStatus WDOG_GetITOPResStatus(void)
+ 308:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 664              		.loc 1 308 1 is_stmt 1 view -0
+ 665              		.cfi_startproc
+ 666              		@ args = 0, pretend = 0, frame = 0
+ 667              		@ frame_needed = 0, uses_anonymous_args = 0
+ 668              		@ link register save eliminated.
+ 309:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   return (FlagStatus)(WDOG->ITOP==WDOG_ITOP_WDOGRES);
+ 669              		.loc 1 309 3 view .LVU122
+ 670              		.loc 1 309 27 is_stmt 0 view .LVU123
+ 671 0000 044B     		ldr	r3, .L63
+ 672 0002 D3F8040F 		ldr	r0, [r3, #3844]
+ 310:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 673              		.loc 1 310 1 view .LVU124
+ 674 0006 A0F10100 		sub	r0, #1
+ 675 000a B0FA80F0 		clz	r0, r0
+ 676 000e 4009     		lsrs	r0, r0, #5
+ 677 0010 7047     		bx	lr
+ 678              	.L64:
+ 679 0012 00BF     		.align	2
+ 680              	.L63:
+ 681 0014 00800040 		.word	1073774592
+ 682              		.cfi_endproc
+ 683              	.LFE46:
+ 685              		.section	.text.WDOG_GetITOPIntStatus,"ax",%progbits
+ 686              		.align	1
+ 687              		.p2align 2,,3
+ 688              		.global	WDOG_GetITOPIntStatus
+ 689              		.syntax unified
+ 690              		.thumb
+ 691              		.thumb_func
+ 692              		.fpu softvfp
+ 694              	WDOG_GetITOPIntStatus:
+ 695              	.LFB47:
+ 311:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** 
+ 312:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** /**
+ 313:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @param none
+ 314:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @return FlagStatus
+ 315:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg SET
+ 316:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   *         @arg RESET
+ 317:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   * @brief Returns integration test output interrupt status.
+ 318:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   */
+ 319:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** FlagStatus WDOG_GetITOPIntStatus(void)
+ 320:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** {
+ 696              		.loc 1 320 1 is_stmt 1 view -0
+ 697              		.cfi_startproc
+ 698              		@ args = 0, pretend = 0, frame = 0
+ 699              		@ frame_needed = 0, uses_anonymous_args = 0
+ 700              		@ link register save eliminated.
+ 321:../PERIPHERAL/Sources/gw1ns4c_wdog.c ****   return (FlagStatus)(WDOG->ITOP==WDOG_ITOP_WDOGINT);
+ 701              		.loc 1 321 3 view .LVU126
+ 702              		.loc 1 321 27 is_stmt 0 view .LVU127
+ 703 0000 044B     		ldr	r3, .L66
+ 704 0002 D3F8040F 		ldr	r0, [r3, #3844]
+ 322:../PERIPHERAL/Sources/gw1ns4c_wdog.c **** }
+ 705              		.loc 1 322 1 view .LVU128
+ 706 0006 A0F10200 		sub	r0, #2
+ 707 000a B0FA80F0 		clz	r0, r0
+ 708 000e 4009     		lsrs	r0, r0, #5
+ 709 0010 7047     		bx	lr
+ 710              	.L67:
+ 711 0012 00BF     		.align	2
+ 712              	.L66:
+ 713 0014 00800040 		.word	1073774592
+ 714              		.cfi_endproc
+ 715              	.LFE47:
+ 717              		.text
+ 718              	.Letext0:
+ 719              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 720              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 721              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 722              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+ 723              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+ 724              		.file 7 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\PERIPHERAL\\Includes/gw1ns4c_wdog.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gw1ns4c_wdog.c
+d:\wintmp\ccoJBKek.s:16     .text.WDOG_Init:00000000 $t
+d:\wintmp\ccoJBKek.s:25     .text.WDOG_Init:00000000 WDOG_Init
+d:\wintmp\ccoJBKek.s:150    .text.WDOG_Init:00000090 $d
+d:\wintmp\ccoJBKek.s:156    .text.WDOG_RestartCounter:00000000 $t
+d:\wintmp\ccoJBKek.s:164    .text.WDOG_RestartCounter:00000000 WDOG_RestartCounter
+d:\wintmp\ccoJBKek.s:181    .text.WDOG_RestartCounter:00000008 $d
+d:\wintmp\ccoJBKek.s:186    .text.WDOG_GetCounterValue:00000000 $t
+d:\wintmp\ccoJBKek.s:194    .text.WDOG_GetCounterValue:00000000 WDOG_GetCounterValue
+d:\wintmp\ccoJBKek.s:210    .text.WDOG_GetCounterValue:00000008 $d
+d:\wintmp\ccoJBKek.s:215    .text.WDOG_SetResetEnable:00000000 $t
+d:\wintmp\ccoJBKek.s:223    .text.WDOG_SetResetEnable:00000000 WDOG_SetResetEnable
+d:\wintmp\ccoJBKek.s:241    .text.WDOG_SetResetEnable:0000000c $d
+d:\wintmp\ccoJBKek.s:246    .text.WDOG_GetResStatus:00000000 $t
+d:\wintmp\ccoJBKek.s:254    .text.WDOG_GetResStatus:00000000 WDOG_GetResStatus
+d:\wintmp\ccoJBKek.s:273    .text.WDOG_GetResStatus:00000010 $d
+d:\wintmp\ccoJBKek.s:278    .text.WDOG_SetIntEnable:00000000 $t
+d:\wintmp\ccoJBKek.s:286    .text.WDOG_SetIntEnable:00000000 WDOG_SetIntEnable
+d:\wintmp\ccoJBKek.s:304    .text.WDOG_SetIntEnable:0000000c $d
+d:\wintmp\ccoJBKek.s:309    .text.WDOG_GetIntStatus:00000000 $t
+d:\wintmp\ccoJBKek.s:317    .text.WDOG_GetIntStatus:00000000 WDOG_GetIntStatus
+d:\wintmp\ccoJBKek.s:336    .text.WDOG_GetIntStatus:00000010 $d
+d:\wintmp\ccoJBKek.s:341    .text.WDOG_ClrIntEnable:00000000 $t
+d:\wintmp\ccoJBKek.s:349    .text.WDOG_ClrIntEnable:00000000 WDOG_ClrIntEnable
+d:\wintmp\ccoJBKek.s:366    .text.WDOG_ClrIntEnable:00000008 $d
+d:\wintmp\ccoJBKek.s:371    .text.WDOG_GetRawIntStatus:00000000 $t
+d:\wintmp\ccoJBKek.s:379    .text.WDOG_GetRawIntStatus:00000000 WDOG_GetRawIntStatus
+d:\wintmp\ccoJBKek.s:398    .text.WDOG_GetRawIntStatus:00000010 $d
+d:\wintmp\ccoJBKek.s:403    .text.WDOG_GetMaskIntStatus:00000000 $t
+d:\wintmp\ccoJBKek.s:411    .text.WDOG_GetMaskIntStatus:00000000 WDOG_GetMaskIntStatus
+d:\wintmp\ccoJBKek.s:430    .text.WDOG_GetMaskIntStatus:00000010 $d
+d:\wintmp\ccoJBKek.s:435    .text.WDOG_LockWriteAccess:00000000 $t
+d:\wintmp\ccoJBKek.s:443    .text.WDOG_LockWriteAccess:00000000 WDOG_LockWriteAccess
+d:\wintmp\ccoJBKek.s:460    .text.WDOG_LockWriteAccess:0000000c $d
+d:\wintmp\ccoJBKek.s:465    .text.WDOG_UnlockWriteAccess:00000000 $t
+d:\wintmp\ccoJBKek.s:473    .text.WDOG_UnlockWriteAccess:00000000 WDOG_UnlockWriteAccess
+d:\wintmp\ccoJBKek.s:490    .text.WDOG_UnlockWriteAccess:0000000c $d
+d:\wintmp\ccoJBKek.s:496    .text.WDOG_SetITModeEnable:00000000 $t
+d:\wintmp\ccoJBKek.s:504    .text.WDOG_SetITModeEnable:00000000 WDOG_SetITModeEnable
+d:\wintmp\ccoJBKek.s:522    .text.WDOG_SetITModeEnable:00000010 $d
+d:\wintmp\ccoJBKek.s:527    .text.WDOG_ClrITModeEnable:00000000 $t
+d:\wintmp\ccoJBKek.s:535    .text.WDOG_ClrITModeEnable:00000000 WDOG_ClrITModeEnable
+d:\wintmp\ccoJBKek.s:553    .text.WDOG_ClrITModeEnable:00000010 $d
+d:\wintmp\ccoJBKek.s:558    .text.WDOG_GetITModeStatus:00000000 $t
+d:\wintmp\ccoJBKek.s:566    .text.WDOG_GetITModeStatus:00000000 WDOG_GetITModeStatus
+d:\wintmp\ccoJBKek.s:585    .text.WDOG_GetITModeStatus:00000014 $d
+d:\wintmp\ccoJBKek.s:590    .text.WDOG_SetITOP:00000000 $t
+d:\wintmp\ccoJBKek.s:598    .text.WDOG_SetITOP:00000000 WDOG_SetITOP
+d:\wintmp\ccoJBKek.s:615    .text.WDOG_SetITOP:00000008 $d
+d:\wintmp\ccoJBKek.s:620    .text.WDOG_ClrITOP:00000000 $t
+d:\wintmp\ccoJBKek.s:628    .text.WDOG_ClrITOP:00000000 WDOG_ClrITOP
+d:\wintmp\ccoJBKek.s:649    .text.WDOG_ClrITOP:00000010 $d
+d:\wintmp\ccoJBKek.s:654    .text.WDOG_GetITOPResStatus:00000000 $t
+d:\wintmp\ccoJBKek.s:662    .text.WDOG_GetITOPResStatus:00000000 WDOG_GetITOPResStatus
+d:\wintmp\ccoJBKek.s:681    .text.WDOG_GetITOPResStatus:00000014 $d
+d:\wintmp\ccoJBKek.s:686    .text.WDOG_GetITOPIntStatus:00000000 $t
+d:\wintmp\ccoJBKek.s:694    .text.WDOG_GetITOPIntStatus:00000000 WDOG_GetITOPIntStatus
+d:\wintmp\ccoJBKek.s:713    .text.WDOG_GetITOPIntStatus:00000014 $d
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+                           .group:00000000 wm4.gw1ns4c_wdog.h.82.1873cd61d66b99ff3b6cc3e9c4898022
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,36 @@
+[
+ {
+  "InstFile" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/test_mcu_top.v",
+  "InstLine" : 1,
+  "InstName" : "test_mcu_top",
+  "ModuleFile" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/test_mcu_top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "test_mcu_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/test_mcu_top.v",
+    "InstLine" : 37,
+    "InstName" : "emup",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/gowin_empu/gowin_empu.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "Gowin_EMPU_Top"
+   },
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/test_mcu_top.v",
+    "InstLine" : 24,
+    "InstName" : "clkgen",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/gowin_pllvr/gowin_pllvr.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "Gowin_PLLVR"
+   },
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/test_mcu_top.v",
+    "InstLine" : 85,
+    "InstName" : "spi_s2s",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/cm3_mcu/src/test_mcu_top.v",
+    "ModuleLine" : 99,
+    "ModuleName" : "spi_s2s"
+   }
+  ]
+ }
+]
