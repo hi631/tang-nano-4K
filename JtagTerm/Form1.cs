@@ -56,7 +56,7 @@ namespace JtagTerm
 		byte[] kinbuf = new byte[rbfmax];
 		byte[] dspbuf = new byte[rbfmax];
 		int kinbwp =0, kinbrp = 0, dspbwp = 0, dspbrp = 0;
-		private unsafe void disp_loop() {
+		private void disp_loop() {
 			char dch;
 			for(;;){
 				string dmsg = "";
@@ -69,7 +69,7 @@ namespace JtagTerm
 			}
 		}
 		
-		private unsafe void ftrx_loop() {
+		private void ftrx_loop() {
 			byte[] init=new byte[4];
 			byte[] sdata=new Byte[64];
 			byte[] rdata=new Byte[64];
