@@ -1,0 +1,433 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gw1ns4c_misc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.NVIC_PriorityGroupConfig,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	NVIC_PriorityGroupConfig
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	NVIC_PriorityGroupConfig:
+  26              	.LVL0:
+  27              	.LFB29:
+  28              		.file 1 "../PERIPHERAL/Sources/gw1ns4c_misc.c"
+   1:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /*
+   2:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  * *****************************************************************************************
+   3:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  *
+   4:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  * 		
+   6:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  * @file        gw1ns4c_misc.c
+   7:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  * @author      Embedded Development Team
+   8:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  * @version     V1.x.x
+   9:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  * @date        2021-01-01 09:00:00
+  10:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  * @brief       This file contains all the functions prototypes for the miscellaneous firmware libr
+  11:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  ******************************************************************************************
+  12:../PERIPHERAL/Sources/gw1ns4c_misc.c ****  */
+  13:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  14:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /* Includes ------------------------------------------------------------------*/
+  15:../PERIPHERAL/Sources/gw1ns4c_misc.c **** #include "gw1ns4c_misc.h"
+  16:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  17:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /** @addtogroup GW1NS4C_StdPeriph_Driver
+  18:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @{
+  19:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  20:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  21:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /** @defgroup MISC
+  22:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @brief MISC driver modules
+  23:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @{
+  24:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  25:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  26:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /** @defgroup MISC_Private_TypesDefinitions
+  27:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @{
+  28:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  29:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  30:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /**
+  31:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @}
+  32:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  33:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  34:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /** @defgroup MISC_Private_Macros
+  35:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @{
+  36:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  37:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  38:../PERIPHERAL/Sources/gw1ns4c_misc.c **** #define AIRCR_VECTKEY_MASK    ((uint32_t)0x05FA0000)
+  39:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  40:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /**
+  41:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @}
+  42:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  43:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  44:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /** @defgroup MISC_Private_Variables
+  45:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @{
+  46:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  47:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  48:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /**
+  49:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @}
+  50:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  51:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  52:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /** @defgroup MISC_Private_FunctionPrototypes
+  53:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @{
+  54:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  55:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  56:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /**
+  57:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @}
+  58:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  59:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  60:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /** @defgroup MISC_Private_Functions
+  61:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @{
+  62:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  63:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  64:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /**
+  65:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @param the priority grouping bits length
+  66:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *        This parameter can be one of the following value:
+  67:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *        @arg NVIC_PriorityGroup_0: 0 bits for pre-emption priority
+  68:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *                                   3 bits for subpriority
+  69:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *        @arg NVIC_PriorityGroup_1: 1 bits for pre-emption priority
+  70:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *                                   2 bits for subpriority
+  71:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *        @arg NVIC_PriorityGroup_2: 2 bits for pre-emption priority
+  72:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *                                   1 bits for subpriority
+  73:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *        @arg NVIC_PriorityGroup_3: 3 bits for pre-emption priority
+  74:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *                                   0 bits for subpriority
+  75:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @return none
+  76:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @brief Sets interrupt priority groups.
+  77:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  78:../PERIPHERAL/Sources/gw1ns4c_misc.c **** void NVIC_PriorityGroupConfig(uint32_t NVIC_PriorityGroup)
+  79:../PERIPHERAL/Sources/gw1ns4c_misc.c **** {
+  29              		.loc 1 79 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  80:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   /* Set the PRIGROUP[10:8] bits according to NVIC_PriorityGroup value */
+  81:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   SCB->AIRCR = AIRCR_VECTKEY_MASK | NVIC_PriorityGroup;
+  34              		.loc 1 81 3 view .LVU1
+  35              		.loc 1 81 35 is_stmt 0 view .LVU2
+  36 0000 40F0BF60 		orr	r0, r0, #100139008
+  37              	.LVL1:
+  38              		.loc 1 81 14 view .LVU3
+  39 0004 024B     		ldr	r3, .L3
+  40              		.loc 1 81 35 view .LVU4
+  41 0006 40F40030 		orr	r0, r0, #131072
+  42              		.loc 1 81 14 view .LVU5
+  43 000a D860     		str	r0, [r3, #12]
+  82:../PERIPHERAL/Sources/gw1ns4c_misc.c **** }
+  44              		.loc 1 82 1 view .LVU6
+  45 000c 7047     		bx	lr
+  46              	.L4:
+  47 000e 00BF     		.align	2
+  48              	.L3:
+  49 0010 00ED00E0 		.word	-536810240
+  50              		.cfi_endproc
+  51              	.LFE29:
+  53              		.section	.text.NVIC_Init,"ax",%progbits
+  54              		.align	1
+  55              		.p2align 2,,3
+  56              		.global	NVIC_Init
+  57              		.syntax unified
+  58              		.thumb
+  59              		.thumb_func
+  60              		.fpu softvfp
+  62              	NVIC_Init:
+  63              	.LVL2:
+  64              	.LFB30:
+  83:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  84:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /**
+  85:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @param NVIC_InitTypeDef Pointer
+  86:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @return none
+  87:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @brief Initial interrupt priority.
+  88:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+  89:../PERIPHERAL/Sources/gw1ns4c_misc.c **** void NVIC_Init(NVIC_InitTypeDef* NVIC_InitStruct)
+  90:../PERIPHERAL/Sources/gw1ns4c_misc.c **** {
+  65              		.loc 1 90 1 is_stmt 1 view -0
+  66              		.cfi_startproc
+  67              		@ args = 0, pretend = 0, frame = 0
+  68              		@ frame_needed = 0, uses_anonymous_args = 0
+  69              		@ link register save eliminated.
+  91:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   uint32_t tmppriority=0x00,tmppre=0x00,tmpsub=0x0F;
+  70              		.loc 1 91 3 view .LVU8
+  92:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  93:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   if(NVIC_InitStruct->NVIC_IRQChannelCmd!=DISABLE)
+  71              		.loc 1 93 3 view .LVU9
+  90:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   uint32_t tmppriority=0x00,tmppre=0x00,tmpsub=0x0F;
+  72              		.loc 1 90 1 is_stmt 0 view .LVU10
+  73 0000 F0B4     		push	{r4, r5, r6, r7}
+  74              		.cfi_def_cfa_offset 16
+  75              		.cfi_offset 4, -16
+  76              		.cfi_offset 5, -12
+  77              		.cfi_offset 6, -8
+  78              		.cfi_offset 7, -4
+  79 0002 0124     		movs	r4, #1
+  80 0004 0178     		ldrb	r1, [r0]	@ zero_extendqisi2
+  81              		.loc 1 93 5 view .LVU11
+  82 0006 C378     		ldrb	r3, [r0, #3]	@ zero_extendqisi2
+  83 0008 01F01F02 		and	r2, r1, #31
+  84 000c 9440     		lsls	r4, r4, r2
+  85 000e 4E09     		lsrs	r6, r1, #5
+  86 0010 BBB1     		cbz	r3, .L6
+  94:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   {
+  95:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     /* Compute the corresponding IRQ priority */
+  96:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppriority = (0x700 - ((SCB->AIRCR) & (uint32_t)0x700))>> 0x08;
+  87              		.loc 1 96 5 is_stmt 1 view .LVU12
+  88              		.loc 1 96 33 is_stmt 0 view .LVU13
+  89 0012 0F4B     		ldr	r3, .L9
+  97:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppre = (0x4 - tmppriority);
+  98:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmpsub = tmpsub >> tmppriority;
+  99:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+ 100:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppriority = (uint32_t)NVIC_InitStruct->NVIC_IRQChannelPreemptionPriority << tmppre;
+ 101:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+  90              		.loc 1 101 36 view .LVU14
+  91 0014 8278     		ldrb	r2, [r0, #2]	@ zero_extendqisi2
+  96:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppre = (0x4 - tmppriority);
+  92              		.loc 1 96 33 view .LVU15
+  93 0016 DD68     		ldr	r5, [r3, #12]
+ 100:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+  94              		.loc 1 100 19 view .LVU16
+  95 0018 4778     		ldrb	r7, [r0, #1]	@ zero_extendqisi2
+  96:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppre = (0x4 - tmppriority);
+  96              		.loc 1 96 26 view .LVU17
+  97 001a E843     		mvns	r0, r5
+  98              	.LVL3:
+  98:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+  99              		.loc 1 98 12 view .LVU18
+ 100 001c 0F23     		movs	r3, #15
+  96:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppre = (0x4 - tmppriority);
+ 101              		.loc 1 96 17 view .LVU19
+ 102 001e C0F30220 		ubfx	r0, r0, #8, #3
+ 103              	.LVL4:
+  97:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmpsub = tmpsub >> tmppriority;
+ 104              		.loc 1 97 5 is_stmt 1 view .LVU20
+  97:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmpsub = tmpsub >> tmppriority;
+ 105              		.loc 1 97 12 is_stmt 0 view .LVU21
+ 106 0022 C0F10405 		rsb	r5, r0, #4
+ 107              	.LVL5:
+  98:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+ 108              		.loc 1 98 5 is_stmt 1 view .LVU22
+ 100:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 109              		.loc 1 100 5 view .LVU23
+  98:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+ 110              		.loc 1 98 12 is_stmt 0 view .LVU24
+ 111 0026 C340     		lsrs	r3, r3, r0
+ 112              	.LVL6:
+ 100:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppriority |=  NVIC_InitStruct->NVIC_IRQChannelSubPriority & tmpsub;
+ 113              		.loc 1 100 17 view .LVU25
+ 114 0028 AF40     		lsls	r7, r7, r5
+ 115              	.LVL7:
+ 116              		.loc 1 101 5 is_stmt 1 view .LVU26
+ 117              		.loc 1 101 65 is_stmt 0 view .LVU27
+ 118 002a 1340     		ands	r3, r3, r2
+ 119              	.LVL8:
+ 120              		.loc 1 101 17 view .LVU28
+ 121 002c 3B43     		orrs	r3, r3, r7
+ 122              	.LVL9:
+ 102:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppriority = tmppriority << 0x04;
+ 123              		.loc 1 102 5 is_stmt 1 view .LVU29
+ 103:../PERIPHERAL/Sources/gw1ns4c_misc.c ****         
+ 104:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     NVIC->IP[NVIC_InitStruct->NVIC_IRQChannel] = tmppriority;
+ 124              		.loc 1 104 5 view .LVU30
+ 125              		.loc 1 104 48 is_stmt 0 view .LVU31
+ 126 002e 094A     		ldr	r2, .L9+4
+ 102:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     tmppriority = tmppriority << 0x04;
+ 127              		.loc 1 102 17 view .LVU32
+ 128 0030 1B01     		lsls	r3, r3, #4
+ 129              	.LVL10:
+ 130              		.loc 1 104 48 view .LVU33
+ 131 0032 DBB2     		uxtb	r3, r3
+ 132              	.LVL11:
+ 133              		.loc 1 104 48 view .LVU34
+ 134 0034 1144     		add	r1, r1, r2
+ 135 0036 81F80033 		strb	r3, [r1, #768]
+ 136              	.LVL12:
+ 105:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     
+ 106:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     /* Enable the Selected IRQ Channels */
+ 107:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     NVIC->ISER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
+ 137              		.loc 1 107 5 is_stmt 1 view .LVU35
+ 138              		.loc 1 107 58 is_stmt 0 view .LVU36
+ 139 003a 42F82640 		str	r4, [r2, r6, lsl #2]
+ 108:../PERIPHERAL/Sources/gw1ns4c_misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+ 109:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   }
+ 110:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   else
+ 111:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   {
+ 112:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     /* Disable the Selected IRQ Channels */
+ 113:../PERIPHERAL/Sources/gw1ns4c_misc.c ****     NVIC->ICER[NVIC_InitStruct->NVIC_IRQChannel >> 0x05] =
+ 114:../PERIPHERAL/Sources/gw1ns4c_misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+ 115:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   }
+ 116:../PERIPHERAL/Sources/gw1ns4c_misc.c **** }
+ 140              		.loc 1 116 1 view .LVU37
+ 141 003e F0BC     		pop	{r4, r5, r6, r7}
+ 142              		.cfi_remember_state
+ 143              		.cfi_restore 7
+ 144              		.cfi_restore 6
+ 145              		.cfi_restore 5
+ 146              		.cfi_restore 4
+ 147              		.cfi_def_cfa_offset 0
+ 148              	.LVL13:
+ 149              		.loc 1 116 1 view .LVU38
+ 150 0040 7047     		bx	lr
+ 151              	.LVL14:
+ 152              	.L6:
+ 153              		.cfi_restore_state
+ 113:../PERIPHERAL/Sources/gw1ns4c_misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+ 154              		.loc 1 113 5 is_stmt 1 view .LVU39
+ 113:../PERIPHERAL/Sources/gw1ns4c_misc.c ****       (uint32_t)0x01 << (NVIC_InitStruct->NVIC_IRQChannel & (uint8_t)0x1F);
+ 155              		.loc 1 113 58 is_stmt 0 view .LVU40
+ 156 0042 044B     		ldr	r3, .L9+4
+ 157 0044 2036     		adds	r6, r6, #32
+ 158 0046 43F82640 		str	r4, [r3, r6, lsl #2]
+ 159              		.loc 1 116 1 view .LVU41
+ 160 004a F0BC     		pop	{r4, r5, r6, r7}
+ 161              		.cfi_restore 7
+ 162              		.cfi_restore 6
+ 163              		.cfi_restore 5
+ 164              		.cfi_restore 4
+ 165              		.cfi_def_cfa_offset 0
+ 166 004c 7047     		bx	lr
+ 167              	.L10:
+ 168 004e 00BF     		.align	2
+ 169              	.L9:
+ 170 0050 00ED00E0 		.word	-536810240
+ 171 0054 00E100E0 		.word	-536813312
+ 172              		.cfi_endproc
+ 173              	.LFE30:
+ 175              		.section	.text.NVIC_SetVectorTable,"ax",%progbits
+ 176              		.align	1
+ 177              		.p2align 2,,3
+ 178              		.global	NVIC_SetVectorTable
+ 179              		.syntax unified
+ 180              		.thumb
+ 181              		.thumb_func
+ 182              		.fpu softvfp
+ 184              	NVIC_SetVectorTable:
+ 185              	.LVL15:
+ 186              	.LFB31:
+ 117:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+ 118:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /**
+ 119:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @param NVIC_VecTabb Ram or Flash Memory
+ 120:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *        @arg NVIC_VecTab_RAM
+ 121:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   *        @arg NVIC_VecTab_FLASH
+ 122:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @param uint32_t Offset vector table base offset field
+ 123:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @return none
+ 124:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @brief Sets interrupt vector table.
+ 125:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+ 126:../PERIPHERAL/Sources/gw1ns4c_misc.c **** void NVIC_SetVectorTable(uint32_t NVIC_VecTab,uint32_t Offset)
+ 127:../PERIPHERAL/Sources/gw1ns4c_misc.c **** {
+ 187              		.loc 1 127 1 is_stmt 1 view -0
+ 188              		.cfi_startproc
+ 189              		@ args = 0, pretend = 0, frame = 0
+ 190              		@ frame_needed = 0, uses_anonymous_args = 0
+ 191              		@ link register save eliminated.
+ 128:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   SCB->VTOR = NVIC_VecTab | (Offset & (uint32_t)0x1FFFFF80);
+ 192              		.loc 1 128 3 view .LVU43
+ 193              		.loc 1 128 37 is_stmt 0 view .LVU44
+ 194 0000 21F06041 		bic	r1, r1, #-536870912
+ 195              	.LVL16:
+ 196              		.loc 1 128 37 view .LVU45
+ 197 0004 21F07F01 		bic	r1, r1, #127
+ 198              		.loc 1 128 13 view .LVU46
+ 199 0008 014B     		ldr	r3, .L12
+ 200              		.loc 1 128 27 view .LVU47
+ 201 000a 0143     		orrs	r1, r1, r0
+ 202              		.loc 1 128 13 view .LVU48
+ 203 000c 9960     		str	r1, [r3, #8]
+ 129:../PERIPHERAL/Sources/gw1ns4c_misc.c **** }
+ 204              		.loc 1 129 1 view .LVU49
+ 205 000e 7047     		bx	lr
+ 206              	.L13:
+ 207              		.align	2
+ 208              	.L12:
+ 209 0010 00ED00E0 		.word	-536810240
+ 210              		.cfi_endproc
+ 211              	.LFE31:
+ 213              		.section	.text.SysTick_CLKSourceConfig,"ax",%progbits
+ 214              		.align	1
+ 215              		.p2align 2,,3
+ 216              		.global	SysTick_CLKSourceConfig
+ 217              		.syntax unified
+ 218              		.thumb
+ 219              		.thumb_func
+ 220              		.fpu softvfp
+ 222              	SysTick_CLKSourceConfig:
+ 223              	.LVL17:
+ 224              	.LFB32:
+ 130:../PERIPHERAL/Sources/gw1ns4c_misc.c **** 
+ 131:../PERIPHERAL/Sources/gw1ns4c_misc.c **** /**
+ 132:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @param uint32_t the SysTick clock source
+ 133:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @return none
+ 134:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   * @brief Sets systick clock source.
+ 135:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   */
+ 136:../PERIPHERAL/Sources/gw1ns4c_misc.c **** void SysTick_CLKSourceConfig(uint32_t SysTick_CLKSource)
+ 137:../PERIPHERAL/Sources/gw1ns4c_misc.c **** {
+ 225              		.loc 1 137 1 is_stmt 1 view -0
+ 226              		.cfi_startproc
+ 227              		@ args = 0, pretend = 0, frame = 0
+ 228              		@ frame_needed = 0, uses_anonymous_args = 0
+ 229              		@ link register save eliminated.
+ 138:../PERIPHERAL/Sources/gw1ns4c_misc.c ****   SysTick->CTRL |= SysTick_CLKSource_HCLK;
+ 230              		.loc 1 138 3 view .LVU51
+ 231              		.loc 1 138 17 is_stmt 0 view .LVU52
+ 232 0000 024A     		ldr	r2, .L15
+ 233 0002 1368     		ldr	r3, [r2]
+ 234 0004 43F00403 		orr	r3, r3, #4
+ 235 0008 1360     		str	r3, [r2]
+ 139:../PERIPHERAL/Sources/gw1ns4c_misc.c **** }
+ 236              		.loc 1 139 1 view .LVU53
+ 237 000a 7047     		bx	lr
+ 238              	.L16:
+ 239              		.align	2
+ 240              	.L15:
+ 241 000c 10E000E0 		.word	-536813552
+ 242              		.cfi_endproc
+ 243              	.LFE32:
+ 245              		.text
+ 246              	.Letext0:
+ 247              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 248              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 249              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 250              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+ 251              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+ 252              		.file 7 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\PERIPHERAL\\Includes/gw1ns4c_misc.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gw1ns4c_misc.c
+d:\wintmp\ccNokcZf.s:16     .text.NVIC_PriorityGroupConfig:00000000 $t
+d:\wintmp\ccNokcZf.s:25     .text.NVIC_PriorityGroupConfig:00000000 NVIC_PriorityGroupConfig
+d:\wintmp\ccNokcZf.s:49     .text.NVIC_PriorityGroupConfig:00000010 $d
+d:\wintmp\ccNokcZf.s:54     .text.NVIC_Init:00000000 $t
+d:\wintmp\ccNokcZf.s:62     .text.NVIC_Init:00000000 NVIC_Init
+d:\wintmp\ccNokcZf.s:170    .text.NVIC_Init:00000050 $d
+d:\wintmp\ccNokcZf.s:176    .text.NVIC_SetVectorTable:00000000 $t
+d:\wintmp\ccNokcZf.s:184    .text.NVIC_SetVectorTable:00000000 NVIC_SetVectorTable
+d:\wintmp\ccNokcZf.s:209    .text.NVIC_SetVectorTable:00000010 $d
+d:\wintmp\ccNokcZf.s:214    .text.SysTick_CLKSourceConfig:00000000 $t
+d:\wintmp\ccNokcZf.s:222    .text.SysTick_CLKSourceConfig:00000000 SysTick_CLKSourceConfig
+d:\wintmp\ccNokcZf.s:241    .text.SysTick_CLKSourceConfig:0000000c $d
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+                           .group:00000000 wm4.gw1ns4c_misc.h.95.748d7516fb86866db30528560ce3ea76
+
+NO UNDEFINED SYMBOLS

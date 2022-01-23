@@ -1,0 +1,1335 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gw1ns4c_gpio.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.GPIO_Init,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	GPIO_Init
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	GPIO_Init:
+  26              	.LVL0:
+  27              	.LFB29:
+  28              		.file 1 "../PERIPHERAL/Sources/gw1ns4c_gpio.c"
+   1:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /*
+   2:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  * *****************************************************************************************
+   3:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  *
+   4:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  * 		
+   6:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  * @file        gw1ns4c_gpio.c
+   7:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  * @author      Embedded Development Team
+   8:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  * @version     V1.x.x
+   9:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  * @date        2021-01-01 09:00:00
+  10:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  * @brief       This file contains all the functions prototypes for the GPIO firmware library.
+  11:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  ******************************************************************************************
+  12:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****  */
+  13:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  14:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /* Includes ------------------------------------------------------------------*/
+  15:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** #include "gw1ns4c_gpio.h"
+  16:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  17:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /** @addtogroup GW1NS4C_StdPeriph_Driver
+  18:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @{
+  19:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  20:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  21:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /** @defgroup GPIO 
+  22:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief GPIO driver modules
+  23:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @{
+  24:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  25:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  26:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /** @defgroup GPIO_Private_TypesDefinitions
+  27:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @{
+  28:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  29:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  30:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+  31:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @}
+  32:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  33:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  34:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /** @defgroup GPIO_Private_Macros
+  35:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @{
+  36:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  37:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  38:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+  39:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @}
+  40:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  41:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  42:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /** @defgroup GPIO_Private_Variables
+  43:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @{
+  44:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  45:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  46:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+  47:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @}
+  48:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  49:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  50:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /** @defgroup GPIO_Private_FunctionPrototypes
+  51:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @{
+  52:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  53:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  54:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+  55:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @}
+  56:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  57:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  58:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /** @defgroup GPIO_Private_Functions
+  59:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @{
+  60:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  61:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  62:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+  63:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+  64:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_InitTypeDef Pointer
+  65:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none 
+  66:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Initials GPIO.
+  67:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+  68:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_Init(GPIO_TypeDef* GPIOx,GPIO_InitTypeDef* GPIO_InitStruct)
+  69:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+  29              		.loc 1 69 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  70:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   uint32_t pos = 0;
+  34              		.loc 1 70 3 view .LVU1
+  71:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   uint32_t GPIO_Pin = GPIO_InitStruct->GPIO_Pin;
+  35              		.loc 1 71 3 view .LVU2
+  72:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOMode_TypeDef GPIO_Mode = GPIO_InitStruct->GPIO_Mode;
+  73:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOInt_TypeDef GPIO_Int = GPIO_InitStruct->GPIO_Int;
+  74:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  75:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   /* Initial all register to zero */
+  76:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->DATA = 0;
+  36              		.loc 1 76 15 is_stmt 0 view .LVU3
+  37 0000 0022     		movs	r2, #0
+  69:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   uint32_t pos = 0;
+  38              		.loc 1 69 1 view .LVU4
+  39 0002 70B4     		push	{r4, r5, r6}
+  40              		.cfi_def_cfa_offset 12
+  41              		.cfi_offset 4, -12
+  42              		.cfi_offset 5, -8
+  43              		.cfi_offset 6, -4
+  77:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->DATAOUT = 0;
+  78:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->OUTENSET = 0;
+  79:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->OUTENCLR = 0;
+  80:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->ALTFUNCSET = 0;
+  81:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->ALTFUNCCLR = 0;
+  82:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENSET = 0;
+  83:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENCLR = 0;
+  84:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTTYPESET = 0;
+  85:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTTYPECLR = 0;
+  86:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTPOLSET = 0;
+  87:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTPOLCLR = 0;
+  88:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTCLEAR = 0;
+  89:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   for(pos = 0;pos < 256;pos++)
+  44              		.loc 1 89 11 view .LVU5
+  45 0004 1346     		mov	r3, r2
+  90:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+  91:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****    GPIOx->MASKLOWBYTE[pos] = 0;
+  46              		.loc 1 91 28 view .LVU6
+  47 0006 1446     		mov	r4, r2
+  71:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOMode_TypeDef GPIO_Mode = GPIO_InitStruct->GPIO_Mode;
+  48              		.loc 1 71 12 view .LVU7
+  49 0008 0D68     		ldr	r5, [r1]
+  50              	.LVL1:
+  72:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOInt_TypeDef GPIO_Int = GPIO_InitStruct->GPIO_Int;
+  51              		.loc 1 72 3 is_stmt 1 view .LVU8
+  72:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOInt_TypeDef GPIO_Int = GPIO_InitStruct->GPIO_Int;
+  52              		.loc 1 72 20 is_stmt 0 view .LVU9
+  53 000a 0E79     		ldrb	r6, [r1, #4]	@ zero_extendqisi2
+  54              	.LVL2:
+  73:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  55              		.loc 1 73 3 is_stmt 1 view .LVU10
+  73:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  56              		.loc 1 73 19 is_stmt 0 view .LVU11
+  57 000c 4979     		ldrb	r1, [r1, #5]	@ zero_extendqisi2
+  58              	.LVL3:
+  76:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->DATAOUT = 0;
+  59              		.loc 1 76 3 is_stmt 1 view .LVU12
+  76:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->DATAOUT = 0;
+  60              		.loc 1 76 15 is_stmt 0 view .LVU13
+  61 000e 0260     		str	r2, [r0]
+  77:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->OUTENSET = 0;
+  62              		.loc 1 77 3 is_stmt 1 view .LVU14
+  77:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->OUTENSET = 0;
+  63              		.loc 1 77 18 is_stmt 0 view .LVU15
+  64 0010 4260     		str	r2, [r0, #4]
+  78:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->OUTENCLR = 0;
+  65              		.loc 1 78 3 is_stmt 1 view .LVU16
+  78:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->OUTENCLR = 0;
+  66              		.loc 1 78 19 is_stmt 0 view .LVU17
+  67 0012 0261     		str	r2, [r0, #16]
+  79:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->ALTFUNCSET = 0;
+  68              		.loc 1 79 3 is_stmt 1 view .LVU18
+  79:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->ALTFUNCSET = 0;
+  69              		.loc 1 79 19 is_stmt 0 view .LVU19
+  70 0014 4261     		str	r2, [r0, #20]
+  80:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->ALTFUNCCLR = 0;
+  71              		.loc 1 80 3 is_stmt 1 view .LVU20
+  80:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->ALTFUNCCLR = 0;
+  72              		.loc 1 80 21 is_stmt 0 view .LVU21
+  73 0016 8261     		str	r2, [r0, #24]
+  81:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENSET = 0;
+  74              		.loc 1 81 3 is_stmt 1 view .LVU22
+  81:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENSET = 0;
+  75              		.loc 1 81 21 is_stmt 0 view .LVU23
+  76 0018 C261     		str	r2, [r0, #28]
+  82:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENCLR = 0;
+  77              		.loc 1 82 3 is_stmt 1 view .LVU24
+  82:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENCLR = 0;
+  78              		.loc 1 82 19 is_stmt 0 view .LVU25
+  79 001a 0262     		str	r2, [r0, #32]
+  83:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTTYPESET = 0;
+  80              		.loc 1 83 3 is_stmt 1 view .LVU26
+  83:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTTYPESET = 0;
+  81              		.loc 1 83 19 is_stmt 0 view .LVU27
+  82 001c 4262     		str	r2, [r0, #36]
+  84:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTTYPECLR = 0;
+  83              		.loc 1 84 3 is_stmt 1 view .LVU28
+  84:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTTYPECLR = 0;
+  84              		.loc 1 84 21 is_stmt 0 view .LVU29
+  85 001e 8262     		str	r2, [r0, #40]
+  85:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTPOLSET = 0;
+  86              		.loc 1 85 3 is_stmt 1 view .LVU30
+  85:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTPOLSET = 0;
+  87              		.loc 1 85 21 is_stmt 0 view .LVU31
+  88 0020 C262     		str	r2, [r0, #44]
+  86:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTPOLCLR = 0;
+  89              		.loc 1 86 3 is_stmt 1 view .LVU32
+  86:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTPOLCLR = 0;
+  90              		.loc 1 86 20 is_stmt 0 view .LVU33
+  91 0022 0263     		str	r2, [r0, #48]
+  87:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTCLEAR = 0;
+  92              		.loc 1 87 3 is_stmt 1 view .LVU34
+  87:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTCLEAR = 0;
+  93              		.loc 1 87 20 is_stmt 0 view .LVU35
+  94 0024 4263     		str	r2, [r0, #52]
+  88:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   for(pos = 0;pos < 256;pos++)
+  95              		.loc 1 88 3 is_stmt 1 view .LVU36
+  88:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   for(pos = 0;pos < 256;pos++)
+  96              		.loc 1 88 19 is_stmt 0 view .LVU37
+  97 0026 8263     		str	r2, [r0, #56]
+  89:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+  98              		.loc 1 89 3 is_stmt 1 view .LVU38
+  99              	.LVL4:
+ 100              	.L2:
+ 101              		.loc 1 91 4 discriminator 3 view .LVU39
+ 102 0028 00EB8302 		add	r2, r0, r3, lsl #2
+  89:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 103              		.loc 1 89 28 is_stmt 0 discriminator 3 view .LVU40
+ 104 002c 0133     		adds	r3, r3, #1
+ 105              	.LVL5:
+  89:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 106              		.loc 1 89 3 discriminator 3 view .LVU41
+ 107 002e B3F5807F 		cmp	r3, #256
+ 108              		.loc 1 91 28 discriminator 3 view .LVU42
+ 109 0032 C2F80044 		str	r4, [r2, #1024]
+  92:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****    GPIOx->MASKHIGHBYTE[pos] = 0;
+ 110              		.loc 1 92 4 is_stmt 1 discriminator 3 view .LVU43
+ 111              	.LVL6:
+ 112              		.loc 1 92 29 is_stmt 0 discriminator 3 view .LVU44
+ 113 0036 C2F80048 		str	r4, [r2, #2048]
+  89:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 114              		.loc 1 89 3 discriminator 3 view .LVU45
+ 115 003a F5D1     		bne	.L2
+  93:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+  94:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+  95:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   /* Set GPIO Mode registers */
+  96:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   if(GPIO_Mode == GPIO_Mode_IN)
+ 116              		.loc 1 96 3 is_stmt 1 view .LVU46
+ 117              		.loc 1 96 5 is_stmt 0 view .LVU47
+ 118 003c AEB9     		cbnz	r6, .L3
+  97:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+  98:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->OUTENSET &= (~GPIO_Pin);//Clear Out Enable
+ 119              		.loc 1 98 5 is_stmt 1 view .LVU48
+ 120              		.loc 1 98 21 is_stmt 0 view .LVU49
+ 121 003e 0369     		ldr	r3, [r0, #16]
+ 122              	.LVL7:
+ 123              		.loc 1 98 21 view .LVU50
+ 124 0040 23EA0503 		bic	r3, r3, r5
+ 125 0044 0361     		str	r3, [r0, #16]
+ 126              	.L4:
+  99:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 100:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   else if(GPIO_Mode == GPIO_Mode_OUT)
+ 101:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 102:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->OUTENSET |= GPIO_Pin;//Set Out Enable
+ 103:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 104:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   else if(GPIO_Mode == GPIO_Mode_AF)
+ 105:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 106:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->ALTFUNCSET |= GPIO_Pin;
+ 107:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 108:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 109:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   /* Set GPIO Interrupt registers */
+ 110:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   if(GPIO_Int == GPIO_Int_Low_Level)
+ 127              		.loc 1 110 3 is_stmt 1 view .LVU51
+ 128              		.loc 1 110 5 is_stmt 0 view .LVU52
+ 129 0046 0129     		cmp	r1, #1
+ 130 0048 19D0     		beq	.L13
+ 131              	.L6:
+ 111:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 112:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTENSET |= GPIO_Pin;
+ 113:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTTYPECLR |= GPIO_Pin;
+ 114:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTPOLCLR |= GPIO_Pin;
+ 115:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 116:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   else if(GPIO_Int == GPIO_Int_High_Level)
+ 132              		.loc 1 116 8 is_stmt 1 view .LVU53
+ 133              		.loc 1 116 10 is_stmt 0 view .LVU54
+ 134 004a 0229     		cmp	r1, #2
+ 135 004c 22D0     		beq	.L14
+ 117:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 118:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTENSET |= GPIO_Pin;
+ 119:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTTYPECLR |= GPIO_Pin;
+ 120:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTPOLSET |= GPIO_Pin;
+ 121:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 122:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   else if(GPIO_Int == GPIO_Int_Falling_Edge)
+ 136              		.loc 1 122 8 is_stmt 1 view .LVU55
+ 137              		.loc 1 122 10 is_stmt 0 view .LVU56
+ 138 004e 0329     		cmp	r1, #3
+ 139 0050 2FD0     		beq	.L15
+ 123:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 124:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTENSET |= GPIO_Pin;
+ 125:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTTYPESET |= GPIO_Pin;
+ 126:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTPOLCLR |= GPIO_Pin;
+ 127:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 128:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   else if(GPIO_Int == GPIO_Int_Rising_Edge)
+ 140              		.loc 1 128 8 is_stmt 1 view .LVU57
+ 141              		.loc 1 128 10 is_stmt 0 view .LVU58
+ 142 0052 0429     		cmp	r1, #4
+ 143 0054 27D1     		bne	.L1
+ 129:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 130:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTENSET |= GPIO_Pin;
+ 144              		.loc 1 130 5 is_stmt 1 view .LVU59
+ 145              		.loc 1 130 21 is_stmt 0 view .LVU60
+ 146 0056 036A     		ldr	r3, [r0, #32]
+ 147 0058 2B43     		orrs	r3, r3, r5
+ 148 005a 0362     		str	r3, [r0, #32]
+ 131:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTPOLSET |= GPIO_Pin;
+ 149              		.loc 1 131 5 is_stmt 1 view .LVU61
+ 150              		.loc 1 131 22 is_stmt 0 view .LVU62
+ 151 005c 036B     		ldr	r3, [r0, #48]
+ 152 005e 2B43     		orrs	r3, r3, r5
+ 153 0060 0363     		str	r3, [r0, #48]
+ 132:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTTYPESET |= GPIO_Pin;
+ 154              		.loc 1 132 5 is_stmt 1 view .LVU63
+ 155              		.loc 1 132 23 is_stmt 0 view .LVU64
+ 156 0062 836A     		ldr	r3, [r0, #40]
+ 157 0064 1D43     		orrs	r5, r5, r3
+ 158              	.LVL8:
+ 159              		.loc 1 132 23 view .LVU65
+ 160 0066 8562     		str	r5, [r0, #40]
+ 133:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 134:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 161              		.loc 1 134 1 view .LVU66
+ 162 0068 1DE0     		b	.L1
+ 163              	.LVL9:
+ 164              	.L3:
+ 100:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 165              		.loc 1 100 8 is_stmt 1 view .LVU67
+ 100:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 166              		.loc 1 100 10 is_stmt 0 view .LVU68
+ 167 006a 012E     		cmp	r6, #1
+ 168 006c 1DD0     		beq	.L16
+ 104:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 169              		.loc 1 104 8 is_stmt 1 view .LVU69
+ 104:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 170              		.loc 1 104 10 is_stmt 0 view .LVU70
+ 171 006e 022E     		cmp	r6, #2
+ 172 0070 E9D1     		bne	.L4
+ 106:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 173              		.loc 1 106 5 is_stmt 1 view .LVU71
+ 106:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 174              		.loc 1 106 23 is_stmt 0 view .LVU72
+ 175 0072 8369     		ldr	r3, [r0, #24]
+ 176              	.LVL10:
+ 110:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 177              		.loc 1 110 5 view .LVU73
+ 178 0074 0129     		cmp	r1, #1
+ 106:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 179              		.loc 1 106 23 view .LVU74
+ 180 0076 43EA0503 		orr	r3, r3, r5
+ 181 007a 8361     		str	r3, [r0, #24]
+ 110:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 182              		.loc 1 110 3 is_stmt 1 view .LVU75
+ 110:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   {
+ 183              		.loc 1 110 5 is_stmt 0 view .LVU76
+ 184 007c E5D1     		bne	.L6
+ 185              	.L13:
+ 112:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTTYPECLR |= GPIO_Pin;
+ 186              		.loc 1 112 5 is_stmt 1 view .LVU77
+ 112:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTTYPECLR |= GPIO_Pin;
+ 187              		.loc 1 112 21 is_stmt 0 view .LVU78
+ 188 007e 036A     		ldr	r3, [r0, #32]
+ 189 0080 2B43     		orrs	r3, r3, r5
+ 190 0082 0362     		str	r3, [r0, #32]
+ 113:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTPOLCLR |= GPIO_Pin;
+ 191              		.loc 1 113 5 is_stmt 1 view .LVU79
+ 113:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTPOLCLR |= GPIO_Pin;
+ 192              		.loc 1 113 23 is_stmt 0 view .LVU80
+ 193 0084 C36A     		ldr	r3, [r0, #44]
+ 194 0086 2B43     		orrs	r3, r3, r5
+ 195 0088 C362     		str	r3, [r0, #44]
+ 114:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 196              		.loc 1 114 5 is_stmt 1 view .LVU81
+ 114:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 197              		.loc 1 114 22 is_stmt 0 view .LVU82
+ 198 008a 436B     		ldr	r3, [r0, #52]
+ 199 008c 1D43     		orrs	r5, r5, r3
+ 200              	.LVL11:
+ 114:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 201              		.loc 1 114 22 view .LVU83
+ 202 008e 4563     		str	r5, [r0, #52]
+ 203              		.loc 1 134 1 view .LVU84
+ 204 0090 70BC     		pop	{r4, r5, r6}
+ 205              		.cfi_remember_state
+ 206              		.cfi_restore 6
+ 207              		.cfi_restore 5
+ 208              		.cfi_restore 4
+ 209              		.cfi_def_cfa_offset 0
+ 210              	.LVL12:
+ 211              		.loc 1 134 1 view .LVU85
+ 212 0092 7047     		bx	lr
+ 213              	.LVL13:
+ 214              	.L14:
+ 215              		.cfi_restore_state
+ 118:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTTYPECLR |= GPIO_Pin;
+ 216              		.loc 1 118 5 is_stmt 1 view .LVU86
+ 118:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTTYPECLR |= GPIO_Pin;
+ 217              		.loc 1 118 21 is_stmt 0 view .LVU87
+ 218 0094 036A     		ldr	r3, [r0, #32]
+ 219 0096 2B43     		orrs	r3, r3, r5
+ 220 0098 0362     		str	r3, [r0, #32]
+ 119:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTPOLSET |= GPIO_Pin;
+ 221              		.loc 1 119 5 is_stmt 1 view .LVU88
+ 119:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTPOLSET |= GPIO_Pin;
+ 222              		.loc 1 119 23 is_stmt 0 view .LVU89
+ 223 009a C36A     		ldr	r3, [r0, #44]
+ 224 009c 2B43     		orrs	r3, r3, r5
+ 225 009e C362     		str	r3, [r0, #44]
+ 120:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 226              		.loc 1 120 5 is_stmt 1 view .LVU90
+ 120:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 227              		.loc 1 120 22 is_stmt 0 view .LVU91
+ 228 00a0 036B     		ldr	r3, [r0, #48]
+ 229 00a2 1D43     		orrs	r5, r5, r3
+ 230              	.LVL14:
+ 120:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 231              		.loc 1 120 22 view .LVU92
+ 232 00a4 0563     		str	r5, [r0, #48]
+ 233              	.L1:
+ 234              		.loc 1 134 1 view .LVU93
+ 235 00a6 70BC     		pop	{r4, r5, r6}
+ 236              		.cfi_remember_state
+ 237              		.cfi_restore 6
+ 238              		.cfi_restore 5
+ 239              		.cfi_restore 4
+ 240              		.cfi_def_cfa_offset 0
+ 241              	.LVL15:
+ 242              		.loc 1 134 1 view .LVU94
+ 243 00a8 7047     		bx	lr
+ 244              	.LVL16:
+ 245              	.L16:
+ 246              		.cfi_restore_state
+ 102:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 247              		.loc 1 102 5 is_stmt 1 view .LVU95
+ 102:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 248              		.loc 1 102 21 is_stmt 0 view .LVU96
+ 249 00aa 0369     		ldr	r3, [r0, #16]
+ 250              	.LVL17:
+ 102:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 251              		.loc 1 102 21 view .LVU97
+ 252 00ac 2B43     		orrs	r3, r3, r5
+ 253 00ae 0361     		str	r3, [r0, #16]
+ 254 00b0 C9E7     		b	.L4
+ 255              	.L15:
+ 124:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTTYPESET |= GPIO_Pin;
+ 256              		.loc 1 124 5 is_stmt 1 view .LVU98
+ 124:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTTYPESET |= GPIO_Pin;
+ 257              		.loc 1 124 21 is_stmt 0 view .LVU99
+ 258 00b2 036A     		ldr	r3, [r0, #32]
+ 259 00b4 2B43     		orrs	r3, r3, r5
+ 260 00b6 0362     		str	r3, [r0, #32]
+ 125:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTPOLCLR |= GPIO_Pin;
+ 261              		.loc 1 125 5 is_stmt 1 view .LVU100
+ 125:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****     GPIOx->INTPOLCLR |= GPIO_Pin;
+ 262              		.loc 1 125 23 is_stmt 0 view .LVU101
+ 263 00b8 836A     		ldr	r3, [r0, #40]
+ 264 00ba 2B43     		orrs	r3, r3, r5
+ 265 00bc 8362     		str	r3, [r0, #40]
+ 126:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 266              		.loc 1 126 5 is_stmt 1 view .LVU102
+ 126:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 267              		.loc 1 126 22 is_stmt 0 view .LVU103
+ 268 00be 436B     		ldr	r3, [r0, #52]
+ 269 00c0 1D43     		orrs	r5, r5, r3
+ 270              	.LVL18:
+ 126:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   }
+ 271              		.loc 1 126 22 view .LVU104
+ 272 00c2 4563     		str	r5, [r0, #52]
+ 273              		.loc 1 134 1 view .LVU105
+ 274 00c4 70BC     		pop	{r4, r5, r6}
+ 275              		.cfi_restore 6
+ 276              		.cfi_restore 5
+ 277              		.cfi_restore 4
+ 278              		.cfi_def_cfa_offset 0
+ 279              	.LVL19:
+ 280              		.loc 1 134 1 view .LVU106
+ 281 00c6 7047     		bx	lr
+ 282              		.cfi_endproc
+ 283              	.LFE29:
+ 285              		.section	.text.GPIO_SetOutEnable,"ax",%progbits
+ 286              		.align	1
+ 287              		.p2align 2,,3
+ 288              		.global	GPIO_SetOutEnable
+ 289              		.syntax unified
+ 290              		.thumb
+ 291              		.thumb_func
+ 292              		.fpu softvfp
+ 294              	GPIO_SetOutEnable:
+ 295              	.LVL20:
+ 296              	.LFB30:
+ 135:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 136:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 137:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 138:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param uint32_t GPIO Pin
+ 139:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 140:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none
+ 141:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Sets pins on a port as an output.
+ 142:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        Set the bit corresponding to the pin number to 1 for output.
+ 143:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        Set bit 1 of outenset to 1 to set pin 1 as an output.
+ 144:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        This function is thread safe.
+ 145:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 146:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_SetOutEnable(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 147:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 297              		.loc 1 147 1 is_stmt 1 view -0
+ 298              		.cfi_startproc
+ 299              		@ args = 0, pretend = 0, frame = 0
+ 300              		@ frame_needed = 0, uses_anonymous_args = 0
+ 301              		@ link register save eliminated.
+ 148:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->OUTENSET |= GPIO_Pin;
+ 302              		.loc 1 148 3 view .LVU108
+ 303              		.loc 1 148 19 is_stmt 0 view .LVU109
+ 304 0000 0369     		ldr	r3, [r0, #16]
+ 305 0002 1943     		orrs	r1, r1, r3
+ 306              	.LVL21:
+ 307              		.loc 1 148 19 view .LVU110
+ 308 0004 0161     		str	r1, [r0, #16]
+ 149:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 309              		.loc 1 149 1 view .LVU111
+ 310 0006 7047     		bx	lr
+ 311              		.cfi_endproc
+ 312              	.LFE30:
+ 314              		.section	.text.GPIO_ClrOutEnable,"ax",%progbits
+ 315              		.align	1
+ 316              		.p2align 2,,3
+ 317              		.global	GPIO_ClrOutEnable
+ 318              		.syntax unified
+ 319              		.thumb
+ 320              		.thumb_func
+ 321              		.fpu softvfp
+ 323              	GPIO_ClrOutEnable:
+ 324              	.LVL22:
+ 325              	.LFB31:
+ 150:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 151:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 152:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 153:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param uint32_t GPIO Pin
+ 154:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 155:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none
+ 156:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Sets pins on a port as an input.
+ 157:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        Set the bit corresponding to the pin number to 1 for input.
+ 158:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        Set bit 1 of outenclr to 1 to set pin 1 as an input.
+ 159:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        This function is thread safe.
+ 160:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 161:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_ClrOutEnable(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 162:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 326              		.loc 1 162 1 is_stmt 1 view -0
+ 327              		.cfi_startproc
+ 328              		@ args = 0, pretend = 0, frame = 0
+ 329              		@ frame_needed = 0, uses_anonymous_args = 0
+ 330              		@ link register save eliminated.
+ 163:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->OUTENCLR = GPIO_Pin;
+ 331              		.loc 1 163 3 view .LVU113
+ 332              		.loc 1 163 19 is_stmt 0 view .LVU114
+ 333 0000 4161     		str	r1, [r0, #20]
+ 164:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 334              		.loc 1 164 1 view .LVU115
+ 335 0002 7047     		bx	lr
+ 336              		.cfi_endproc
+ 337              	.LFE31:
+ 339              		.section	.text.GPIO_SetBit,"ax",%progbits
+ 340              		.align	1
+ 341              		.p2align 2,,3
+ 342              		.global	GPIO_SetBit
+ 343              		.syntax unified
+ 344              		.thumb
+ 345              		.thumb_func
+ 346              		.fpu softvfp
+ 348              	GPIO_SetBit:
+ 349              	.LVL23:
+ 350              	.LFB32:
+ 165:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 166:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 167:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Set GPIO Output = "1"
+ 168:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 169:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_SetBit(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 170:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 351              		.loc 1 170 1 is_stmt 1 view -0
+ 352              		.cfi_startproc
+ 353              		@ args = 0, pretend = 0, frame = 0
+ 354              		@ frame_needed = 0, uses_anonymous_args = 0
+ 355              		@ link register save eliminated.
+ 171:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->DATAOUT |= GPIO_Pin;
+ 356              		.loc 1 171 3 view .LVU117
+ 357              		.loc 1 171 18 is_stmt 0 view .LVU118
+ 358 0000 4368     		ldr	r3, [r0, #4]
+ 359 0002 1943     		orrs	r1, r1, r3
+ 360              	.LVL24:
+ 361              		.loc 1 171 18 view .LVU119
+ 362 0004 4160     		str	r1, [r0, #4]
+ 172:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 363              		.loc 1 172 1 view .LVU120
+ 364 0006 7047     		bx	lr
+ 365              		.cfi_endproc
+ 366              	.LFE32:
+ 368              		.section	.text.GPIO_ResetBit,"ax",%progbits
+ 369              		.align	1
+ 370              		.p2align 2,,3
+ 371              		.global	GPIO_ResetBit
+ 372              		.syntax unified
+ 373              		.thumb
+ 374              		.thumb_func
+ 375              		.fpu softvfp
+ 377              	GPIO_ResetBit:
+ 378              	.LVL25:
+ 379              	.LFB33:
+ 173:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 174:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 175:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Set GPIO Output = "0"
+ 176:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 177:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_ResetBit(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 178:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 380              		.loc 1 178 1 is_stmt 1 view -0
+ 381              		.cfi_startproc
+ 382              		@ args = 0, pretend = 0, frame = 0
+ 383              		@ frame_needed = 0, uses_anonymous_args = 0
+ 384              		@ link register save eliminated.
+ 179:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->DATAOUT &= ~GPIO_Pin;
+ 385              		.loc 1 179 3 view .LVU122
+ 386              		.loc 1 179 18 is_stmt 0 view .LVU123
+ 387 0000 4368     		ldr	r3, [r0, #4]
+ 388 0002 23EA0101 		bic	r1, r3, r1
+ 389              	.LVL26:
+ 390              		.loc 1 179 18 view .LVU124
+ 391 0006 4160     		str	r1, [r0, #4]
+ 180:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 392              		.loc 1 180 1 view .LVU125
+ 393 0008 7047     		bx	lr
+ 394              		.cfi_endproc
+ 395              	.LFE33:
+ 397 000a 00BF     		.section	.text.GPIO_WriteBits,"ax",%progbits
+ 398              		.align	1
+ 399              		.p2align 2,,3
+ 400              		.global	GPIO_WriteBits
+ 401              		.syntax unified
+ 402              		.thumb
+ 403              		.thumb_func
+ 404              		.fpu softvfp
+ 406              	GPIO_WriteBits:
+ 407              	.LVL27:
+ 408              	.LFB34:
+ 181:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 182:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 183:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Write GPIO Output
+ 184:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 185:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_WriteBits(GPIO_TypeDef* GPIOx,uint32_t value)
+ 186:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 409              		.loc 1 186 1 is_stmt 1 view -0
+ 410              		.cfi_startproc
+ 411              		@ args = 0, pretend = 0, frame = 0
+ 412              		@ frame_needed = 0, uses_anonymous_args = 0
+ 413              		@ link register save eliminated.
+ 187:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->DATAOUT = value;
+ 414              		.loc 1 187 3 view .LVU127
+ 415              		.loc 1 187 18 is_stmt 0 view .LVU128
+ 416 0000 4160     		str	r1, [r0, #4]
+ 188:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 417              		.loc 1 188 1 view .LVU129
+ 418 0002 7047     		bx	lr
+ 419              		.cfi_endproc
+ 420              	.LFE34:
+ 422              		.section	.text.GPIO_ReadBits,"ax",%progbits
+ 423              		.align	1
+ 424              		.p2align 2,,3
+ 425              		.global	GPIO_ReadBits
+ 426              		.syntax unified
+ 427              		.thumb
+ 428              		.thumb_func
+ 429              		.fpu softvfp
+ 431              	GPIO_ReadBits:
+ 432              	.LVL28:
+ 433              	.LFB35:
+ 189:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 190:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 191:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Read GPIO Input
+ 192:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 193:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** uint32_t GPIO_ReadBits(GPIO_TypeDef* GPIOx)
+ 194:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 434              		.loc 1 194 1 is_stmt 1 view -0
+ 435              		.cfi_startproc
+ 436              		@ args = 0, pretend = 0, frame = 0
+ 437              		@ frame_needed = 0, uses_anonymous_args = 0
+ 438              		@ link register save eliminated.
+ 195:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   return GPIOx->DATA; 
+ 439              		.loc 1 195 3 view .LVU131
+ 440              		.loc 1 195 15 is_stmt 0 view .LVU132
+ 441 0000 0068     		ldr	r0, [r0]
+ 442              	.LVL29:
+ 196:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 443              		.loc 1 196 1 view .LVU133
+ 444 0002 7047     		bx	lr
+ 445              		.cfi_endproc
+ 446              	.LFE35:
+ 448              		.section	.text.GPIO_GetOutEnable,"ax",%progbits
+ 449              		.align	1
+ 450              		.p2align 2,,3
+ 451              		.global	GPIO_GetOutEnable
+ 452              		.syntax unified
+ 453              		.thumb
+ 454              		.thumb_func
+ 455              		.fpu softvfp
+ 457              	GPIO_GetOutEnable:
+ 458              	.LVL30:
+ 459              	.LFB36:
+ 197:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 198:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 199:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 200:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return Output status
+ 201:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Returns whether pins on a port are set as inputs or outputs.
+ 202:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        If bit 1 of the returned is 1,this is an output.
+ 203:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 204:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** uint32_t GPIO_GetOutEnable(GPIO_TypeDef* GPIOx)
+ 205:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 460              		.loc 1 205 1 is_stmt 1 view -0
+ 461              		.cfi_startproc
+ 462              		@ args = 0, pretend = 0, frame = 0
+ 463              		@ frame_needed = 0, uses_anonymous_args = 0
+ 464              		@ link register save eliminated.
+ 206:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   return GPIOx->OUTENSET;
+ 465              		.loc 1 206 3 view .LVU135
+ 466              		.loc 1 206 15 is_stmt 0 view .LVU136
+ 467 0000 0069     		ldr	r0, [r0, #16]
+ 468              	.LVL31:
+ 207:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 469              		.loc 1 207 1 view .LVU137
+ 470 0002 7047     		bx	lr
+ 471              		.cfi_endproc
+ 472              	.LFE36:
+ 474              		.section	.text.GPIO_SetAltFunc,"ax",%progbits
+ 475              		.align	1
+ 476              		.p2align 2,,3
+ 477              		.global	GPIO_SetAltFunc
+ 478              		.syntax unified
+ 479              		.thumb
+ 480              		.thumb_func
+ 481              		.fpu softvfp
+ 483              	GPIO_SetAltFunc:
+ 484              	.LVL32:
+ 485              	.LFB37:
+ 208:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 209:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 210:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 211:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param uint32_t GPIO Pin
+ 212:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 213:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none
+ 214:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Enables the alternative function for pins.
+ 215:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        Set the bit corresponding to the pin number to 1 for alternate function.
+ 216:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        Set bit 1 of ALtFunc to 1 to set pin 1 to its alternative function.
+ 217:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        This function is thread safe.
+ 218:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 219:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_SetAltFunc(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 220:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 486              		.loc 1 220 1 is_stmt 1 view -0
+ 487              		.cfi_startproc
+ 488              		@ args = 0, pretend = 0, frame = 0
+ 489              		@ frame_needed = 0, uses_anonymous_args = 0
+ 490              		@ link register save eliminated.
+ 221:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->ALTFUNCSET |= GPIO_Pin;
+ 491              		.loc 1 221 3 view .LVU139
+ 492              		.loc 1 221 21 is_stmt 0 view .LVU140
+ 493 0000 8369     		ldr	r3, [r0, #24]
+ 494 0002 1943     		orrs	r1, r1, r3
+ 495              	.LVL33:
+ 496              		.loc 1 221 21 view .LVU141
+ 497 0004 8161     		str	r1, [r0, #24]
+ 222:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 498              		.loc 1 222 1 view .LVU142
+ 499 0006 7047     		bx	lr
+ 500              		.cfi_endproc
+ 501              	.LFE37:
+ 503              		.section	.text.GPIO_ClrAltFunc,"ax",%progbits
+ 504              		.align	1
+ 505              		.p2align 2,,3
+ 506              		.global	GPIO_ClrAltFunc
+ 507              		.syntax unified
+ 508              		.thumb
+ 509              		.thumb_func
+ 510              		.fpu softvfp
+ 512              	GPIO_ClrAltFunc:
+ 513              	.LVL34:
+ 514              	.LFB38:
+ 223:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 224:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 225:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 226:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param uint32_t GPIO Pin
+ 227:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 228:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none
+ 229:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Disables the alternative function for pins.
+ 230:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        Set the bit corresponding to the pin number to 1 to disable alternate function. 
+ 231:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        Set bit 1 of ALtFunc to 1 to set pin 1 to the orignal output function.
+ 232:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        This function is thread safe.
+ 233:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 234:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_ClrAltFunc(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 235:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 515              		.loc 1 235 1 is_stmt 1 view -0
+ 516              		.cfi_startproc
+ 517              		@ args = 0, pretend = 0, frame = 0
+ 518              		@ frame_needed = 0, uses_anonymous_args = 0
+ 519              		@ link register save eliminated.
+ 236:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->ALTFUNCCLR = GPIO_Pin;
+ 520              		.loc 1 236 3 view .LVU144
+ 521              		.loc 1 236 21 is_stmt 0 view .LVU145
+ 522 0000 C161     		str	r1, [r0, #28]
+ 237:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 523              		.loc 1 237 1 view .LVU146
+ 524 0002 7047     		bx	lr
+ 525              		.cfi_endproc
+ 526              	.LFE38:
+ 528              		.section	.text.GPIO_GetAltFunc,"ax",%progbits
+ 529              		.align	1
+ 530              		.p2align 2,,3
+ 531              		.global	GPIO_GetAltFunc
+ 532              		.syntax unified
+ 533              		.thumb
+ 534              		.thumb_func
+ 535              		.fpu softvfp
+ 537              	GPIO_GetAltFunc:
+ 538              	.LVL35:
+ 539              	.LFB39:
+ 238:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 239:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 240:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 241:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return AltFunc status
+ 242:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Returns whether pins on a port are set to their alternative or their original output fun
+ 243:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        If bit 1 of the returned is 1,this is alternative function.
+ 244:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 245:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** uint32_t GPIO_GetAltFunc(GPIO_TypeDef* GPIOx)
+ 246:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 540              		.loc 1 246 1 is_stmt 1 view -0
+ 541              		.cfi_startproc
+ 542              		@ args = 0, pretend = 0, frame = 0
+ 543              		@ frame_needed = 0, uses_anonymous_args = 0
+ 544              		@ link register save eliminated.
+ 247:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   return GPIOx->ALTFUNCSET;
+ 545              		.loc 1 247 3 view .LVU148
+ 546              		.loc 1 247 15 is_stmt 0 view .LVU149
+ 547 0000 8069     		ldr	r0, [r0, #24]
+ 548              	.LVL36:
+ 248:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 549              		.loc 1 248 1 view .LVU150
+ 550 0002 7047     		bx	lr
+ 551              		.cfi_endproc
+ 552              	.LFE39:
+ 554              		.section	.text.GPIO_IntClear,"ax",%progbits
+ 555              		.align	1
+ 556              		.p2align 2,,3
+ 557              		.global	GPIO_IntClear
+ 558              		.syntax unified
+ 559              		.thumb
+ 560              		.thumb_func
+ 561              		.fpu softvfp
+ 563              	GPIO_IntClear:
+ 564              	.LVL37:
+ 565              	.LFB40:
+ 249:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 250:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 251:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 252:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param uint32_t GPIO Pin
+ 253:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 254:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none
+ 255:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Clears the interrupt flag for the specified pin.
+ 256:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 257:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_IntClear(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 258:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 566              		.loc 1 258 1 is_stmt 1 view -0
+ 567              		.cfi_startproc
+ 568              		@ args = 0, pretend = 0, frame = 0
+ 569              		@ frame_needed = 0, uses_anonymous_args = 0
+ 570              		@ link register save eliminated.
+ 259:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTCLEAR |= GPIO_Pin;
+ 571              		.loc 1 259 3 view .LVU152
+ 572              		.loc 1 259 19 is_stmt 0 view .LVU153
+ 573 0000 836B     		ldr	r3, [r0, #56]
+ 574 0002 1943     		orrs	r1, r1, r3
+ 575              	.LVL38:
+ 576              		.loc 1 259 19 view .LVU154
+ 577 0004 8163     		str	r1, [r0, #56]
+ 260:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 578              		.loc 1 260 1 view .LVU155
+ 579 0006 7047     		bx	lr
+ 580              		.cfi_endproc
+ 581              	.LFE40:
+ 583              		.section	.text.GPIO_GetIntStatus,"ax",%progbits
+ 584              		.align	1
+ 585              		.p2align 2,,3
+ 586              		.global	GPIO_GetIntStatus
+ 587              		.syntax unified
+ 588              		.thumb
+ 589              		.thumb_func
+ 590              		.fpu softvfp
+ 592              	GPIO_GetIntStatus:
+ 593              	.LVL39:
+ 594              	.LFB41:
+ 261:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 262:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 263:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 264:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return Interrupt status
+ 265:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Returns GPIO Interrupt request status.
+ 266:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 267:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** uint32_t GPIO_GetIntStatus(GPIO_TypeDef* GPIOx)
+ 268:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 595              		.loc 1 268 1 is_stmt 1 view -0
+ 596              		.cfi_startproc
+ 597              		@ args = 0, pretend = 0, frame = 0
+ 598              		@ frame_needed = 0, uses_anonymous_args = 0
+ 599              		@ link register save eliminated.
+ 269:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   return GPIOx->INTSTATUS;
+ 600              		.loc 1 269 3 view .LVU157
+ 601              		.loc 1 269 15 is_stmt 0 view .LVU158
+ 602 0000 806B     		ldr	r0, [r0, #56]
+ 603              	.LVL40:
+ 270:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 604              		.loc 1 270 1 view .LVU159
+ 605 0002 7047     		bx	lr
+ 606              		.cfi_endproc
+ 607              	.LFE41:
+ 609              		.section	.text.GPIO_SetIntEnable,"ax",%progbits
+ 610              		.align	1
+ 611              		.p2align 2,,3
+ 612              		.global	GPIO_SetIntEnable
+ 613              		.syntax unified
+ 614              		.thumb
+ 615              		.thumb_func
+ 616              		.fpu softvfp
+ 618              	GPIO_SetIntEnable:
+ 619              	.LVL41:
+ 620              	.LFB42:
+ 271:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 272:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 273:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 274:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param uint32_t GPIO Pin
+ 275:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 276:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return Interrupt enable set
+ 277:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Enables interrupts for the specified pin.
+ 278:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        Returns the new interrupt enable status of the pin.
+ 279:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        This function is thread safe.
+ 280:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 281:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** uint32_t GPIO_SetIntEnable(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 282:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 621              		.loc 1 282 1 is_stmt 1 view -0
+ 622              		.cfi_startproc
+ 623              		@ args = 0, pretend = 0, frame = 0
+ 624              		@ frame_needed = 0, uses_anonymous_args = 0
+ 625              		@ link register save eliminated.
+ 283:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENSET |= GPIO_Pin;
+ 626              		.loc 1 283 3 view .LVU161
+ 627              		.loc 1 283 19 is_stmt 0 view .LVU162
+ 628 0000 036A     		ldr	r3, [r0, #32]
+ 629 0002 1943     		orrs	r1, r1, r3
+ 630              	.LVL42:
+ 631              		.loc 1 283 19 view .LVU163
+ 632 0004 0162     		str	r1, [r0, #32]
+ 284:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   return GPIOx->INTENSET;
+ 633              		.loc 1 284 3 is_stmt 1 view .LVU164
+ 634              		.loc 1 284 15 is_stmt 0 view .LVU165
+ 635 0006 006A     		ldr	r0, [r0, #32]
+ 636              	.LVL43:
+ 285:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 637              		.loc 1 285 1 view .LVU166
+ 638 0008 7047     		bx	lr
+ 639              		.cfi_endproc
+ 640              	.LFE42:
+ 642 000a 00BF     		.section	.text.GPIO_ClrIntEnable,"ax",%progbits
+ 643              		.align	1
+ 644              		.p2align 2,,3
+ 645              		.global	GPIO_ClrIntEnable
+ 646              		.syntax unified
+ 647              		.thumb
+ 648              		.thumb_func
+ 649              		.fpu softvfp
+ 651              	GPIO_ClrIntEnable:
+ 652              	.LVL44:
+ 653              	.LFB43:
+ 286:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 287:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 288:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 289:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO Pin
+ 290:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 291:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return Interrupt enable clear
+ 292:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Disables interrupts for the specified pin.
+ 293:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        Returns the new interrupt enable status of the pin.
+ 294:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        This function is thread safe.
+ 295:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 296:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** uint32_t GPIO_ClrIntEnable(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 297:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 654              		.loc 1 297 1 is_stmt 1 view -0
+ 655              		.cfi_startproc
+ 656              		@ args = 0, pretend = 0, frame = 0
+ 657              		@ frame_needed = 0, uses_anonymous_args = 0
+ 658              		@ link register save eliminated.
+ 298:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENCLR |= GPIO_Pin;
+ 659              		.loc 1 298 3 view .LVU168
+ 660              		.loc 1 298 19 is_stmt 0 view .LVU169
+ 661 0000 436A     		ldr	r3, [r0, #36]
+ 662 0002 1943     		orrs	r1, r1, r3
+ 663              	.LVL45:
+ 664              		.loc 1 298 19 view .LVU170
+ 665 0004 4162     		str	r1, [r0, #36]
+ 299:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   return GPIOx->INTENCLR;
+ 666              		.loc 1 299 3 is_stmt 1 view .LVU171
+ 667              		.loc 1 299 15 is_stmt 0 view .LVU172
+ 668 0006 406A     		ldr	r0, [r0, #36]
+ 669              	.LVL46:
+ 300:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 670              		.loc 1 300 1 view .LVU173
+ 671 0008 7047     		bx	lr
+ 672              		.cfi_endproc
+ 673              	.LFE43:
+ 675 000a 00BF     		.section	.text.GPIO_SetIntHighLevel,"ax",%progbits
+ 676              		.align	1
+ 677              		.p2align 2,,3
+ 678              		.global	GPIO_SetIntHighLevel
+ 679              		.syntax unified
+ 680              		.thumb
+ 681              		.thumb_func
+ 682              		.fpu softvfp
+ 684              	GPIO_SetIntHighLevel:
+ 685              	.LVL47:
+ 686              	.LFB44:
+ 301:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 302:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 303:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 304:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO Pin
+ 305:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 306:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none
+ 307:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Changes the interrupt type for the specified pin to a high level interrupt. 
+ 308:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        This function is thread safe.
+ 309:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 310:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_SetIntHighLevel(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 311:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 687              		.loc 1 311 1 is_stmt 1 view -0
+ 688              		.cfi_startproc
+ 689              		@ args = 0, pretend = 0, frame = 0
+ 690              		@ frame_needed = 0, uses_anonymous_args = 0
+ 691              		@ link register save eliminated.
+ 312:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENSET |= GPIO_Pin;    /* Set INT Enable bit */
+ 692              		.loc 1 312 3 view .LVU175
+ 693              		.loc 1 312 19 is_stmt 0 view .LVU176
+ 694 0000 036A     		ldr	r3, [r0, #32]
+ 695 0002 0B43     		orrs	r3, r3, r1
+ 696 0004 0362     		str	r3, [r0, #32]
+ 313:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTTYPECLR |= GPIO_Pin; /* Clear INT TYPE bit */
+ 697              		.loc 1 313 3 is_stmt 1 view .LVU177
+ 698              		.loc 1 313 21 is_stmt 0 view .LVU178
+ 699 0006 C36A     		ldr	r3, [r0, #44]
+ 700 0008 0B43     		orrs	r3, r3, r1
+ 701 000a C362     		str	r3, [r0, #44]
+ 314:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTPOLSET |= GPIO_Pin;  /* Set INT POLarity bit */
+ 702              		.loc 1 314 3 is_stmt 1 view .LVU179
+ 703              		.loc 1 314 20 is_stmt 0 view .LVU180
+ 704 000c 036B     		ldr	r3, [r0, #48]
+ 705 000e 0B43     		orrs	r3, r3, r1
+ 706 0010 0363     		str	r3, [r0, #48]
+ 315:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 707              		.loc 1 315 1 view .LVU181
+ 708 0012 7047     		bx	lr
+ 709              		.cfi_endproc
+ 710              	.LFE44:
+ 712              		.section	.text.GPIO_SetIntRisingEdge,"ax",%progbits
+ 713              		.align	1
+ 714              		.p2align 2,,3
+ 715              		.global	GPIO_SetIntRisingEdge
+ 716              		.syntax unified
+ 717              		.thumb
+ 718              		.thumb_func
+ 719              		.fpu softvfp
+ 721              	GPIO_SetIntRisingEdge:
+ 722              	.LVL48:
+ 723              	.LFB45:
+ 316:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 317:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 318:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 319:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO Pin
+ 320:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 321:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none
+ 322:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Changes the interrupt type for the specified pin to a rising edge interrupt.
+ 323:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        This function is thread safe.
+ 324:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 325:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_SetIntRisingEdge(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 326:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 724              		.loc 1 326 1 is_stmt 1 view -0
+ 725              		.cfi_startproc
+ 726              		@ args = 0, pretend = 0, frame = 0
+ 727              		@ frame_needed = 0, uses_anonymous_args = 0
+ 728              		@ link register save eliminated.
+ 327:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENSET |= GPIO_Pin;   /* Set INT Enable bit */
+ 729              		.loc 1 327 3 view .LVU183
+ 730              		.loc 1 327 19 is_stmt 0 view .LVU184
+ 731 0000 036A     		ldr	r3, [r0, #32]
+ 732 0002 0B43     		orrs	r3, r3, r1
+ 733 0004 0362     		str	r3, [r0, #32]
+ 328:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTTYPESET |= GPIO_Pin; /* Set INT TYPE bit */
+ 734              		.loc 1 328 3 is_stmt 1 view .LVU185
+ 735              		.loc 1 328 21 is_stmt 0 view .LVU186
+ 736 0006 836A     		ldr	r3, [r0, #40]
+ 737 0008 0B43     		orrs	r3, r3, r1
+ 738 000a 8362     		str	r3, [r0, #40]
+ 329:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTPOLSET |= GPIO_Pin;  /* Set INT POLarity bit */
+ 739              		.loc 1 329 3 is_stmt 1 view .LVU187
+ 740              		.loc 1 329 20 is_stmt 0 view .LVU188
+ 741 000c 036B     		ldr	r3, [r0, #48]
+ 742 000e 0B43     		orrs	r3, r3, r1
+ 743 0010 0363     		str	r3, [r0, #48]
+ 330:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 744              		.loc 1 330 1 view .LVU189
+ 745 0012 7047     		bx	lr
+ 746              		.cfi_endproc
+ 747              	.LFE45:
+ 749              		.section	.text.GPIO_SetIntLowLevel,"ax",%progbits
+ 750              		.align	1
+ 751              		.p2align 2,,3
+ 752              		.global	GPIO_SetIntLowLevel
+ 753              		.syntax unified
+ 754              		.thumb
+ 755              		.thumb_func
+ 756              		.fpu softvfp
+ 758              	GPIO_SetIntLowLevel:
+ 759              	.LVL49:
+ 760              	.LFB46:
+ 331:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 332:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 333:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 334:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO Pin
+ 335:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 336:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none
+ 337:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Changes the interrupt type for the specified pin to a low level interrupt.
+ 338:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        This function is thread safe.
+ 339:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 340:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_SetIntLowLevel(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 341:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 761              		.loc 1 341 1 is_stmt 1 view -0
+ 762              		.cfi_startproc
+ 763              		@ args = 0, pretend = 0, frame = 0
+ 764              		@ frame_needed = 0, uses_anonymous_args = 0
+ 765              		@ link register save eliminated.
+ 342:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENSET |= GPIO_Pin;    /* Set INT Enable bit */
+ 766              		.loc 1 342 3 view .LVU191
+ 767              		.loc 1 342 19 is_stmt 0 view .LVU192
+ 768 0000 036A     		ldr	r3, [r0, #32]
+ 769 0002 0B43     		orrs	r3, r3, r1
+ 770 0004 0362     		str	r3, [r0, #32]
+ 343:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTTYPECLR |= GPIO_Pin;  /* Clear INT TYPE bit */
+ 771              		.loc 1 343 3 is_stmt 1 view .LVU193
+ 772              		.loc 1 343 21 is_stmt 0 view .LVU194
+ 773 0006 C36A     		ldr	r3, [r0, #44]
+ 774 0008 0B43     		orrs	r3, r3, r1
+ 775 000a C362     		str	r3, [r0, #44]
+ 344:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTPOLCLR |= GPIO_Pin;   /* Clear INT POLarity bit */
+ 776              		.loc 1 344 3 is_stmt 1 view .LVU195
+ 777              		.loc 1 344 20 is_stmt 0 view .LVU196
+ 778 000c 436B     		ldr	r3, [r0, #52]
+ 779 000e 0B43     		orrs	r3, r3, r1
+ 780 0010 4363     		str	r3, [r0, #52]
+ 345:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 781              		.loc 1 345 1 view .LVU197
+ 782 0012 7047     		bx	lr
+ 783              		.cfi_endproc
+ 784              	.LFE46:
+ 786              		.section	.text.GPIO_SetIntFallingEdge,"ax",%progbits
+ 787              		.align	1
+ 788              		.p2align 2,,3
+ 789              		.global	GPIO_SetIntFallingEdge
+ 790              		.syntax unified
+ 791              		.thumb
+ 792              		.thumb_func
+ 793              		.fpu softvfp
+ 795              	GPIO_SetIntFallingEdge:
+ 796              	.LVL50:
+ 797              	.LFB47:
+ 346:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 347:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 348:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 349:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO Pin
+ 350:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        @arg GPIO_Pin_0...GPIO_Pin_15
+ 351:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none
+ 352:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Changes the interrupt type for the specified pin to a falling edge interrupt.
+ 353:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   *        This function is thread safe.
+ 354:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 355:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_SetIntFallingEdge(GPIO_TypeDef* GPIOx,uint32_t GPIO_Pin)
+ 356:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 798              		.loc 1 356 1 is_stmt 1 view -0
+ 799              		.cfi_startproc
+ 800              		@ args = 0, pretend = 0, frame = 0
+ 801              		@ frame_needed = 0, uses_anonymous_args = 0
+ 802              		@ link register save eliminated.
+ 357:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTENSET |= GPIO_Pin;    /* Set INT Enable bit */
+ 803              		.loc 1 357 3 view .LVU199
+ 804              		.loc 1 357 19 is_stmt 0 view .LVU200
+ 805 0000 036A     		ldr	r3, [r0, #32]
+ 806 0002 0B43     		orrs	r3, r3, r1
+ 807 0004 0362     		str	r3, [r0, #32]
+ 358:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTTYPESET |= GPIO_Pin;  /* Set INT TYPE bit */
+ 808              		.loc 1 358 3 is_stmt 1 view .LVU201
+ 809              		.loc 1 358 21 is_stmt 0 view .LVU202
+ 810 0006 836A     		ldr	r3, [r0, #40]
+ 811 0008 0B43     		orrs	r3, r3, r1
+ 812 000a 8362     		str	r3, [r0, #40]
+ 359:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->INTPOLCLR |= GPIO_Pin;   /* Clear INT POLarity bit */
+ 813              		.loc 1 359 3 is_stmt 1 view .LVU203
+ 814              		.loc 1 359 20 is_stmt 0 view .LVU204
+ 815 000c 436B     		ldr	r3, [r0, #52]
+ 816 000e 0B43     		orrs	r3, r3, r1
+ 817 0010 4363     		str	r3, [r0, #52]
+ 360:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 818              		.loc 1 360 1 view .LVU205
+ 819 0012 7047     		bx	lr
+ 820              		.cfi_endproc
+ 821              	.LFE47:
+ 823              		.section	.text.GPIO_MaskedWrite,"ax",%progbits
+ 824              		.align	1
+ 825              		.p2align 2,,3
+ 826              		.global	GPIO_MaskedWrite
+ 827              		.syntax unified
+ 828              		.thumb
+ 829              		.thumb_func
+ 830              		.fpu softvfp
+ 832              	GPIO_MaskedWrite:
+ 833              	.LVL51:
+ 834              	.LFB48:
+ 361:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** 
+ 362:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** /**
+ 363:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param GPIO_TypeDef Pointer
+ 364:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param uint32_t mask The output port mask.
+ 365:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @param uint32_t value The value to output to the specified port.
+ 366:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @return none
+ 367:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   * @brief Outputs the specified value on the desired port using the user defined mask to perform M
+ 368:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   */
+ 369:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** void GPIO_MaskedWrite(GPIO_TypeDef* GPIOx,uint32_t value,uint32_t mask)
+ 370:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** {
+ 835              		.loc 1 370 1 is_stmt 1 view -0
+ 836              		.cfi_startproc
+ 837              		@ args = 0, pretend = 0, frame = 0
+ 838              		@ frame_needed = 0, uses_anonymous_args = 0
+ 839              		@ link register save eliminated.
+ 371:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->MASKLOWBYTE[0x00FF & mask] = value;
+ 840              		.loc 1 371 3 view .LVU207
+ 841              		.loc 1 371 29 is_stmt 0 view .LVU208
+ 842 0000 D3B2     		uxtb	r3, r2
+ 372:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->MASKHIGHBYTE[((0xFF00 & mask) >> 8)] = value;
+ 843              		.loc 1 372 40 view .LVU209
+ 844 0002 C2F30722 		ubfx	r2, r2, #8, #8
+ 845              	.LVL52:
+ 371:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->MASKLOWBYTE[0x00FF & mask] = value;
+ 846              		.loc 1 371 37 view .LVU210
+ 847 0006 03F58073 		add	r3, r3, #256
+ 848              		.loc 1 372 47 view .LVU211
+ 849 000a 02F50072 		add	r2, r2, #512
+ 371:../PERIPHERAL/Sources/gw1ns4c_gpio.c ****   GPIOx->MASKLOWBYTE[0x00FF & mask] = value;
+ 850              		.loc 1 371 37 view .LVU212
+ 851 000e 40F82310 		str	r1, [r0, r3, lsl #2]
+ 852              		.loc 1 372 3 is_stmt 1 view .LVU213
+ 853              		.loc 1 372 47 is_stmt 0 view .LVU214
+ 854 0012 40F82210 		str	r1, [r0, r2, lsl #2]
+ 373:../PERIPHERAL/Sources/gw1ns4c_gpio.c **** }
+ 855              		.loc 1 373 1 view .LVU215
+ 856 0016 7047     		bx	lr
+ 857              		.cfi_endproc
+ 858              	.LFE48:
+ 860              		.text
+ 861              	.Letext0:
+ 862              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 863              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 864              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 865              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+ 866              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+ 867              		.file 7 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\PERIPHERAL\\Includes/gw1ns4c_gpio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gw1ns4c_gpio.c
+d:\wintmp\ccHFsQ0i.s:16     .text.GPIO_Init:00000000 $t
+d:\wintmp\ccHFsQ0i.s:25     .text.GPIO_Init:00000000 GPIO_Init
+d:\wintmp\ccHFsQ0i.s:286    .text.GPIO_SetOutEnable:00000000 $t
+d:\wintmp\ccHFsQ0i.s:294    .text.GPIO_SetOutEnable:00000000 GPIO_SetOutEnable
+d:\wintmp\ccHFsQ0i.s:315    .text.GPIO_ClrOutEnable:00000000 $t
+d:\wintmp\ccHFsQ0i.s:323    .text.GPIO_ClrOutEnable:00000000 GPIO_ClrOutEnable
+d:\wintmp\ccHFsQ0i.s:340    .text.GPIO_SetBit:00000000 $t
+d:\wintmp\ccHFsQ0i.s:348    .text.GPIO_SetBit:00000000 GPIO_SetBit
+d:\wintmp\ccHFsQ0i.s:369    .text.GPIO_ResetBit:00000000 $t
+d:\wintmp\ccHFsQ0i.s:377    .text.GPIO_ResetBit:00000000 GPIO_ResetBit
+d:\wintmp\ccHFsQ0i.s:398    .text.GPIO_WriteBits:00000000 $t
+d:\wintmp\ccHFsQ0i.s:406    .text.GPIO_WriteBits:00000000 GPIO_WriteBits
+d:\wintmp\ccHFsQ0i.s:423    .text.GPIO_ReadBits:00000000 $t
+d:\wintmp\ccHFsQ0i.s:431    .text.GPIO_ReadBits:00000000 GPIO_ReadBits
+d:\wintmp\ccHFsQ0i.s:449    .text.GPIO_GetOutEnable:00000000 $t
+d:\wintmp\ccHFsQ0i.s:457    .text.GPIO_GetOutEnable:00000000 GPIO_GetOutEnable
+d:\wintmp\ccHFsQ0i.s:475    .text.GPIO_SetAltFunc:00000000 $t
+d:\wintmp\ccHFsQ0i.s:483    .text.GPIO_SetAltFunc:00000000 GPIO_SetAltFunc
+d:\wintmp\ccHFsQ0i.s:504    .text.GPIO_ClrAltFunc:00000000 $t
+d:\wintmp\ccHFsQ0i.s:512    .text.GPIO_ClrAltFunc:00000000 GPIO_ClrAltFunc
+d:\wintmp\ccHFsQ0i.s:529    .text.GPIO_GetAltFunc:00000000 $t
+d:\wintmp\ccHFsQ0i.s:537    .text.GPIO_GetAltFunc:00000000 GPIO_GetAltFunc
+d:\wintmp\ccHFsQ0i.s:555    .text.GPIO_IntClear:00000000 $t
+d:\wintmp\ccHFsQ0i.s:563    .text.GPIO_IntClear:00000000 GPIO_IntClear
+d:\wintmp\ccHFsQ0i.s:584    .text.GPIO_GetIntStatus:00000000 $t
+d:\wintmp\ccHFsQ0i.s:592    .text.GPIO_GetIntStatus:00000000 GPIO_GetIntStatus
+d:\wintmp\ccHFsQ0i.s:610    .text.GPIO_SetIntEnable:00000000 $t
+d:\wintmp\ccHFsQ0i.s:618    .text.GPIO_SetIntEnable:00000000 GPIO_SetIntEnable
+d:\wintmp\ccHFsQ0i.s:643    .text.GPIO_ClrIntEnable:00000000 $t
+d:\wintmp\ccHFsQ0i.s:651    .text.GPIO_ClrIntEnable:00000000 GPIO_ClrIntEnable
+d:\wintmp\ccHFsQ0i.s:676    .text.GPIO_SetIntHighLevel:00000000 $t
+d:\wintmp\ccHFsQ0i.s:684    .text.GPIO_SetIntHighLevel:00000000 GPIO_SetIntHighLevel
+d:\wintmp\ccHFsQ0i.s:713    .text.GPIO_SetIntRisingEdge:00000000 $t
+d:\wintmp\ccHFsQ0i.s:721    .text.GPIO_SetIntRisingEdge:00000000 GPIO_SetIntRisingEdge
+d:\wintmp\ccHFsQ0i.s:750    .text.GPIO_SetIntLowLevel:00000000 $t
+d:\wintmp\ccHFsQ0i.s:758    .text.GPIO_SetIntLowLevel:00000000 GPIO_SetIntLowLevel
+d:\wintmp\ccHFsQ0i.s:787    .text.GPIO_SetIntFallingEdge:00000000 $t
+d:\wintmp\ccHFsQ0i.s:795    .text.GPIO_SetIntFallingEdge:00000000 GPIO_SetIntFallingEdge
+d:\wintmp\ccHFsQ0i.s:824    .text.GPIO_MaskedWrite:00000000 $t
+d:\wintmp\ccHFsQ0i.s:832    .text.GPIO_MaskedWrite:00000000 GPIO_MaskedWrite
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_wdog.h.82.1873cd61d66b99ff3b6cc3e9c4898022
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+
+NO UNDEFINED SYMBOLS

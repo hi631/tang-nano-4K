@@ -1,0 +1,610 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gw1ns4c_rtc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.Get_Current_Value,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	Get_Current_Value
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	Get_Current_Value:
+  26              	.LFB29:
+  27              		.file 1 "../PERIPHERAL/Sources/gw1ns4c_rtc.c"
+   1:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** /*
+   2:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  * *****************************************************************************************
+   3:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  *
+   4:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  * 		
+   6:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  * @file			gw1ns4c_rtc.c
+   7:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  * @author		Embedded Development Team
+   8:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  * @version		V1.x.x
+   9:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  * @date			2021-01-01 09:00:00
+  10:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  * @brief			This file contains all the functions prototypes for the RTC firmware library.
+  11:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  ******************************************************************************************
+  12:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  */
+  13:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  14:../PERIPHERAL/Sources/gw1ns4c_rtc.c ****  /* Includes ------------------------------------------------------------------*/
+  15:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** #include "gw1ns4c_rtc.h"
+  16:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  17:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** //THE CLOCK OF RTC is 1HZ
+  18:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** uint32_t Get_Current_Value(void)
+  19:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+  28              		.loc 1 19 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  20:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	return RTC->RTC_CURRENT_DATA;
+  33              		.loc 1 20 2 view .LVU1
+  34              		.loc 1 20 12 is_stmt 0 view .LVU2
+  35 0000 014B     		ldr	r3, .L3
+  36 0002 1868     		ldr	r0, [r3]
+  21:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+  37              		.loc 1 21 1 view .LVU3
+  38 0004 7047     		bx	lr
+  39              	.L4:
+  40 0006 00BF     		.align	2
+  41              	.L3:
+  42 0008 00600040 		.word	1073766400
+  43              		.cfi_endproc
+  44              	.LFE29:
+  46              		.section	.text.Set_Match_Value,"ax",%progbits
+  47              		.align	1
+  48              		.p2align 2,,3
+  49              		.global	Set_Match_Value
+  50              		.syntax unified
+  51              		.thumb
+  52              		.thumb_func
+  53              		.fpu softvfp
+  55              	Set_Match_Value:
+  56              	.LVL0:
+  57              	.LFB30:
+  22:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  23:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** void Set_Match_Value(uint32_t match_value)
+  24:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+  58              		.loc 1 24 1 is_stmt 1 view -0
+  59              		.cfi_startproc
+  60              		@ args = 0, pretend = 0, frame = 0
+  61              		@ frame_needed = 0, uses_anonymous_args = 0
+  62              		@ link register save eliminated.
+  25:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	RTC->RTC_MATCH_VALUE =match_value;
+  63              		.loc 1 25 2 view .LVU5
+  64              		.loc 1 25 23 is_stmt 0 view .LVU6
+  65 0000 014B     		ldr	r3, .L6
+  66 0002 5860     		str	r0, [r3, #4]
+  26:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+  67              		.loc 1 26 1 view .LVU7
+  68 0004 7047     		bx	lr
+  69              	.L7:
+  70 0006 00BF     		.align	2
+  71              	.L6:
+  72 0008 00600040 		.word	1073766400
+  73              		.cfi_endproc
+  74              	.LFE30:
+  76              		.section	.text.Get_Match_Value,"ax",%progbits
+  77              		.align	1
+  78              		.p2align 2,,3
+  79              		.global	Get_Match_Value
+  80              		.syntax unified
+  81              		.thumb
+  82              		.thumb_func
+  83              		.fpu softvfp
+  85              	Get_Match_Value:
+  86              	.LFB31:
+  27:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  28:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** uint32_t Get_Match_Value(void)
+  29:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+  87              		.loc 1 29 1 is_stmt 1 view -0
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              		@ link register save eliminated.
+  30:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	return RTC->RTC_MATCH_VALUE;
+  92              		.loc 1 30 2 view .LVU9
+  93              		.loc 1 30 12 is_stmt 0 view .LVU10
+  94 0000 014B     		ldr	r3, .L9
+  95 0002 5868     		ldr	r0, [r3, #4]
+  31:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+  96              		.loc 1 31 1 view .LVU11
+  97 0004 7047     		bx	lr
+  98              	.L10:
+  99 0006 00BF     		.align	2
+ 100              	.L9:
+ 101 0008 00600040 		.word	1073766400
+ 102              		.cfi_endproc
+ 103              	.LFE31:
+ 105              		.section	.text.Set_Load_Value,"ax",%progbits
+ 106              		.align	1
+ 107              		.p2align 2,,3
+ 108              		.global	Set_Load_Value
+ 109              		.syntax unified
+ 110              		.thumb
+ 111              		.thumb_func
+ 112              		.fpu softvfp
+ 114              	Set_Load_Value:
+ 115              	.LVL1:
+ 116              	.LFB32:
+  32:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  33:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** void Set_Load_Value(uint32_t load_value)
+  34:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 117              		.loc 1 34 1 is_stmt 1 view -0
+ 118              		.cfi_startproc
+ 119              		@ args = 0, pretend = 0, frame = 0
+ 120              		@ frame_needed = 0, uses_anonymous_args = 0
+ 121              		@ link register save eliminated.
+  35:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	RTC->RTC_LOAD_VALUE = load_value;
+ 122              		.loc 1 35 2 view .LVU13
+ 123              		.loc 1 35 22 is_stmt 0 view .LVU14
+ 124 0000 014B     		ldr	r3, .L12
+ 125 0002 9860     		str	r0, [r3, #8]
+  36:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 126              		.loc 1 36 1 view .LVU15
+ 127 0004 7047     		bx	lr
+ 128              	.L13:
+ 129 0006 00BF     		.align	2
+ 130              	.L12:
+ 131 0008 00600040 		.word	1073766400
+ 132              		.cfi_endproc
+ 133              	.LFE32:
+ 135              		.section	.text.Get_Load_Value,"ax",%progbits
+ 136              		.align	1
+ 137              		.p2align 2,,3
+ 138              		.global	Get_Load_Value
+ 139              		.syntax unified
+ 140              		.thumb
+ 141              		.thumb_func
+ 142              		.fpu softvfp
+ 144              	Get_Load_Value:
+ 145              	.LFB33:
+  37:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  38:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** uint32_t Get_Load_Value(void)
+  39:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 146              		.loc 1 39 1 is_stmt 1 view -0
+ 147              		.cfi_startproc
+ 148              		@ args = 0, pretend = 0, frame = 0
+ 149              		@ frame_needed = 0, uses_anonymous_args = 0
+ 150              		@ link register save eliminated.
+  40:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	return RTC->RTC_LOAD_VALUE;
+ 151              		.loc 1 40 2 view .LVU17
+ 152              		.loc 1 40 12 is_stmt 0 view .LVU18
+ 153 0000 014B     		ldr	r3, .L15
+ 154 0002 9868     		ldr	r0, [r3, #8]
+  41:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 155              		.loc 1 41 1 view .LVU19
+ 156 0004 7047     		bx	lr
+ 157              	.L16:
+ 158 0006 00BF     		.align	2
+ 159              	.L15:
+ 160 0008 00600040 		.word	1073766400
+ 161              		.cfi_endproc
+ 162              	.LFE33:
+ 164              		.section	.text.Start_RTC,"ax",%progbits
+ 165              		.align	1
+ 166              		.p2align 2,,3
+ 167              		.global	Start_RTC
+ 168              		.syntax unified
+ 169              		.thumb
+ 170              		.thumb_func
+ 171              		.fpu softvfp
+ 173              	Start_RTC:
+ 174              	.LFB34:
+  42:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  43:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** void Start_RTC(void)
+  44:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 175              		.loc 1 44 1 is_stmt 1 view -0
+ 176              		.cfi_startproc
+ 177              		@ args = 0, pretend = 0, frame = 0
+ 178              		@ frame_needed = 0, uses_anonymous_args = 0
+ 179              		@ link register save eliminated.
+  45:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	RTC->RTC_CTROLLER_REG =0x01;
+ 180              		.loc 1 45 2 view .LVU21
+ 181              		.loc 1 45 24 is_stmt 0 view .LVU22
+ 182 0000 0122     		movs	r2, #1
+ 183 0002 014B     		ldr	r3, .L18
+ 184 0004 DA60     		str	r2, [r3, #12]
+  46:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 185              		.loc 1 46 1 view .LVU23
+ 186 0006 7047     		bx	lr
+ 187              	.L19:
+ 188              		.align	2
+ 189              	.L18:
+ 190 0008 00600040 		.word	1073766400
+ 191              		.cfi_endproc
+ 192              	.LFE34:
+ 194              		.section	.text.Close_RTC,"ax",%progbits
+ 195              		.align	1
+ 196              		.p2align 2,,3
+ 197              		.global	Close_RTC
+ 198              		.syntax unified
+ 199              		.thumb
+ 200              		.thumb_func
+ 201              		.fpu softvfp
+ 203              	Close_RTC:
+ 204              	.LFB35:
+  47:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  48:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** void Close_RTC(void)
+  49:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 205              		.loc 1 49 1 is_stmt 1 view -0
+ 206              		.cfi_startproc
+ 207              		@ args = 0, pretend = 0, frame = 0
+ 208              		@ frame_needed = 0, uses_anonymous_args = 0
+ 209              		@ link register save eliminated.
+  50:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	RTC->RTC_CTROLLER_REG =0x00;
+ 210              		.loc 1 50 2 view .LVU25
+ 211              		.loc 1 50 24 is_stmt 0 view .LVU26
+ 212 0000 0022     		movs	r2, #0
+ 213 0002 014B     		ldr	r3, .L21
+ 214 0004 DA60     		str	r2, [r3, #12]
+  51:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 215              		.loc 1 51 1 view .LVU27
+ 216 0006 7047     		bx	lr
+ 217              	.L22:
+ 218              		.align	2
+ 219              	.L21:
+ 220 0008 00600040 		.word	1073766400
+ 221              		.cfi_endproc
+ 222              	.LFE35:
+ 224              		.section	.text.Get_RTC_Control_value,"ax",%progbits
+ 225              		.align	1
+ 226              		.p2align 2,,3
+ 227              		.global	Get_RTC_Control_value
+ 228              		.syntax unified
+ 229              		.thumb
+ 230              		.thumb_func
+ 231              		.fpu softvfp
+ 233              	Get_RTC_Control_value:
+ 234              	.LFB36:
+  52:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  53:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** uint8_t Get_RTC_Control_value(void)
+  54:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 235              		.loc 1 54 1 is_stmt 1 view -0
+ 236              		.cfi_startproc
+ 237              		@ args = 0, pretend = 0, frame = 0
+ 238              		@ frame_needed = 0, uses_anonymous_args = 0
+ 239              		@ link register save eliminated.
+  55:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	return RTC->RTC_CTROLLER_REG;
+ 240              		.loc 1 55 2 view .LVU29
+ 241              		.loc 1 55 12 is_stmt 0 view .LVU30
+ 242 0000 014B     		ldr	r3, .L24
+ 243 0002 D868     		ldr	r0, [r3, #12]
+  56:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 244              		.loc 1 56 1 view .LVU31
+ 245 0004 C0B2     		uxtb	r0, r0
+ 246 0006 7047     		bx	lr
+ 247              	.L25:
+ 248              		.align	2
+ 249              	.L24:
+ 250 0008 00600040 		.word	1073766400
+ 251              		.cfi_endproc
+ 252              	.LFE36:
+ 254              		.section	.text.RTC_Inter_Mask_Set,"ax",%progbits
+ 255              		.align	1
+ 256              		.p2align 2,,3
+ 257              		.global	RTC_Inter_Mask_Set
+ 258              		.syntax unified
+ 259              		.thumb
+ 260              		.thumb_func
+ 261              		.fpu softvfp
+ 263              	RTC_Inter_Mask_Set:
+ 264              	.LFB37:
+  57:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  58:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** void RTC_Inter_Mask_Set(void)
+  59:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 265              		.loc 1 59 1 is_stmt 1 view -0
+ 266              		.cfi_startproc
+ 267              		@ args = 0, pretend = 0, frame = 0
+ 268              		@ frame_needed = 0, uses_anonymous_args = 0
+ 269              		@ link register save eliminated.
+  60:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	RTC->RTC_IMSC = 0x01;
+ 270              		.loc 1 60 2 view .LVU33
+ 271              		.loc 1 60 16 is_stmt 0 view .LVU34
+ 272 0000 0122     		movs	r2, #1
+ 273 0002 014B     		ldr	r3, .L27
+ 274 0004 1A61     		str	r2, [r3, #16]
+  61:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 275              		.loc 1 61 1 view .LVU35
+ 276 0006 7047     		bx	lr
+ 277              	.L28:
+ 278              		.align	2
+ 279              	.L27:
+ 280 0008 00600040 		.word	1073766400
+ 281              		.cfi_endproc
+ 282              	.LFE37:
+ 284              		.section	.text.RTC_Inter_Mask_Clr,"ax",%progbits
+ 285              		.align	1
+ 286              		.p2align 2,,3
+ 287              		.global	RTC_Inter_Mask_Clr
+ 288              		.syntax unified
+ 289              		.thumb
+ 290              		.thumb_func
+ 291              		.fpu softvfp
+ 293              	RTC_Inter_Mask_Clr:
+ 294              	.LFB38:
+  62:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  63:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** void RTC_Inter_Mask_Clr(void)//MASK Interrupt FLAG
+  64:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 295              		.loc 1 64 1 is_stmt 1 view -0
+ 296              		.cfi_startproc
+ 297              		@ args = 0, pretend = 0, frame = 0
+ 298              		@ frame_needed = 0, uses_anonymous_args = 0
+ 299              		@ link register save eliminated.
+  65:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	RTC->RTC_IMSC = 0x00;
+ 300              		.loc 1 65 2 view .LVU37
+ 301              		.loc 1 65 16 is_stmt 0 view .LVU38
+ 302 0000 0022     		movs	r2, #0
+ 303 0002 014B     		ldr	r3, .L30
+ 304 0004 1A61     		str	r2, [r3, #16]
+  66:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 305              		.loc 1 66 1 view .LVU39
+ 306 0006 7047     		bx	lr
+ 307              	.L31:
+ 308              		.align	2
+ 309              	.L30:
+ 310 0008 00600040 		.word	1073766400
+ 311              		.cfi_endproc
+ 312              	.LFE38:
+ 314              		.section	.text.Get_RTC_Inter_Mask_value,"ax",%progbits
+ 315              		.align	1
+ 316              		.p2align 2,,3
+ 317              		.global	Get_RTC_Inter_Mask_value
+ 318              		.syntax unified
+ 319              		.thumb
+ 320              		.thumb_func
+ 321              		.fpu softvfp
+ 323              	Get_RTC_Inter_Mask_value:
+ 324              	.LFB39:
+  67:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  68:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** uint8_t Get_RTC_Inter_Mask_value(void)
+  69:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 325              		.loc 1 69 1 is_stmt 1 view -0
+ 326              		.cfi_startproc
+ 327              		@ args = 0, pretend = 0, frame = 0
+ 328              		@ frame_needed = 0, uses_anonymous_args = 0
+ 329              		@ link register save eliminated.
+  70:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	return RTC->RTC_IMSC;
+ 330              		.loc 1 70 2 view .LVU41
+ 331              		.loc 1 70 12 is_stmt 0 view .LVU42
+ 332 0000 014B     		ldr	r3, .L33
+ 333 0002 1869     		ldr	r0, [r3, #16]
+  71:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 334              		.loc 1 71 1 view .LVU43
+ 335 0004 C0B2     		uxtb	r0, r0
+ 336 0006 7047     		bx	lr
+ 337              	.L34:
+ 338              		.align	2
+ 339              	.L33:
+ 340 0008 00600040 		.word	1073766400
+ 341              		.cfi_endproc
+ 342              	.LFE39:
+ 344              		.section	.text.Clear_RTC_interrupt,"ax",%progbits
+ 345              		.align	1
+ 346              		.p2align 2,,3
+ 347              		.global	Clear_RTC_interrupt
+ 348              		.syntax unified
+ 349              		.thumb
+ 350              		.thumb_func
+ 351              		.fpu softvfp
+ 353              	Clear_RTC_interrupt:
+ 354              	.LFB40:
+  72:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  73:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** void Clear_RTC_interrupt(void)
+  74:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 355              		.loc 1 74 1 is_stmt 1 view -0
+ 356              		.cfi_startproc
+ 357              		@ args = 0, pretend = 0, frame = 0
+ 358              		@ frame_needed = 0, uses_anonymous_args = 0
+ 359              		@ link register save eliminated.
+  75:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	RTC->RTC_INTR_CLEAR = 0x01;
+ 360              		.loc 1 75 2 view .LVU45
+ 361              		.loc 1 75 22 is_stmt 0 view .LVU46
+ 362 0000 0122     		movs	r2, #1
+ 363 0002 014B     		ldr	r3, .L36
+ 364 0004 DA61     		str	r2, [r3, #28]
+  76:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 365              		.loc 1 76 1 view .LVU47
+ 366 0006 7047     		bx	lr
+ 367              	.L37:
+ 368              		.align	2
+ 369              	.L36:
+ 370 0008 00600040 		.word	1073766400
+ 371              		.cfi_endproc
+ 372              	.LFE40:
+ 374              		.section	.text.RTC_init,"ax",%progbits
+ 375              		.align	1
+ 376              		.p2align 2,,3
+ 377              		.global	RTC_init
+ 378              		.syntax unified
+ 379              		.thumb
+ 380              		.thumb_func
+ 381              		.fpu softvfp
+ 383              	RTC_init:
+ 384              	.LFB41:
+  77:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 
+  78:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** void RTC_init(void)
+  79:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 385              		.loc 1 79 1 is_stmt 1 view -0
+ 386              		.cfi_startproc
+ 387              		@ args = 0, pretend = 0, frame = 0
+ 388              		@ frame_needed = 0, uses_anonymous_args = 0
+ 389              		@ link register save eliminated.
+  80:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	Set_Match_Value(30);//Match 30
+ 390              		.loc 1 80 2 view .LVU49
+ 391              	.LVL2:
+ 392              	.LBB10:
+ 393              	.LBI10:
+  23:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 394              		.loc 1 23 6 view .LVU50
+ 395              	.LBB11:
+  25:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 396              		.loc 1 25 2 view .LVU51
+ 397              	.LBE11:
+ 398              	.LBE10:
+ 399              	.LBB14:
+ 400              	.LBB15:
+  60:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 401              		.loc 1 60 16 is_stmt 0 view .LVU52
+ 402 0000 0122     		movs	r2, #1
+ 403              	.LBE15:
+ 404              	.LBE14:
+ 405              	.LBB17:
+ 406              	.LBB12:
+  25:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 407              		.loc 1 25 23 view .LVU53
+ 408 0002 1E20     		movs	r0, #30
+ 409              	.LBE12:
+ 410              	.LBE17:
+ 411              	.LBB18:
+ 412              	.LBB19:
+  35:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 413              		.loc 1 35 22 view .LVU54
+ 414 0004 0021     		movs	r1, #0
+ 415              	.LBE19:
+ 416              	.LBE18:
+ 417              	.LBB21:
+ 418              	.LBB13:
+  25:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 419              		.loc 1 25 23 view .LVU55
+ 420 0006 034B     		ldr	r3, .L39
+ 421 0008 5860     		str	r0, [r3, #4]
+ 422              	.LVL3:
+  25:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 423              		.loc 1 25 23 view .LVU56
+ 424              	.LBE13:
+ 425              	.LBE21:
+  81:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	Set_Load_Value(0);//0 Statr 
+ 426              		.loc 1 81 2 is_stmt 1 view .LVU57
+ 427              	.LBB22:
+ 428              	.LBI18:
+  33:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 429              		.loc 1 33 6 view .LVU58
+ 430              	.LBB20:
+  35:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 431              		.loc 1 35 2 view .LVU59
+  35:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 432              		.loc 1 35 22 is_stmt 0 view .LVU60
+ 433 000a 9960     		str	r1, [r3, #8]
+ 434              	.LVL4:
+  35:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 435              		.loc 1 35 22 view .LVU61
+ 436              	.LBE20:
+ 437              	.LBE22:
+  82:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	RTC_Inter_Mask_Set();
+ 438              		.loc 1 82 2 is_stmt 1 view .LVU62
+ 439              	.LBB23:
+ 440              	.LBI14:
+  58:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 441              		.loc 1 58 6 view .LVU63
+ 442              	.LBB16:
+  60:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 443              		.loc 1 60 2 view .LVU64
+  60:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 444              		.loc 1 60 16 is_stmt 0 view .LVU65
+ 445 000c 1A61     		str	r2, [r3, #16]
+ 446              	.LBE16:
+ 447              	.LBE23:
+  83:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	//RTC_Inter_Mask_Clr();
+  84:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** 	Start_RTC();
+ 448              		.loc 1 84 2 is_stmt 1 view .LVU66
+ 449              	.LBB24:
+ 450              	.LBI24:
+  43:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** {
+ 451              		.loc 1 43 6 view .LVU67
+ 452              	.LBB25:
+  45:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 453              		.loc 1 45 2 view .LVU68
+  45:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 454              		.loc 1 45 24 is_stmt 0 view .LVU69
+ 455 000e DA60     		str	r2, [r3, #12]
+ 456              	.LBE25:
+ 457              	.LBE24:
+  85:../PERIPHERAL/Sources/gw1ns4c_rtc.c **** }
+ 458              		.loc 1 85 1 view .LVU70
+ 459 0010 7047     		bx	lr
+ 460              	.L40:
+ 461 0012 00BF     		.align	2
+ 462              	.L39:
+ 463 0014 00600040 		.word	1073766400
+ 464              		.cfi_endproc
+ 465              	.LFE41:
+ 467              		.text
+ 468              	.Letext0:
+ 469              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 470              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 471              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 472              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+ 473              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gw1ns4c_rtc.c
+d:\wintmp\ccyM4xip.s:16     .text.Get_Current_Value:00000000 $t
+d:\wintmp\ccyM4xip.s:25     .text.Get_Current_Value:00000000 Get_Current_Value
+d:\wintmp\ccyM4xip.s:42     .text.Get_Current_Value:00000008 $d
+d:\wintmp\ccyM4xip.s:47     .text.Set_Match_Value:00000000 $t
+d:\wintmp\ccyM4xip.s:55     .text.Set_Match_Value:00000000 Set_Match_Value
+d:\wintmp\ccyM4xip.s:72     .text.Set_Match_Value:00000008 $d
+d:\wintmp\ccyM4xip.s:77     .text.Get_Match_Value:00000000 $t
+d:\wintmp\ccyM4xip.s:85     .text.Get_Match_Value:00000000 Get_Match_Value
+d:\wintmp\ccyM4xip.s:101    .text.Get_Match_Value:00000008 $d
+d:\wintmp\ccyM4xip.s:106    .text.Set_Load_Value:00000000 $t
+d:\wintmp\ccyM4xip.s:114    .text.Set_Load_Value:00000000 Set_Load_Value
+d:\wintmp\ccyM4xip.s:131    .text.Set_Load_Value:00000008 $d
+d:\wintmp\ccyM4xip.s:136    .text.Get_Load_Value:00000000 $t
+d:\wintmp\ccyM4xip.s:144    .text.Get_Load_Value:00000000 Get_Load_Value
+d:\wintmp\ccyM4xip.s:160    .text.Get_Load_Value:00000008 $d
+d:\wintmp\ccyM4xip.s:165    .text.Start_RTC:00000000 $t
+d:\wintmp\ccyM4xip.s:173    .text.Start_RTC:00000000 Start_RTC
+d:\wintmp\ccyM4xip.s:190    .text.Start_RTC:00000008 $d
+d:\wintmp\ccyM4xip.s:195    .text.Close_RTC:00000000 $t
+d:\wintmp\ccyM4xip.s:203    .text.Close_RTC:00000000 Close_RTC
+d:\wintmp\ccyM4xip.s:220    .text.Close_RTC:00000008 $d
+d:\wintmp\ccyM4xip.s:225    .text.Get_RTC_Control_value:00000000 $t
+d:\wintmp\ccyM4xip.s:233    .text.Get_RTC_Control_value:00000000 Get_RTC_Control_value
+d:\wintmp\ccyM4xip.s:250    .text.Get_RTC_Control_value:00000008 $d
+d:\wintmp\ccyM4xip.s:255    .text.RTC_Inter_Mask_Set:00000000 $t
+d:\wintmp\ccyM4xip.s:263    .text.RTC_Inter_Mask_Set:00000000 RTC_Inter_Mask_Set
+d:\wintmp\ccyM4xip.s:280    .text.RTC_Inter_Mask_Set:00000008 $d
+d:\wintmp\ccyM4xip.s:285    .text.RTC_Inter_Mask_Clr:00000000 $t
+d:\wintmp\ccyM4xip.s:293    .text.RTC_Inter_Mask_Clr:00000000 RTC_Inter_Mask_Clr
+d:\wintmp\ccyM4xip.s:310    .text.RTC_Inter_Mask_Clr:00000008 $d
+d:\wintmp\ccyM4xip.s:315    .text.Get_RTC_Inter_Mask_value:00000000 $t
+d:\wintmp\ccyM4xip.s:323    .text.Get_RTC_Inter_Mask_value:00000000 Get_RTC_Inter_Mask_value
+d:\wintmp\ccyM4xip.s:340    .text.Get_RTC_Inter_Mask_value:00000008 $d
+d:\wintmp\ccyM4xip.s:345    .text.Clear_RTC_interrupt:00000000 $t
+d:\wintmp\ccyM4xip.s:353    .text.Clear_RTC_interrupt:00000000 Clear_RTC_interrupt
+d:\wintmp\ccyM4xip.s:370    .text.Clear_RTC_interrupt:00000008 $d
+d:\wintmp\ccyM4xip.s:375    .text.RTC_init:00000000 $t
+d:\wintmp\ccyM4xip.s:383    .text.RTC_init:00000000 RTC_init
+d:\wintmp\ccyM4xip.s:463    .text.RTC_init:00000014 $d
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.246badb67c3fe4ab4fcaac35e4d9c296
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+
+NO UNDEFINED SYMBOLS

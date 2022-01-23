@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gowin-synthesis-project>
+<Project>
+    <Version>beta</Version>
+    <Device id="GW1NSR-4C" package="QFN48P" speed="6" partNumber="GW1NSR-LV4CQN48PC6/I5"/>
+    <FileList>
+        <File path="C:/app/Gowin/Gowin_V1.9.8_Education/IDE/ipcore/HYPERRAM_EMB/data/HPRAM_TOP.v" type="verilog"/>
+        <File path="C:/app/Gowin/Gowin_V1.9.8_Education/IDE/ipcore/HYPERRAM_EMB/data/hpram_code_166.v" type="verilog"/>
+    </FileList>
+    <OptionList>
+        <Option type="disable_insert_pad" value="1"/>
+        <Option type="dsp_balance" value="1"/>
+        <Option type="include_path" value="C:/app/Gowin/Gowin_V1.9.8_Education/IDE/ipcore/HYPERRAM_EMB/data"/>
+        <Option type="include_path" value="C:/kitahard/Tang_Nano_4K/dk_test/src/hyperram_memory_interface/temp/HYPERRAM"/>
+        <Option type="output_file" value="hyperram_memory_interface.vg"/>
+        <Option type="output_template" value="hyperram_memory_interface_tmp.v"/>
+        <Option type="ram_balance" value="1"/>
+        <Option type="ram_rw_check" value="1"/>
+        <Option type="verilog_language" value="sysv-2017"/>
+    </OptionList>
+</Project>

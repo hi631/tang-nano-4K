@@ -1,0 +1,724 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gw1ns4c_timer.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.TIMER_Init,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	TIMER_Init
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	TIMER_Init:
+  26              	.LVL0:
+  27              	.LFB29:
+  28              		.file 1 "../PERIPHERAL/Sources/gw1ns4c_timer.c"
+   1:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /*
+   2:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  * *****************************************************************************************
+   3:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  *
+   4:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  * 		
+   6:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  * @file        gw1ns4c_timer.c
+   7:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  * @author      Embedded Development Team
+   8:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  * @version     V1.x.x
+   9:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  * @date        2021-01-01 09:00:00
+  10:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  * @brief       This file contains all the functions prototypes for the TIMER firmware library.
+  11:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  ******************************************************************************************
+  12:../PERIPHERAL/Sources/gw1ns4c_timer.c ****  */
+  13:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  14:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /* Includes ------------------------------------------------------------------*/
+  15:../PERIPHERAL/Sources/gw1ns4c_timer.c **** #include "gw1ns4c_timer.h"
+  16:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  17:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /** @addtogroup GW1NS4C_StdPeriph_Driver
+  18:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @{
+  19:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  20:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  21:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /** @defgroup TIMER 
+  22:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief TIMER driver modules
+  23:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @{
+  24:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  25:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  26:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /** @defgroup TIMER_Private_TypesDefinitions
+  27:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @{
+  28:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  29:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  30:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+  31:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @}
+  32:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  33:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  34:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /** @defgroup TIMER_Private_Macros
+  35:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @{
+  36:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  37:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  38:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+  39:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @}
+  40:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  41:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  42:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /** @defgroup TIMER_Private_Variables
+  43:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @{
+  44:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  45:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  46:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+  47:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @}
+  48:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  49:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  50:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /** @defgroup TIMER_Private_FunctionPrototypes
+  51:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @{
+  52:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  53:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  54:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+  55:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @}
+  56:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  57:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  58:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /** @defgroup TIMER_Private_Functions
+  59:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @{
+  60:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  61:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  62:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+  63:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+  64:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_InitTypeDef Pointer
+  65:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return none 
+  66:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Initializes Timer module.
+  67:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   *        TIMERInt_TypeDef : Interrupt enable.
+  68:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   *        TIMERExti_TypeDef : Select external input;
+  69:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   *        Or Initializes the timer to user the internal clock.
+  70:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+  71:../PERIPHERAL/Sources/gw1ns4c_timer.c **** void TIMER_Init(TIMER_TypeDef* TIMERx,TIMER_InitTypeDef* TIMER_InitStruct)
+  72:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+  29              		.loc 1 72 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  73:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   /* Initial all register to zero */
+  74:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->CTRL = 0;
+  34              		.loc 1 74 3 view .LVU1
+  35              		.loc 1 74 16 is_stmt 0 view .LVU2
+  36 0000 0023     		movs	r3, #0
+  75:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->VALUE = 0;
+  76:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->RELOAD = 0;
+  77:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->INTCLEAR = 0;
+  78:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  79:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   /* VALUE register */
+  80:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->VALUE = TIMER_InitStruct->Reload;
+  37              		.loc 1 80 35 view .LVU3
+  38 0002 0A68     		ldr	r2, [r1]
+  74:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->VALUE = 0;
+  39              		.loc 1 74 16 view .LVU4
+  40 0004 0360     		str	r3, [r0]
+  75:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->VALUE = 0;
+  41              		.loc 1 75 3 is_stmt 1 view .LVU5
+  75:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->VALUE = 0;
+  42              		.loc 1 75 17 is_stmt 0 view .LVU6
+  43 0006 4360     		str	r3, [r0, #4]
+  76:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->INTCLEAR = 0;
+  44              		.loc 1 76 3 is_stmt 1 view .LVU7
+  76:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->INTCLEAR = 0;
+  45              		.loc 1 76 18 is_stmt 0 view .LVU8
+  46 0008 8360     		str	r3, [r0, #8]
+  77:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  47              		.loc 1 77 3 is_stmt 1 view .LVU9
+  77:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  48              		.loc 1 77 20 is_stmt 0 view .LVU10
+  49 000a C360     		str	r3, [r0, #12]
+  50              		.loc 1 80 3 is_stmt 1 view .LVU11
+  51              		.loc 1 80 17 is_stmt 0 view .LVU12
+  52 000c 4260     		str	r2, [r0, #4]
+  81:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  82:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   /* RELOAD register */
+  83:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->RELOAD = TIMER_InitStruct->Reload;
+  53              		.loc 1 83 3 is_stmt 1 view .LVU13
+  54              		.loc 1 83 18 is_stmt 0 view .LVU14
+  55 000e 8260     		str	r2, [r0, #8]
+  84:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  85:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   /* CTRL register timer enable */
+  86:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->CTRL |= TIMER_CTRL_EN;
+  56              		.loc 1 86 3 is_stmt 1 view .LVU15
+  57              		.loc 1 86 16 is_stmt 0 view .LVU16
+  58 0010 0368     		ldr	r3, [r0]
+  87:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  88:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   /* if TIMER_Int enable */
+  89:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   if(TIMER_InitStruct->TIMER_Int == ENABLE)
+  59              		.loc 1 89 5 view .LVU17
+  60 0012 0A79     		ldrb	r2, [r1, #4]	@ zero_extendqisi2
+  86:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  61              		.loc 1 86 16 view .LVU18
+  62 0014 43F00103 		orr	r3, r3, #1
+  63              		.loc 1 89 5 view .LVU19
+  64 0018 012A     		cmp	r2, #1
+  86:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  65              		.loc 1 86 16 view .LVU20
+  66 001a 0360     		str	r3, [r0]
+  67              		.loc 1 89 3 is_stmt 1 view .LVU21
+  68              		.loc 1 89 5 is_stmt 0 view .LVU22
+  69 001c 03D1     		bne	.L2
+  90:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   {
+  91:../PERIPHERAL/Sources/gw1ns4c_timer.c ****     TIMERx->CTRL |= TIMER_CTRL_IRQEN;
+  70              		.loc 1 91 5 is_stmt 1 view .LVU23
+  71              		.loc 1 91 18 is_stmt 0 view .LVU24
+  72 001e 0368     		ldr	r3, [r0]
+  73 0020 43F00803 		orr	r3, r3, #8
+  74 0024 0360     		str	r3, [r0]
+  75              	.L2:
+  92:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   }
+  93:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+  94:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /* disable external input */
+  95:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   if(TIMER_InitStruct->TIMER_Exti == TIMER_DISABLE)
+  76              		.loc 1 95 3 is_stmt 1 view .LVU25
+  77              		.loc 1 95 22 is_stmt 0 view .LVU26
+  78 0026 4B79     		ldrb	r3, [r1, #5]	@ zero_extendqisi2
+  79              		.loc 1 95 5 view .LVU27
+  80 0028 23B9     		cbnz	r3, .L3
+  96:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   {
+  97:../PERIPHERAL/Sources/gw1ns4c_timer.c ****     /*  external input as disable */
+  98:../PERIPHERAL/Sources/gw1ns4c_timer.c ****     TIMERx->CTRL &= ~(TIMER_CTRL_SELEXTEN |TIMER_CTRL_SELEXTEN );
+  81              		.loc 1 98 5 is_stmt 1 view .LVU28
+  82              		.loc 1 98 18 is_stmt 0 view .LVU29
+  83 002a 0368     		ldr	r3, [r0]
+  84 002c 23F00203 		bic	r3, r3, #2
+  85 0030 0360     		str	r3, [r0]
+  99:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   }
+ 100:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 101:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   /* select external input */
+ 102:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   if(TIMER_InitStruct->TIMER_Exti == TIMER_EXTI_EN)
+  86              		.loc 1 102 3 is_stmt 1 view .LVU30
+ 103:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   {
+ 104:../PERIPHERAL/Sources/gw1ns4c_timer.c ****     /*  select external input as enable */
+ 105:../PERIPHERAL/Sources/gw1ns4c_timer.c ****     TIMERx->CTRL |= TIMER_CTRL_SELEXTEN;
+ 106:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   }
+ 107:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   else if(TIMER_InitStruct->TIMER_Exti == TIMER_EXTI_CLK)
+  87              		.loc 1 107 8 view .LVU31
+  88 0032 7047     		bx	lr
+  89              	.L3:
+ 102:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   {
+  90              		.loc 1 102 3 view .LVU32
+ 102:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   {
+  91              		.loc 1 102 5 is_stmt 0 view .LVU33
+  92 0034 012B     		cmp	r3, #1
+  93 0036 04D1     		bne	.L5
+ 105:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   }
+  94              		.loc 1 105 5 is_stmt 1 view .LVU34
+ 105:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   }
+  95              		.loc 1 105 18 is_stmt 0 view .LVU35
+  96 0038 0368     		ldr	r3, [r0]
+  97 003a 43F00203 		orr	r3, r3, #2
+  98 003e 0360     		str	r3, [r0]
+  99 0040 7047     		bx	lr
+ 100              	.L5:
+ 101              		.loc 1 107 8 is_stmt 1 view .LVU36
+ 102              		.loc 1 107 10 is_stmt 0 view .LVU37
+ 103 0042 022B     		cmp	r3, #2
+ 104 0044 03D1     		bne	.L1
+ 108:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   {
+ 109:../PERIPHERAL/Sources/gw1ns4c_timer.c ****     /* select external input as clock */
+ 110:../PERIPHERAL/Sources/gw1ns4c_timer.c ****     TIMERx->CTRL |= TIMER_CTRL_SELEXTCLK;
+ 105              		.loc 1 110 5 is_stmt 1 view .LVU38
+ 106              		.loc 1 110 18 is_stmt 0 view .LVU39
+ 107 0046 0368     		ldr	r3, [r0]
+ 108 0048 43F00403 		orr	r3, r3, #4
+ 109 004c 0360     		str	r3, [r0]
+ 110              	.L1:
+ 111:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   }
+ 112:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 111              		.loc 1 112 1 view .LVU40
+ 112 004e 7047     		bx	lr
+ 113              		.cfi_endproc
+ 114              	.LFE29:
+ 116              		.section	.text.TIMER_StartTimer,"ax",%progbits
+ 117              		.align	1
+ 118              		.p2align 2,,3
+ 119              		.global	TIMER_StartTimer
+ 120              		.syntax unified
+ 121              		.thumb
+ 122              		.thumb_func
+ 123              		.fpu softvfp
+ 125              	TIMER_StartTimer:
+ 126              	.LVL1:
+ 127              	.LFB30:
+ 113:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 114:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 115:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 116:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return none 
+ 117:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Starts Timer.
+ 118:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 119:../PERIPHERAL/Sources/gw1ns4c_timer.c **** void TIMER_StartTimer(TIMER_TypeDef* TIMERx)
+ 120:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 128              		.loc 1 120 1 is_stmt 1 view -0
+ 129              		.cfi_startproc
+ 130              		@ args = 0, pretend = 0, frame = 0
+ 131              		@ frame_needed = 0, uses_anonymous_args = 0
+ 132              		@ link register save eliminated.
+ 121:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->CTRL |= TIMER_CTRL_EN;
+ 133              		.loc 1 121 3 view .LVU42
+ 134              		.loc 1 121 16 is_stmt 0 view .LVU43
+ 135 0000 0368     		ldr	r3, [r0]
+ 136 0002 43F00103 		orr	r3, r3, #1
+ 137 0006 0360     		str	r3, [r0]
+ 122:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 138              		.loc 1 122 1 view .LVU44
+ 139 0008 7047     		bx	lr
+ 140              		.cfi_endproc
+ 141              	.LFE30:
+ 143 000a 00BF     		.section	.text.TIMER_StopTimer,"ax",%progbits
+ 144              		.align	1
+ 145              		.p2align 2,,3
+ 146              		.global	TIMER_StopTimer
+ 147              		.syntax unified
+ 148              		.thumb
+ 149              		.thumb_func
+ 150              		.fpu softvfp
+ 152              	TIMER_StopTimer:
+ 153              	.LVL2:
+ 154              	.LFB31:
+ 123:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 124:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 125:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 126:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return none 
+ 127:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Stops Timer.
+ 128:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 129:../PERIPHERAL/Sources/gw1ns4c_timer.c **** void TIMER_StopTimer(TIMER_TypeDef* TIMERx)
+ 130:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 155              		.loc 1 130 1 is_stmt 1 view -0
+ 156              		.cfi_startproc
+ 157              		@ args = 0, pretend = 0, frame = 0
+ 158              		@ frame_needed = 0, uses_anonymous_args = 0
+ 159              		@ link register save eliminated.
+ 131:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->CTRL &= ~TIMER_CTRL_EN;
+ 160              		.loc 1 131 3 view .LVU46
+ 161              		.loc 1 131 16 is_stmt 0 view .LVU47
+ 162 0000 0368     		ldr	r3, [r0]
+ 163 0002 23F00103 		bic	r3, r3, #1
+ 164 0006 0360     		str	r3, [r0]
+ 132:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 165              		.loc 1 132 1 view .LVU48
+ 166 0008 7047     		bx	lr
+ 167              		.cfi_endproc
+ 168              	.LFE31:
+ 170 000a 00BF     		.section	.text.TIMER_GetIRQStatus,"ax",%progbits
+ 171              		.align	1
+ 172              		.p2align 2,,3
+ 173              		.global	TIMER_GetIRQStatus
+ 174              		.syntax unified
+ 175              		.thumb
+ 176              		.thumb_func
+ 177              		.fpu softvfp
+ 179              	TIMER_GetIRQStatus:
+ 180              	.LVL3:
+ 181              	.LFB32:
+ 133:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 134:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 135:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 136:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return Interrupt Status
+ 137:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   *         @arg SET
+ 138:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   *         @arg RESET
+ 139:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Returns timer IRQ status.
+ 140:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 141:../PERIPHERAL/Sources/gw1ns4c_timer.c **** ITStatus TIMER_GetIRQStatus(TIMER_TypeDef* TIMERx)
+ 142:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 182              		.loc 1 142 1 is_stmt 1 view -0
+ 183              		.cfi_startproc
+ 184              		@ args = 0, pretend = 0, frame = 0
+ 185              		@ frame_needed = 0, uses_anonymous_args = 0
+ 186              		@ link register save eliminated.
+ 143:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   return (ITStatus)(TIMERx->INTSTATUS);
+ 187              		.loc 1 143 3 view .LVU50
+ 188              		.loc 1 143 27 is_stmt 0 view .LVU51
+ 189 0000 C068     		ldr	r0, [r0, #12]
+ 190              	.LVL4:
+ 144:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 191              		.loc 1 144 1 view .LVU52
+ 192 0002 C0B2     		uxtb	r0, r0
+ 193 0004 7047     		bx	lr
+ 194              		.cfi_endproc
+ 195              	.LFE32:
+ 197 0006 00BF     		.section	.text.TIMER_ClearIRQ,"ax",%progbits
+ 198              		.align	1
+ 199              		.p2align 2,,3
+ 200              		.global	TIMER_ClearIRQ
+ 201              		.syntax unified
+ 202              		.thumb
+ 203              		.thumb_func
+ 204              		.fpu softvfp
+ 206              	TIMER_ClearIRQ:
+ 207              	.LVL5:
+ 208              	.LFB33:
+ 145:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 146:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 147:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 148:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return none
+ 149:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Timer interrupt clear.
+ 150:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 151:../PERIPHERAL/Sources/gw1ns4c_timer.c **** void TIMER_ClearIRQ(TIMER_TypeDef* TIMERx)
+ 152:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 209              		.loc 1 152 1 is_stmt 1 view -0
+ 210              		.cfi_startproc
+ 211              		@ args = 0, pretend = 0, frame = 0
+ 212              		@ frame_needed = 0, uses_anonymous_args = 0
+ 213              		@ link register save eliminated.
+ 153:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->INTCLEAR = TIMER_INTCLEAR;
+ 214              		.loc 1 153 3 view .LVU54
+ 215              		.loc 1 153 20 is_stmt 0 view .LVU55
+ 216 0000 0123     		movs	r3, #1
+ 217 0002 C360     		str	r3, [r0, #12]
+ 154:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 218              		.loc 1 154 1 view .LVU56
+ 219 0004 7047     		bx	lr
+ 220              		.cfi_endproc
+ 221              	.LFE33:
+ 223 0006 00BF     		.section	.text.TIMER_GetReload,"ax",%progbits
+ 224              		.align	1
+ 225              		.p2align 2,,3
+ 226              		.global	TIMER_GetReload
+ 227              		.syntax unified
+ 228              		.thumb
+ 229              		.thumb_func
+ 230              		.fpu softvfp
+ 232              	TIMER_GetReload:
+ 233              	.LVL6:
+ 234              	.LFB34:
+ 155:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 156:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 157:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 158:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return reload value
+ 159:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Returns Timer Reload value.
+ 160:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   *        The reload value is the value which the timer is set to after an underflow occurs.
+ 161:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 162:../PERIPHERAL/Sources/gw1ns4c_timer.c **** uint32_t TIMER_GetReload(TIMER_TypeDef* TIMERx)
+ 163:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 235              		.loc 1 163 1 is_stmt 1 view -0
+ 236              		.cfi_startproc
+ 237              		@ args = 0, pretend = 0, frame = 0
+ 238              		@ frame_needed = 0, uses_anonymous_args = 0
+ 239              		@ link register save eliminated.
+ 164:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   return TIMERx->RELOAD;
+ 240              		.loc 1 164 3 view .LVU58
+ 241              		.loc 1 164 16 is_stmt 0 view .LVU59
+ 242 0000 8068     		ldr	r0, [r0, #8]
+ 243              	.LVL7:
+ 165:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 244              		.loc 1 165 1 view .LVU60
+ 245 0002 7047     		bx	lr
+ 246              		.cfi_endproc
+ 247              	.LFE34:
+ 249              		.section	.text.TIMER_SetReload,"ax",%progbits
+ 250              		.align	1
+ 251              		.p2align 2,,3
+ 252              		.global	TIMER_SetReload
+ 253              		.syntax unified
+ 254              		.thumb
+ 255              		.thumb_func
+ 256              		.fpu softvfp
+ 258              	TIMER_SetReload:
+ 259              	.LVL8:
+ 260              	.LFB35:
+ 166:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 167:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 168:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 169:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param uint32_t value to set reload
+ 170:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return none
+ 171:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Sets Timer Reload value.
+ 172:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   *        The reload value is the value which the timer is set to after an underflow occurs.
+ 173:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 174:../PERIPHERAL/Sources/gw1ns4c_timer.c **** void TIMER_SetReload(TIMER_TypeDef* TIMERx,uint32_t value)
+ 175:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 261              		.loc 1 175 1 is_stmt 1 view -0
+ 262              		.cfi_startproc
+ 263              		@ args = 0, pretend = 0, frame = 0
+ 264              		@ frame_needed = 0, uses_anonymous_args = 0
+ 265              		@ link register save eliminated.
+ 176:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->RELOAD = value;
+ 266              		.loc 1 176 3 view .LVU62
+ 267              		.loc 1 176 18 is_stmt 0 view .LVU63
+ 268 0000 8160     		str	r1, [r0, #8]
+ 177:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 269              		.loc 1 177 1 view .LVU64
+ 270 0002 7047     		bx	lr
+ 271              		.cfi_endproc
+ 272              	.LFE35:
+ 274              		.section	.text.TIMER_GetValue,"ax",%progbits
+ 275              		.align	1
+ 276              		.p2align 2,,3
+ 277              		.global	TIMER_GetValue
+ 278              		.syntax unified
+ 279              		.thumb
+ 280              		.thumb_func
+ 281              		.fpu softvfp
+ 283              	TIMER_GetValue:
+ 284              	.LVL9:
+ 285              	.LFB36:
+ 178:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 179:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 180:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 181:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return current value
+ 182:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Returns Timer current value.
+ 183:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 184:../PERIPHERAL/Sources/gw1ns4c_timer.c **** uint32_t TIMER_GetValue(TIMER_TypeDef* TIMERx)
+ 185:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 286              		.loc 1 185 1 is_stmt 1 view -0
+ 287              		.cfi_startproc
+ 288              		@ args = 0, pretend = 0, frame = 0
+ 289              		@ frame_needed = 0, uses_anonymous_args = 0
+ 290              		@ link register save eliminated.
+ 186:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   return TIMERx->VALUE;
+ 291              		.loc 1 186 3 view .LVU66
+ 292              		.loc 1 186 16 is_stmt 0 view .LVU67
+ 293 0000 4068     		ldr	r0, [r0, #4]
+ 294              	.LVL10:
+ 187:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 295              		.loc 1 187 1 view .LVU68
+ 296 0002 7047     		bx	lr
+ 297              		.cfi_endproc
+ 298              	.LFE36:
+ 300              		.section	.text.TIMER_SetValue,"ax",%progbits
+ 301              		.align	1
+ 302              		.p2align 2,,3
+ 303              		.global	TIMER_SetValue
+ 304              		.syntax unified
+ 305              		.thumb
+ 306              		.thumb_func
+ 307              		.fpu softvfp
+ 309              	TIMER_SetValue:
+ 310              	.LVL11:
+ 311              	.LFB37:
+ 188:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 189:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 190:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 191:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param uint32_t value to set current value
+ 192:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return none
+ 193:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Sets Timer current value.
+ 194:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 195:../PERIPHERAL/Sources/gw1ns4c_timer.c **** void TIMER_SetValue(TIMER_TypeDef* TIMERx,uint32_t value)
+ 196:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 312              		.loc 1 196 1 is_stmt 1 view -0
+ 313              		.cfi_startproc
+ 314              		@ args = 0, pretend = 0, frame = 0
+ 315              		@ frame_needed = 0, uses_anonymous_args = 0
+ 316              		@ link register save eliminated.
+ 197:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->VALUE = value;
+ 317              		.loc 1 197 3 view .LVU70
+ 318              		.loc 1 197 17 is_stmt 0 view .LVU71
+ 319 0000 4160     		str	r1, [r0, #4]
+ 198:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 320              		.loc 1 198 1 view .LVU72
+ 321 0002 7047     		bx	lr
+ 322              		.cfi_endproc
+ 323              	.LFE37:
+ 325              		.section	.text.TIMER_EnableIRQ,"ax",%progbits
+ 326              		.align	1
+ 327              		.p2align 2,,3
+ 328              		.global	TIMER_EnableIRQ
+ 329              		.syntax unified
+ 330              		.thumb
+ 331              		.thumb_func
+ 332              		.fpu softvfp
+ 334              	TIMER_EnableIRQ:
+ 335              	.LVL12:
+ 336              	.LFB38:
+ 199:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 200:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 201:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 202:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return none
+ 203:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Enables Timer Interrupt requests.
+ 204:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 205:../PERIPHERAL/Sources/gw1ns4c_timer.c **** void TIMER_EnableIRQ(TIMER_TypeDef* TIMERx)
+ 206:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 337              		.loc 1 206 1 is_stmt 1 view -0
+ 338              		.cfi_startproc
+ 339              		@ args = 0, pretend = 0, frame = 0
+ 340              		@ frame_needed = 0, uses_anonymous_args = 0
+ 341              		@ link register save eliminated.
+ 207:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->CTRL |= TIMER_CTRL_IRQEN;
+ 342              		.loc 1 207 3 view .LVU74
+ 343              		.loc 1 207 16 is_stmt 0 view .LVU75
+ 344 0000 0368     		ldr	r3, [r0]
+ 345 0002 43F00803 		orr	r3, r3, #8
+ 346 0006 0360     		str	r3, [r0]
+ 208:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 347              		.loc 1 208 1 view .LVU76
+ 348 0008 7047     		bx	lr
+ 349              		.cfi_endproc
+ 350              	.LFE38:
+ 352 000a 00BF     		.section	.text.TIMER_DisableIRQ,"ax",%progbits
+ 353              		.align	1
+ 354              		.p2align 2,,3
+ 355              		.global	TIMER_DisableIRQ
+ 356              		.syntax unified
+ 357              		.thumb
+ 358              		.thumb_func
+ 359              		.fpu softvfp
+ 361              	TIMER_DisableIRQ:
+ 362              	.LVL13:
+ 363              	.LFB39:
+ 209:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 210:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 211:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 212:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return none
+ 213:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief Disables Timer Interrupt requests.
+ 214:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 215:../PERIPHERAL/Sources/gw1ns4c_timer.c **** void TIMER_DisableIRQ(TIMER_TypeDef* TIMERx)
+ 216:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 364              		.loc 1 216 1 is_stmt 1 view -0
+ 365              		.cfi_startproc
+ 366              		@ args = 0, pretend = 0, frame = 0
+ 367              		@ frame_needed = 0, uses_anonymous_args = 0
+ 368              		@ link register save eliminated.
+ 217:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMERx->CTRL &= ~TIMER_CTRL_IRQEN;
+ 369              		.loc 1 217 3 view .LVU78
+ 370              		.loc 1 217 16 is_stmt 0 view .LVU79
+ 371 0000 0368     		ldr	r3, [r0]
+ 372 0002 23F00803 		bic	r3, r3, #8
+ 373 0006 0360     		str	r3, [r0]
+ 218:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 374              		.loc 1 218 1 view .LVU80
+ 375 0008 7047     		bx	lr
+ 376              		.cfi_endproc
+ 377              	.LFE39:
+ 379 000a 00BF     		.section	.text.TIMER_SelExtEnable,"ax",%progbits
+ 380              		.align	1
+ 381              		.p2align 2,,3
+ 382              		.global	TIMER_SelExtEnable
+ 383              		.syntax unified
+ 384              		.thumb
+ 385              		.thumb_func
+ 386              		.fpu softvfp
+ 388              	TIMER_SelExtEnable:
+ 389              	.LVL14:
+ 390              	.LFB40:
+ 219:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 220:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 221:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 222:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return none
+ 223:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief  Select Ext input Enable.
+ 224:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 225:../PERIPHERAL/Sources/gw1ns4c_timer.c **** void TIMER_SelExtEnable(TIMER_TypeDef *TIMER)
+ 226:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 391              		.loc 1 226 1 is_stmt 1 view -0
+ 392              		.cfi_startproc
+ 393              		@ args = 0, pretend = 0, frame = 0
+ 394              		@ frame_needed = 0, uses_anonymous_args = 0
+ 395              		@ link register save eliminated.
+ 227:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMER->CTRL = ~(TIMER_CTRL_SELEXTEN |TIMER_CTRL_SELEXTCLK );
+ 396              		.loc 1 227 3 view .LVU82
+ 397              		.loc 1 227 15 is_stmt 0 view .LVU83
+ 398 0000 6FF00603 		mvn	r3, #6
+ 399 0004 0360     		str	r3, [r0]
+ 228:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMER->CTRL |= TIMER_CTRL_SELEXTEN;    
+ 400              		.loc 1 228 3 is_stmt 1 view .LVU84
+ 401              		.loc 1 228 15 is_stmt 0 view .LVU85
+ 402 0006 0368     		ldr	r3, [r0]
+ 403 0008 43F00203 		orr	r3, r3, #2
+ 404 000c 0360     		str	r3, [r0]
+ 229:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 405              		.loc 1 229 1 view .LVU86
+ 406 000e 7047     		bx	lr
+ 407              		.cfi_endproc
+ 408              	.LFE40:
+ 410              		.section	.text.TIMER_SelExtClock,"ax",%progbits
+ 411              		.align	1
+ 412              		.p2align 2,,3
+ 413              		.global	TIMER_SelExtClock
+ 414              		.syntax unified
+ 415              		.thumb
+ 416              		.thumb_func
+ 417              		.fpu softvfp
+ 419              	TIMER_SelExtClock:
+ 420              	.LVL15:
+ 421              	.LFB41:
+ 230:../PERIPHERAL/Sources/gw1ns4c_timer.c **** 
+ 231:../PERIPHERAL/Sources/gw1ns4c_timer.c **** /**
+ 232:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @param TIMER_TypeDef Pointer
+ 233:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @return none
+ 234:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   * @brief  Select Ext input Clock.
+ 235:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   */
+ 236:../PERIPHERAL/Sources/gw1ns4c_timer.c **** void TIMER_SelExtClock(TIMER_TypeDef *TIMER)
+ 237:../PERIPHERAL/Sources/gw1ns4c_timer.c **** {
+ 422              		.loc 1 237 1 is_stmt 1 view -0
+ 423              		.cfi_startproc
+ 424              		@ args = 0, pretend = 0, frame = 0
+ 425              		@ frame_needed = 0, uses_anonymous_args = 0
+ 426              		@ link register save eliminated.
+ 238:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMER->CTRL = ~(TIMER_CTRL_SELEXTEN |TIMER_CTRL_SELEXTCLK );
+ 427              		.loc 1 238 3 view .LVU88
+ 428              		.loc 1 238 15 is_stmt 0 view .LVU89
+ 429 0000 6FF00603 		mvn	r3, #6
+ 430 0004 0360     		str	r3, [r0]
+ 239:../PERIPHERAL/Sources/gw1ns4c_timer.c ****   TIMER->CTRL |= TIMER_CTRL_SELEXTCLK;    
+ 431              		.loc 1 239 3 is_stmt 1 view .LVU90
+ 432              		.loc 1 239 15 is_stmt 0 view .LVU91
+ 433 0006 0368     		ldr	r3, [r0]
+ 434 0008 43F00403 		orr	r3, r3, #4
+ 435 000c 0360     		str	r3, [r0]
+ 240:../PERIPHERAL/Sources/gw1ns4c_timer.c **** }
+ 436              		.loc 1 240 1 view .LVU92
+ 437 000e 7047     		bx	lr
+ 438              		.cfi_endproc
+ 439              	.LFE41:
+ 441              		.text
+ 442              	.Letext0:
+ 443              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 444              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 445              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 446              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+ 447              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+ 448              		.file 7 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\PERIPHERAL\\Includes/gw1ns4c_timer.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gw1ns4c_timer.c
+d:\wintmp\ccBpsnfq.s:16     .text.TIMER_Init:00000000 $t
+d:\wintmp\ccBpsnfq.s:25     .text.TIMER_Init:00000000 TIMER_Init
+d:\wintmp\ccBpsnfq.s:117    .text.TIMER_StartTimer:00000000 $t
+d:\wintmp\ccBpsnfq.s:125    .text.TIMER_StartTimer:00000000 TIMER_StartTimer
+d:\wintmp\ccBpsnfq.s:144    .text.TIMER_StopTimer:00000000 $t
+d:\wintmp\ccBpsnfq.s:152    .text.TIMER_StopTimer:00000000 TIMER_StopTimer
+d:\wintmp\ccBpsnfq.s:171    .text.TIMER_GetIRQStatus:00000000 $t
+d:\wintmp\ccBpsnfq.s:179    .text.TIMER_GetIRQStatus:00000000 TIMER_GetIRQStatus
+d:\wintmp\ccBpsnfq.s:198    .text.TIMER_ClearIRQ:00000000 $t
+d:\wintmp\ccBpsnfq.s:206    .text.TIMER_ClearIRQ:00000000 TIMER_ClearIRQ
+d:\wintmp\ccBpsnfq.s:224    .text.TIMER_GetReload:00000000 $t
+d:\wintmp\ccBpsnfq.s:232    .text.TIMER_GetReload:00000000 TIMER_GetReload
+d:\wintmp\ccBpsnfq.s:250    .text.TIMER_SetReload:00000000 $t
+d:\wintmp\ccBpsnfq.s:258    .text.TIMER_SetReload:00000000 TIMER_SetReload
+d:\wintmp\ccBpsnfq.s:275    .text.TIMER_GetValue:00000000 $t
+d:\wintmp\ccBpsnfq.s:283    .text.TIMER_GetValue:00000000 TIMER_GetValue
+d:\wintmp\ccBpsnfq.s:301    .text.TIMER_SetValue:00000000 $t
+d:\wintmp\ccBpsnfq.s:309    .text.TIMER_SetValue:00000000 TIMER_SetValue
+d:\wintmp\ccBpsnfq.s:326    .text.TIMER_EnableIRQ:00000000 $t
+d:\wintmp\ccBpsnfq.s:334    .text.TIMER_EnableIRQ:00000000 TIMER_EnableIRQ
+d:\wintmp\ccBpsnfq.s:353    .text.TIMER_DisableIRQ:00000000 $t
+d:\wintmp\ccBpsnfq.s:361    .text.TIMER_DisableIRQ:00000000 TIMER_DisableIRQ
+d:\wintmp\ccBpsnfq.s:380    .text.TIMER_SelExtEnable:00000000 $t
+d:\wintmp\ccBpsnfq.s:388    .text.TIMER_SelExtEnable:00000000 TIMER_SelExtEnable
+d:\wintmp\ccBpsnfq.s:411    .text.TIMER_SelExtClock:00000000 $t
+d:\wintmp\ccBpsnfq.s:419    .text.TIMER_SelExtClock:00000000 TIMER_SelExtClock
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+                           .group:00000000 wm4.gw1ns4c_timer.h.69.eb41231e335b0aa8768e5a6989a87a4e
+
+NO UNDEFINED SYMBOLS

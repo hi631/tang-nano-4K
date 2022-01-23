@@ -1,0 +1,21 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NSR-4C" pn="GW1NSR-LV4CQN48PC6/I5">gw1nsr4c-000</Device>
+    <FileList>
+        <File path="src/dvi_tx/dvi_tx.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_empu/gowin_empu.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pllvr/GW_PLLVR.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_pllvr/TMDS_PLLVR.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin_sdpb/gowin_sdpb_32x16.v" type="file.verilog" enable="1"/>
+        <File path="src/hyperram_memory_interface/hyperram_memory_interface.v" type="file.verilog" enable="1"/>
+        <File path="src/syn_code/syn_gen.v" type="file.verilog" enable="1"/>
+        <File path="src/video_top.v" type="file.verilog" enable="1"/>
+        <File path="src/dk_video.cst" type="file.cst" enable="1"/>
+        <File path="src/dk_video.sdc" type="file.sdc" enable="1"/>
+        <File path="src/dk_test_rd.rao" type="file.gao" enable="0"/>
+        <File path="src/dk_test_wd.rao" type="file.gao" enable="0"/>
+    </FileList>
+</Project>

@@ -1,0 +1,1991 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gw1ns4c_i2c.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.I2C_UnEnable,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	I2C_UnEnable
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	I2C_UnEnable:
+  26              	.LVL0:
+  27              	.LFB29:
+  28              		.file 1 "../PERIPHERAL/Sources/gw1ns4c_i2c.c"
+   1:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /*
+   2:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  * *****************************************************************************************
+   3:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  *
+   4:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  * 		
+   6:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  * @file			gw1ns4c_i2c.c
+   7:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  * @author		Embedded Development Team
+   8:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  * @version		V1.x.x
+   9:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  * @date			2021-01-01 09:00:00
+  10:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  * @brief			This file contains all the functions prototypes for the I2C firmware library.
+  11:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  ******************************************************************************************
+  12:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****  */
+  13:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+  14:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /* Includes ------------------------------------------------------------------*/
+  15:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** #include "gw1ns4c_i2c.h"
+  16:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+  17:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /** @addtogroup GW1NS4C_StdPeriph_Driver
+  18:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @{
+  19:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */
+  20:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+  21:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+  22:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param i2c is I2C Master address
+  23:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @return none
+  24:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief Close the I2C Core
+  25:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */ 
+  26:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** void I2C_UnEnable(I2C_TypeDef * i2c)
+  27:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+  29              		.loc 1 27 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  28:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CTR = ~I2C_CTR_EN;
+  34              		.loc 1 28 2 view .LVU1
+  35              		.loc 1 28 11 is_stmt 0 view .LVU2
+  36 0000 6FF08003 		mvn	r3, #128
+  37 0004 4360     		str	r3, [r0, #4]
+  29:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+  38              		.loc 1 29 1 view .LVU3
+  39 0006 7047     		bx	lr
+  40              		.cfi_endproc
+  41              	.LFE29:
+  43              		.section	.text.I2C_Enable,"ax",%progbits
+  44              		.align	1
+  45              		.p2align 2,,3
+  46              		.global	I2C_Enable
+  47              		.syntax unified
+  48              		.thumb
+  49              		.thumb_func
+  50              		.fpu softvfp
+  52              	I2C_Enable:
+  53              	.LVL1:
+  54              	.LFB30:
+  30:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+  31:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+  32:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param i2c is I2C Master address
+  33:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @return none
+  34:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief Enable the I2C Core 
+  35:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */ 
+  36:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** void I2C_Enable(I2C_TypeDef * i2c)
+  37:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+  55              		.loc 1 37 1 is_stmt 1 view -0
+  56              		.cfi_startproc
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59              		@ link register save eliminated.
+  38:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CTR |= I2C_CTR_EN;
+  60              		.loc 1 38 2 view .LVU5
+  61              		.loc 1 38 11 is_stmt 0 view .LVU6
+  62 0000 4368     		ldr	r3, [r0, #4]
+  63 0002 43F08003 		orr	r3, r3, #128
+  64 0006 4360     		str	r3, [r0, #4]
+  39:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+  65              		.loc 1 39 1 view .LVU7
+  66 0008 7047     		bx	lr
+  67              		.cfi_endproc
+  68              	.LFE30:
+  70 000a 00BF     		.section	.text.I2C_Rate_Set,"ax",%progbits
+  71              		.align	1
+  72              		.p2align 2,,3
+  73              		.global	I2C_Rate_Set
+  74              		.syntax unified
+  75              		.thumb
+  76              		.thumb_func
+  77              		.fpu softvfp
+  79              	I2C_Rate_Set:
+  80              	.LVL2:
+  81              	.LFB31:
+  40:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+  41:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+  42:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param The Rate of the I2C Range
+  43:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param i2c is I2C Master address
+  44:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @return ErrorStatus indicate the State of the Init program
+  45:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief Initialize I2C.
+  46:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */ 
+  47:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** uint16_t I2C_Rate_Set(I2C_TypeDef * i2c,uint16_t Rate)
+  48:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+  82              		.loc 1 48 1 is_stmt 1 view -0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86              		@ link register save eliminated.
+  49:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	uint16_t prescal = 0;
+  87              		.loc 1 49 2 view .LVU9
+  50:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+  51:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	prescal =    (uint32_t) (SystemCoreClock/(5000*Rate)-1);
+  88              		.loc 1 51 2 view .LVU10
+  89              		.loc 1 51 48 is_stmt 0 view .LVU11
+  90 0000 41F28833 		movw	r3, #5000
+  91              		.loc 1 51 42 view .LVU12
+  92 0004 054A     		ldr	r2, .L5
+  93              		.loc 1 51 48 view .LVU13
+  94 0006 03FB01F1 		mul	r1, r3, r1
+  95              	.LVL3:
+  96              		.loc 1 51 42 view .LVU14
+  97 000a 1368     		ldr	r3, [r2]
+  98 000c B3FBF1F1 		udiv	r1, r3, r1
+  99              		.loc 1 51 10 view .LVU15
+ 100 0010 0139     		subs	r1, r1, #1
+ 101 0012 89B2     		uxth	r1, r1
+ 102              	.LVL4:
+  52:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->PRER = (prescal&I2C_CTR_PERE);
+ 103              		.loc 1 52 2 is_stmt 1 view .LVU16
+ 104              		.loc 1 52 12 is_stmt 0 view .LVU17
+ 105 0014 0160     		str	r1, [r0]
+  53:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+  54:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	return prescal;
+ 106              		.loc 1 54 2 is_stmt 1 view .LVU18
+  55:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 107              		.loc 1 55 1 is_stmt 0 view .LVU19
+ 108 0016 0846     		mov	r0, r1
+ 109              	.LVL5:
+ 110              		.loc 1 55 1 view .LVU20
+ 111 0018 7047     		bx	lr
+ 112              	.L6:
+ 113 001a 00BF     		.align	2
+ 114              	.L5:
+ 115 001c 00000000 		.word	SystemCoreClock
+ 116              		.cfi_endproc
+ 117              	.LFE31:
+ 119              		.section	.text.Delay_ms_i2c,"ax",%progbits
+ 120              		.align	1
+ 121              		.p2align 2,,3
+ 122              		.global	Delay_ms_i2c
+ 123              		.syntax unified
+ 124              		.thumb
+ 125              		.thumb_func
+ 126              		.fpu softvfp
+ 128              	Delay_ms_i2c:
+ 129              	.LVL6:
+ 130              	.LFB32:
+  56:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+  57:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+  58:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param the ms will be delay
+  59:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @return none
+  60:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief Delay .
+  61:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */ 
+  62:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** void Delay_ms_i2c(__IO uint32_t delay_ms)
+  63:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 131              		.loc 1 63 1 is_stmt 1 view -0
+ 132              		.cfi_startproc
+ 133              		@ args = 0, pretend = 0, frame = 8
+ 134              		@ frame_needed = 0, uses_anonymous_args = 0
+ 135              		@ link register save eliminated.
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   for(delay_ms=delay_ms*(SystemCoreClock>>13); delay_ms != 0; delay_ms--);
+ 136              		.loc 1 64 3 view .LVU22
+ 137              		.loc 1 64 41 is_stmt 0 view .LVU23
+ 138 0000 094B     		ldr	r3, .L15
+  63:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   for(delay_ms=delay_ms*(SystemCoreClock>>13); delay_ms != 0; delay_ms--);
+ 139              		.loc 1 63 1 view .LVU24
+ 140 0002 82B0     		sub	sp, sp, #8
+ 141              		.cfi_def_cfa_offset 8
+  63:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   for(delay_ms=delay_ms*(SystemCoreClock>>13); delay_ms != 0; delay_ms--);
+ 142              		.loc 1 63 1 view .LVU25
+ 143 0004 0190     		str	r0, [sp, #4]
+ 144              		.loc 1 64 41 view .LVU26
+ 145 0006 1A68     		ldr	r2, [r3]
+ 146              		.loc 1 64 24 view .LVU27
+ 147 0008 019B     		ldr	r3, [sp, #4]
+ 148              		.loc 1 64 41 view .LVU28
+ 149 000a 520B     		lsrs	r2, r2, #13
+ 150              		.loc 1 64 24 view .LVU29
+ 151 000c 03FB02F3 		mul	r3, r3, r2
+ 152              		.loc 1 64 15 view .LVU30
+ 153 0010 0193     		str	r3, [sp, #4]
+ 154              		.loc 1 64 57 view .LVU31
+ 155 0012 019B     		ldr	r3, [sp, #4]
+ 156              		.loc 1 64 3 view .LVU32
+ 157 0014 2BB1     		cbz	r3, .L7
+ 158              	.L9:
+ 159              		.loc 1 64 74 is_stmt 1 discriminator 3 view .LVU33
+ 160              		.loc 1 64 71 is_stmt 0 discriminator 3 view .LVU34
+ 161 0016 019B     		ldr	r3, [sp, #4]
+ 162 0018 013B     		subs	r3, r3, #1
+ 163 001a 0193     		str	r3, [sp, #4]
+ 164              		.loc 1 64 57 discriminator 3 view .LVU35
+ 165 001c 019B     		ldr	r3, [sp, #4]
+ 166              		.loc 1 64 3 discriminator 3 view .LVU36
+ 167 001e 002B     		cmp	r3, #0
+ 168 0020 F9D1     		bne	.L9
+ 169              	.L7:
+  65:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 170              		.loc 1 65 1 view .LVU37
+ 171 0022 02B0     		add	sp, sp, #8
+ 172              		.cfi_def_cfa_offset 0
+ 173              		@ sp needed
+ 174 0024 7047     		bx	lr
+ 175              	.L16:
+ 176 0026 00BF     		.align	2
+ 177              	.L15:
+ 178 0028 00000000 		.word	SystemCoreClock
+ 179              		.cfi_endproc
+ 180              	.LFE32:
+ 182              		.section	.text.I2C_Init,"ax",%progbits
+ 183              		.align	1
+ 184              		.p2align 2,,3
+ 185              		.global	I2C_Init
+ 186              		.syntax unified
+ 187              		.thumb
+ 188              		.thumb_func
+ 189              		.fpu softvfp
+ 191              	I2C_Init:
+ 192              	.LVL7:
+ 193              	.LFB33:
+  66:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+  67:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+  68:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param none
+  69:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param i2c is I2C Master address
+  70:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @return ErrorStatus indicate the State of the Init program
+  71:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief Initialize I2C.
+  72:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */ 
+  73:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** ErrorStatus I2C_Init(I2C_TypeDef * i2c, uint16_t Rate)
+  74:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 194              		.loc 1 74 1 is_stmt 1 view -0
+ 195              		.cfi_startproc
+ 196              		@ args = 0, pretend = 0, frame = 0
+ 197              		@ frame_needed = 0, uses_anonymous_args = 0
+ 198              		@ link register save eliminated.
+  75:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	uint16_t temp_save;
+ 199              		.loc 1 75 2 view .LVU39
+  76:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+  77:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	I2C_Enable(i2c);
+ 200              		.loc 1 77 2 view .LVU40
+ 201              	.LBB16:
+ 202              	.LBB17:
+  51:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->PRER = (prescal&I2C_CTR_PERE);
+ 203              		.loc 1 51 48 is_stmt 0 view .LVU41
+ 204 0000 41F28833 		movw	r3, #5000
+  51:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->PRER = (prescal&I2C_CTR_PERE);
+ 205              		.loc 1 51 42 view .LVU42
+ 206 0004 0C4A     		ldr	r2, .L20
+  51:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->PRER = (prescal&I2C_CTR_PERE);
+ 207              		.loc 1 51 48 view .LVU43
+ 208 0006 03FB01F1 		mul	r1, r3, r1
+ 209              	.LVL8:
+  51:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->PRER = (prescal&I2C_CTR_PERE);
+ 210              		.loc 1 51 42 view .LVU44
+ 211 000a 1368     		ldr	r3, [r2]
+ 212              	.LVL9:
+  51:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->PRER = (prescal&I2C_CTR_PERE);
+ 213              		.loc 1 51 42 view .LVU45
+ 214              	.LBE17:
+ 215              	.LBE16:
+ 216              	.LBB22:
+ 217              	.LBI22:
+  36:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 218              		.loc 1 36 6 is_stmt 1 view .LVU46
+ 219              	.LBB23:
+  38:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 220              		.loc 1 38 2 view .LVU47
+ 221              	.LBE23:
+ 222              	.LBE22:
+ 223              	.LBB27:
+ 224              	.LBB18:
+  51:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->PRER = (prescal&I2C_CTR_PERE);
+ 225              		.loc 1 51 42 is_stmt 0 view .LVU48
+ 226 000c B3FBF1F1 		udiv	r1, r3, r1
+ 227              	.LBE18:
+ 228              	.LBE27:
+ 229              	.LBB28:
+ 230              	.LBB24:
+  38:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 231              		.loc 1 38 11 view .LVU49
+ 232 0010 4368     		ldr	r3, [r0, #4]
+ 233              	.LBE24:
+ 234              	.LBE28:
+ 235              	.LBB29:
+ 236              	.LBB19:
+  51:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->PRER = (prescal&I2C_CTR_PERE);
+ 237              		.loc 1 51 10 view .LVU50
+ 238 0012 0139     		subs	r1, r1, #1
+ 239              	.LBE19:
+ 240              	.LBE29:
+ 241              	.LBB30:
+ 242              	.LBB25:
+  38:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 243              		.loc 1 38 11 view .LVU51
+ 244 0014 43F08003 		orr	r3, r3, #128
+ 245              	.LBE25:
+ 246              	.LBE30:
+ 247              	.LBB31:
+ 248              	.LBB20:
+  52:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 249              		.loc 1 52 22 view .LVU52
+ 250 0018 89B2     		uxth	r1, r1
+ 251              	.LBE20:
+ 252              	.LBE31:
+ 253              	.LBB32:
+ 254              	.LBB26:
+  38:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 255              		.loc 1 38 11 view .LVU53
+ 256 001a 4360     		str	r3, [r0, #4]
+ 257              	.LVL10:
+  38:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 258              		.loc 1 38 11 view .LVU54
+ 259              	.LBE26:
+ 260              	.LBE32:
+  78:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	temp_save=I2C_Rate_Set(i2c,Rate);
+ 261              		.loc 1 78 2 is_stmt 1 view .LVU55
+ 262              	.LBB33:
+ 263              	.LBI16:
+  47:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 264              		.loc 1 47 10 view .LVU56
+ 265              	.LBB21:
+  49:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 266              		.loc 1 49 2 view .LVU57
+  51:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->PRER = (prescal&I2C_CTR_PERE);
+ 267              		.loc 1 51 2 view .LVU58
+  52:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 268              		.loc 1 52 2 view .LVU59
+  52:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 269              		.loc 1 52 12 is_stmt 0 view .LVU60
+ 270 001c 0160     		str	r1, [r0]
+  54:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 271              		.loc 1 54 2 is_stmt 1 view .LVU61
+ 272              	.LVL11:
+  54:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 273              		.loc 1 54 2 is_stmt 0 view .LVU62
+ 274              	.LBE21:
+ 275              	.LBE33:
+  79:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+  80:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	if((i2c->CTR&I2C_CTR_EN)&&(i2c->PRER == (uint32_t) (temp_save&I2C_CTR_PERE)))
+ 276              		.loc 1 80 2 is_stmt 1 view .LVU63
+ 277              		.loc 1 80 9 is_stmt 0 view .LVU64
+ 278 001e 4368     		ldr	r3, [r0, #4]
+ 279              		.loc 1 80 4 view .LVU65
+ 280 0020 13F08003 		ands	r3, r3, #128
+ 281 0024 05D0     		beq	.L19
+ 282              		.loc 1 80 32 discriminator 1 view .LVU66
+ 283 0026 0068     		ldr	r0, [r0]
+ 284              	.LVL12:
+  81:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	{
+  82:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		return SUCCESS;
+  83:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	}
+  84:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	else
+  85:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	{
+  86:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		return ERROR;
+ 285              		.loc 1 86 10 discriminator 1 view .LVU67
+ 286 0028 401A     		subs	r0, r0, r1
+ 287 002a B0FA80F0 		clz	r0, r0
+ 288 002e 4009     		lsrs	r0, r0, #5
+ 289 0030 7047     		bx	lr
+ 290              	.LVL13:
+ 291              	.L19:
+ 292              		.loc 1 86 10 view .LVU68
+ 293 0032 1846     		mov	r0, r3
+ 294              	.LVL14:
+  87:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	}
+  88:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 295              		.loc 1 88 1 view .LVU69
+ 296 0034 7047     		bx	lr
+ 297              	.L21:
+ 298 0036 00BF     		.align	2
+ 299              	.L20:
+ 300 0038 00000000 		.word	SystemCoreClock
+ 301              		.cfi_endproc
+ 302              	.LFE33:
+ 304              		.section	.text.I2C_SendByte,"ax",%progbits
+ 305              		.align	1
+ 306              		.p2align 2,,3
+ 307              		.global	I2C_SendByte
+ 308              		.syntax unified
+ 309              		.thumb
+ 310              		.thumb_func
+ 311              		.fpu softvfp
+ 313              	I2C_SendByte:
+ 314              	.LVL15:
+ 315              	.LFB34:
+  89:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+  90:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+  91:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param none
+  92:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param i2c is I2C Master address
+  93:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	* @param slv_address is slave peripheral address
+  94:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	* @param data_address is the address which we will send data
+  95:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	* @param data is a byte data
+  96:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @return none
+  97:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief  Send byte to I2C serial bus
+  98:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */ 
+  99:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** void I2C_SendByte(I2C_TypeDef *i2c ,uint8_t slv_address,uint8_t data_address,uint8_t data)
+ 100:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 316              		.loc 1 100 1 is_stmt 1 view -0
+ 317              		.cfi_startproc
+ 318              		@ args = 0, pretend = 0, frame = 0
+ 319              		@ frame_needed = 0, uses_anonymous_args = 0
+ 320              		@ link register save eliminated.
+ 321              		.loc 1 100 1 is_stmt 0 view .LVU71
+ 322 0000 10B4     		push	{r4}
+ 323              		.cfi_def_cfa_offset 4
+ 324              		.cfi_offset 4, -4
+ 101:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = (slv_address <<1) |0;
+ 102:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;
+ 325              		.loc 1 102 10 view .LVU72
+ 326 0002 9024     		movs	r4, #144
+ 101:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = (slv_address <<1) |0;
+ 327              		.loc 1 101 2 is_stmt 1 view .LVU73
+ 101:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = (slv_address <<1) |0;
+ 328              		.loc 1 101 31 is_stmt 0 view .LVU74
+ 329 0004 4900     		lsls	r1, r1, #1
+ 330              	.LVL16:
+ 101:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = (slv_address <<1) |0;
+ 331              		.loc 1 101 11 view .LVU75
+ 332 0006 8160     		str	r1, [r0, #8]
+ 333              		.loc 1 102 2 is_stmt 1 view .LVU76
+ 334              		.loc 1 102 10 is_stmt 0 view .LVU77
+ 335 0008 C460     		str	r4, [r0, #12]
+ 103:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 336              		.loc 1 103 2 is_stmt 1 view .LVU78
+ 337              	.L23:
+ 338              		.loc 1 103 27 discriminator 1 view .LVU79
+ 339              		.loc 1 103 11 is_stmt 0 discriminator 1 view .LVU80
+ 340 000a C168     		ldr	r1, [r0, #12]
+ 341              		.loc 1 103 7 discriminator 1 view .LVU81
+ 342 000c 8C07     		lsls	r4, r1, #30
+ 343 000e FCD4     		bmi	.L23
+ 344              	.L24:
+ 104:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 345              		.loc 1 104 29 is_stmt 1 discriminator 1 view .LVU82
+ 346              		.loc 1 104 11 is_stmt 0 discriminator 1 view .LVU83
+ 347 0010 C168     		ldr	r1, [r0, #12]
+ 348              		.loc 1 104 7 discriminator 1 view .LVU84
+ 349 0012 0906     		lsls	r1, r1, #24
+ 350 0014 FCD4     		bmi	.L24
+ 105:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 106:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = data_address;	
+ 351              		.loc 1 106 2 is_stmt 1 view .LVU85
+ 107:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_WR);
+ 352              		.loc 1 107 10 is_stmt 0 view .LVU86
+ 353 0016 1021     		movs	r1, #16
+ 106:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_WR);
+ 354              		.loc 1 106 11 view .LVU87
+ 355 0018 8260     		str	r2, [r0, #8]
+ 356              		.loc 1 107 2 is_stmt 1 view .LVU88
+ 357              		.loc 1 107 10 is_stmt 0 view .LVU89
+ 358 001a C160     		str	r1, [r0, #12]
+ 108:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 359              		.loc 1 108 2 is_stmt 1 view .LVU90
+ 360              	.LVL17:
+ 361              	.L25:
+ 362              		.loc 1 108 27 discriminator 1 view .LVU91
+ 363              		.loc 1 108 11 is_stmt 0 discriminator 1 view .LVU92
+ 364 001c C268     		ldr	r2, [r0, #12]
+ 365              		.loc 1 108 7 discriminator 1 view .LVU93
+ 366 001e 9207     		lsls	r2, r2, #30
+ 367 0020 FCD4     		bmi	.L25
+ 368              	.L26:
+ 109:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 369              		.loc 1 109 29 is_stmt 1 discriminator 1 view .LVU94
+ 370              		.loc 1 109 11 is_stmt 0 discriminator 1 view .LVU95
+ 371 0022 C268     		ldr	r2, [r0, #12]
+ 372              		.loc 1 109 7 discriminator 1 view .LVU96
+ 373 0024 1406     		lsls	r4, r2, #24
+ 374 0026 FCD4     		bmi	.L26
+ 110:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 111:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = data;
+ 375              		.loc 1 111 2 is_stmt 1 view .LVU97
+ 112:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STO|I2C_CMD_WR);
+ 376              		.loc 1 112 10 is_stmt 0 view .LVU98
+ 377 0028 5022     		movs	r2, #80
+ 111:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STO|I2C_CMD_WR);
+ 378              		.loc 1 111 11 view .LVU99
+ 379 002a 8360     		str	r3, [r0, #8]
+ 380              		.loc 1 112 2 is_stmt 1 view .LVU100
+ 381              		.loc 1 112 10 is_stmt 0 view .LVU101
+ 382 002c C260     		str	r2, [r0, #12]
+ 113:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 383              		.loc 1 113 2 is_stmt 1 view .LVU102
+ 384              	.LVL18:
+ 385              	.LBB38:
+ 386              	.LBI38:
+  99:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 387              		.loc 1 99 6 view .LVU103
+ 388              	.L27:
+ 389              	.LBB39:
+ 390              		.loc 1 113 27 view .LVU104
+ 391              		.loc 1 113 11 is_stmt 0 view .LVU105
+ 392 002e C368     		ldr	r3, [r0, #12]
+ 393              		.loc 1 113 7 view .LVU106
+ 394 0030 9907     		lsls	r1, r3, #30
+ 395 0032 FCD4     		bmi	.L27
+ 396              	.L28:
+ 114:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 397              		.loc 1 114 29 is_stmt 1 view .LVU107
+ 398              		.loc 1 114 11 is_stmt 0 view .LVU108
+ 399 0034 C368     		ldr	r3, [r0, #12]
+ 400              		.loc 1 114 7 view .LVU109
+ 401 0036 1A06     		lsls	r2, r3, #24
+ 402 0038 FCD4     		bmi	.L28
+ 403              	.L29:
+ 115:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_BUSY);
+ 404              		.loc 1 115 28 is_stmt 1 view .LVU110
+ 405              		.loc 1 115 11 is_stmt 0 view .LVU111
+ 406 003a C368     		ldr	r3, [r0, #12]
+ 407              		.loc 1 115 7 view .LVU112
+ 408 003c 5B06     		lsls	r3, r3, #25
+ 409 003e FCD4     		bmi	.L29
+ 116:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 117:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	Delay_ms_i2c(3);//Wait the data to I2C Ready
+ 410              		.loc 1 117 2 is_stmt 1 view .LVU113
+ 411 0040 0323     		movs	r3, #3
+ 412              	.LVL19:
+ 413              	.LBB40:
+ 414              	.LBI40:
+  62:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 415              		.loc 1 62 6 view .LVU114
+ 416              	.LBB41:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 417              		.loc 1 64 3 view .LVU115
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 418              		.loc 1 64 41 is_stmt 0 view .LVU116
+ 419 0042 054A     		ldr	r2, .L44
+ 420 0044 1268     		ldr	r2, [r2]
+ 421 0046 520B     		lsrs	r2, r2, #13
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 422              		.loc 1 64 24 view .LVU117
+ 423 0048 03FB02F3 		mul	r3, r3, r2
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 424              		.loc 1 64 3 view .LVU118
+ 425 004c 0BB1     		cbz	r3, .L22
+ 426              	.L31:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 427              		.loc 1 64 74 is_stmt 1 view .LVU119
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 428              		.loc 1 64 3 is_stmt 0 view .LVU120
+ 429 004e 013B     		subs	r3, r3, #1
+ 430 0050 FDD1     		bne	.L31
+ 431              	.L22:
+ 432              	.LBE41:
+ 433              	.LBE40:
+ 434              	.LBE39:
+ 435              	.LBE38:
+ 118:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 436              		.loc 1 118 1 view .LVU121
+ 437 0052 10BC     		pop	{r4}
+ 438              		.cfi_restore 4
+ 439              		.cfi_def_cfa_offset 0
+ 440 0054 7047     		bx	lr
+ 441              	.L45:
+ 442 0056 00BF     		.align	2
+ 443              	.L44:
+ 444 0058 00000000 		.word	SystemCoreClock
+ 445              		.cfi_endproc
+ 446              	.LFE34:
+ 448              		.section	.text.I2C_SendData,"ax",%progbits
+ 449              		.align	1
+ 450              		.p2align 2,,3
+ 451              		.global	I2C_SendData
+ 452              		.syntax unified
+ 453              		.thumb
+ 454              		.thumb_func
+ 455              		.fpu softvfp
+ 457              	I2C_SendData:
+ 458              	.LVL20:
+ 459              	.LFB35:
+ 119:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 120:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+ 121:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param none
+ 122:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param i2c is I2C Master address
+ 123:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param slv_addr is slave peripheral address
+ 124:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param data is several bytes data
+ 125:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param data_size is byte number
+ 126:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @return none
+ 127:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief  Send several bytes a time to I2C serial bus
+ 128:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */ 
+ 129:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** void I2C_SendData(I2C_TypeDef *i2c ,uint8_t slv_addr,uint8_t data_addr,uint8_t* data,uint32_t data_
+ 130:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 460              		.loc 1 130 1 is_stmt 1 view -0
+ 461              		.cfi_startproc
+ 462              		@ args = 4, pretend = 0, frame = 0
+ 463              		@ frame_needed = 0, uses_anonymous_args = 0
+ 464              		@ link register save eliminated.
+ 465              		.loc 1 130 1 is_stmt 0 view .LVU123
+ 466 0000 F0B4     		push	{r4, r5, r6, r7}
+ 467              		.cfi_def_cfa_offset 16
+ 468              		.cfi_offset 4, -16
+ 469              		.cfi_offset 5, -12
+ 470              		.cfi_offset 6, -8
+ 471              		.cfi_offset 7, -4
+ 131:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	uint32_t i;
+ 132:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 133:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = (slv_addr <<1) |0;
+ 134:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;
+ 472              		.loc 1 134 10 view .LVU124
+ 473 0002 9025     		movs	r5, #144
+ 131:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	uint32_t i;
+ 474              		.loc 1 131 2 is_stmt 1 view .LVU125
+ 133:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;
+ 475              		.loc 1 133 2 view .LVU126
+ 133:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;
+ 476              		.loc 1 133 28 is_stmt 0 view .LVU127
+ 477 0004 4900     		lsls	r1, r1, #1
+ 478              	.LVL21:
+ 130:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	uint32_t i;
+ 479              		.loc 1 130 1 view .LVU128
+ 480 0006 049C     		ldr	r4, [sp, #16]
+ 133:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;
+ 481              		.loc 1 133 11 view .LVU129
+ 482 0008 8160     		str	r1, [r0, #8]
+ 483              		.loc 1 134 2 is_stmt 1 view .LVU130
+ 484              		.loc 1 134 10 is_stmt 0 view .LVU131
+ 485 000a C560     		str	r5, [r0, #12]
+ 135:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 486              		.loc 1 135 2 is_stmt 1 view .LVU132
+ 487              	.L47:
+ 488              		.loc 1 135 27 discriminator 1 view .LVU133
+ 489              		.loc 1 135 11 is_stmt 0 discriminator 1 view .LVU134
+ 490 000c C168     		ldr	r1, [r0, #12]
+ 491              		.loc 1 135 7 discriminator 1 view .LVU135
+ 492 000e 8E07     		lsls	r6, r1, #30
+ 493 0010 FCD4     		bmi	.L47
+ 494              	.L48:
+ 136:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 495              		.loc 1 136 29 is_stmt 1 discriminator 1 view .LVU136
+ 496              		.loc 1 136 11 is_stmt 0 discriminator 1 view .LVU137
+ 497 0012 C168     		ldr	r1, [r0, #12]
+ 498              		.loc 1 136 7 discriminator 1 view .LVU138
+ 499 0014 0D06     		lsls	r5, r1, #24
+ 500 0016 FCD4     		bmi	.L48
+ 137:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 138:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = data_addr;	
+ 501              		.loc 1 138 2 is_stmt 1 view .LVU139
+ 139:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_WR);
+ 502              		.loc 1 139 10 is_stmt 0 view .LVU140
+ 503 0018 1021     		movs	r1, #16
+ 138:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_WR);
+ 504              		.loc 1 138 11 view .LVU141
+ 505 001a 8260     		str	r2, [r0, #8]
+ 506              		.loc 1 139 2 is_stmt 1 view .LVU142
+ 507              		.loc 1 139 10 is_stmt 0 view .LVU143
+ 508 001c C160     		str	r1, [r0, #12]
+ 140:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 509              		.loc 1 140 2 is_stmt 1 view .LVU144
+ 510              	.LVL22:
+ 511              	.L49:
+ 512              		.loc 1 140 27 discriminator 1 view .LVU145
+ 513              		.loc 1 140 11 is_stmt 0 discriminator 1 view .LVU146
+ 514 001e C268     		ldr	r2, [r0, #12]
+ 515              		.loc 1 140 7 discriminator 1 view .LVU147
+ 516 0020 9107     		lsls	r1, r2, #30
+ 517 0022 FCD4     		bmi	.L49
+ 518              	.L50:
+ 141:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 519              		.loc 1 141 29 is_stmt 1 discriminator 1 view .LVU148
+ 520              		.loc 1 141 11 is_stmt 0 discriminator 1 view .LVU149
+ 521 0024 C268     		ldr	r2, [r0, #12]
+ 522              		.loc 1 141 7 discriminator 1 view .LVU150
+ 523 0026 1206     		lsls	r2, r2, #24
+ 524 0028 FCD4     		bmi	.L50
+ 525              	.LVL23:
+ 142:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 143:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	for(i=0;i<data_size;i++)
+ 526              		.loc 1 143 2 view .LVU151
+ 527 002a BCB1     		cbz	r4, .L52
+ 528 002c 1A46     		mov	r2, r3
+ 144:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	{
+ 145:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		i2c->TXR = data[i];
+ 146:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		if((data_size-1) == i)
+ 147:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		{
+ 148:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 			i2c->CR = (I2C_CMD_STO|I2C_CMD_WR);
+ 149:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		}
+ 150:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		else
+ 151:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		{
+ 152:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 			i2c->CR = (I2C_CMD_WR);
+ 529              		.loc 1 152 12 view .LVU152
+ 530 002e 1027     		movs	r7, #16
+ 531 0030 DE43     		mvns	r6, r3
+ 148:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		}
+ 532              		.loc 1 148 12 view .LVU153
+ 533 0032 4FF0500C 		mov	ip, #80
+ 534 0036 1D19     		adds	r5, r3, r4
+ 535 0038 013C     		subs	r4, r4, #1
+ 536              	.LVL24:
+ 537              	.L57:
+ 145:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		if((data_size-1) == i)
+ 538              		.loc 1 145 3 is_stmt 1 view .LVU154
+ 145:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		if((data_size-1) == i)
+ 539              		.loc 1 145 18 is_stmt 0 view .LVU155
+ 540 003a 12F8011B 		ldrb	r1, [r2], #1	@ zero_extendqisi2
+ 541              	.LVL25:
+ 146:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		{
+ 542              		.loc 1 146 5 view .LVU156
+ 543 003e B318     		adds	r3, r6, r2
+ 544 0040 A342     		cmp	r3, r4
+ 145:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		if((data_size-1) == i)
+ 545              		.loc 1 145 12 view .LVU157
+ 546 0042 8160     		str	r1, [r0, #8]
+ 146:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		{
+ 547              		.loc 1 146 3 is_stmt 1 view .LVU158
+ 148:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		}
+ 548              		.loc 1 148 4 view .LVU159
+ 148:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		}
+ 549              		.loc 1 148 12 is_stmt 0 view .LVU160
+ 550 0044 0CBF     		ite	eq
+ 551 0046 C0F80CC0 		streq	ip, [r0, #12]
+ 552              		.loc 1 152 4 is_stmt 1 view .LVU161
+ 553              		.loc 1 152 12 is_stmt 0 view .LVU162
+ 554 004a C760     		strne	r7, [r0, #12]
+ 555              	.L55:
+ 153:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		}
+ 154:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		
+ 155:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 556              		.loc 1 155 28 is_stmt 1 discriminator 1 view .LVU163
+ 557              		.loc 1 155 12 is_stmt 0 discriminator 1 view .LVU164
+ 558 004c C368     		ldr	r3, [r0, #12]
+ 559              		.loc 1 155 8 discriminator 1 view .LVU165
+ 560 004e 9B07     		lsls	r3, r3, #30
+ 561 0050 FCD4     		bmi	.L55
+ 562              	.L56:
+ 156:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 563              		.loc 1 156 30 is_stmt 1 discriminator 1 view .LVU166
+ 564              		.loc 1 156 12 is_stmt 0 discriminator 1 view .LVU167
+ 565 0052 C368     		ldr	r3, [r0, #12]
+ 566              		.loc 1 156 8 discriminator 1 view .LVU168
+ 567 0054 1906     		lsls	r1, r3, #24
+ 568 0056 FCD4     		bmi	.L56
+ 569              	.LVL26:
+ 143:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	{
+ 570              		.loc 1 143 2 discriminator 2 view .LVU169
+ 571 0058 9542     		cmp	r5, r2
+ 572 005a EED1     		bne	.L57
+ 573              	.LVL27:
+ 574              	.L52:
+ 157:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	}
+ 158:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 159:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_BUSY);
+ 575              		.loc 1 159 28 is_stmt 1 discriminator 1 view .LVU170
+ 576              		.loc 1 159 11 is_stmt 0 discriminator 1 view .LVU171
+ 577 005c C368     		ldr	r3, [r0, #12]
+ 578              		.loc 1 159 7 discriminator 1 view .LVU172
+ 579 005e 5B06     		lsls	r3, r3, #25
+ 580 0060 FCD4     		bmi	.L52
+ 160:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	Delay_ms_i2c(3);//Wait the data to I2C Ready
+ 581              		.loc 1 160 2 is_stmt 1 view .LVU173
+ 582 0062 0323     		movs	r3, #3
+ 583              	.LVL28:
+ 584              	.LBB42:
+ 585              	.LBI42:
+  62:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 586              		.loc 1 62 6 view .LVU174
+ 587              	.LBB43:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 588              		.loc 1 64 3 view .LVU175
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 589              		.loc 1 64 41 is_stmt 0 view .LVU176
+ 590 0064 044A     		ldr	r2, .L72
+ 591 0066 1268     		ldr	r2, [r2]
+ 592 0068 520B     		lsrs	r2, r2, #13
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 593              		.loc 1 64 24 view .LVU177
+ 594 006a 03FB02F3 		mul	r3, r3, r2
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 595              		.loc 1 64 3 view .LVU178
+ 596 006e 0BB1     		cbz	r3, .L46
+ 597              	.L59:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 598              		.loc 1 64 74 is_stmt 1 view .LVU179
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 599              		.loc 1 64 3 is_stmt 0 view .LVU180
+ 600 0070 013B     		subs	r3, r3, #1
+ 601 0072 FDD1     		bne	.L59
+ 602              	.L46:
+ 603              	.LBE43:
+ 604              	.LBE42:
+ 161:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 605              		.loc 1 161 1 view .LVU181
+ 606 0074 F0BC     		pop	{r4, r5, r6, r7}
+ 607              		.cfi_restore 7
+ 608              		.cfi_restore 6
+ 609              		.cfi_restore 5
+ 610              		.cfi_restore 4
+ 611              		.cfi_def_cfa_offset 0
+ 612              	.LVL29:
+ 613              		.loc 1 161 1 view .LVU182
+ 614 0076 7047     		bx	lr
+ 615              	.L73:
+ 616              		.align	2
+ 617              	.L72:
+ 618 0078 00000000 		.word	SystemCoreClock
+ 619              		.cfi_endproc
+ 620              	.LFE35:
+ 622              		.section	.text.I2C_ReceiveByte,"ax",%progbits
+ 623              		.align	1
+ 624              		.p2align 2,,3
+ 625              		.global	I2C_ReceiveByte
+ 626              		.syntax unified
+ 627              		.thumb
+ 628              		.thumb_func
+ 629              		.fpu softvfp
+ 631              	I2C_ReceiveByte:
+ 632              	.LVL30:
+ 633              	.LFB36:
+ 162:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 163:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+ 164:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param i2c is I2C Master address
+ 165:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param slv_addr is I2C slave address
+ 166:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param data_addr is The data which we will read address
+ 167:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @return uint8_t receives character
+ 168:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief Receives 8-bits data from the serial bus.
+ 169:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */
+ 170:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** uint8_t I2C_ReceiveByte(I2C_TypeDef *i2c ,uint8_t slv_addr,uint8_t data_addr)
+ 171:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 634              		.loc 1 171 1 is_stmt 1 view -0
+ 635              		.cfi_startproc
+ 636              		@ args = 0, pretend = 0, frame = 0
+ 637              		@ frame_needed = 0, uses_anonymous_args = 0
+ 638              		@ link register save eliminated.
+ 172:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	uint8_t data=0;
+ 639              		.loc 1 172 2 view .LVU184
+ 173:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 174:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = (slv_addr <<1) |0;
+ 640              		.loc 1 174 2 view .LVU185
+ 175:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 641              		.loc 1 175 10 is_stmt 0 view .LVU186
+ 642 0000 9023     		movs	r3, #144
+ 174:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 643              		.loc 1 174 28 view .LVU187
+ 644 0002 4900     		lsls	r1, r1, #1
+ 645              	.LVL31:
+ 174:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 646              		.loc 1 174 11 view .LVU188
+ 647 0004 8160     		str	r1, [r0, #8]
+ 648              		.loc 1 175 2 is_stmt 1 view .LVU189
+ 649              		.loc 1 175 10 is_stmt 0 view .LVU190
+ 650 0006 C360     		str	r3, [r0, #12]
+ 176:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 651              		.loc 1 176 2 is_stmt 1 view .LVU191
+ 652              	.L75:
+ 653              		.loc 1 176 27 discriminator 1 view .LVU192
+ 654              		.loc 1 176 11 is_stmt 0 discriminator 1 view .LVU193
+ 655 0008 C368     		ldr	r3, [r0, #12]
+ 656              		.loc 1 176 7 discriminator 1 view .LVU194
+ 657 000a 9B07     		lsls	r3, r3, #30
+ 658 000c FCD4     		bmi	.L75
+ 659              	.L76:
+ 177:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 660              		.loc 1 177 29 is_stmt 1 discriminator 1 view .LVU195
+ 661              		.loc 1 177 11 is_stmt 0 discriminator 1 view .LVU196
+ 662 000e C368     		ldr	r3, [r0, #12]
+ 663              		.loc 1 177 7 discriminator 1 view .LVU197
+ 664 0010 1B06     		lsls	r3, r3, #24
+ 665 0012 FCD4     		bmi	.L76
+ 178:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 179:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = data_addr;
+ 666              		.loc 1 179 2 is_stmt 1 view .LVU198
+ 180:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_WR;//stop
+ 667              		.loc 1 180 10 is_stmt 0 view .LVU199
+ 668 0014 1023     		movs	r3, #16
+ 179:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_WR;//stop
+ 669              		.loc 1 179 11 view .LVU200
+ 670 0016 8260     		str	r2, [r0, #8]
+ 671              		.loc 1 180 2 is_stmt 1 view .LVU201
+ 672              		.loc 1 180 10 is_stmt 0 view .LVU202
+ 673 0018 C360     		str	r3, [r0, #12]
+ 181:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 674              		.loc 1 181 2 is_stmt 1 view .LVU203
+ 675              	.LVL32:
+ 676              	.L77:
+ 677              		.loc 1 181 27 discriminator 1 view .LVU204
+ 678              		.loc 1 181 11 is_stmt 0 discriminator 1 view .LVU205
+ 679 001a C368     		ldr	r3, [r0, #12]
+ 680              		.loc 1 181 7 discriminator 1 view .LVU206
+ 681 001c 9A07     		lsls	r2, r3, #30
+ 682 001e FCD4     		bmi	.L77
+ 683              	.L78:
+ 182:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 684              		.loc 1 182 29 is_stmt 1 discriminator 1 view .LVU207
+ 685              		.loc 1 182 11 is_stmt 0 discriminator 1 view .LVU208
+ 686 0020 C368     		ldr	r3, [r0, #12]
+ 687              		.loc 1 182 7 discriminator 1 view .LVU209
+ 688 0022 1B06     		lsls	r3, r3, #24
+ 689 0024 FCD4     		bmi	.L78
+ 183:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 184:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = (slv_addr <<1) |1;	
+ 690              		.loc 1 184 2 is_stmt 1 view .LVU210
+ 185:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 691              		.loc 1 185 10 is_stmt 0 view .LVU211
+ 692 0026 9023     		movs	r3, #144
+ 184:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 693              		.loc 1 184 28 view .LVU212
+ 694 0028 41F00101 		orr	r1, r1, #1
+ 184:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 695              		.loc 1 184 11 view .LVU213
+ 696 002c 8160     		str	r1, [r0, #8]
+ 697              		.loc 1 185 2 is_stmt 1 view .LVU214
+ 698              		.loc 1 185 10 is_stmt 0 view .LVU215
+ 699 002e C360     		str	r3, [r0, #12]
+ 186:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 700              		.loc 1 186 2 is_stmt 1 view .LVU216
+ 701              	.LVL33:
+ 702              	.LBB48:
+ 703              	.LBI48:
+ 170:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 704              		.loc 1 170 9 view .LVU217
+ 705              	.L79:
+ 706              	.LBB49:
+ 707              		.loc 1 186 27 view .LVU218
+ 708              		.loc 1 186 11 is_stmt 0 view .LVU219
+ 709 0030 C368     		ldr	r3, [r0, #12]
+ 710              		.loc 1 186 7 view .LVU220
+ 711 0032 9907     		lsls	r1, r3, #30
+ 712 0034 FCD4     		bmi	.L79
+ 713              	.L80:
+ 187:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack	
+ 714              		.loc 1 187 29 is_stmt 1 view .LVU221
+ 715              		.loc 1 187 11 is_stmt 0 view .LVU222
+ 716 0036 C368     		ldr	r3, [r0, #12]
+ 717              		.loc 1 187 7 view .LVU223
+ 718 0038 1A06     		lsls	r2, r3, #24
+ 719 003a FCD4     		bmi	.L80
+ 188:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 189:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_ACK|I2C_CMD_STO|I2C_CMD_RD);//send nack
+ 720              		.loc 1 189 2 is_stmt 1 view .LVU224
+ 721              		.loc 1 189 10 is_stmt 0 view .LVU225
+ 722 003c 6823     		movs	r3, #104
+ 723 003e C360     		str	r3, [r0, #12]
+ 190:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 724              		.loc 1 190 2 is_stmt 1 view .LVU226
+ 725              	.L81:
+ 726              		.loc 1 190 27 view .LVU227
+ 727              		.loc 1 190 11 is_stmt 0 view .LVU228
+ 728 0040 C368     		ldr	r3, [r0, #12]
+ 729              		.loc 1 190 7 view .LVU229
+ 730 0042 9B07     		lsls	r3, r3, #30
+ 731 0044 FCD4     		bmi	.L81
+ 191:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	data = i2c->RXR;
+ 732              		.loc 1 191 2 is_stmt 1 view .LVU230
+ 733 0046 0323     		movs	r3, #3
+ 734              	.LBB50:
+ 735              	.LBB51:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 736              		.loc 1 64 41 is_stmt 0 view .LVU231
+ 737 0048 054A     		ldr	r2, .L95
+ 738              	.LBE51:
+ 739              	.LBE50:
+ 740              		.loc 1 191 12 view .LVU232
+ 741 004a 8068     		ldr	r0, [r0, #8]
+ 742              	.LVL34:
+ 743              	.LBB54:
+ 744              	.LBB52:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 745              		.loc 1 64 41 view .LVU233
+ 746 004c 1268     		ldr	r2, [r2]
+ 747              	.LBE52:
+ 748              	.LBE54:
+ 749              		.loc 1 191 7 view .LVU234
+ 750 004e C0B2     		uxtb	r0, r0
+ 751              	.LVL35:
+ 192:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	Delay_ms_i2c(3);
+ 752              		.loc 1 192 2 is_stmt 1 view .LVU235
+ 753              	.LBB55:
+ 754              	.LBI50:
+  62:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 755              		.loc 1 62 6 view .LVU236
+ 756              	.LBB53:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 757              		.loc 1 64 3 view .LVU237
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 758              		.loc 1 64 41 is_stmt 0 view .LVU238
+ 759 0050 520B     		lsrs	r2, r2, #13
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 760              		.loc 1 64 24 view .LVU239
+ 761 0052 03FB02F3 		mul	r3, r3, r2
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 762              		.loc 1 64 3 view .LVU240
+ 763 0056 0BB1     		cbz	r3, .L82
+ 764              	.L83:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 765              		.loc 1 64 74 is_stmt 1 view .LVU241
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 766              		.loc 1 64 3 is_stmt 0 view .LVU242
+ 767 0058 013B     		subs	r3, r3, #1
+ 768 005a FDD1     		bne	.L83
+ 769              	.L82:
+ 770              	.LVL36:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 771              		.loc 1 64 3 view .LVU243
+ 772              	.LBE53:
+ 773              	.LBE55:
+ 193:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 194:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   return data;
+ 774              		.loc 1 194 3 is_stmt 1 view .LVU244
+ 775              		.loc 1 194 3 is_stmt 0 view .LVU245
+ 776              	.LBE49:
+ 777              	.LBE48:
+ 778              		.loc 1 194 3 is_stmt 1 view .LVU246
+ 195:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 779              		.loc 1 195 1 is_stmt 0 view .LVU247
+ 780 005c 7047     		bx	lr
+ 781              	.L96:
+ 782 005e 00BF     		.align	2
+ 783              	.L95:
+ 784 0060 00000000 		.word	SystemCoreClock
+ 785              		.cfi_endproc
+ 786              	.LFE36:
+ 788              		.section	.text.I2C_ReceiveData,"ax",%progbits
+ 789              		.align	1
+ 790              		.p2align 2,,3
+ 791              		.global	I2C_ReceiveData
+ 792              		.syntax unified
+ 793              		.thumb
+ 794              		.thumb_func
+ 795              		.fpu softvfp
+ 797              	I2C_ReceiveData:
+ 798              	.LVL37:
+ 799              	.LFB37:
+ 196:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 197:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+ 198:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param i2c is I2C Master address
+ 199:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param slv_addr is I2C slave address
+ 200:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param data_addr is The data which we will read address
+ 201:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	* @param data_size is received data number
+ 202:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param data is what we receive several bytes data
+ 203:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief Receives several bytes data a time from the serial bus.
+ 204:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */
+ 205:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** void I2C_ReceiveData(I2C_TypeDef *i2c ,uint8_t slv_addr,uint8_t data_addr,uint8_t *data,uint32_t da
+ 206:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 800              		.loc 1 206 1 is_stmt 1 view -0
+ 801              		.cfi_startproc
+ 802              		@ args = 4, pretend = 0, frame = 0
+ 803              		@ frame_needed = 0, uses_anonymous_args = 0
+ 804              		@ link register save eliminated.
+ 805              		.loc 1 206 1 is_stmt 0 view .LVU249
+ 806 0000 F0B4     		push	{r4, r5, r6, r7}
+ 807              		.cfi_def_cfa_offset 16
+ 808              		.cfi_offset 4, -16
+ 809              		.cfi_offset 5, -12
+ 810              		.cfi_offset 6, -8
+ 811              		.cfi_offset 7, -4
+ 207:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	uint32_t i;
+ 208:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 209:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = (slv_addr <<1) |0;
+ 210:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 812              		.loc 1 210 10 view .LVU250
+ 813 0002 9024     		movs	r4, #144
+ 207:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	uint32_t i;
+ 814              		.loc 1 207 2 is_stmt 1 view .LVU251
+ 209:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 815              		.loc 1 209 2 view .LVU252
+ 209:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 816              		.loc 1 209 28 is_stmt 0 view .LVU253
+ 817 0004 4D00     		lsls	r5, r1, #1
+ 206:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	uint32_t i;
+ 818              		.loc 1 206 1 view .LVU254
+ 819 0006 0499     		ldr	r1, [sp, #16]
+ 820              	.LVL38:
+ 209:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 821              		.loc 1 209 11 view .LVU255
+ 822 0008 8560     		str	r5, [r0, #8]
+ 823              		.loc 1 210 2 is_stmt 1 view .LVU256
+ 824              		.loc 1 210 10 is_stmt 0 view .LVU257
+ 825 000a C460     		str	r4, [r0, #12]
+ 211:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 826              		.loc 1 211 2 is_stmt 1 view .LVU258
+ 827              	.L98:
+ 828              		.loc 1 211 27 discriminator 1 view .LVU259
+ 829              		.loc 1 211 11 is_stmt 0 discriminator 1 view .LVU260
+ 830 000c C468     		ldr	r4, [r0, #12]
+ 831              		.loc 1 211 7 discriminator 1 view .LVU261
+ 832 000e A607     		lsls	r6, r4, #30
+ 833 0010 FCD4     		bmi	.L98
+ 834              	.L99:
+ 212:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 835              		.loc 1 212 29 is_stmt 1 discriminator 1 view .LVU262
+ 836              		.loc 1 212 11 is_stmt 0 discriminator 1 view .LVU263
+ 837 0012 C468     		ldr	r4, [r0, #12]
+ 838              		.loc 1 212 7 discriminator 1 view .LVU264
+ 839 0014 2406     		lsls	r4, r4, #24
+ 840 0016 FCD4     		bmi	.L99
+ 213:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 214:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = data_addr;
+ 841              		.loc 1 214 2 is_stmt 1 view .LVU265
+ 215:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_WR;//stop
+ 842              		.loc 1 215 10 is_stmt 0 view .LVU266
+ 843 0018 1024     		movs	r4, #16
+ 214:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_WR;//stop
+ 844              		.loc 1 214 11 view .LVU267
+ 845 001a 8260     		str	r2, [r0, #8]
+ 846              		.loc 1 215 2 is_stmt 1 view .LVU268
+ 847              		.loc 1 215 10 is_stmt 0 view .LVU269
+ 848 001c C460     		str	r4, [r0, #12]
+ 216:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 849              		.loc 1 216 2 is_stmt 1 view .LVU270
+ 850              	.LVL39:
+ 851              	.L100:
+ 852              		.loc 1 216 27 discriminator 1 view .LVU271
+ 853              		.loc 1 216 11 is_stmt 0 discriminator 1 view .LVU272
+ 854 001e C268     		ldr	r2, [r0, #12]
+ 855              		.loc 1 216 7 discriminator 1 view .LVU273
+ 856 0020 9707     		lsls	r7, r2, #30
+ 857 0022 FCD4     		bmi	.L100
+ 858              	.L101:
+ 217:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 859              		.loc 1 217 29 is_stmt 1 discriminator 1 view .LVU274
+ 860              		.loc 1 217 11 is_stmt 0 discriminator 1 view .LVU275
+ 861 0024 C268     		ldr	r2, [r0, #12]
+ 862              		.loc 1 217 7 discriminator 1 view .LVU276
+ 863 0026 1606     		lsls	r6, r2, #24
+ 864 0028 FCD4     		bmi	.L101
+ 218:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 219:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->TXR = (slv_addr <<1) |1;	
+ 865              		.loc 1 219 2 is_stmt 1 view .LVU277
+ 220:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 866              		.loc 1 220 10 is_stmt 0 view .LVU278
+ 867 002a 9022     		movs	r2, #144
+ 219:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 868              		.loc 1 219 28 view .LVU279
+ 869 002c 45F00105 		orr	r5, r5, #1
+ 219:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 870              		.loc 1 219 11 view .LVU280
+ 871 0030 8560     		str	r5, [r0, #8]
+ 872              		.loc 1 220 2 is_stmt 1 view .LVU281
+ 873              		.loc 1 220 10 is_stmt 0 view .LVU282
+ 874 0032 C260     		str	r2, [r0, #12]
+ 221:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 875              		.loc 1 221 2 is_stmt 1 view .LVU283
+ 876              	.L102:
+ 877              		.loc 1 221 27 discriminator 1 view .LVU284
+ 878              		.loc 1 221 11 is_stmt 0 discriminator 1 view .LVU285
+ 879 0034 C268     		ldr	r2, [r0, #12]
+ 880              		.loc 1 221 7 discriminator 1 view .LVU286
+ 881 0036 9407     		lsls	r4, r2, #30
+ 882 0038 FCD4     		bmi	.L102
+ 883              	.L103:
+ 222:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack	
+ 884              		.loc 1 222 29 is_stmt 1 discriminator 1 view .LVU287
+ 885              		.loc 1 222 11 is_stmt 0 discriminator 1 view .LVU288
+ 886 003a C268     		ldr	r2, [r0, #12]
+ 887              		.loc 1 222 7 discriminator 1 view .LVU289
+ 888 003c 1206     		lsls	r2, r2, #24
+ 889 003e FCD4     		bmi	.L103
+ 890              	.LVL40:
+ 223:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 224:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   for(i=0;i<data_size;i++)
+ 891              		.loc 1 224 3 view .LVU290
+ 892 0040 A1B1     		cbz	r1, .L105
+ 225:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	{
+ 226:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		if((data_size-1) == i)
+ 227:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		{
+ 228:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 			i2c->CR = (I2C_CMD_ACK|I2C_CMD_STO|I2C_CMD_RD);//send nack
+ 229:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		}
+ 230:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		else
+ 231:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		{
+ 232:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 			i2c->CR = (~I2C_CMD_ACK&I2C_CMD_RD);//send ack
+ 893              		.loc 1 232 12 view .LVU291
+ 894 0042 2026     		movs	r6, #32
+ 228:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		}
+ 895              		.loc 1 228 12 view .LVU292
+ 896 0044 6827     		movs	r7, #104
+ 897 0046 5D18     		adds	r5, r3, r1
+ 898 0048 013D     		subs	r5, r5, #1
+ 899 004a 0139     		subs	r1, r1, #1
+ 900 004c 5A1E     		subs	r2, r3, #1
+ 901 004e C3F10104 		rsb	r4, r3, #1
+ 902              	.LVL41:
+ 903              	.L109:
+ 226:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		{
+ 904              		.loc 1 226 3 is_stmt 1 view .LVU293
+ 226:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		{
+ 905              		.loc 1 226 5 is_stmt 0 view .LVU294
+ 906 0052 A318     		adds	r3, r4, r2
+ 907 0054 8B42     		cmp	r3, r1
+ 228:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		}
+ 908              		.loc 1 228 4 is_stmt 1 view .LVU295
+ 228:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		}
+ 909              		.loc 1 228 12 is_stmt 0 view .LVU296
+ 910 0056 0CBF     		ite	eq
+ 911 0058 C760     		streq	r7, [r0, #12]
+ 912              		.loc 1 232 4 is_stmt 1 view .LVU297
+ 913              		.loc 1 232 12 is_stmt 0 view .LVU298
+ 914 005a C660     		strne	r6, [r0, #12]
+ 915              	.L108:
+ 233:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		}
+ 234:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		
+ 235:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		while(i2c->SR&I2C_SR_TIP);
+ 916              		.loc 1 235 28 is_stmt 1 discriminator 1 view .LVU299
+ 917              		.loc 1 235 12 is_stmt 0 discriminator 1 view .LVU300
+ 918 005c C368     		ldr	r3, [r0, #12]
+ 919              		.loc 1 235 8 discriminator 1 view .LVU301
+ 920 005e 9B07     		lsls	r3, r3, #30
+ 921 0060 FCD4     		bmi	.L108
+ 236:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		data[i] = i2c->RXR;
+ 922              		.loc 1 236 3 is_stmt 1 discriminator 2 view .LVU302
+ 923              		.loc 1 236 16 is_stmt 0 discriminator 2 view .LVU303
+ 924 0062 8368     		ldr	r3, [r0, #8]
+ 925              		.loc 1 236 11 discriminator 2 view .LVU304
+ 926 0064 02F8013F 		strb	r3, [r2, #1]!
+ 927              	.LVL42:
+ 224:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	{
+ 928              		.loc 1 224 3 discriminator 2 view .LVU305
+ 929 0068 AA42     		cmp	r2, r5
+ 930 006a F2D1     		bne	.L109
+ 931              	.LVL43:
+ 932              	.L105:
+ 237:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	}
+ 238:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 239:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_BUSY);
+ 933              		.loc 1 239 28 is_stmt 1 discriminator 1 view .LVU306
+ 934              		.loc 1 239 11 is_stmt 0 discriminator 1 view .LVU307
+ 935 006c C368     		ldr	r3, [r0, #12]
+ 936              		.loc 1 239 7 discriminator 1 view .LVU308
+ 937 006e 5B06     		lsls	r3, r3, #25
+ 938 0070 FCD4     		bmi	.L105
+ 240:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 939              		.loc 1 240 1 view .LVU309
+ 940 0072 F0BC     		pop	{r4, r5, r6, r7}
+ 941              		.cfi_restore 7
+ 942              		.cfi_restore 6
+ 943              		.cfi_restore 5
+ 944              		.cfi_restore 4
+ 945              		.cfi_def_cfa_offset 0
+ 946              	.LVL44:
+ 947              		.loc 1 240 1 view .LVU310
+ 948 0074 7047     		bx	lr
+ 949              		.cfi_endproc
+ 950              	.LFE37:
+ 952 0076 00BF     		.section	.text.I2C_SendBytes,"ax",%progbits
+ 953              		.align	1
+ 954              		.p2align 2,,3
+ 955              		.global	I2C_SendBytes
+ 956              		.syntax unified
+ 957              		.thumb
+ 958              		.thumb_func
+ 959              		.fpu softvfp
+ 961              	I2C_SendBytes:
+ 962              	.LVL45:
+ 963              	.LFB38:
+ 241:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 242:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+ 243:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param i2c is I2C Master address
+ 244:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param slv_addr is I2C slave address
+ 245:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param data_start_address is The first data address
+ 246:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param data is the buff of the send bytes
+ 247:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @return No returns
+ 248:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief Send the data to the serial bus.
+ 249:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */
+ 250:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** void I2C_SendBytes(I2C_TypeDef *i2c ,uint8_t slv_address,uint8_t data_start_address,uint8_t *data,i
+ 251:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 964              		.loc 1 251 1 is_stmt 1 view -0
+ 965              		.cfi_startproc
+ 966              		@ args = 4, pretend = 0, frame = 0
+ 967              		@ frame_needed = 0, uses_anonymous_args = 0
+ 968              		.loc 1 251 1 is_stmt 0 view .LVU312
+ 969 0000 2DE9F043 		push	{r4, r5, r6, r7, r8, r9, lr}
+ 970              		.cfi_def_cfa_offset 28
+ 971              		.cfi_offset 4, -28
+ 972              		.cfi_offset 5, -24
+ 973              		.cfi_offset 6, -20
+ 974              		.cfi_offset 7, -16
+ 975              		.cfi_offset 8, -12
+ 976              		.cfi_offset 9, -8
+ 977              		.cfi_offset 14, -4
+ 978              		.loc 1 251 1 view .LVU313
+ 979 0004 079E     		ldr	r6, [sp, #28]
+ 252:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	int32_t i;
+ 980              		.loc 1 252 2 is_stmt 1 view .LVU314
+ 253:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 254:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	for(i=0;i<data_num;i++)
+ 981              		.loc 1 254 2 view .LVU315
+ 982              	.LVL46:
+ 983              		.loc 1 254 2 is_stmt 0 view .LVU316
+ 984 0006 002E     		cmp	r6, #0
+ 985 0008 3ADD     		ble	.L121
+ 986 000a 5D1E     		subs	r5, r3, #1
+ 987              	.LBB62:
+ 988              	.LBB63:
+ 989              	.LBB64:
+ 990              	.LBB65:
+ 991              	.LBB66:
+ 992              	.LBB67:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 993              		.loc 1 64 41 view .LVU317
+ 994 000c 2C46     		mov	r4, r5
+ 995              	.LBE67:
+ 996              	.LBE66:
+ 997              	.LBE65:
+ 998              	.LBE64:
+ 102:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 999              		.loc 1 102 10 view .LVU318
+ 1000 000e 4FF0900E 		mov	lr, #144
+ 107:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1001              		.loc 1 107 10 view .LVU319
+ 1002 0012 4FF0100C 		mov	ip, #16
+ 112:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1003              		.loc 1 112 10 view .LVU320
+ 1004 0016 5027     		movs	r7, #80
+ 1005              	.LBB77:
+ 1006              	.LBB74:
+ 1007              	.LBB71:
+ 1008              	.LBB68:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1009              		.loc 1 64 41 view .LVU321
+ 1010 0018 1A4B     		ldr	r3, .L146
+ 1011              	.LVL47:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1012              		.loc 1 64 41 view .LVU322
+ 1013 001a 3544     		add	r5, r5, r6
+ 1014 001c 1E68     		ldr	r6, [r3]
+ 1015 001e 121B     		subs	r2, r2, r4
+ 1016              	.LVL48:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1017              		.loc 1 64 41 view .LVU323
+ 1018              	.LBE68:
+ 1019              	.LBE71:
+ 1020              	.LBE74:
+ 1021              	.LBE77:
+ 101:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;
+ 1022              		.loc 1 101 31 view .LVU324
+ 1023 0020 4900     		lsls	r1, r1, #1
+ 1024              	.LVL49:
+ 1025              	.LBB78:
+ 1026              	.LBB75:
+ 1027              	.LBB72:
+ 1028              	.LBB69:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1029              		.loc 1 64 41 view .LVU325
+ 1030 0022 760B     		lsrs	r6, r6, #13
+ 1031              	.LVL50:
+ 1032              	.L132:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1033              		.loc 1 64 41 view .LVU326
+ 1034              	.LBE69:
+ 1035              	.LBE72:
+ 1036              	.LBE75:
+ 1037              	.LBE78:
+ 1038              	.LBE63:
+ 1039              	.LBE62:
+ 255:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	{
+ 256:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		I2C_SendByte(i2c,slv_address,data_start_address+i,data[i]);
+ 1040              		.loc 1 256 3 is_stmt 1 discriminator 3 view .LVU327
+ 1041 0024 1319     		adds	r3, r2, r4
+ 1042 0026 DBB2     		uxtb	r3, r3
+ 1043 0028 14F8019F 		ldrb	r9, [r4, #1]!	@ zero_extendqisi2
+ 1044              	.LVL51:
+ 1045              	.LBB81:
+ 1046              	.LBI62:
+  99:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 1047              		.loc 1 99 6 discriminator 3 view .LVU328
+ 1048              	.LBB80:
+ 101:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;
+ 1049              		.loc 1 101 2 discriminator 3 view .LVU329
+ 101:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;
+ 1050              		.loc 1 101 11 is_stmt 0 discriminator 3 view .LVU330
+ 1051 002c 8160     		str	r1, [r0, #8]
+ 1052              	.LVL52:
+ 102:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1053              		.loc 1 102 2 is_stmt 1 discriminator 3 view .LVU331
+ 102:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1054              		.loc 1 102 10 is_stmt 0 discriminator 3 view .LVU332
+ 1055 002e C0F80CE0 		str	lr, [r0, #12]
+ 103:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 1056              		.loc 1 103 2 is_stmt 1 discriminator 3 view .LVU333
+ 1057              	.L123:
+ 103:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 1058              		.loc 1 103 27 view .LVU334
+ 103:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 1059              		.loc 1 103 11 is_stmt 0 view .LVU335
+ 1060 0032 D0F80C80 		ldr	r8, [r0, #12]
+ 103:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 1061              		.loc 1 103 7 view .LVU336
+ 1062 0036 18F0020F 		tst	r8, #2
+ 1063 003a FAD1     		bne	.L123
+ 1064              	.L124:
+ 104:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 1065              		.loc 1 104 29 is_stmt 1 view .LVU337
+ 104:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 1066              		.loc 1 104 11 is_stmt 0 view .LVU338
+ 1067 003c D0F80C80 		ldr	r8, [r0, #12]
+ 104:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 1068              		.loc 1 104 7 view .LVU339
+ 1069 0040 18F0800F 		tst	r8, #128
+ 1070 0044 FAD1     		bne	.L124
+ 106:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_WR);
+ 1071              		.loc 1 106 2 is_stmt 1 view .LVU340
+ 106:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_WR);
+ 1072              		.loc 1 106 11 is_stmt 0 view .LVU341
+ 1073 0046 8360     		str	r3, [r0, #8]
+ 107:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1074              		.loc 1 107 2 is_stmt 1 view .LVU342
+ 107:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1075              		.loc 1 107 10 is_stmt 0 view .LVU343
+ 1076 0048 C0F80CC0 		str	ip, [r0, #12]
+ 108:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1077              		.loc 1 108 2 is_stmt 1 view .LVU344
+ 1078              	.LVL53:
+ 1079              	.L125:
+ 108:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1080              		.loc 1 108 27 view .LVU345
+ 108:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1081              		.loc 1 108 11 is_stmt 0 view .LVU346
+ 1082 004c C368     		ldr	r3, [r0, #12]
+ 108:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1083              		.loc 1 108 7 view .LVU347
+ 1084 004e 9B07     		lsls	r3, r3, #30
+ 1085 0050 FCD4     		bmi	.L125
+ 1086              	.L126:
+ 109:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1087              		.loc 1 109 29 is_stmt 1 view .LVU348
+ 109:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1088              		.loc 1 109 11 is_stmt 0 view .LVU349
+ 1089 0052 C368     		ldr	r3, [r0, #12]
+ 109:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1090              		.loc 1 109 7 view .LVU350
+ 1091 0054 1B06     		lsls	r3, r3, #24
+ 1092 0056 FCD4     		bmi	.L126
+ 111:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STO|I2C_CMD_WR);
+ 1093              		.loc 1 111 2 is_stmt 1 view .LVU351
+ 111:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STO|I2C_CMD_WR);
+ 1094              		.loc 1 111 11 is_stmt 0 view .LVU352
+ 1095 0058 C0F80890 		str	r9, [r0, #8]
+ 112:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1096              		.loc 1 112 2 is_stmt 1 view .LVU353
+ 112:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1097              		.loc 1 112 10 is_stmt 0 view .LVU354
+ 1098 005c C760     		str	r7, [r0, #12]
+ 113:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1099              		.loc 1 113 2 is_stmt 1 view .LVU355
+ 1100              	.LVL54:
+ 1101              	.LBB79:
+ 1102              	.LBI64:
+  99:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 1103              		.loc 1 99 6 view .LVU356
+ 1104              	.L127:
+ 1105              	.LBB76:
+ 113:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1106              		.loc 1 113 27 view .LVU357
+ 113:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1107              		.loc 1 113 11 is_stmt 0 view .LVU358
+ 1108 005e C368     		ldr	r3, [r0, #12]
+ 113:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1109              		.loc 1 113 7 view .LVU359
+ 1110 0060 9B07     		lsls	r3, r3, #30
+ 1111 0062 FCD4     		bmi	.L127
+ 1112              	.L128:
+ 114:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_BUSY);
+ 1113              		.loc 1 114 29 is_stmt 1 view .LVU360
+ 114:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_BUSY);
+ 1114              		.loc 1 114 11 is_stmt 0 view .LVU361
+ 1115 0064 C368     		ldr	r3, [r0, #12]
+ 114:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_BUSY);
+ 1116              		.loc 1 114 7 view .LVU362
+ 1117 0066 1B06     		lsls	r3, r3, #24
+ 1118 0068 FCD4     		bmi	.L128
+ 1119              	.L129:
+ 115:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1120              		.loc 1 115 28 is_stmt 1 view .LVU363
+ 115:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1121              		.loc 1 115 11 is_stmt 0 view .LVU364
+ 1122 006a C368     		ldr	r3, [r0, #12]
+ 115:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1123              		.loc 1 115 7 view .LVU365
+ 1124 006c 5B06     		lsls	r3, r3, #25
+ 1125 006e FCD4     		bmi	.L129
+ 117:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1126              		.loc 1 117 2 is_stmt 1 view .LVU366
+ 1127 0070 0323     		movs	r3, #3
+ 1128              	.LVL55:
+ 1129              	.LBB73:
+ 1130              	.LBI66:
+  62:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 1131              		.loc 1 62 6 view .LVU367
+ 1132              	.LBB70:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1133              		.loc 1 64 3 view .LVU368
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1134              		.loc 1 64 24 is_stmt 0 view .LVU369
+ 1135 0072 03FB06F3 		mul	r3, r3, r6
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1136              		.loc 1 64 3 view .LVU370
+ 1137 0076 0BB1     		cbz	r3, .L130
+ 1138              	.L131:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1139              		.loc 1 64 74 is_stmt 1 view .LVU371
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1140              		.loc 1 64 3 is_stmt 0 view .LVU372
+ 1141 0078 013B     		subs	r3, r3, #1
+ 1142 007a FDD1     		bne	.L131
+ 1143              	.L130:
+ 1144              	.LVL56:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1145              		.loc 1 64 3 view .LVU373
+ 1146              	.LBE70:
+ 1147              	.LBE73:
+ 1148              	.LBE76:
+ 1149              	.LBE79:
+ 1150              	.LBE80:
+ 1151              	.LBE81:
+ 254:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	{
+ 1152              		.loc 1 254 2 view .LVU374
+ 1153 007c AC42     		cmp	r4, r5
+ 1154 007e D1D1     		bne	.L132
+ 1155              	.LVL57:
+ 1156              	.L121:
+ 257:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	}
+ 258:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1157              		.loc 1 258 1 view .LVU375
+ 1158 0080 BDE8F083 		pop	{r4, r5, r6, r7, r8, r9, pc}
+ 1159              	.LVL58:
+ 1160              	.L147:
+ 1161              		.loc 1 258 1 view .LVU376
+ 1162              		.align	2
+ 1163              	.L146:
+ 1164 0084 00000000 		.word	SystemCoreClock
+ 1165              		.cfi_endproc
+ 1166              	.LFE38:
+ 1168              		.section	.text.I2C_ReadBytes,"ax",%progbits
+ 1169              		.align	1
+ 1170              		.p2align 2,,3
+ 1171              		.global	I2C_ReadBytes
+ 1172              		.syntax unified
+ 1173              		.thumb
+ 1174              		.thumb_func
+ 1175              		.fpu softvfp
+ 1177              	I2C_ReadBytes:
+ 1178              	.LVL59:
+ 1179              	.LFB39:
+ 259:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 260:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+ 261:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param i2c is I2C Master address
+ 262:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param slv_addr is I2C slave address
+ 263:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param data_start_address is The first data address
+ 264:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param data is the buff of the read bytes
+ 265:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param data_num is the number of the data will be read
+ 266:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @return uint8_t receives character
+ 267:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief Send the data to the serial bus.
+ 268:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */
+ 269:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** void I2C_ReadBytes(I2C_TypeDef *i2c ,uint8_t slv_address,uint8_t data_start_address,uint8_t *data,i
+ 270:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 1180              		.loc 1 270 1 is_stmt 1 view -0
+ 1181              		.cfi_startproc
+ 1182              		@ args = 4, pretend = 0, frame = 0
+ 1183              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1184              		.loc 1 270 1 is_stmt 0 view .LVU378
+ 1185 0000 2DE9F047 		push	{r4, r5, r6, r7, r8, r9, r10, lr}
+ 1186              		.cfi_def_cfa_offset 32
+ 1187              		.cfi_offset 4, -32
+ 1188              		.cfi_offset 5, -28
+ 1189              		.cfi_offset 6, -24
+ 1190              		.cfi_offset 7, -20
+ 1191              		.cfi_offset 8, -16
+ 1192              		.cfi_offset 9, -12
+ 1193              		.cfi_offset 10, -8
+ 1194              		.cfi_offset 14, -4
+ 1195              		.loc 1 270 1 view .LVU379
+ 1196 0004 089D     		ldr	r5, [sp, #32]
+ 271:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	int32_t i;
+ 1197              		.loc 1 271 2 is_stmt 1 view .LVU380
+ 272:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 273:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	for(i=0;i<data_num;i++)
+ 1198              		.loc 1 273 2 view .LVU381
+ 1199              	.LVL60:
+ 1200              		.loc 1 273 2 is_stmt 0 view .LVU382
+ 1201 0006 002D     		cmp	r5, #0
+ 1202 0008 3FDD     		ble	.L148
+ 1203 000a 5F1E     		subs	r7, r3, #1
+ 1204              	.LBB88:
+ 1205              	.LBB89:
+ 184:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 1206              		.loc 1 184 28 view .LVU383
+ 1207 000c 3C46     		mov	r4, r7
+ 175:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 1208              		.loc 1 175 10 view .LVU384
+ 1209 000e 9026     		movs	r6, #144
+ 180:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1210              		.loc 1 180 10 view .LVU385
+ 1211 0010 4FF01009 		mov	r9, #16
+ 1212              	.LBB90:
+ 1213              	.LBB91:
+ 189:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 1214              		.loc 1 189 10 view .LVU386
+ 1215 0014 4FF06808 		mov	r8, #104
+ 1216              	.LBE91:
+ 1217              	.LBE90:
+ 174:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 1218              		.loc 1 174 28 view .LVU387
+ 1219 0018 4900     		lsls	r1, r1, #1
+ 1220              	.LVL61:
+ 174:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 1221              		.loc 1 174 28 view .LVU388
+ 1222 001a DFF874E0 		ldr	lr, .L173
+ 1223 001e 2F44     		add	r7, r7, r5
+ 1224 0020 121B     		subs	r2, r2, r4
+ 1225              	.LVL62:
+ 184:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 1226              		.loc 1 184 28 view .LVU389
+ 1227 0022 41F0010C 		orr	ip, r1, #1
+ 1228              	.LVL63:
+ 1229              	.L159:
+ 184:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 1230              		.loc 1 184 28 view .LVU390
+ 1231              	.LBE89:
+ 1232              	.LBE88:
+ 274:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	{
+ 275:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 		data[i]=I2C_ReceiveByte(i2c,slv_address,data_start_address+i);
+ 1233              		.loc 1 275 3 is_stmt 1 discriminator 3 view .LVU391
+ 1234 0026 1319     		adds	r3, r2, r4
+ 1235              	.LBB102:
+ 1236              	.LBB100:
+ 174:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 1237              		.loc 1 174 11 is_stmt 0 discriminator 3 view .LVU392
+ 1238 0028 8160     		str	r1, [r0, #8]
+ 1239 002a DBB2     		uxtb	r3, r3
+ 1240              	.LVL64:
+ 174:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 1241              		.loc 1 174 11 discriminator 3 view .LVU393
+ 1242              	.LBE100:
+ 1243              	.LBI88:
+ 170:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 1244              		.loc 1 170 9 is_stmt 1 discriminator 3 view .LVU394
+ 1245              	.LBB101:
+ 172:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1246              		.loc 1 172 2 discriminator 3 view .LVU395
+ 174:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_STA|I2C_CMD_WR;	
+ 1247              		.loc 1 174 2 discriminator 3 view .LVU396
+ 175:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 1248              		.loc 1 175 2 discriminator 3 view .LVU397
+ 175:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 1249              		.loc 1 175 10 is_stmt 0 discriminator 3 view .LVU398
+ 1250 002c C660     		str	r6, [r0, #12]
+ 176:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 1251              		.loc 1 176 2 is_stmt 1 discriminator 3 view .LVU399
+ 1252              	.L150:
+ 176:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 1253              		.loc 1 176 27 view .LVU400
+ 176:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 1254              		.loc 1 176 11 is_stmt 0 view .LVU401
+ 1255 002e C568     		ldr	r5, [r0, #12]
+ 176:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack-----Over Here
+ 1256              		.loc 1 176 7 view .LVU402
+ 1257 0030 AD07     		lsls	r5, r5, #30
+ 1258 0032 FCD4     		bmi	.L150
+ 1259              	.L151:
+ 177:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1260              		.loc 1 177 29 is_stmt 1 view .LVU403
+ 177:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1261              		.loc 1 177 11 is_stmt 0 view .LVU404
+ 1262 0034 C568     		ldr	r5, [r0, #12]
+ 177:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1263              		.loc 1 177 7 view .LVU405
+ 1264 0036 2D06     		lsls	r5, r5, #24
+ 1265 0038 FCD4     		bmi	.L151
+ 179:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_WR;//stop
+ 1266              		.loc 1 179 2 is_stmt 1 view .LVU406
+ 179:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = I2C_CMD_WR;//stop
+ 1267              		.loc 1 179 11 is_stmt 0 view .LVU407
+ 1268 003a 8360     		str	r3, [r0, #8]
+ 180:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1269              		.loc 1 180 2 is_stmt 1 view .LVU408
+ 180:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);//wait TIP
+ 1270              		.loc 1 180 10 is_stmt 0 view .LVU409
+ 1271 003c C0F80C90 		str	r9, [r0, #12]
+ 181:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1272              		.loc 1 181 2 is_stmt 1 view .LVU410
+ 1273              	.L152:
+ 181:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1274              		.loc 1 181 27 view .LVU411
+ 181:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1275              		.loc 1 181 11 is_stmt 0 view .LVU412
+ 1276 0040 C368     		ldr	r3, [r0, #12]
+ 181:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack
+ 1277              		.loc 1 181 7 view .LVU413
+ 1278 0042 9B07     		lsls	r3, r3, #30
+ 1279 0044 FCD4     		bmi	.L152
+ 1280              	.L153:
+ 182:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1281              		.loc 1 182 29 is_stmt 1 view .LVU414
+ 182:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1282              		.loc 1 182 11 is_stmt 0 view .LVU415
+ 1283 0046 C368     		ldr	r3, [r0, #12]
+ 182:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1284              		.loc 1 182 7 view .LVU416
+ 1285 0048 1D06     		lsls	r5, r3, #24
+ 1286 004a FCD4     		bmi	.L153
+ 184:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 1287              		.loc 1 184 2 is_stmt 1 view .LVU417
+ 184:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CR = (I2C_CMD_STA|I2C_CMD_WR);
+ 1288              		.loc 1 184 11 is_stmt 0 view .LVU418
+ 1289 004c C0F808C0 		str	ip, [r0, #8]
+ 185:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 1290              		.loc 1 185 2 is_stmt 1 view .LVU419
+ 185:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 1291              		.loc 1 185 10 is_stmt 0 view .LVU420
+ 1292 0050 C660     		str	r6, [r0, #12]
+ 186:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack	
+ 1293              		.loc 1 186 2 is_stmt 1 view .LVU421
+ 1294              	.LVL65:
+ 1295              	.LBB99:
+ 1296              	.LBI90:
+ 170:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 1297              		.loc 1 170 9 view .LVU422
+ 1298              	.L154:
+ 1299              	.LBB98:
+ 186:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack	
+ 1300              		.loc 1 186 27 view .LVU423
+ 186:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack	
+ 1301              		.loc 1 186 11 is_stmt 0 view .LVU424
+ 1302 0052 C368     		ldr	r3, [r0, #12]
+ 186:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_RXACK);//wait ack	
+ 1303              		.loc 1 186 7 view .LVU425
+ 1304 0054 9B07     		lsls	r3, r3, #30
+ 1305 0056 FCD4     		bmi	.L154
+ 1306              	.L155:
+ 187:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 1307              		.loc 1 187 29 is_stmt 1 view .LVU426
+ 187:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 1308              		.loc 1 187 11 is_stmt 0 view .LVU427
+ 1309 0058 C368     		ldr	r3, [r0, #12]
+ 187:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 1310              		.loc 1 187 7 view .LVU428
+ 1311 005a 1D06     		lsls	r5, r3, #24
+ 1312 005c FCD4     		bmi	.L155
+ 189:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 1313              		.loc 1 189 2 is_stmt 1 view .LVU429
+ 189:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	while(i2c->SR&I2C_SR_TIP);
+ 1314              		.loc 1 189 10 is_stmt 0 view .LVU430
+ 1315 005e C0F80C80 		str	r8, [r0, #12]
+ 190:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	data = i2c->RXR;
+ 1316              		.loc 1 190 2 is_stmt 1 view .LVU431
+ 1317              	.L156:
+ 190:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	data = i2c->RXR;
+ 1318              		.loc 1 190 27 view .LVU432
+ 190:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	data = i2c->RXR;
+ 1319              		.loc 1 190 11 is_stmt 0 view .LVU433
+ 1320 0062 C368     		ldr	r3, [r0, #12]
+ 190:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	data = i2c->RXR;
+ 1321              		.loc 1 190 7 view .LVU434
+ 1322 0064 9B07     		lsls	r3, r3, #30
+ 1323 0066 FCD4     		bmi	.L156
+ 191:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	Delay_ms_i2c(3);
+ 1324              		.loc 1 191 2 is_stmt 1 view .LVU435
+ 1325 0068 0323     		movs	r3, #3
+ 1326              	.LBB92:
+ 1327              	.LBB93:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1328              		.loc 1 64 41 is_stmt 0 view .LVU436
+ 1329 006a DEF80050 		ldr	r5, [lr]
+ 1330              	.LBE93:
+ 1331              	.LBE92:
+ 191:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	Delay_ms_i2c(3);
+ 1332              		.loc 1 191 12 view .LVU437
+ 1333 006e D0F808A0 		ldr	r10, [r0, #8]
+ 1334              	.LBB96:
+ 1335              	.LBB94:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1336              		.loc 1 64 41 view .LVU438
+ 1337 0072 6D0B     		lsrs	r5, r5, #13
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1338              		.loc 1 64 24 view .LVU439
+ 1339 0074 03FB05F3 		mul	r3, r3, r5
+ 1340              	.LBE94:
+ 1341              	.LBE96:
+ 191:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	Delay_ms_i2c(3);
+ 1342              		.loc 1 191 7 view .LVU440
+ 1343 0078 5FFA8AF5 		uxtb	r5, r10
+ 1344              	.LVL66:
+ 192:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	
+ 1345              		.loc 1 192 2 is_stmt 1 view .LVU441
+ 1346              	.LBB97:
+ 1347              	.LBI92:
+  62:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 1348              		.loc 1 62 6 view .LVU442
+ 1349              	.LBB95:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1350              		.loc 1 64 3 view .LVU443
+ 1351 007c 0BB1     		cbz	r3, .L157
+ 1352              	.L158:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1353              		.loc 1 64 74 view .LVU444
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1354              		.loc 1 64 3 is_stmt 0 view .LVU445
+ 1355 007e 013B     		subs	r3, r3, #1
+ 1356 0080 FDD1     		bne	.L158
+ 1357              	.L157:
+ 1358              	.LVL67:
+  64:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1359              		.loc 1 64 3 view .LVU446
+ 1360              	.LBE95:
+ 1361              	.LBE97:
+ 194:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1362              		.loc 1 194 3 is_stmt 1 view .LVU447
+ 194:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1363              		.loc 1 194 3 is_stmt 0 view .LVU448
+ 1364              	.LBE98:
+ 1365              	.LBE99:
+ 194:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1366              		.loc 1 194 3 is_stmt 1 view .LVU449
+ 194:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1367              		.loc 1 194 3 is_stmt 0 view .LVU450
+ 1368              	.LBE101:
+ 1369              	.LBE102:
+ 1370              		.loc 1 275 10 view .LVU451
+ 1371 0082 04F8015F 		strb	r5, [r4, #1]!
+ 1372              	.LVL68:
+ 273:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	{
+ 1373              		.loc 1 273 2 view .LVU452
+ 1374 0086 A742     		cmp	r7, r4
+ 1375 0088 CDD1     		bne	.L159
+ 1376              	.LVL69:
+ 1377              	.L148:
+ 276:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	}
+ 277:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1378              		.loc 1 277 1 view .LVU453
+ 1379 008a BDE8F087 		pop	{r4, r5, r6, r7, r8, r9, r10, pc}
+ 1380              	.LVL70:
+ 1381              	.L174:
+ 1382              		.loc 1 277 1 view .LVU454
+ 1383 008e 00BF     		.align	2
+ 1384              	.L173:
+ 1385 0090 00000000 		.word	SystemCoreClock
+ 1386              		.cfi_endproc
+ 1387              	.LFE39:
+ 1389              		.section	.text.I2C_InterruptOpen,"ax",%progbits
+ 1390              		.align	1
+ 1391              		.p2align 2,,3
+ 1392              		.global	I2C_InterruptOpen
+ 1393              		.syntax unified
+ 1394              		.thumb
+ 1395              		.thumb_func
+ 1396              		.fpu softvfp
+ 1398              	I2C_InterruptOpen:
+ 1399              	.LVL71:
+ 1400              	.LFB40:
+ 278:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 279:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+ 280:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param I2Cx is I2C Master address
+ 281:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief Open the i2C Interrupt.
+ 282:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */
+ 283:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** void I2C_InterruptOpen(I2C_TypeDef *i2c)
+ 284:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 1401              		.loc 1 284 1 is_stmt 1 view -0
+ 1402              		.cfi_startproc
+ 1403              		@ args = 0, pretend = 0, frame = 0
+ 1404              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1405              		@ link register save eliminated.
+ 285:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CTR = I2C_CTR_IEN | i2c->CTR;
+ 1406              		.loc 1 285 2 view .LVU456
+ 1407              		.loc 1 285 30 is_stmt 0 view .LVU457
+ 1408 0000 4368     		ldr	r3, [r0, #4]
+ 1409              		.loc 1 285 25 view .LVU458
+ 1410 0002 43F04003 		orr	r3, r3, #64
+ 1411              		.loc 1 285 11 view .LVU459
+ 1412 0006 4360     		str	r3, [r0, #4]
+ 286:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1413              		.loc 1 286 1 view .LVU460
+ 1414 0008 7047     		bx	lr
+ 1415              		.cfi_endproc
+ 1416              	.LFE40:
+ 1418 000a 00BF     		.section	.text.I2C_InterruptClose,"ax",%progbits
+ 1419              		.align	1
+ 1420              		.p2align 2,,3
+ 1421              		.global	I2C_InterruptClose
+ 1422              		.syntax unified
+ 1423              		.thumb
+ 1424              		.thumb_func
+ 1425              		.fpu softvfp
+ 1427              	I2C_InterruptClose:
+ 1428              	.LVL72:
+ 1429              	.LFB41:
+ 287:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 
+ 288:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** /**
+ 289:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @param I2Cx is I2C Master address
+ 290:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   * @brief close the i2C Interrupt.
+ 291:../PERIPHERAL/Sources/gw1ns4c_i2c.c ****   */
+ 292:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** void I2C_InterruptClose(I2C_TypeDef *i2c)
+ 293:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** {
+ 1430              		.loc 1 293 1 is_stmt 1 view -0
+ 1431              		.cfi_startproc
+ 1432              		@ args = 0, pretend = 0, frame = 0
+ 1433              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1434              		@ link register save eliminated.
+ 294:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** 	i2c->CTR &= ~I2C_CTR_IEN;
+ 1435              		.loc 1 294 2 view .LVU462
+ 1436              		.loc 1 294 11 is_stmt 0 view .LVU463
+ 1437 0000 4368     		ldr	r3, [r0, #4]
+ 1438 0002 23F04003 		bic	r3, r3, #64
+ 1439 0006 4360     		str	r3, [r0, #4]
+ 295:../PERIPHERAL/Sources/gw1ns4c_i2c.c **** }
+ 1440              		.loc 1 295 1 view .LVU464
+ 1441 0008 7047     		bx	lr
+ 1442              		.cfi_endproc
+ 1443              	.LFE41:
+ 1445 000a 00BF     		.text
+ 1446              	.Letext0:
+ 1447              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 1448              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 1449              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 1450              		.file 5 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/system_gw1ns4c.h"
+ 1451              		.file 6 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\SYSTEM/gw1ns4c.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gw1ns4c_i2c.c
+d:\wintmp\ccpETz7I.s:16     .text.I2C_UnEnable:00000000 $t
+d:\wintmp\ccpETz7I.s:25     .text.I2C_UnEnable:00000000 I2C_UnEnable
+d:\wintmp\ccpETz7I.s:44     .text.I2C_Enable:00000000 $t
+d:\wintmp\ccpETz7I.s:52     .text.I2C_Enable:00000000 I2C_Enable
+d:\wintmp\ccpETz7I.s:71     .text.I2C_Rate_Set:00000000 $t
+d:\wintmp\ccpETz7I.s:79     .text.I2C_Rate_Set:00000000 I2C_Rate_Set
+d:\wintmp\ccpETz7I.s:115    .text.I2C_Rate_Set:0000001c $d
+d:\wintmp\ccpETz7I.s:120    .text.Delay_ms_i2c:00000000 $t
+d:\wintmp\ccpETz7I.s:128    .text.Delay_ms_i2c:00000000 Delay_ms_i2c
+d:\wintmp\ccpETz7I.s:178    .text.Delay_ms_i2c:00000028 $d
+d:\wintmp\ccpETz7I.s:183    .text.I2C_Init:00000000 $t
+d:\wintmp\ccpETz7I.s:191    .text.I2C_Init:00000000 I2C_Init
+d:\wintmp\ccpETz7I.s:300    .text.I2C_Init:00000038 $d
+d:\wintmp\ccpETz7I.s:305    .text.I2C_SendByte:00000000 $t
+d:\wintmp\ccpETz7I.s:313    .text.I2C_SendByte:00000000 I2C_SendByte
+d:\wintmp\ccpETz7I.s:444    .text.I2C_SendByte:00000058 $d
+d:\wintmp\ccpETz7I.s:449    .text.I2C_SendData:00000000 $t
+d:\wintmp\ccpETz7I.s:457    .text.I2C_SendData:00000000 I2C_SendData
+d:\wintmp\ccpETz7I.s:618    .text.I2C_SendData:00000078 $d
+d:\wintmp\ccpETz7I.s:623    .text.I2C_ReceiveByte:00000000 $t
+d:\wintmp\ccpETz7I.s:631    .text.I2C_ReceiveByte:00000000 I2C_ReceiveByte
+d:\wintmp\ccpETz7I.s:784    .text.I2C_ReceiveByte:00000060 $d
+d:\wintmp\ccpETz7I.s:789    .text.I2C_ReceiveData:00000000 $t
+d:\wintmp\ccpETz7I.s:797    .text.I2C_ReceiveData:00000000 I2C_ReceiveData
+d:\wintmp\ccpETz7I.s:953    .text.I2C_SendBytes:00000000 $t
+d:\wintmp\ccpETz7I.s:961    .text.I2C_SendBytes:00000000 I2C_SendBytes
+d:\wintmp\ccpETz7I.s:1164   .text.I2C_SendBytes:00000084 $d
+d:\wintmp\ccpETz7I.s:1169   .text.I2C_ReadBytes:00000000 $t
+d:\wintmp\ccpETz7I.s:1177   .text.I2C_ReadBytes:00000000 I2C_ReadBytes
+d:\wintmp\ccpETz7I.s:1385   .text.I2C_ReadBytes:00000090 $d
+d:\wintmp\ccpETz7I.s:1390   .text.I2C_InterruptOpen:00000000 $t
+d:\wintmp\ccpETz7I.s:1398   .text.I2C_InterruptOpen:00000000 I2C_InterruptOpen
+d:\wintmp\ccpETz7I.s:1419   .text.I2C_InterruptClose:00000000 $t
+d:\wintmp\ccpETz7I.s:1427   .text.I2C_InterruptClose:00000000 I2C_InterruptClose
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+                           .group:00000000 wm4.gw1ns4c_i2c.h.25.7ec116854365a5211203c11def66bb2d
+
+UNDEFINED SYMBOLS
+SystemCoreClock

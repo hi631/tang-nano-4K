@@ -1,0 +1,2372 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (exit)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+                              ./USER/ttbasic.o (fflush)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o) (__sinit)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o) (_free_r)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o) (_fwalk)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-impure.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o) (_global_impure_ptr)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (__libc_init_array)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o) (__retarget_lock_init_recursive)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o) (_malloc_r)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memcpy.o)
+                              ./USER/ttbasic.o (memcpy)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (memset)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o) (__malloc_lock)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-rand.o)
+                              ./USER/ttbasic.o (rand)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o) (_sbrk_r)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o) (__sread)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o) (_write_r)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o) (__call_exitprocs)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o) (atexit)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o) (_close_r)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o) (_fclose_r)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o) (__libc_fini_array)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o) (_lseek_r)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o) (_read_r)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o) (errno)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o) (__register_exitproc)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o) (_close)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o) (_lseek)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o) (_read)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(sbrk.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o) (_sbrk)
+c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(_exit.o)
+                              c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+arr                 0x80              ./USER/ttbasic.o
+ibuf                0x50              ./USER/ttbasic.o
+__lock___atexit_recursive_mutex
+                    0x1               c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+__lock___arc4random_mutex
+                    0x1               c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+errno               0x4               c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+sIdx                0x4               ./USER/vramdisp.o
+gstk                0x18              ./USER/ttbasic.o
+__lock___env_recursive_mutex
+                    0x1               c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+__lock___sinit_recursive_mutex
+                    0x1               c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+lstk                0x3c              ./USER/ttbasic.o
+eIdx                0x4               ./USER/vramdisp.o
+__lock___malloc_recursive_mutex
+                    0x1               c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+kinbuf              0x100             ./USER/main.o
+pd                  0x1               ./USER/vramdisp.o
+wddt                0x28              ./USER/vramdisp.o
+mdgpioi             0x4               ./USER/main.o
+cip                 0x4               ./USER/ttbasic.o
+err                 0x1               ./USER/ttbasic.o
+clp                 0x4               ./USER/ttbasic.o
+listbuf             0x800             ./USER/ttbasic.o
+gstki               0x1               ./USER/ttbasic.o
+lbuf                0x50              ./USER/ttbasic.o
+var                 0x34              ./USER/ttbasic.o
+lstki               0x1               ./USER/ttbasic.o
+__lock___at_quick_exit_mutex
+                    0x1               c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+aryex               0x400             ./USER/vramdisp.o
+__lock___dd_hash_mutex
+                    0x1               c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+__lock___tz_mutex   0x1               c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+mdgpio              0x4               ./USER/main.o
+__lock___sfp_recursive_mutex
+                    0x1               c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
+ .text          0x00000000       0x40 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+ .data          0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+ .bss           0x00000000       0x1c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+ .init_array    0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+ .fini_array    0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+ .ARM.attributes
+                0x00000000       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+ .text          0x00000000       0x74 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .ARM.exidx     0x00000000        0x8 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .ARM.attributes
+                0x00000000       0x1b c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/gw1ns4c_it.o
+ .text          0x00000000        0x0 ./USER/gw1ns4c_it.o
+ .data          0x00000000        0x0 ./USER/gw1ns4c_it.o
+ .bss           0x00000000        0x0 ./USER/gw1ns4c_it.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .group         0x00000000        0xc ./USER/main.o
+ .text          0x00000000        0x0 ./USER/main.o
+ .data          0x00000000        0x0 ./USER/main.o
+ .bss           0x00000000        0x0 ./USER/main.o
+ .text.GPIOInit
+                0x00000000       0x28 ./USER/main.o
+ .text.SPIInit  0x00000000       0x18 ./USER/main.o
+ .text.delay_ms
+                0x00000000       0x2c ./USER/main.o
+ .text.setsup   0x00000000       0x2c ./USER/main.o
+ .text.puth     0x00000000       0x1c ./USER/main.o
+ .text.puth2    0x00000000       0x34 ./USER/main.o
+ .text.puth4    0x00000000       0x5c ./USER/main.o
+ .text.puth6    0x00000000       0x84 ./USER/main.o
+ .text.puth8    0x00000000       0xa8 ./USER/main.o
+ .text.putsuart
+                0x00000000       0x18 ./USER/main.o
+ .text.getsuart
+                0x00000000       0xb8 ./USER/main.o
+ .text.ishex    0x00000000       0x20 ./USER/main.o
+ .text.getssu   0x00000000       0xf4 ./USER/main.o
+ .text.putadrhd
+                0x00000000       0xbc ./USER/main.o
+ .text.getsh    0x00000000       0x58 ./USER/main.o
+ .debug_macro   0x00000000      0xa78 ./USER/main.o
+ .debug_macro   0x00000000       0x22 ./USER/main.o
+ .debug_macro   0x00000000       0x22 ./USER/main.o
+ .debug_macro   0x00000000       0x22 ./USER/main.o
+ .debug_macro   0x00000000       0x8e ./USER/main.o
+ .debug_macro   0x00000000       0x51 ./USER/main.o
+ .debug_macro   0x00000000      0x103 ./USER/main.o
+ .debug_macro   0x00000000       0x6a ./USER/main.o
+ .debug_macro   0x00000000      0x1df ./USER/main.o
+ .debug_macro   0x00000000      0x7b7 ./USER/main.o
+ .debug_macro   0x00000000      0x314 ./USER/main.o
+ .debug_macro   0x00000000       0x6a ./USER/main.o
+ .debug_macro   0x00000000       0x3a ./USER/main.o
+ .debug_macro   0x00000000       0x7c ./USER/main.o
+ .debug_macro   0x00000000       0x22 ./USER/main.o
+ .debug_macro   0x00000000       0x94 ./USER/main.o
+ .debug_macro   0x00000000       0x58 ./USER/main.o
+ .debug_macro   0x00000000       0x34 ./USER/main.o
+ .debug_macro   0x00000000       0x1c ./USER/main.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/retarget.o
+ .text          0x00000000        0x0 ./USER/retarget.o
+ .data          0x00000000        0x0 ./USER/retarget.o
+ .bss           0x00000000        0x0 ./USER/retarget.o
+ .debug_macro   0x00000000      0xa78 ./USER/retarget.o
+ .debug_macro   0x00000000       0x22 ./USER/retarget.o
+ .debug_macro   0x00000000       0x22 ./USER/retarget.o
+ .debug_macro   0x00000000       0x22 ./USER/retarget.o
+ .debug_macro   0x00000000       0x8e ./USER/retarget.o
+ .debug_macro   0x00000000       0x51 ./USER/retarget.o
+ .debug_macro   0x00000000      0x103 ./USER/retarget.o
+ .debug_macro   0x00000000       0x6a ./USER/retarget.o
+ .debug_macro   0x00000000      0x1df ./USER/retarget.o
+ .debug_macro   0x00000000      0x7b7 ./USER/retarget.o
+ .debug_macro   0x00000000      0x314 ./USER/retarget.o
+ .debug_macro   0x00000000       0x6a ./USER/retarget.o
+ .debug_macro   0x00000000       0x3a ./USER/retarget.o
+ .debug_macro   0x00000000       0x7c ./USER/retarget.o
+ .debug_macro   0x00000000       0x22 ./USER/retarget.o
+ .debug_macro   0x00000000       0x94 ./USER/retarget.o
+ .debug_macro   0x00000000       0x58 ./USER/retarget.o
+ .debug_macro   0x00000000       0x34 ./USER/retarget.o
+ .debug_macro   0x00000000       0x1c ./USER/retarget.o
+ .debug_macro   0x00000000       0x5e ./USER/retarget.o
+ .debug_macro   0x00000000       0x18 ./USER/retarget.o
+ .debug_macro   0x00000000       0x35 ./USER/retarget.o
+ .debug_macro   0x00000000       0x34 ./USER/retarget.o
+ .debug_macro   0x00000000       0x16 ./USER/retarget.o
+ .debug_macro   0x00000000       0x97 ./USER/retarget.o
+ .debug_macro   0x00000000      0x339 ./USER/retarget.o
+ .debug_macro   0x00000000       0xfd ./USER/retarget.o
+ .debug_macro   0x00000000       0x10 ./USER/retarget.o
+ .debug_macro   0x00000000       0x16 ./USER/retarget.o
+ .debug_macro   0x00000000       0x43 ./USER/retarget.o
+ .debug_macro   0x00000000       0x34 ./USER/retarget.o
+ .debug_macro   0x00000000       0x10 ./USER/retarget.o
+ .debug_macro   0x00000000       0x58 ./USER/retarget.o
+ .debug_macro   0x00000000      0x182 ./USER/retarget.o
+ .debug_macro   0x00000000       0x10 ./USER/retarget.o
+ .debug_macro   0x00000000       0x1c ./USER/retarget.o
+ .debug_macro   0x00000000       0x52 ./USER/retarget.o
+ .debug_macro   0x00000000       0x40 ./USER/retarget.o
+ .debug_macro   0x00000000       0x10 ./USER/retarget.o
+ .debug_macro   0x00000000       0x40 ./USER/retarget.o
+ .debug_macro   0x00000000       0xd5 ./USER/retarget.o
+ .debug_macro   0x00000000       0x1c ./USER/retarget.o
+ .debug_macro   0x00000000       0x3d ./USER/retarget.o
+ .debug_macro   0x00000000       0x16 ./USER/retarget.o
+ .debug_macro   0x00000000      0x16f ./USER/retarget.o
+ .debug_macro   0x00000000       0x35 ./USER/retarget.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/ttbasic.o
+ .text          0x00000000        0x0 ./USER/ttbasic.o
+ .data          0x00000000        0x0 ./USER/ttbasic.o
+ .bss           0x00000000        0x0 ./USER/ttbasic.o
+ .text._putch   0x00000000       0x18 ./USER/ttbasic.o
+ .text._getch   0x00000000        0x4 ./USER/ttbasic.o
+ .text._kbhit   0x00000000        0x4 ./USER/ttbasic.o
+ .text.newline  0x00000000       0x28 ./USER/ttbasic.o
+ .text.getrnd   0x00000000       0x18 ./USER/ttbasic.o
+ .text.sstyle   0x00000000       0x38 ./USER/ttbasic.o
+ .text.c_toupper
+                0x00000000       0x14 ./USER/ttbasic.o
+ .text.c_isprint
+                0x00000000       0x10 ./USER/ttbasic.o
+ .text.c_isspace
+                0x00000000       0x18 ./USER/ttbasic.o
+ .text.c_isdigit
+                0x00000000       0x10 ./USER/ttbasic.o
+ .text.c_isalpha
+                0x00000000       0x14 ./USER/ttbasic.o
+ .text.c_puts   0x00000000       0x28 ./USER/ttbasic.o
+ .text.getlineno
+                0x00000000       0x18 ./USER/ttbasic.o
+ .text.getlp    0x00000000       0x2c ./USER/ttbasic.o
+ .text.getsize  0x00000000       0x24 ./USER/ttbasic.o
+ .text.getparam
+                0x00000000       0x40 ./USER/ttbasic.o
+ .text.imul     0x00000000       0x58 ./USER/ttbasic.o
+ .text.ivar     0x00000000       0x3c ./USER/ttbasic.o
+ .text.ilet     0x00000000       0x58 ./USER/ttbasic.o
+ .text.chk_sep  0x00000000       0x10 ./USER/ttbasic.o
+ .text.ipset    0x00000000       0x50 ./USER/ttbasic.o
+ .text.ipaint   0x00000000       0x50 ./USER/ttbasic.o
+ .text.irun     0x00000000       0x4c ./USER/ttbasic.o
+ .text.inew     0x00000000       0x44 ./USER/ttbasic.o
+ .rodata.i_nsb  0x00000000        0xf ./USER/ttbasic.o
+ .debug_macro   0x00000000      0xa78 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x22 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x18 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x35 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x34 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x16 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x97 ./USER/ttbasic.o
+ .debug_macro   0x00000000      0x339 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0xfd ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x10 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x16 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x43 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x34 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x10 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x58 ./USER/ttbasic.o
+ .debug_macro   0x00000000      0x182 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x10 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x6a ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x1c ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x52 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x40 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x10 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x40 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0xd5 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x1c ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x3d ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x16 ./USER/ttbasic.o
+ .debug_macro   0x00000000      0x16f ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x16 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x35 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x16 ./USER/ttbasic.o
+ .debug_macro   0x00000000       0x29 ./USER/ttbasic.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .group         0x00000000        0xc ./USER/vramdisp.o
+ .text          0x00000000        0x0 ./USER/vramdisp.o
+ .data          0x00000000        0x0 ./USER/vramdisp.o
+ .bss           0x00000000        0x0 ./USER/vramdisp.o
+ .text.set_vramadr
+                0x00000000       0x3c ./USER/vramdisp.o
+ .text.get_vramdata
+                0x00000000       0x68 ./USER/vramdisp.o
+ .text.set_vramdata
+                0x00000000       0x70 ./USER/vramdisp.o
+ .text.set_vramdata_f6
+                0x00000000       0xa8 ./USER/vramdisp.o
+ .text.set_vram
+                0x00000000       0x90 ./USER/vramdisp.o
+ .text.set_char
+                0x00000000       0x84 ./USER/vramdisp.o
+ .text.disp_vramw
+                0x00000000       0x10 ./USER/vramdisp.o
+ .text.DrawRectangle
+                0x00000000       0x4c ./USER/vramdisp.o
+ .text.point    0x00000000       0xf8 ./USER/vramdisp.o
+ .debug_macro   0x00000000      0xa78 ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x22 ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x22 ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x22 ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x8e ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x51 ./USER/vramdisp.o
+ .debug_macro   0x00000000      0x103 ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x6a ./USER/vramdisp.o
+ .debug_macro   0x00000000      0x1df ./USER/vramdisp.o
+ .debug_macro   0x00000000      0x7b7 ./USER/vramdisp.o
+ .debug_macro   0x00000000      0x314 ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x6a ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x3a ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x7c ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x22 ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x94 ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x58 ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x34 ./USER/vramdisp.o
+ .debug_macro   0x00000000       0x1c ./USER/vramdisp.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .group         0x00000000        0xc ./SYSTEM/system_gw1ns4c.o
+ .text          0x00000000        0x0 ./SYSTEM/system_gw1ns4c.o
+ .data          0x00000000        0x0 ./SYSTEM/system_gw1ns4c.o
+ .bss           0x00000000        0x0 ./SYSTEM/system_gw1ns4c.o
+ .text.SystemCoreClockUpdate
+                0x00000000       0x2c ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000      0xa78 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x22 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x22 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x22 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x8e ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x51 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000      0x103 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x6a ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000      0x1df ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000      0x7b7 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000      0x314 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x6a ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x3a ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x7c ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x22 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x94 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x58 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x34 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00000000       0x1c ./SYSTEM/system_gw1ns4c.o
+ .data          0x00000000        0x0 ./STARTUP/startup_gw1ns4c.o
+ .bss           0x00000000        0x0 ./STARTUP/startup_gw1ns4c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .data          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .bss           0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_Init
+                0x00000000       0xc8 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_SetOutEnable
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_ClrOutEnable
+                0x00000000        0x4 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_SetBit
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_ResetBit
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_GetOutEnable
+                0x00000000        0x4 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_SetAltFunc
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_ClrAltFunc
+                0x00000000        0x4 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_GetAltFunc
+                0x00000000        0x4 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_IntClear
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_GetIntStatus
+                0x00000000        0x4 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_SetIntEnable
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_ClrIntEnable
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_SetIntHighLevel
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_SetIntRisingEdge
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_SetIntLowLevel
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_SetIntFallingEdge
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .text.GPIO_MaskedWrite
+                0x00000000       0x18 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000      0xa78 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x8e ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x51 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000      0x103 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000      0x1df ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000      0x7b7 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000      0x314 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x7c ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x94 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x58 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x34 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .data          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .bss           0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_UnEnable
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_Enable
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_Rate_Set
+                0x00000000       0x20 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.Delay_ms_i2c
+                0x00000000       0x2c ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_Init
+                0x00000000       0x3c ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_SendByte
+                0x00000000       0x5c ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_SendData
+                0x00000000       0x7c ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_ReceiveByte
+                0x00000000       0x64 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_ReceiveData
+                0x00000000       0x78 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_SendBytes
+                0x00000000       0x88 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_ReadBytes
+                0x00000000       0x94 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_InterruptOpen
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .text.I2C_InterruptClose
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_info    0x00000000      0x8f1 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_abbrev  0x00000000      0x314 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_loc     0x00000000      0x727 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_aranges
+                0x00000000       0x80 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_ranges  0x00000000      0x1d8 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000      0x100 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000      0xa78 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x8e ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x51 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000      0x103 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000      0x1df ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000      0x7b7 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000      0x314 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x3a ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x7c ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x94 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x34 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_macro   0x00000000       0x52 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_line    0x00000000      0xc04 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_str     0x00000000     0x89d9 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .comment       0x00000000       0x77 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .debug_frame   0x00000000      0x160 ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .ARM.attributes
+                0x00000000       0x2d ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .text          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .data          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .bss           0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .text.NVIC_PriorityGroupConfig
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .text.NVIC_Init
+                0x00000000       0x58 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .text.NVIC_SetVectorTable
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .text.SysTick_CLKSourceConfig
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_info    0x00000000      0x537 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_abbrev  0x00000000      0x1c1 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_loc     0x00000000      0x19b ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_aranges
+                0x00000000       0x38 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_ranges  0x00000000       0x28 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000      0x106 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000      0xa78 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x8e ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x51 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000      0x103 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000      0x1df ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000      0x7b7 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000      0x314 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x3a ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x7c ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x94 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x58 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_macro   0x00000000       0x2e ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_line    0x00000000      0x434 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_str     0x00000000     0x8a95 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .comment       0x00000000       0x77 ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .debug_frame   0x00000000       0x7c ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .ARM.attributes
+                0x00000000       0x2d ./PERIPHERAL/Sources/gw1ns4c_misc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .data          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .bss           0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.Get_Current_Value
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.Set_Match_Value
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.Get_Match_Value
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.Set_Load_Value
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.Get_Load_Value
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.Start_RTC
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.Close_RTC
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.Get_RTC_Control_value
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.RTC_Inter_Mask_Set
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.RTC_Inter_Mask_Clr
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.Get_RTC_Inter_Mask_value
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.Clear_RTC_interrupt
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .text.RTC_init
+                0x00000000       0x18 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_info    0x00000000      0x335 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_abbrev  0x00000000      0x19f ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_loc     0x00000000       0x2c ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_aranges
+                0x00000000       0x80 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_ranges  0x00000000       0xc0 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0xf5 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000      0xa78 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x8e ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x51 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000      0x103 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000      0x1df ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000      0x7d5 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000      0x314 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x3a ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x7c ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x94 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x58 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x34 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_macro   0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_line    0x00000000      0x504 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_str     0x00000000     0x89bd ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .comment       0x00000000       0x77 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .debug_frame   0x00000000       0xe0 ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .ARM.attributes
+                0x00000000       0x2d ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .data          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .bss           0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_SetDirection
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_ClrDirection
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_GetDirection
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_SetPhase
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_ClrPhase
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_GetPhase
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_SetPolarity
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_ClrPolarity
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_GetPolarity
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_SetClkSel
+                0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_GetClkSel
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_GetToeStatus
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_GetRoeStatus
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_GetTmtStatus
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_GetTrdyStatus
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_GetRrdyStatus
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_GetErrStatus
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_ClrToeStatus
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_ClrRoeStatus
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_ClrErrStatus
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_ReadWriteByte
+                0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .text.SPI_Select_Slave
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000      0xa78 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x8e ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x51 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000      0x103 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000      0x1df ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000      0x7b7 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000      0x314 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x3a ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x7c ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x58 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x34 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .text          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .data          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .bss           0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .text.SYSCON_Init
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .text.SYSCON_GetRemap
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .text.SYSCON_GetPmuctrlEnable
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .text.SYSCON_GetResetopLockuprst
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .text.SYSCON_GetRstinfoSysresetreq
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .text.SYSCON_GetRstinfoWdogresetreq
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .text.SYSCON_GetRstinfoLockreset
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_info    0x00000000      0x1ea ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_abbrev  0x00000000       0xf3 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_aranges
+                0x00000000       0x50 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_ranges  0x00000000       0x40 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000      0x100 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000      0xa78 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x8e ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x51 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000      0x103 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000      0x1df ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000      0x7b7 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000      0x314 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x3a ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x7c ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x94 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x58 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x34 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_macro   0x00000000       0x16 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_line    0x00000000      0x42e ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_str     0x00000000     0x8939 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .comment       0x00000000       0x77 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .debug_frame   0x00000000       0x80 ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .ARM.attributes
+                0x00000000       0x2d ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .data          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .bss           0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_Init
+                0x00000000       0x50 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_StartTimer
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_StopTimer
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_GetIRQStatus
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_ClearIRQ
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_GetReload
+                0x00000000        0x4 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_SetReload
+                0x00000000        0x4 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_GetValue
+                0x00000000        0x4 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_SetValue
+                0x00000000        0x4 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_EnableIRQ
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_DisableIRQ
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_SelExtEnable
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .text.TIMER_SelExtClock
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_info    0x00000000      0x432 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_abbrev  0x00000000      0x144 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_loc     0x00000000       0x6f ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_aranges
+                0x00000000       0x80 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_ranges  0x00000000       0x70 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000      0x100 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000      0xa78 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x8e ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x51 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000      0x103 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000      0x1df ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000      0x7b7 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000      0x314 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x3a ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x7c ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x94 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x58 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x34 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_macro   0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_line    0x00000000      0x554 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_str     0x00000000     0x8a1e ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .comment       0x00000000       0x77 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .debug_frame   0x00000000       0xe0 ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .ARM.attributes
+                0x00000000       0x2d ./PERIPHERAL/Sources/gw1ns4c_timer.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .data          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .bss           0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_GetRxBufferFull
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_GetTxBufferFull
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_GetRxBufferOverrunStatus
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_GetTxBufferOverrunStatus
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_ClearRxBufferOverrunStatus
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_ClearTxBufferOverrunStatus
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_SendString
+                0x00000000       0x18 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_ReceiveChar
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_GetBaudDivider
+                0x00000000        0x4 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_GetTxIRQStatus
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_GetRxIRQStatus
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_ClearTxIRQ
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_ClearRxIRQ
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_GetTxOverrunIRQStatus
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_GetRxOverrunIRQStatus
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_ClearTxOverrunIRQ
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_ClearRxOverrunIRQ
+                0x00000000        0x8 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_SetHSTM
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .text.UART_ClrHSTM
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000      0xa78 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x8e ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x51 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000      0x103 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000      0x1df ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000      0x7b7 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000      0x314 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x3a ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x94 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x58 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x34 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .data          0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .bss           0x00000000        0x0 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_Init
+                0x00000000       0x98 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_RestartCounter
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_GetCounterValue
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_SetResetEnable
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_GetResStatus
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_SetIntEnable
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_GetIntStatus
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_ClrIntEnable
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_GetRawIntStatus
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_GetMaskIntStatus
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_LockWriteAccess
+                0x00000000       0x10 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_UnlockWriteAccess
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_SetITModeEnable
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_ClrITModeEnable
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_GetITModeStatus
+                0x00000000       0x18 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_SetITOP
+                0x00000000        0xc ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_ClrITOP
+                0x00000000       0x14 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_GetITOPResStatus
+                0x00000000       0x18 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .text.WDOG_GetITOPIntStatus
+                0x00000000       0x18 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_info    0x00000000      0x47b ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_abbrev  0x00000000      0x216 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_loc     0x00000000       0x47 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_aranges
+                0x00000000       0xb0 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_ranges  0x00000000       0xa0 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000      0x100 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000      0xa78 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x8e ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x51 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000      0x103 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000      0x1df ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000      0x7b7 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000      0x314 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x6a ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x7c ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x22 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x94 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x58 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x34 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x1c ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_macro   0x00000000       0x34 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_line    0x00000000      0x637 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_str     0x00000000     0x8ae9 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .comment       0x00000000       0x77 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .debug_frame   0x00000000      0x140 ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .ARM.attributes
+                0x00000000       0x2d ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+ .group         0x00000000        0xc ./CORE/core_cm3.o
+ .group         0x00000000        0xc ./CORE/core_cm3.o
+ .group         0x00000000        0xc ./CORE/core_cm3.o
+ .group         0x00000000        0xc ./CORE/core_cm3.o
+ .group         0x00000000        0xc ./CORE/core_cm3.o
+ .group         0x00000000        0xc ./CORE/core_cm3.o
+ .group         0x00000000        0xc ./CORE/core_cm3.o
+ .text          0x00000000        0x0 ./CORE/core_cm3.o
+ .data          0x00000000        0x0 ./CORE/core_cm3.o
+ .bss           0x00000000        0x0 ./CORE/core_cm3.o
+ .text.__get_PSP
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__set_PSP
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__get_MSP
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__set_MSP
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__get_BASEPRI
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__set_BASEPRI
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__get_PRIMASK
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__set_PRIMASK
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__get_FAULTMASK
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__set_FAULTMASK
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__get_CONTROL
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__set_CONTROL
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__REV    0x00000000        0x4 ./CORE/core_cm3.o
+ .text.__REV16  0x00000000        0x4 ./CORE/core_cm3.o
+ .text.__REVSH  0x00000000        0x4 ./CORE/core_cm3.o
+ .text.__RBIT   0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__LDREXB
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__LDREXH
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__LDREXW
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__STREXB
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__STREXH
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .text.__STREXW
+                0x00000000        0x8 ./CORE/core_cm3.o
+ .debug_info    0x00000000      0x5ef ./CORE/core_cm3.o
+ .debug_abbrev  0x00000000       0xd4 ./CORE/core_cm3.o
+ .debug_loc     0x00000000      0x3a2 ./CORE/core_cm3.o
+ .debug_aranges
+                0x00000000       0xc8 ./CORE/core_cm3.o
+ .debug_ranges  0x00000000       0xb8 ./CORE/core_cm3.o
+ .debug_macro   0x00000000       0x6f ./CORE/core_cm3.o
+ .debug_macro   0x00000000      0xa78 ./CORE/core_cm3.o
+ .debug_macro   0x00000000       0x22 ./CORE/core_cm3.o
+ .debug_macro   0x00000000       0x8e ./CORE/core_cm3.o
+ .debug_macro   0x00000000       0x51 ./CORE/core_cm3.o
+ .debug_macro   0x00000000      0x103 ./CORE/core_cm3.o
+ .debug_macro   0x00000000       0x6a ./CORE/core_cm3.o
+ .debug_macro   0x00000000      0x1df ./CORE/core_cm3.o
+ .debug_line    0x00000000      0x408 ./CORE/core_cm3.o
+ .debug_str     0x00000000     0x3e07 ./CORE/core_cm3.o
+ .comment       0x00000000       0x77 ./CORE/core_cm3.o
+ .debug_frame   0x00000000      0x170 ./CORE/core_cm3.o
+ .ARM.attributes
+                0x00000000       0x2d ./CORE/core_cm3.o
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text.__fp_lock
+                0x00000000       0x1c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text.__fp_unlock
+                0x00000000       0x1c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text.__sfmoreglue
+                0x00000000       0x30 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text._cleanup
+                0x00000000       0x14 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text.__sfp    0x00000000       0xa4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text.__sinit_lock_acquire
+                0x00000000        0xc c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text.__sinit_lock_release
+                0x00000000        0xc c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text.__fp_lock_all
+                0x00000000       0x24 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text.__fp_unlock_all
+                0x00000000       0x24 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+ .text._fwalk   0x00000000       0x48 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
+ .text.__libc_init_array
+                0x00000000       0x48 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
+ .debug_frame   0x00000000       0x2c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+ .text._malloc_r
+                0x00000000      0x558 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+ .bss.__malloc_max_sbrked_mem
+                0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+ .bss.__malloc_max_total_mem
+                0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-rand.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-rand.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-rand.o)
+ .text.srand    0x00000000       0x10 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-rand.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+ .text.__seofread
+                0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+ .text.startup.register_fini
+                0x00000000       0x14 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+ .init_array.00000
+                0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
+ .text.atexit   0x00000000        0xc c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
+ .debug_frame   0x00000000       0x20 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-atexit.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+ .text.fclose   0x00000000       0x10 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
+ .text.__libc_fini_array
+                0x00000000       0x34 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
+ .debug_frame   0x00000000       0x34 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fini.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x00000000       0x1c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x00000000       0x88 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
+ .text.__register_exitproc
+                0x00000000       0x84 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
+ .debug_frame   0x00000000       0x30 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x00000000       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__atexit.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtend.o
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtend.o
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtend.o
+ .eh_frame      0x00000000        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtend.o
+ .ARM.attributes
+                0x00000000       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtend.o
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
+ .init          0x00000000        0x8 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
+ .fini          0x00000000        0x8 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
+ .ARM.attributes
+                0x00000000       0x1d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(sbrk.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(sbrk.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(sbrk.o)
+ .text          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(_exit.o)
+ .data          0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(_exit.o)
+ .bss           0x00000000        0x0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(_exit.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00000000         0x00008000         xr
+RAM              0x20000000         0x00004000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtbegin.o
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o
+LOAD ./USER/gw1ns4c_it.o
+LOAD ./USER/main.o
+LOAD ./USER/retarget.o
+LOAD ./USER/ttbasic.o
+LOAD ./USER/vramdisp.o
+LOAD ./SYSTEM/system_gw1ns4c.o
+LOAD ./STARTUP/startup_gw1ns4c.o
+LOAD ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+LOAD ./PERIPHERAL/Sources/gw1ns4c_i2c.o
+LOAD ./PERIPHERAL/Sources/gw1ns4c_misc.o
+LOAD ./PERIPHERAL/Sources/gw1ns4c_rtc.o
+LOAD ./PERIPHERAL/Sources/gw1ns4c_spi.o
+LOAD ./PERIPHERAL/Sources/gw1ns4c_syscon.o
+LOAD ./PERIPHERAL/Sources/gw1ns4c_timer.o
+LOAD ./PERIPHERAL/Sources/gw1ns4c_uart.o
+LOAD ./PERIPHERAL/Sources/gw1ns4c_wdog.o
+LOAD ./CORE/core_cm3.o
+START GROUP
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp\libgcc.a
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc.a
+END GROUP
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtend.o
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crtn.o
+START GROUP
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp\libgcc.a
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libc.a
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
+LOAD c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a
+END GROUP
+
+.text           0x00000000     0x733c
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xc0 ./STARTUP/startup_gw1ns4c.o
+                0x00000000                __isr_vector
+ *(.text*)
+ .text.NMI_Handler
+                0x000000c0        0x4 ./USER/gw1ns4c_it.o
+                0x000000c0                NMI_Handler
+ .text.HardFault_Handler
+                0x000000c4        0x4 ./USER/gw1ns4c_it.o
+                0x000000c4                HardFault_Handler
+ .text.MemManage_Handler
+                0x000000c8        0x4 ./USER/gw1ns4c_it.o
+                0x000000c8                MemManage_Handler
+ .text.BusFault_Handler
+                0x000000cc        0x4 ./USER/gw1ns4c_it.o
+                0x000000cc                BusFault_Handler
+ .text.UsageFault_Handler
+                0x000000d0        0x4 ./USER/gw1ns4c_it.o
+                0x000000d0                UsageFault_Handler
+ .text.SVC_Handler
+                0x000000d4        0x4 ./USER/gw1ns4c_it.o
+                0x000000d4                SVC_Handler
+ .text.DebugMon_Handler
+                0x000000d8        0x4 ./USER/gw1ns4c_it.o
+                0x000000d8                DebugMon_Handler
+ .text.PendSV_Handler
+                0x000000dc        0x4 ./USER/gw1ns4c_it.o
+                0x000000dc                PendSV_Handler
+ .text.SysTick_Handler
+                0x000000e0        0x4 ./USER/gw1ns4c_it.o
+                0x000000e0                SysTick_Handler
+ .text.USER_INT0_Handler
+                0x000000e4        0x4 ./USER/gw1ns4c_it.o
+                0x000000e4                USER_INT0_Handler
+ .text.USER_INT1_Handler
+                0x000000e8        0x4 ./USER/gw1ns4c_it.o
+                0x000000e8                USER_INT1_Handler
+ .text.USER_INT2_Handler
+                0x000000ec        0x4 ./USER/gw1ns4c_it.o
+                0x000000ec                USER_INT2_Handler
+ .text.USER_INT3_Handler
+                0x000000f0        0x4 ./USER/gw1ns4c_it.o
+                0x000000f0                USER_INT3_Handler
+ .text.USER_INT4_Handler
+                0x000000f4        0x4 ./USER/gw1ns4c_it.o
+                0x000000f4                USER_INT4_Handler
+ .text.USER_INT5_Handler
+                0x000000f8        0x4 ./USER/gw1ns4c_it.o
+                0x000000f8                USER_INT5_Handler
+ .text.UART0_Handler
+                0x000000fc        0x4 ./USER/gw1ns4c_it.o
+                0x000000fc                UART0_Handler
+ .text.UART1_Handler
+                0x00000100        0x4 ./USER/gw1ns4c_it.o
+                0x00000100                UART1_Handler
+ .text.TIMER0_Handler
+                0x00000104        0x4 ./USER/gw1ns4c_it.o
+                0x00000104                TIMER0_Handler
+ .text.TIMER1_Handler
+                0x00000108        0x4 ./USER/gw1ns4c_it.o
+                0x00000108                TIMER1_Handler
+ .text.I2C_Handler
+                0x0000010c        0x4 ./USER/gw1ns4c_it.o
+                0x0000010c                I2C_Handler
+ .text.RTC_Handler
+                0x00000110        0x4 ./USER/gw1ns4c_it.o
+                0x00000110                RTC_Handler
+ .text.PORT0_0_Handler
+                0x00000114        0x4 ./USER/gw1ns4c_it.o
+                0x00000114                PORT0_0_Handler
+ .text.PORT0_1_Handler
+                0x00000118        0x4 ./USER/gw1ns4c_it.o
+                0x00000118                PORT0_1_Handler
+ .text.PORT0_2_Handler
+                0x0000011c        0x4 ./USER/gw1ns4c_it.o
+                0x0000011c                PORT0_2_Handler
+ .text.PORT0_3_Handler
+                0x00000120        0x4 ./USER/gw1ns4c_it.o
+                0x00000120                PORT0_3_Handler
+ .text.PORT0_4_Handler
+                0x00000124        0x4 ./USER/gw1ns4c_it.o
+                0x00000124                PORT0_4_Handler
+ .text.PORT0_5_Handler
+                0x00000128        0x4 ./USER/gw1ns4c_it.o
+                0x00000128                PORT0_5_Handler
+ .text.PORT0_6_Handler
+                0x0000012c        0x4 ./USER/gw1ns4c_it.o
+                0x0000012c                PORT0_6_Handler
+ .text.PORT0_7_Handler
+                0x00000130        0x4 ./USER/gw1ns4c_it.o
+                0x00000130                PORT0_7_Handler
+ .text.PORT0_8_Handler
+                0x00000134        0x4 ./USER/gw1ns4c_it.o
+                0x00000134                PORT0_8_Handler
+ .text.PORT0_9_Handler
+                0x00000138        0x4 ./USER/gw1ns4c_it.o
+                0x00000138                PORT0_9_Handler
+ .text.PORT0_10_Handler
+                0x0000013c        0x4 ./USER/gw1ns4c_it.o
+                0x0000013c                PORT0_10_Handler
+ .text.PORT0_11_Handler
+                0x00000140        0x4 ./USER/gw1ns4c_it.o
+                0x00000140                PORT0_11_Handler
+ .text.PORT0_12_Handler
+                0x00000144        0x4 ./USER/gw1ns4c_it.o
+                0x00000144                PORT0_12_Handler
+ .text.PORT0_13_Handler
+                0x00000148        0x4 ./USER/gw1ns4c_it.o
+                0x00000148                PORT0_13_Handler
+ .text.PORT0_14_Handler
+                0x0000014c        0x4 ./USER/gw1ns4c_it.o
+                0x0000014c                PORT0_14_Handler
+ .text.PORT0_15_Handler
+                0x00000150        0x4 ./USER/gw1ns4c_it.o
+                0x00000150                PORT0_15_Handler
+ .text.getsh.part.0
+                0x00000154       0x4c ./USER/main.o
+ .text.UartInit
+                0x000001a0       0x28 ./USER/main.o
+                0x000001a0                UartInit
+ .text.check_gpio
+                0x000001c8       0x68 ./USER/main.o
+                0x000001c8                check_gpio
+ .text.key_check
+                0x00000230       0x4c ./USER/main.o
+                0x00000230                key_check
+ .text.getch_uart
+                0x0000027c       0x8c ./USER/main.o
+                0x0000027c                getch_uart
+ .text.putch_uart
+                0x00000308       0xdc ./USER/main.o
+                0x00000308                putch_uart
+ .text.startup.main
+                0x000003e4     0x20bc ./USER/main.o
+                0x000003e4                main
+ .text._write   0x000024a0       0x20 ./USER/retarget.o
+                0x000024a0                _write
+ .text.c_gets   0x000024c0       0xd0 ./USER/ttbasic.o
+                0x000024c0                c_gets
+ .text.putnum   0x00002590       0xbc ./USER/ttbasic.o
+                0x00002590                putnum
+ .text.getnum   0x0000264c      0x128 ./USER/ttbasic.o
+                0x0000264c                getnum
+ .text.toktoi   0x00002774      0x2ec ./USER/ttbasic.o
+                0x00002774                toktoi
+ .text.inslist  0x00002a60      0x18c ./USER/ttbasic.o
+                0x00002a60                inslist
+ .text.putlist  0x00002bec      0x1e8 ./USER/ttbasic.o
+                0x00002bec                putlist
+ .text.iexp     0x00002dd4       0xa0 ./USER/ttbasic.o
+                0x00002dd4                iexp
+ .text.ivalue   0x00002e74      0x200 ./USER/ttbasic.o
+                0x00002e74                ivalue
+ .text.iplus    0x00003074      0x140 ./USER/ttbasic.o
+                0x00003074                iplus
+ .text.iprint   0x000031b4       0xcc ./USER/ttbasic.o
+                0x000031b4                iprint
+ .text.iinput   0x00003280      0x1ac ./USER/ttbasic.o
+                0x00003280                iinput
+ .text.iarray   0x0000342c       0xc0 ./USER/ttbasic.o
+                0x0000342c                iarray
+ .text.iline    0x000034ec       0x8c ./USER/ttbasic.o
+                0x000034ec                iline
+ .text.icircle  0x00003578       0x6c ./USER/ttbasic.o
+                0x00003578                icircle
+ .text.igotoxy  0x000035e4       0x78 ./USER/ttbasic.o
+                0x000035e4                igotoxy
+ .text.iexe     0x0000365c      0x4f0 ./USER/ttbasic.o
+                0x0000365c                iexe
+ .text.ilist    0x00003b4c      0x178 ./USER/ttbasic.o
+                0x00003b4c                ilist
+ .text.icom     0x00003cc4       0xc8 ./USER/ttbasic.o
+                0x00003cc4                icom
+ .text.error    0x00003d8c      0x170 ./USER/ttbasic.o
+                0x00003d8c                error
+ .text.basic    0x00003efc      0x14c ./USER/ttbasic.o
+                0x00003efc                basic
+ .text.set_vramdata_f6.constprop.1
+                0x00004048       0xa8 ./USER/vramdisp.o
+ .text.get_vram
+                0x000040f0       0xc4 ./USER/vramdisp.o
+                0x000040f0                get_vram
+ .text.move_vram
+                0x000041b4       0xa4 ./USER/vramdisp.o
+                0x000041b4                move_vram
+ .text.set_vramm
+                0x00004258      0x108 ./USER/vramdisp.o
+                0x00004258                set_vramm
+ .text.dispscroll
+                0x00004360      0x178 ./USER/vramdisp.o
+                0x00004360                dispscroll
+ .text.disp_vram
+                0x000044d8      0x28c ./USER/vramdisp.o
+                0x000044d8                disp_vram
+ .text.gotoxy   0x00004764      0x258 ./USER/vramdisp.o
+                0x00004764                gotoxy
+ .text.dispfull
+                0x000049bc      0x100 ./USER/vramdisp.o
+                0x000049bc                dispfull
+ .text.pget     0x00004abc       0xf8 ./USER/vramdisp.o
+                0x00004abc                pget
+ .text.pset     0x00004bb4       0x98 ./USER/vramdisp.o
+                0x00004bb4                pset
+ .text.DCircle  0x00004c4c      0x5f8 ./USER/vramdisp.o
+                0x00004c4c                DCircle
+ .text.DLine    0x00005244      0x174 ./USER/vramdisp.o
+                0x00005244                DLine
+ .text.scanLine
+                0x000053b8      0x384 ./USER/vramdisp.o
+                0x000053b8                scanLine
+ .text.DPaint   0x0000573c      0x458 ./USER/vramdisp.o
+                0x0000573c                DPaint
+ .text.SystemInit
+                0x00005b94       0x2c ./SYSTEM/system_gw1ns4c.o
+                0x00005b94                SystemInit
+ .text          0x00005bc0       0x98 ./STARTUP/startup_gw1ns4c.o
+                0x00005bc0                Reset_Handler
+                0x00005c26                PORT0_COMB_Handler
+                0x00005c30                UARTOVF_Handler
+                0x00005c36                Spare15_Handler
+ .text.GPIO_WriteBits
+                0x00005c58        0x4 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+                0x00005c58                GPIO_WriteBits
+ .text.GPIO_ReadBits
+                0x00005c5c        0x4 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+                0x00005c5c                GPIO_ReadBits
+ .text.SPI_Init
+                0x00005c60       0x3c ./PERIPHERAL/Sources/gw1ns4c_spi.o
+                0x00005c60                SPI_Init
+ .text.SPI_WriteData
+                0x00005c9c       0x1c ./PERIPHERAL/Sources/gw1ns4c_spi.o
+                0x00005c9c                SPI_WriteData
+ .text.SPI_ReadData
+                0x00005cb8       0x20 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+                0x00005cb8                SPI_ReadData
+ .text.UART_Init
+                0x00005cd8       0x80 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+                0x00005cd8                UART_Init
+ .text.UART_SendChar
+                0x00005d58        0xc ./PERIPHERAL/Sources/gw1ns4c_uart.o
+                0x00005d58                UART_SendChar
+ .text.exit     0x00005d64       0x20 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o)
+                0x00005d64                exit
+ .text.__sflush_r
+                0x00005d84      0x144 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+                0x00005d84                __sflush_r
+ .text._fflush_r
+                0x00005ec8       0x5c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+                0x00005ec8                _fflush_r
+ .text.fflush   0x00005f24       0x24 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+                0x00005f24                fflush
+ .text.std      0x00005f48       0x50 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .text._cleanup_r
+                0x00005f98        0xc c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+                0x00005f98                _cleanup_r
+ .text.__sinit  0x00005fa4       0x5c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+                0x00005fa4                __sinit
+ .text.__sfp_lock_acquire
+                0x00006000        0xc c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+                0x00006000                __sfp_lock_acquire
+ .text.__sfp_lock_release
+                0x0000600c        0xc c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+                0x0000600c                __sfp_lock_release
+ .text._malloc_trim_r
+                0x00006018       0xa0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+                0x00006018                _malloc_trim_r
+ .text._free_r  0x000060b8      0x1f4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+                0x000060b8                _free_r
+ .text._fwalk_reent
+                0x000062ac       0x50 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+                0x000062ac                _fwalk_reent
+ .text.__retarget_lock_init_recursive
+                0x000062fc        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x000062fc                __retarget_lock_init_recursive
+ .text.__retarget_lock_close_recursive
+                0x00006300        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x00006300                __retarget_lock_close_recursive
+ .text.__retarget_lock_acquire_recursive
+                0x00006304        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x00006304                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x00006308        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x00006308                __retarget_lock_release_recursive
+ .text          0x0000630c       0xec c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memcpy.o)
+                0x0000630c                memcpy
+ .text.memset   0x000063f8       0xa0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
+                0x000063f8                memset
+ .text.__malloc_lock
+                0x00006498        0xc c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+                0x00006498                __malloc_lock
+ .text.__malloc_unlock
+                0x000064a4        0xc c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+                0x000064a4                __malloc_unlock
+ .text.rand     0x000064b0       0x3c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-rand.o)
+                0x000064b0                rand
+ .text._sbrk_r  0x000064ec       0x24 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
+                0x000064ec                _sbrk_r
+ .text.__sread  0x00006510       0x24 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+                0x00006510                __sread
+ .text.__swrite
+                0x00006534       0x40 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+                0x00006534                __swrite
+ .text.__sseek  0x00006574       0x20 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+                0x00006574                __sseek
+ .text.__sclose
+                0x00006594        0x8 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+                0x00006594                __sclose
+ .text._write_r
+                0x0000659c       0x2c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
+                0x0000659c                _write_r
+ .text.__call_exitprocs
+                0x000065c8       0xb0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+                0x000065c8                __call_exitprocs
+ .text._close_r
+                0x00006678       0x24 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
+                0x00006678                _close_r
+ .text._fclose_r
+                0x0000669c       0xd0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+                0x0000669c                _fclose_r
+ .text._lseek_r
+                0x0000676c       0x2c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
+                0x0000676c                _lseek_r
+ .text._read_r  0x00006798       0x2c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
+                0x00006798                _read_r
+ .text._close   0x000067c4       0x10 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+                0x000067c4                _close
+ .text._lseek   0x000067d4       0x10 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
+                0x000067d4                _lseek
+ .text._read    0x000067e4       0x10 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+                0x000067e4                _read
+ .text._sbrk    0x000067f4       0x1c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(sbrk.o)
+                0x000067f4                _sbrk
+ .text._exit    0x00006810        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(_exit.o)
+                0x00006810                _exit
+ *(.init)
+ .init          0x00006814        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
+                0x00006814                _init
+ *(.fini)
+ .fini          0x00006818        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
+                0x00006818                _fini
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ .rodata.main.str1.4
+                0x0000681c       0x13 ./USER/main.o
+ *fill*         0x0000682f        0x1 
+ .rodata.putadrhd.str1.4
+                0x00006830        0x3 ./USER/main.o
+ *fill*         0x00006833        0x1 
+ .rodata.basic.str1.4
+                0x00006834       0x42 ./USER/ttbasic.o
+ *fill*         0x00006876        0x2 
+ .rodata.error.str1.4
+                0x00006878       0x13 ./USER/ttbasic.o
+ *fill*         0x0000688b        0x1 
+ .rodata.i_nsa  0x0000688c       0x13 ./USER/ttbasic.o
+                0x0000688c                i_nsa
+ *fill*         0x0000689f        0x1 
+ .rodata.iinput.str1.4
+                0x000068a0        0x7 ./USER/ttbasic.o
+ *fill*         0x000068a7        0x1 
+ .rodata.str1.4
+                0x000068a8      0x290 ./USER/ttbasic.o
+                                0x294 (size before relaxing)
+ .rodata.FONT_8x8
+                0x00006b38      0x800 ./USER/vramdisp.o
+                0x00006b38                FONT_8x8
+ .rodata._global_impure_ptr
+                0x00007338        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-impure.o)
+                0x00007338                _global_impure_ptr
+ *(.eh_frame*)
+
+.glue_7         0x0000733c        0x0
+ .glue_7        0x0000733c        0x0 linker stubs
+
+.glue_7t        0x0000733c        0x0
+ .glue_7t       0x0000733c        0x0 linker stubs
+
+.vfp11_veneer   0x0000733c        0x0
+ .vfp11_veneer  0x0000733c        0x0 linker stubs
+
+.v4_bx          0x0000733c        0x0
+ .v4_bx         0x0000733c        0x0 linker stubs
+
+.iplt           0x0000733c        0x0
+ .iplt          0x0000733c        0x0 ./USER/gw1ns4c_it.o
+
+.rel.dyn        0x0000733c        0x0
+ .rel.iplt      0x0000733c        0x0 ./USER/gw1ns4c_it.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000733c                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x0000733c                __exidx_end = .
+                0x0000733c                __etext = .
+
+.data           0x20000000      0x954 load address 0x0000733c
+                0x20000000                __data_start__ = .
+ *(vtable)
+ *(.data*)
+ .data.errmsg   0x20000000       0x5c ./USER/ttbasic.o
+                0x20000000                errmsg
+ .data.kwtbl    0x2000005c       0xa4 ./USER/ttbasic.o
+                0x2000005c                kwtbl
+ .data.buff     0x20000100        0x4 ./USER/vramdisp.o
+                0x20000100                buff
+ .data.HCLK     0x20000104        0x4 ./SYSTEM/system_gw1ns4c.o
+                0x20000104                HCLK
+ .data.PCLK1    0x20000108        0x4 ./SYSTEM/system_gw1ns4c.o
+                0x20000108                PCLK1
+ .data.PCLK2    0x2000010c        0x4 ./SYSTEM/system_gw1ns4c.o
+                0x2000010c                PCLK2
+ .data.SystemCoreClock
+                0x20000110        0x4 ./SYSTEM/system_gw1ns4c.o
+                0x20000110                SystemCoreClock
+ .data._impure_ptr
+                0x20000114        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-impure.o)
+                0x20000114                _impure_ptr
+ .data.impure_data
+                0x20000118      0x428 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-impure.o)
+ .data.__malloc_av_
+                0x20000540      0x408 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20000540                __malloc_av_
+ .data.__malloc_sbrk_base
+                0x20000948        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20000948                __malloc_sbrk_base
+ .data.__malloc_trim_threshold
+                0x2000094c        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x2000094c                __malloc_trim_threshold
+ .data.__atexit_recursive_mutex
+                0x20000950        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+                0x20000950                __atexit_recursive_mutex
+                0x20000954                . = ALIGN (0x4)
+                0x20000954                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                0x20000954                PROVIDE (__preinit_array_end = .)
+                0x20000954                . = ALIGN (0x4)
+                0x20000954                PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+                0x20000954                PROVIDE (__init_array_end = .)
+                0x20000954                . = ALIGN (0x4)
+                0x20000954                PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array)
+                0x20000954                PROVIDE (__fini_array_end = .)
+                0x20000954                . = ALIGN (0x4)
+                0x20000954                __data_end__ = .
+
+.igot.plt       0x20000954        0x0 load address 0x00007c90
+ .igot.plt      0x20000954        0x0 ./USER/gw1ns4c_it.o
+
+.bss            0x20000954      0xf68 load address 0x00007c90
+                0x20000954                . = ALIGN (0x4)
+                0x20000954                __bss_start__ = .
+ *(.bss*)
+ .bss.kinbrp    0x20000954        0x4 ./USER/main.o
+                0x20000954                kinbrp
+ .bss.kinbwp    0x20000958        0x4 ./USER/main.o
+                0x20000958                kinbwp
+ .bss.csrmd     0x2000095c        0x4 ./USER/vramdisp.o
+ .bss.csrx      0x20000960        0x4 ./USER/vramdisp.o
+ .bss.csry      0x20000964        0x4 ./USER/vramdisp.o
+ .bss.dispinitf
+                0x20000968        0x4 ./USER/vramdisp.o
+ .bss.__malloc_current_mallinfo
+                0x2000096c       0x28 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x2000096c                __malloc_current_mallinfo
+ .bss.__malloc_top_pad
+                0x20000994        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+                0x20000994                __malloc_top_pad
+ .bss.heap_end.4194
+                0x20000998        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(sbrk.o)
+ *(COMMON)
+ COMMON         0x2000099c      0x108 ./USER/main.o
+                0x2000099c                kinbuf
+                0x20000a9c                mdgpioi
+                0x20000aa0                mdgpio
+ COMMON         0x20000aa4      0x9b9 ./USER/ttbasic.o
+                0x20000aa4                arr
+                0x20000b24                ibuf
+                0x20000b74                gstk
+                0x20000b8c                lstk
+                0x20000bc8                cip
+                0x20000bcc                err
+                0x20000bd0                clp
+                0x20000bd4                listbuf
+                0x200013d4                gstki
+                0x200013d8                lbuf
+                0x20001428                var
+                0x2000145c                lstki
+ *fill*         0x2000145d        0x3 
+ COMMON         0x20001460      0x434 ./USER/vramdisp.o
+                0x20001460                sIdx
+                0x20001464                eIdx
+                0x20001468                pd
+                0x2000146c                wddt
+                0x20001494                aryex
+ COMMON         0x20001894       0x21 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+                0x20001894                __lock___atexit_recursive_mutex
+                0x20001898                __lock___arc4random_mutex
+                0x2000189c                __lock___env_recursive_mutex
+                0x200018a0                __lock___sinit_recursive_mutex
+                0x200018a4                __lock___malloc_recursive_mutex
+                0x200018a8                __lock___at_quick_exit_mutex
+                0x200018ac                __lock___dd_hash_mutex
+                0x200018b0                __lock___tz_mutex
+                0x200018b4                __lock___sfp_recursive_mutex
+ *fill*         0x200018b5        0x3 
+ COMMON         0x200018b8        0x4 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+                0x200018b8                errno
+                0x200018bc                . = ALIGN (0x4)
+                0x200018bc                __bss_end__ = .
+
+.heap           0x200018c0      0x200
+                0x200018c0                __end__ = .
+                0x200018c0                end = __end__
+ *(.heap*)
+ .heap          0x200018c0      0x200 ./STARTUP/startup_gw1ns4c.o
+                0x200018c0                __HeapBase
+                0x20001ac0                __HeapLimit = .
+
+.stack_dummy    0x200018c0      0x400
+ *(.stack*)
+ .stack         0x200018c0      0x400 ./STARTUP/startup_gw1ns4c.o
+                0x20004000                __StackTop = (ORIGIN (RAM) + LENGTH (RAM))
+                0x20003c00                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
+                0x20004000                PROVIDE (__stack = __StackTop)
+                0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
+OUTPUT(cm3_mon.elf elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x29
+ .ARM.attributes
+                0x00000000       0x1d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/thumb/v7-m/nofp/crti.o
+ .ARM.attributes
+                0x0000001d       0x2d ./USER/gw1ns4c_it.o
+ .ARM.attributes
+                0x0000004a       0x2d ./USER/main.o
+ .ARM.attributes
+                0x00000077       0x2d ./USER/retarget.o
+ .ARM.attributes
+                0x000000a4       0x2d ./USER/ttbasic.o
+ .ARM.attributes
+                0x000000d1       0x2d ./USER/vramdisp.o
+ .ARM.attributes
+                0x000000fe       0x2d ./SYSTEM/system_gw1ns4c.o
+ .ARM.attributes
+                0x0000012b       0x1b ./STARTUP/startup_gw1ns4c.o
+ .ARM.attributes
+                0x00000146       0x2d ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .ARM.attributes
+                0x00000173       0x2d ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .ARM.attributes
+                0x000001a0       0x2d ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .ARM.attributes
+                0x000001cd       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o)
+ .ARM.attributes
+                0x000001fa       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+ .ARM.attributes
+                0x00000227       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .ARM.attributes
+                0x00000254       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+ .ARM.attributes
+                0x00000281       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+ .ARM.attributes
+                0x000002ae       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000002db       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .ARM.attributes
+                0x00000308       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+ .ARM.attributes
+                0x00000335       0x1b c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000350       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000037d       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x000003aa       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-rand.o)
+ .ARM.attributes
+                0x000003d7       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x00000404       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+ .ARM.attributes
+                0x00000431       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
+ .ARM.attributes
+                0x0000045e       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x0000048b       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
+ .ARM.attributes
+                0x000004b8       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+ .ARM.attributes
+                0x000004e5       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
+ .ARM.attributes
+                0x00000512       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
+ .ARM.attributes
+                0x0000053f       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+ .ARM.attributes
+                0x0000056c       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+ .ARM.attributes
+                0x00000599       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
+ .ARM.attributes
+                0x000005c6       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+ .ARM.attributes
+                0x000005f3       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(sbrk.o)
+ .ARM.attributes
+                0x00000620       0x2d c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(_exit.o)
+
+.comment        0x00000000       0x76
+ .comment       0x00000000       0x76 ./USER/gw1ns4c_it.o
+                                 0x77 (size before relaxing)
+ .comment       0x00000076       0x77 ./USER/main.o
+ .comment       0x00000076       0x77 ./USER/retarget.o
+ .comment       0x00000076       0x77 ./USER/ttbasic.o
+ .comment       0x00000076       0x77 ./USER/vramdisp.o
+ .comment       0x00000076       0x77 ./SYSTEM/system_gw1ns4c.o
+ .comment       0x00000076       0x77 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .comment       0x00000076       0x77 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .comment       0x00000076       0x77 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+
+.debug_info     0x00000000    0x11394
+ .debug_info    0x00000000      0x23a ./USER/gw1ns4c_it.o
+ .debug_info    0x0000023a     0x6229 ./USER/main.o
+ .debug_info    0x00006463      0xab6 ./USER/retarget.o
+ .debug_info    0x00006f19     0x3e50 ./USER/ttbasic.o
+ .debug_info    0x0000ad69     0x51a6 ./USER/vramdisp.o
+ .debug_info    0x0000ff0f      0x11c ./SYSTEM/system_gw1ns4c.o
+ .debug_info    0x0001002b       0x26 ./STARTUP/startup_gw1ns4c.o
+ .debug_info    0x00010051      0x778 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_info    0x000107c9      0x4d8 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_info    0x00010ca1      0x6f3 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+
+.debug_abbrev   0x00000000     0x1939
+ .debug_abbrev  0x00000000       0xc8 ./USER/gw1ns4c_it.o
+ .debug_abbrev  0x000000c8      0x50d ./USER/main.o
+ .debug_abbrev  0x000005d5      0x238 ./USER/retarget.o
+ .debug_abbrev  0x0000080d      0x608 ./USER/ttbasic.o
+ .debug_abbrev  0x00000e15      0x3c4 ./USER/vramdisp.o
+ .debug_abbrev  0x000011d9       0xa3 ./SYSTEM/system_gw1ns4c.o
+ .debug_abbrev  0x0000127c       0x14 ./STARTUP/startup_gw1ns4c.o
+ .debug_abbrev  0x00001290      0x1f4 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_abbrev  0x00001484      0x27e ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_abbrev  0x00001702      0x237 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+
+.debug_aranges  0x00000000      0x608
+ .debug_aranges
+                0x00000000       0x40 ./USER/gw1ns4c_it.o
+ .debug_aranges
+                0x00000040       0xc8 ./USER/main.o
+ .debug_aranges
+                0x00000108       0x20 ./USER/retarget.o
+ .debug_aranges
+                0x00000128      0x178 ./USER/ttbasic.o
+ .debug_aranges
+                0x000002a0       0xd0 ./USER/vramdisp.o
+ .debug_aranges
+                0x00000370       0x20 ./SYSTEM/system_gw1ns4c.o
+ .debug_aranges
+                0x00000390       0x20 ./STARTUP/startup_gw1ns4c.o
+ .debug_aranges
+                0x000003b0       0xb8 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_aranges
+                0x00000468       0xe0 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_aranges
+                0x00000548       0xc0 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+
+.debug_ranges   0x00000000     0x34f8
+ .debug_ranges  0x00000000       0x30 ./USER/gw1ns4c_it.o
+ .debug_ranges  0x00000030     0x1b88 ./USER/main.o
+ .debug_ranges  0x00001bb8       0x10 ./USER/retarget.o
+ .debug_ranges  0x00001bc8      0xae0 ./USER/ttbasic.o
+ .debug_ranges  0x000026a8      0xc18 ./USER/vramdisp.o
+ .debug_ranges  0x000032c0       0x10 ./SYSTEM/system_gw1ns4c.o
+ .debug_ranges  0x000032d0       0xa8 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_ranges  0x00003378       0xd0 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_ranges  0x00003448       0xb0 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+
+.debug_macro    0x00000000     0x3aa0
+ .debug_macro   0x00000000      0x100 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00000100      0xa78 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00000b78       0x22 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00000b9a       0x22 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00000bbc       0x22 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00000bde       0x8e ./USER/gw1ns4c_it.o
+ .debug_macro   0x00000c6c       0x51 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00000cbd      0x103 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00000dc0       0x6a ./USER/gw1ns4c_it.o
+ .debug_macro   0x00000e2a      0x1df ./USER/gw1ns4c_it.o
+ .debug_macro   0x00001009      0x7b7 ./USER/gw1ns4c_it.o
+ .debug_macro   0x000017c0      0x314 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00001ad4       0x6a ./USER/gw1ns4c_it.o
+ .debug_macro   0x00001b3e       0x3a ./USER/gw1ns4c_it.o
+ .debug_macro   0x00001b78       0x7c ./USER/gw1ns4c_it.o
+ .debug_macro   0x00001bf4       0x22 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00001c16       0x94 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00001caa       0x58 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00001d02       0x34 ./USER/gw1ns4c_it.o
+ .debug_macro   0x00001d36       0x1c ./USER/gw1ns4c_it.o
+ .debug_macro   0x00001d52      0x2c8 ./USER/main.o
+ .debug_macro   0x0000201a       0x5e ./USER/main.o
+ .debug_macro   0x00002078       0x18 ./USER/main.o
+ .debug_macro   0x00002090       0x35 ./USER/main.o
+ .debug_macro   0x000020c5       0x34 ./USER/main.o
+ .debug_macro   0x000020f9       0x16 ./USER/main.o
+ .debug_macro   0x0000210f       0x97 ./USER/main.o
+ .debug_macro   0x000021a6      0x339 ./USER/main.o
+ .debug_macro   0x000024df       0xfd ./USER/main.o
+ .debug_macro   0x000025dc       0x10 ./USER/main.o
+ .debug_macro   0x000025ec       0x16 ./USER/main.o
+ .debug_macro   0x00002602       0x43 ./USER/main.o
+ .debug_macro   0x00002645       0x34 ./USER/main.o
+ .debug_macro   0x00002679       0x10 ./USER/main.o
+ .debug_macro   0x00002689       0x58 ./USER/main.o
+ .debug_macro   0x000026e1      0x182 ./USER/main.o
+ .debug_macro   0x00002863       0x10 ./USER/main.o
+ .debug_macro   0x00002873       0x1c ./USER/main.o
+ .debug_macro   0x0000288f       0x52 ./USER/main.o
+ .debug_macro   0x000028e1       0x40 ./USER/main.o
+ .debug_macro   0x00002921       0x10 ./USER/main.o
+ .debug_macro   0x00002931       0x40 ./USER/main.o
+ .debug_macro   0x00002971       0xd5 ./USER/main.o
+ .debug_macro   0x00002a46       0x1c ./USER/main.o
+ .debug_macro   0x00002a62       0x3d ./USER/main.o
+ .debug_macro   0x00002a9f       0x16 ./USER/main.o
+ .debug_macro   0x00002ab5      0x16f ./USER/main.o
+ .debug_macro   0x00002c24       0x16 ./USER/main.o
+ .debug_macro   0x00002c3a       0x35 ./USER/main.o
+ .debug_macro   0x00002c6f       0x16 ./USER/main.o
+ .debug_macro   0x00002c85       0x29 ./USER/main.o
+ .debug_macro   0x00002cae       0x16 ./USER/main.o
+ .debug_macro   0x00002cc4      0x289 ./USER/retarget.o
+ .debug_macro   0x00002f4d       0x16 ./USER/retarget.o
+ .debug_macro   0x00002f63       0x10 ./USER/retarget.o
+ .debug_macro   0x00002f73       0x10 ./USER/retarget.o
+ .debug_macro   0x00002f83       0x35 ./USER/retarget.o
+ .debug_macro   0x00002fb8      0x122 ./USER/retarget.o
+ .debug_macro   0x000030da      0x21e ./USER/ttbasic.o
+ .debug_macro   0x000032f8       0x58 ./USER/ttbasic.o
+ .debug_macro   0x00003350       0x94 ./USER/ttbasic.o
+ .debug_macro   0x000033e4       0x57 ./USER/ttbasic.o
+ .debug_macro   0x0000343b      0x12b ./USER/vramdisp.o
+ .debug_macro   0x00003566      0x102 ./SYSTEM/system_gw1ns4c.o
+ .debug_macro   0x00003668      0x100 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x00003768       0x34 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_macro   0x0000379c      0x100 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x0000389c       0x8e ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_macro   0x0000392a      0x100 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_macro   0x00003a2a       0x76 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+
+.debug_line     0x00000000     0xc355
+ .debug_line    0x00000000      0x3d9 ./USER/gw1ns4c_it.o
+ .debug_line    0x000003d9     0x4207 ./USER/main.o
+ .debug_line    0x000045e0      0x4c7 ./USER/retarget.o
+ .debug_line    0x00004aa7     0x35d8 ./USER/ttbasic.o
+ .debug_line    0x0000807f     0x2923 ./USER/vramdisp.o
+ .debug_line    0x0000a9a2      0x394 ./SYSTEM/system_gw1ns4c.o
+ .debug_line    0x0000ad36       0x98 ./STARTUP/startup_gw1ns4c.o
+ .debug_line    0x0000adce      0x786 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_line    0x0000b554      0x732 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_line    0x0000bc86      0x6cf ./PERIPHERAL/Sources/gw1ns4c_uart.o
+
+.debug_str      0x00000000     0xe17b
+ .debug_str     0x00000000     0x892f ./USER/gw1ns4c_it.o
+                               0x8a9e (size before relaxing)
+ .debug_str     0x0000892f     0x4660 ./USER/main.o
+                               0xcf8c (size before relaxing)
+ .debug_str     0x0000cf8f      0x53b ./USER/retarget.o
+                               0xceec (size before relaxing)
+ .debug_str     0x0000d4ca      0x559 ./USER/ttbasic.o
+                               0x7a4c (size before relaxing)
+ .debug_str     0x0000da23      0x186 ./USER/vramdisp.o
+                               0x8b0c (size before relaxing)
+ .debug_str     0x0000dba9       0x62 ./SYSTEM/system_gw1ns4c.o
+                               0x8892 (size before relaxing)
+ .debug_str     0x0000dc0b       0x2b ./STARTUP/startup_gw1ns4c.o
+                                 0x52 (size before relaxing)
+ .debug_str     0x0000dc36      0x15a ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+                               0x8b54 (size before relaxing)
+ .debug_str     0x0000dd90      0x1f4 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+                               0x8a90 (size before relaxing)
+ .debug_str     0x0000df84      0x1f7 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+                               0x8b75 (size before relaxing)
+
+.debug_frame    0x00000000     0x1d20
+ .debug_frame   0x00000000      0x260 ./USER/gw1ns4c_it.o
+ .debug_frame   0x00000260      0x358 ./USER/main.o
+ .debug_frame   0x000005b8       0x30 ./USER/retarget.o
+ .debug_frame   0x000005e8      0x614 ./USER/ttbasic.o
+ .debug_frame   0x00000bfc      0x4f0 ./USER/vramdisp.o
+ .debug_frame   0x000010ec       0x48 ./SYSTEM/system_gw1ns4c.o
+ .debug_frame   0x00001134      0x180 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_frame   0x000012b4      0x1a0 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_frame   0x00001454      0x16c ./PERIPHERAL/Sources/gw1ns4c_uart.o
+ .debug_frame   0x000015c0       0x28 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-exit.o)
+ .debug_frame   0x000015e8       0x5c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fflush.o)
+ .debug_frame   0x00001644      0x150 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-findfp.o)
+ .debug_frame   0x00001794       0x8c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-freer.o)
+ .debug_frame   0x00001820       0x54 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fwalk.o)
+ .debug_frame   0x00001874       0xb0 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lock.o)
+ .debug_frame   0x00001924       0x4c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mallocr.o)
+ .debug_frame   0x00001970       0x38 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-memset.o)
+ .debug_frame   0x000019a8       0x30 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-mlock.o)
+ .debug_frame   0x000019d8       0x3c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-rand.o)
+ .debug_frame   0x00001a14       0x2c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-sbrkr.o)
+ .debug_frame   0x00001a40       0x8c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-stdio.o)
+ .debug_frame   0x00001acc       0x30 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-writer.o)
+ .debug_frame   0x00001afc       0x5c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00001b58       0x2c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-closer.o)
+ .debug_frame   0x00001b84       0x3c c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-fclose.o)
+ .debug_frame   0x00001bc0       0x30 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-lseekr.o)
+ .debug_frame   0x00001bf0       0x30 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-readr.o)
+ .debug_frame   0x00001c20       0x60 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg.a(lib_a-reent.o)
+ .debug_frame   0x00001c80       0x20 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+ .debug_frame   0x00001ca0       0x20 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
+ .debug_frame   0x00001cc0       0x20 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+ .debug_frame   0x00001ce0       0x20 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(sbrk.o)
+ .debug_frame   0x00001d00       0x20 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(_exit.o)
+
+.debug_loc      0x00000000     0xc16e
+ .debug_loc     0x00000000     0x4adf ./USER/main.o
+ .debug_loc     0x00004adf       0xbf ./USER/retarget.o
+ .debug_loc     0x00004b9e     0x3110 ./USER/ttbasic.o
+ .debug_loc     0x00007cae     0x36bf ./USER/vramdisp.o
+ .debug_loc     0x0000b36d      0x337 ./PERIPHERAL/Sources/gw1ns4c_gpio.o
+ .debug_loc     0x0000b6a4       0xc2 ./PERIPHERAL/Sources/gw1ns4c_spi.o
+ .debug_loc     0x0000b766      0xa08 ./PERIPHERAL/Sources/gw1ns4c_uart.o
+
+.stab           0x00000000       0x54
+ .stab          0x00000000       0x24 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)
+ .stab          0x00000024       0x18 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(lseek.o)
+                                 0x24 (size before relaxing)
+ .stab          0x0000003c       0x18 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(read.o)
+                                 0x24 (size before relaxing)
+
+.stabstr        0x00000000       0xa9
+ .stabstr       0x00000000       0xa9 c:/app/gowin/gmd/toolchain/arm_toolchain/bin/../lib/gcc/arm-none-eabi/8.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libnosys.a(close.o)

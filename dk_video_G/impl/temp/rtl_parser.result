@@ -1,0 +1,78 @@
+[
+ {
+  "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/video_top.v",
+  "InstLine" : 1,
+  "InstName" : "video_top",
+  "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/video_top.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "video_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/video_top.v",
+    "InstLine" : 378,
+    "InstName" : "empu",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/gowin_empu/gowin_empu.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "Gowin_EMPU_Top"
+   },
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/video_top.v",
+    "InstLine" : 393,
+    "InstName" : "HyperRAM_Memory_Interface_Top_inst",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/hyperram_memory_interface/hyperram_memory_interface.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "HyperRAM_Memory_Interface_Top"
+   },
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/video_top.v",
+    "InstLine" : 40,
+    "InstName" : "GW_PLLVR_inst",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/gowin_pllvr/GW_PLLVR.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "GW_PLLVR"
+   },
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/video_top.v",
+    "InstLine" : 45,
+    "InstName" : "TMDS_PLLVR_inst",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/gowin_pllvr/TMDS_PLLVR.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "TMDS_PLLVR"
+   },
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/video_top.v",
+    "InstLine" : 385,
+    "InstName" : "vramtmp",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/gowin_sdpb/gowin_sdpb_32x16.v",
+    "ModuleLine" : 9,
+    "ModuleName" : "Gowin_SDPB_32x16"
+   },
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/video_top.v",
+    "InstLine" : 405,
+    "InstName" : "syn_gen_inst",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/syn_code/syn_gen.v",
+    "ModuleLine" : 13,
+    "ModuleName" : "syn_gen"
+   },
+   {
+    "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/video_top.v",
+    "InstLine" : 433,
+    "InstName" : "DVI_TX_Top_inst",
+    "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/dvi_tx/dvi_tx.v",
+    "ModuleLine" : 1048,
+    "ModuleName" : "DVI_TX_Top",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/dvi_tx/dvi_tx.v",
+      "InstLine" : 1079,
+      "InstName" : "rgb2dvi_inst",
+      "ModuleFile" : "C:/kitahard/Tang_Nano_4K/dk_test/src/dvi_tx/dvi_tx.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "~rgb2dvi.DVI_TX_Top"
+     }
+    ]
+   }
+  ]
+ }
+]

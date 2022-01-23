@@ -1,0 +1,316 @@
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 2
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"system_gw1ns4c.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.SystemCoreClockUpdate,"ax",%progbits
+  16              		.align	1
+  17              		.p2align 2,,3
+  18              		.global	SystemCoreClockUpdate
+  19              		.arch armv7-m
+  20              		.syntax unified
+  21              		.thumb
+  22              		.thumb_func
+  23              		.fpu softvfp
+  25              	SystemCoreClockUpdate:
+  26              	.LFB32:
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 0
+  29              		@ frame_needed = 0, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+  31 0000 10B4     		push	{r4}
+  32              		.cfi_def_cfa_offset 4
+  33              		.cfi_offset 4, -4
+  34 0002 054B     		ldr	r3, .L4
+  35 0004 054C     		ldr	r4, .L4+4
+  36 0006 0648     		ldr	r0, .L4+8
+  37 0008 0649     		ldr	r1, .L4+12
+  38 000a 074A     		ldr	r2, .L4+16
+  39 000c 2360     		str	r3, [r4]
+  40 000e 0360     		str	r3, [r0]
+  41 0010 0B60     		str	r3, [r1]
+  42 0012 1360     		str	r3, [r2]
+  43 0014 10BC     		pop	{r4}
+  44              		.cfi_restore 4
+  45              		.cfi_def_cfa_offset 0
+  46 0016 7047     		bx	lr
+  47              	.L5:
+  48              		.align	2
+  49              	.L4:
+  50 0018 00B4C404 		.word	80000000
+  51 001c 00000000 		.word	.LANCHOR0
+  52 0020 00000000 		.word	.LANCHOR1
+  53 0024 00000000 		.word	.LANCHOR2
+  54 0028 00000000 		.word	.LANCHOR3
+  55              		.cfi_endproc
+  56              	.LFE32:
+  58              		.section	.text.SystemInit,"ax",%progbits
+  59              		.align	1
+  60              		.p2align 2,,3
+  61              		.global	SystemInit
+  62              		.syntax unified
+  63              		.thumb
+  64              		.thumb_func
+  65              		.fpu softvfp
+  67              	SystemInit:
+  68              	.LFB30:
+  69              		.file 1 "../SYSTEM/system_gw1ns4c.c"
+   1:../SYSTEM/system_gw1ns4c.c **** /*
+   2:../SYSTEM/system_gw1ns4c.c ****  * *****************************************************************************************
+   3:../SYSTEM/system_gw1ns4c.c ****  *
+   4:../SYSTEM/system_gw1ns4c.c ****  * 		Copyright (C) 2014-2021 Gowin Semiconductor Technology Co.,Ltd.
+   5:../SYSTEM/system_gw1ns4c.c ****  * 		
+   6:../SYSTEM/system_gw1ns4c.c ****  * @file        system_gw1ns4c.c
+   7:../SYSTEM/system_gw1ns4c.c ****  * @author      Embedded Development Team
+   8:../SYSTEM/system_gw1ns4c.c ****  * @version     V1.x.x
+   9:../SYSTEM/system_gw1ns4c.c ****  * @date        2021-01-01 09:00:00
+  10:../SYSTEM/system_gw1ns4c.c ****  * @brief       CMSIS Cortex-M3 Device Peripheral Access Layer System Source File.
+  11:../SYSTEM/system_gw1ns4c.c ****  *              This file contains the system clock configuration for GW1NS-4C device.
+  12:../SYSTEM/system_gw1ns4c.c ****  *
+  13:../SYSTEM/system_gw1ns4c.c ****  *              This file provides two functions and one global variable to be called from
+  14:../SYSTEM/system_gw1ns4c.c ****  *              user application:
+  15:../SYSTEM/system_gw1ns4c.c ****  *                - SystemInit(): Setups the system clock.
+  16:../SYSTEM/system_gw1ns4c.c ****  *                                 This function is called at startup just after reset and
+  17:../SYSTEM/system_gw1ns4c.c ****  *                                 before branch to main program. This call is mad inside
+  18:../SYSTEM/system_gw1ns4c.c ****  *                                 the "startup_gw1ns4c.s" file.
+  19:../SYSTEM/system_gw1ns4c.c ****  *                - SystemCoreClock variable: Contains the core clock, it can be used
+  20:../SYSTEM/system_gw1ns4c.c ****  *                                 by the user application to setup the SysTick 
+  21:../SYSTEM/system_gw1ns4c.c ****  *                                 timer or configure other parameters.
+  22:../SYSTEM/system_gw1ns4c.c ****  *                - SystemCoreClockUpdate(): Updates the variable SystemCoreClock and must
+  23:../SYSTEM/system_gw1ns4c.c ****  *                                 be called whenever the core clock is changed
+  24:../SYSTEM/system_gw1ns4c.c ****  *                                 during program execution.
+  25:../SYSTEM/system_gw1ns4c.c ****  ******************************************************************************************
+  26:../SYSTEM/system_gw1ns4c.c ****  */
+  27:../SYSTEM/system_gw1ns4c.c **** 
+  28:../SYSTEM/system_gw1ns4c.c **** /** @addtogroup CMSIS
+  29:../SYSTEM/system_gw1ns4c.c ****   * @{
+  30:../SYSTEM/system_gw1ns4c.c ****   */
+  31:../SYSTEM/system_gw1ns4c.c **** 
+  32:../SYSTEM/system_gw1ns4c.c **** /** @addtogroup gw1ns4c_system
+  33:../SYSTEM/system_gw1ns4c.c ****   * @{
+  34:../SYSTEM/system_gw1ns4c.c ****   */  
+  35:../SYSTEM/system_gw1ns4c.c ****   
+  36:../SYSTEM/system_gw1ns4c.c **** /** @addtogroup GW1NS4C_System_Private_Includes
+  37:../SYSTEM/system_gw1ns4c.c ****   * @{
+  38:../SYSTEM/system_gw1ns4c.c ****   */
+  39:../SYSTEM/system_gw1ns4c.c **** 
+  40:../SYSTEM/system_gw1ns4c.c **** #include "gw1ns4c.h"
+  41:../SYSTEM/system_gw1ns4c.c **** 
+  42:../SYSTEM/system_gw1ns4c.c **** /**
+  43:../SYSTEM/system_gw1ns4c.c ****   * @}
+  44:../SYSTEM/system_gw1ns4c.c ****   */
+  45:../SYSTEM/system_gw1ns4c.c **** 
+  46:../SYSTEM/system_gw1ns4c.c **** /** @addtogroup GW1NS4C_System_Private_TypesDefinitions
+  47:../SYSTEM/system_gw1ns4c.c ****   * @{
+  48:../SYSTEM/system_gw1ns4c.c ****   */
+  49:../SYSTEM/system_gw1ns4c.c **** 
+  50:../SYSTEM/system_gw1ns4c.c **** /**
+  51:../SYSTEM/system_gw1ns4c.c ****   * @}
+  52:../SYSTEM/system_gw1ns4c.c ****   */
+  53:../SYSTEM/system_gw1ns4c.c **** 
+  54:../SYSTEM/system_gw1ns4c.c **** /** @addtogroup GW1NS4C_System_Private_Defines
+  55:../SYSTEM/system_gw1ns4c.c ****   * @{
+  56:../SYSTEM/system_gw1ns4c.c ****   */
+  57:../SYSTEM/system_gw1ns4c.c **** 
+  58:../SYSTEM/system_gw1ns4c.c **** /**
+  59:../SYSTEM/system_gw1ns4c.c ****   * @}
+  60:../SYSTEM/system_gw1ns4c.c ****   */
+  61:../SYSTEM/system_gw1ns4c.c **** 
+  62:../SYSTEM/system_gw1ns4c.c **** /** @addtogroup GW1NS4C_System_Private_Macros
+  63:../SYSTEM/system_gw1ns4c.c ****   * @{
+  64:../SYSTEM/system_gw1ns4c.c ****   */
+  65:../SYSTEM/system_gw1ns4c.c **** 
+  66:../SYSTEM/system_gw1ns4c.c **** /*----------------------------------------------------------------------------
+  67:../SYSTEM/system_gw1ns4c.c ****   Define clocks
+  68:../SYSTEM/system_gw1ns4c.c ****  *----------------------------------------------------------------------------*/
+  69:../SYSTEM/system_gw1ns4c.c **** #define __XTAL            (160000000UL)    /* Oscillator frequency */
+  70:../SYSTEM/system_gw1ns4c.c **** 
+  71:../SYSTEM/system_gw1ns4c.c **** #define __SYSTEM_CLOCK    (__XTAL / 2)	   /* 80MHz */
+  72:../SYSTEM/system_gw1ns4c.c **** 
+  73:../SYSTEM/system_gw1ns4c.c **** /**
+  74:../SYSTEM/system_gw1ns4c.c ****   * @}
+  75:../SYSTEM/system_gw1ns4c.c ****   */
+  76:../SYSTEM/system_gw1ns4c.c **** 
+  77:../SYSTEM/system_gw1ns4c.c **** /** @addtogroup GW1NS4C_System_Private_Variables
+  78:../SYSTEM/system_gw1ns4c.c ****   * @{
+  79:../SYSTEM/system_gw1ns4c.c ****   */
+  80:../SYSTEM/system_gw1ns4c.c **** 
+  81:../SYSTEM/system_gw1ns4c.c **** /*----------------------------------------------------------------------------
+  82:../SYSTEM/system_gw1ns4c.c ****   Clock Variable definitions
+  83:../SYSTEM/system_gw1ns4c.c ****  *----------------------------------------------------------------------------*/
+  84:../SYSTEM/system_gw1ns4c.c **** uint32_t SystemCoreClock = __SYSTEM_CLOCK;/*!< System Clock Frequency (Core Clock)*/
+  85:../SYSTEM/system_gw1ns4c.c **** uint32_t PCLK1 = __SYSTEM_CLOCK;          /*!< APB1 Clock Frequency */
+  86:../SYSTEM/system_gw1ns4c.c **** uint32_t PCLK2 = __SYSTEM_CLOCK;          /*!< APB2 Clock Frequency */
+  87:../SYSTEM/system_gw1ns4c.c **** uint32_t HCLK = __SYSTEM_CLOCK;           /*!< AHB Clock Frequency */
+  88:../SYSTEM/system_gw1ns4c.c **** 
+  89:../SYSTEM/system_gw1ns4c.c **** /**
+  90:../SYSTEM/system_gw1ns4c.c ****   * @}
+  91:../SYSTEM/system_gw1ns4c.c ****   */
+  92:../SYSTEM/system_gw1ns4c.c **** 
+  93:../SYSTEM/system_gw1ns4c.c **** /** @addtogroup GW1NS4C_System_Private_Functions
+  94:../SYSTEM/system_gw1ns4c.c ****   * @{
+  95:../SYSTEM/system_gw1ns4c.c ****   */
+  96:../SYSTEM/system_gw1ns4c.c **** 
+  97:../SYSTEM/system_gw1ns4c.c **** /*----------------------------------------------------------------------------
+  98:../SYSTEM/system_gw1ns4c.c ****   Clock functions
+  99:../SYSTEM/system_gw1ns4c.c ****  *----------------------------------------------------------------------------*/
+ 100:../SYSTEM/system_gw1ns4c.c **** /**
+ 101:../SYSTEM/system_gw1ns4c.c ****  * Update SystemCoreClock variable
+ 102:../SYSTEM/system_gw1ns4c.c ****  *
+ 103:../SYSTEM/system_gw1ns4c.c ****  * @param  none
+ 104:../SYSTEM/system_gw1ns4c.c ****  * @return none
+ 105:../SYSTEM/system_gw1ns4c.c ****  * @brief  Updates the SystemCoreClock with current core Clock
+ 106:../SYSTEM/system_gw1ns4c.c ****  *         retrieved from mcu registers.
+ 107:../SYSTEM/system_gw1ns4c.c ****  */
+ 108:../SYSTEM/system_gw1ns4c.c **** void SystemCoreClockUpdate (void)
+ 109:../SYSTEM/system_gw1ns4c.c **** {
+ 110:../SYSTEM/system_gw1ns4c.c ****   SystemCoreClock = __SYSTEM_CLOCK;
+ 111:../SYSTEM/system_gw1ns4c.c ****   PCLK1 = SystemCoreClock;
+ 112:../SYSTEM/system_gw1ns4c.c ****   PCLK2 = SystemCoreClock;
+ 113:../SYSTEM/system_gw1ns4c.c ****   HCLK = SystemCoreClock;
+ 114:../SYSTEM/system_gw1ns4c.c **** }
+ 115:../SYSTEM/system_gw1ns4c.c **** 
+ 116:../SYSTEM/system_gw1ns4c.c **** /**
+ 117:../SYSTEM/system_gw1ns4c.c ****  * @param  none
+ 118:../SYSTEM/system_gw1ns4c.c ****  * @return none
+ 119:../SYSTEM/system_gw1ns4c.c ****  * @brief  Setup the mcu system.
+ 120:../SYSTEM/system_gw1ns4c.c ****  *         Initialize the System.
+ 121:../SYSTEM/system_gw1ns4c.c ****  */
+ 122:../SYSTEM/system_gw1ns4c.c **** void SystemInit (void)
+ 123:../SYSTEM/system_gw1ns4c.c **** {
+  70              		.loc 1 123 1 view -0
+  71              		.cfi_startproc
+  72              		@ args = 0, pretend = 0, frame = 0
+  73              		@ frame_needed = 0, uses_anonymous_args = 0
+  74              		@ link register save eliminated.
+ 124:../SYSTEM/system_gw1ns4c.c **** #ifdef UNALIGNED_SUPPORT_DISABLE
+ 125:../SYSTEM/system_gw1ns4c.c ****   SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+ 126:../SYSTEM/system_gw1ns4c.c **** #endif
+ 127:../SYSTEM/system_gw1ns4c.c **** 
+ 128:../SYSTEM/system_gw1ns4c.c ****   SystemCoreClock = __SYSTEM_CLOCK;
+  75              		.loc 1 128 3 view .LVU1
+ 123:../SYSTEM/system_gw1ns4c.c **** #ifdef UNALIGNED_SUPPORT_DISABLE
+  76              		.loc 1 123 1 is_stmt 0 view .LVU2
+  77 0000 10B4     		push	{r4}
+  78              		.cfi_def_cfa_offset 4
+  79              		.cfi_offset 4, -4
+  80              		.loc 1 128 19 view .LVU3
+  81 0002 054B     		ldr	r3, .L8
+  82 0004 054C     		ldr	r4, .L8+4
+ 129:../SYSTEM/system_gw1ns4c.c ****   PCLK1 = SystemCoreClock;
+  83              		.loc 1 129 9 view .LVU4
+  84 0006 0648     		ldr	r0, .L8+8
+ 130:../SYSTEM/system_gw1ns4c.c ****   PCLK2 = SystemCoreClock;
+  85              		.loc 1 130 9 view .LVU5
+  86 0008 0649     		ldr	r1, .L8+12
+ 131:../SYSTEM/system_gw1ns4c.c ****   HCLK = SystemCoreClock;
+  87              		.loc 1 131 8 view .LVU6
+  88 000a 074A     		ldr	r2, .L8+16
+ 128:../SYSTEM/system_gw1ns4c.c ****   PCLK1 = SystemCoreClock;
+  89              		.loc 1 128 19 view .LVU7
+  90 000c 2360     		str	r3, [r4]
+ 129:../SYSTEM/system_gw1ns4c.c ****   PCLK2 = SystemCoreClock;
+  91              		.loc 1 129 3 is_stmt 1 view .LVU8
+ 129:../SYSTEM/system_gw1ns4c.c ****   PCLK2 = SystemCoreClock;
+  92              		.loc 1 129 9 is_stmt 0 view .LVU9
+  93 000e 0360     		str	r3, [r0]
+ 130:../SYSTEM/system_gw1ns4c.c ****   HCLK = SystemCoreClock;
+  94              		.loc 1 130 3 is_stmt 1 view .LVU10
+ 130:../SYSTEM/system_gw1ns4c.c ****   HCLK = SystemCoreClock;
+  95              		.loc 1 130 9 is_stmt 0 view .LVU11
+  96 0010 0B60     		str	r3, [r1]
+  97              		.loc 1 131 3 is_stmt 1 view .LVU12
+  98              		.loc 1 131 8 is_stmt 0 view .LVU13
+  99 0012 1360     		str	r3, [r2]
+ 132:../SYSTEM/system_gw1ns4c.c **** }
+ 100              		.loc 1 132 1 view .LVU14
+ 101 0014 10BC     		pop	{r4}
+ 102              		.cfi_restore 4
+ 103              		.cfi_def_cfa_offset 0
+ 104 0016 7047     		bx	lr
+ 105              	.L9:
+ 106              		.align	2
+ 107              	.L8:
+ 108 0018 00B4C404 		.word	80000000
+ 109 001c 00000000 		.word	.LANCHOR0
+ 110 0020 00000000 		.word	.LANCHOR1
+ 111 0024 00000000 		.word	.LANCHOR2
+ 112 0028 00000000 		.word	.LANCHOR3
+ 113              		.cfi_endproc
+ 114              	.LFE30:
+ 116              		.global	HCLK
+ 117              		.global	PCLK2
+ 118              		.global	PCLK1
+ 119              		.global	SystemCoreClock
+ 120              		.section	.data.HCLK,"aw"
+ 121              		.align	2
+ 122              		.set	.LANCHOR3,. + 0
+ 125              	HCLK:
+ 126 0000 00B4C404 		.word	80000000
+ 127              		.section	.data.PCLK1,"aw"
+ 128              		.align	2
+ 129              		.set	.LANCHOR1,. + 0
+ 132              	PCLK1:
+ 133 0000 00B4C404 		.word	80000000
+ 134              		.section	.data.PCLK2,"aw"
+ 135              		.align	2
+ 136              		.set	.LANCHOR2,. + 0
+ 139              	PCLK2:
+ 140 0000 00B4C404 		.word	80000000
+ 141              		.section	.data.SystemCoreClock,"aw"
+ 142              		.align	2
+ 143              		.set	.LANCHOR0,. + 0
+ 146              	SystemCoreClock:
+ 147 0000 00B4C404 		.word	80000000
+ 148              		.text
+ 149              	.Letext0:
+ 150              		.file 2 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\machine\\_default_
+ 151              		.file 3 "c:\\app\\gowin\\gmd\\toolchain\\arm_toolchain\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 152              		.file 4 "C:\\kitaprg\\GMD_RefDesign\\cm3_mon\\CORE/core_cm3.h"
+ 153              		.file 5 "../SYSTEM/system_gw1ns4c.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 system_gw1ns4c.c
+d:\wintmp\ccsurmKQ.s:16     .text.SystemCoreClockUpdate:00000000 $t
+d:\wintmp\ccsurmKQ.s:25     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+d:\wintmp\ccsurmKQ.s:50     .text.SystemCoreClockUpdate:00000018 $d
+d:\wintmp\ccsurmKQ.s:59     .text.SystemInit:00000000 $t
+d:\wintmp\ccsurmKQ.s:67     .text.SystemInit:00000000 SystemInit
+d:\wintmp\ccsurmKQ.s:108    .text.SystemInit:00000018 $d
+d:\wintmp\ccsurmKQ.s:125    .data.HCLK:00000000 HCLK
+d:\wintmp\ccsurmKQ.s:139    .data.PCLK2:00000000 PCLK2
+d:\wintmp\ccsurmKQ.s:132    .data.PCLK1:00000000 PCLK1
+d:\wintmp\ccsurmKQ.s:146    .data.SystemCoreClock:00000000 SystemCoreClock
+d:\wintmp\ccsurmKQ.s:121    .data.HCLK:00000000 $d
+d:\wintmp\ccsurmKQ.s:128    .data.PCLK1:00000000 $d
+d:\wintmp\ccsurmKQ.s:135    .data.PCLK2:00000000 $d
+d:\wintmp\ccsurmKQ.s:142    .data.SystemCoreClock:00000000 $d
+                           .group:00000000 wm4.0.881e6aea30f26d002fa34da4862e4bcf
+                           .group:00000000 wm4.gw1ns4c.h.42.b574272a1988cda7506b1103a6ee000e
+                           .group:00000000 wm4.core_cm3.h.25.d35e9a9b04ec4aaebae9bf79fff061f9
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.318b64d71e0957639cfb30f1db1f7ec8
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.48bafbb683905c4daa4565a85aeeb264
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cm3.h.113.418486a6827cd861c086288012ae5e2b
+                           .group:00000000 wm4.gw1ns4c.h.318.1c2396dae4397f7395410f9554aa71af
+                           .group:00000000 wm4.gw1ns4c_gpio.h.80.0c581660eee051be7914b6ea1f39cc1a
+                           .group:00000000 wm4.gw1ns4c_wdog.h.16.8a3a0f1d8c60adc0580b7852c78f55c8
+                           .group:00000000 wm4.gw1ns4c_uart.h.16.3be05e6b03c62d460c8c05b141d1c023
+                           .group:00000000 wm4.gw1ns4c_timer.h.16.f5209a1e64a528f95e8d85c71081528f
+                           .group:00000000 wm4.gw1ns4c_spi.h.16.810014cb7f012daf88d29d7d2b7aba9e
+                           .group:00000000 wm4.gw1ns4c_i2c.h.16.05421c18011a5a09c18d5f4cc6da69a8
+                           .group:00000000 wm4.gw1ns4c_misc.h.16.65dc2339a60ecdd9b90897e72d3b061a
+                           .group:00000000 wm4.gw1ns4c_syscon.h.16.40f8fc44d5bd6529877ce8d20de4e3a1
+
+NO UNDEFINED SYMBOLS
