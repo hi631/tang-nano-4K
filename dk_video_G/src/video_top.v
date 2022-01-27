@@ -76,7 +76,7 @@ reg  [31:0] wr1_data, wr2_data;
 reg         wr_wait; 
 reg  [15:0] wr_loop;
 reg  [7:0]  wr_line;
-reg  [6:0]  blkct, blkct1, blkctx, linct;
+reg  [6:0]  blkct, blkct1, blkctx;
 reg  [1:0]  runseq, runseq_ret, hpwseq;
 reg         maskmd;
 reg  [7:0]  maskbit;
@@ -283,33 +283,29 @@ always @(posedge dma_clk or negedge rst_n) begin
 	end
 end
 
-wire rgbfull = dbradrc[dbrbs-1:4]==dbwadr_next[dbwbs-1:3] ? 1 : 0;
 reg  rgbfulld, vrambsy, rgb_hsc, rgb_hsd, linoe, start_de;
 wire rgb_hs_upm = (rgb_hsc && ~rgb_hsd);
 wire rgb_hs_dnm = (~rgb_hsc && rgb_hsd);
 always @(posedge dma_clk or negedge rst_n) begin
     if(!rst_n) begin
 		runseq <= 0; cmd2 <= 0; cmd2_en <= 0;   
-		hpradr <= hpramtop; blkct <= 0; linct <= 0; linoe <= 0; vrambsy <= 0; 
+		vrambsy <= 0; 
 	end else begin
 		rgb_vsc <= rgb_vs; rgb_vsd <= rgb_vsc; dbradrc <= dbradr;
-		rgbfulld <= rgbfull; rgb_hsc <= rgb_hs; rgb_hsd <= rgb_hsc;
-		if(rgb_hs_upm && ~linoe) vrambsy <= 1;
-		if(rgb_hs_dnm) begin blkct <= 0; linoe <= ~linoe; end
-		if(rgb_vs)      start_de <= 0;
-		else if(rgb_de) start_de <= 1;
+		rgb_hsc <= rgb_hs; rgb_hsd <= rgb_hsc;
  
 		case (runseq)
 			2'd0: if(init_calib) begin runseq <= 1; end
 			2'd1: runseq <= runseq_ret; // Write Dumy.Data
-			2'd2: begin
-				hpradr <= hpramtop;  
-				if(~rgb_vsc && rgb_vsd) begin blkct <= 0; linct <= 0; runseq <= 3; end 
-			end
+			2'd2: if(~rgb_vsc && rgb_vsd) begin start_de <= 0; linoe <= 0; runseq <= 3; end 
 			2'd3: if(rgb_vsc) runseq <= 2;
 				else begin
 				// VRAM Read
-				if( ~cmd_bsy && blkct<40 && linoe && start_de) begin
+				if(rgb_de) start_de <= 1;
+				if(rgb_hs_upm && ~start_de) hpradr <= hpramtop;
+				if(rgb_hs_upm && ~linoe) vrambsy <= 1;
+				if(rgb_hs_dnm) begin blkct <= 0; linoe <= ~linoe; end
+				if( ~cmd_bsy && blkct<40 && linoe) begin
 					cmd2_en <= 1; cmd2 <= 0;	// 0:Read
 				end else
 				if(cmd2_en) begin 
