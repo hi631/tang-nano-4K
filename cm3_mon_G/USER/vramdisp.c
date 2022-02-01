@@ -189,12 +189,9 @@ u16 pget(u16 xp, u16 yp){
 
 void pset(u16 xp, u16 yp, u16 ptn){	// xp=0-639 yp=0-359
 	unsigned char ph, pl, px;
-	//if(xp==0xffff) { dispinitf = 0; disp_vramw(0);}
-	//else {
 		wddt.s[2] = ptn; wddt.b[6] = xp & 15; // bit.pos
 		set_vramadr(yp, xp/16);
 		set_vramdata(7);	// adr(4)+ptn(2)+bitpos(1)
-	//}
 }
 
 void DCircle(u16 x0,u16 y0,u16 r,u16 ptn) {
@@ -550,7 +547,7 @@ const unsigned char FONT_8x8[] = {
 60 LINE 0,Y,639,Y,Y*256+Y
 70 NEXT Y
 run
-//
+// PAINT
 10 GOXY -1,-1
 15 X=0
 16 Y=0
@@ -565,8 +562,11 @@ run
 32 X=A
 34 Y=B
 40 NEXT R
-50 FOR R=1 TO 50
-60 PAINT RND(640-200)+100,RND(360-200)+100,RND(32767)*2
+50 FOR R=1 TO 100
+52 X=RND(640-100)+50
+54 Y=RND(360-100)+50
+56 P=PGET(X,Y)
+60 IF P=0 PAINT X,Y,RND(32767)*2
 70 NEXT R
 //
 10 GOXY -1,-1

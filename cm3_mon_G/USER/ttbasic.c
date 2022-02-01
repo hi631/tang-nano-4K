@@ -39,6 +39,7 @@ int _kbhit(){ return 0;}	// No Effect
 //
 #define u16 unsigned short
 void pset(u16 y, u16 x, u16 ptn);
+int  pget(u16 y, u16 x);
 void DLine(u16 x1, u16 y1, u16 x2, u16 y2, u16 ptn);
 void DCircle(u16 x0,u16 y0,u16 r,u16 ptn);
 void DPaint( u16 x, u16 y, u16 paintCol );
@@ -69,7 +70,7 @@ const char *kwtbl[] = {
 	"FOR", "TO", "STEP", "NEXT",
 	"IF", "REM", "STOP",
 	"INPUT", "PRINT", "LET",
-	"?","PSET","LINE","CIRCLE","PAINT","GOXY","BYE",		// new
+	"?","PSET","PGET","LINE","CIRCLE","PAINT","GOXY","BYE",		// new
 	",", ";",
 	"-", "+", "*", "/", "(", ")",
 	">=", "#", ">", "=", "<=", "<",
@@ -83,7 +84,7 @@ enum {
 	I_FOR, I_TO, I_STEP, I_NEXT,
 	I_IF, I_REM, I_STOP,
 	I_INPUT, I_PRINT, I_LET,
-	I_PRT,I_PSET,I_LINE,I_CIRCLE,I_PAINT,I_GOXY,I_BYE,	// new
+	I_PRT,I_PSET,I_PGET,I_LINE,I_CIRCLE,I_PAINT,I_GOXY,I_BYE,	// new
 	I_COMMA, I_SEMI,
 	I_MINUS, I_PLUS, I_MUL, I_DIV, I_OPEN, I_CLOSE,
 	I_GTE, I_SHARP, I_GT, I_EQ, I_LTE, I_LT,
@@ -592,6 +593,15 @@ short getparam() {
 	return value;
 }
 
+int ipget(){
+	//int val0 = iexp(); chk_sep(*cip); cip++;
+	//int val1 = iexp();
+	cip++; int val0 = iexp();
+	cip++; int val1 = iexp();
+	cip++;
+	return pget(val0,val1);
+}
+
 // Get value
 short ivalue() {
 	short value;
@@ -640,6 +650,10 @@ short ivalue() {
 			break;
 		value = getrnd(value);
 		}
+		break;
+	case I_PGET:
+		cip++;
+		value = ipget();
 		break;
 	case I_ABS:
 		cip++;
